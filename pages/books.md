@@ -23,11 +23,3 @@ permalink: /books
           %}
 
 &nbsp;
-{% capture temp %}{% link pages/lancar-bahasa-inggris-tanpa-belajar.md %}{% endcapture %}
-## [Bahasa Inggris Mudah dan Menyenangkan (2013)]({{ temp }})
-
-{% include image.html
-            img="sales-buku-eel.jpg"
-            url=temp
-            title="Belajar Bahasa Inggris Metode EEL"
-            %}
