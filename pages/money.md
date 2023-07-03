@@ -26,7 +26,7 @@ It does matter to discuss it now.
 Because the harms to society has been slowly & steadily materialized for decades, in Indonesia...
 
 {% include image.html
-        img="money/the-cause-of-Indonesian-inequality.png
+        img="money/the-cause-of-Indonesian-inequality.png"
         title="The cause of Indonesian inequality"
         image-caption="Up until 1978, Indonesian Rupiah had a fixed exchange rate with US Dollar, just like US Dollar to gold in 1944-1971 era. Thus, prior to 1978, Indonesian US Dollar reserve was psychologically limit the Rupiah supply. Source: World Inequality Report 2022."
         %}
@@ -40,9 +40,9 @@ Because the harms to society has been slowly & steadily materialized for decades
           %}
 
 {% include image.html
-        img="money/BLS-CPI-sejak-tahun-1775.jpg
+        img="money/BLS-CPI-sejak-tahun-1775.jpg"
         title="CPI In United States of America since 1775"
-        image-caption="No war in 1971, yet the price keeps increase up until now. Without much income increase, this will hurt the poor most. "
+        image-caption="No war in 1971, yet the price keeps increase up until now. Without much income increase, this will hurt the poor most."
         %}
 
 ## The Best Solution
