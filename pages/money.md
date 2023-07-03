@@ -14,7 +14,7 @@ Because our legal money doesn't require an equivalent energy to create. The pape
 No wonder the amount has been increasing exponentially since five decades ago.
 
 {% include image.html
-        img="money/USD-and-IDR-money-supply.png
+        img="money/USD-and-IDR-money-supply.png"
         title="USD and IDR money supply"
         image-caption="In USA, Indonesia, and any other countries."
         %}
