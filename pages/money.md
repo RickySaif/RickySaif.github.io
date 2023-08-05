@@ -9,7 +9,7 @@ Because anyone with the power of creating money from zero (or very little) energ
 
 It's just human nature.
 
-That's why, **I don't blame past & current Indonesian governments, because they just follow the global system on each time. I even only partially blame the post-world-war USA governements, as the weakness of [one-country-printing-world's-money-with-gold-as-the-only-reserve](https://en.wikipedia.org/wiki/Bretton_Woods_system) solution is pretty trivial since the beginning.**
+That's why, **I don't blame past & current Indonesian governments, because they just follow the global system on each time. I even only partially blame the 50s-60s USA governements, as the weakness of [one-country-printing-world's-money-with-gold-as-the-only-reserve](https://en.wikipedia.org/wiki/Bretton_Woods_system) solution decided in 1944 is quite obvious since the beginning.**
 
 Wait.. wait.. so?
 
