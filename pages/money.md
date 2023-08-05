@@ -9,13 +9,13 @@ Because anyone with the power of creating money from zero (or very little) energ
 
 It's just human nature.
 
-That's why, **I don't blame past & current Indonesian governments, because they just follow the global system on each time. I even only partially blame the post-world-war USA governements, as the weakness of gold-as-the-only-reserve solution is pretty trivial since the beginning.**
+That's why, **I don't blame past & current Indonesian governments, because they just follow the global system on each time. I even only partially blame the post-world-war USA governements, as the weakness of [one-country-printing-world's-money-with-gold-as-the-only-reserve](https://en.wikipedia.org/wiki/Bretton_Woods_system) solution is pretty trivial since the beginning.**
 
 Wait.. wait.. so?
 
 ### Yes. Our Current Money Doesn't Requires Equivalent Energy
 
-Because our legal money doesn't require equivalent energy to create. The paper money ONLY costs 0.08% to 2.8% of its printed nominal (face value), [as the issuer said](https://www.federalreserve.gov/faqs/currency_12771.htm). The digital money? 0. Zero.
+The paper money ONLY costs 0.08% to 2.8% of its printed nominal (face value), [as the issuer said](https://www.federalreserve.gov/faqs/currency_12771.htm). The digital money? 0. Zero.
 
 No wonder the money supply has been increasing exponentially since five decades ago, unlike [the flat increase of the world's gross domestic product](https://www.statista.com/statistics/268750/global-gross-domestic-product-gdp/).
 
@@ -79,9 +79,9 @@ Do not dream that bitcoin will be the only money & currency in this world. Not b
 
 ### What Am I Doing Now?
 
-I'm saving in bitcoin & gold. And spreading this idea to Indonesian -- my nation. To make it simpler & more inviting, I wrap it with the fifth principle of our nation (Pancasila):
+I'm saving in bitcoin & gold. And spreading this idea to Indonesian -- my people. To make it simpler & more inviting, I wrap it with the fifth principle of our nation (Pancasila):
 
-> Social justice for every Indonesia citizen.
+> Social justice for every Indonesian citizen.
 
 There's no social justice with widening income inequality. Coming from a low-income family helps me to care about this issue.
 
