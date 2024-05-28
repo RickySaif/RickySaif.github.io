@@ -83,10 +83,12 @@ I'm saving in bitcoin & gold. And spreading this idea to Indonesian -- my people
 
 > Social justice for every Indonesian citizen.
 
-There's no social justice with widening income inequality. Coming from a low-income family helps me to care about this issue.
+Not only simpler & inviting, it's also fit the narrative. As there's no social justice with widening income inequality. Coming from a low-income family helps me to care about this issue.
 
 Do you care? Let's help them. Subscribe & share:
 
-<a href="https://www.youtube.com/@SilaKelimaPancasila" target="_blank">Youtube Sila Kelima➚</a>
+<a href="https://sila-kelima.com" target="_blank">Sila Kelima's Website➚</a>
 
-<a href="https://www.tiktok.com/@silakelimapancasila" target="_blank">Tiktok Sila Kelima➚</a>
+<a href="https://www.youtube.com/@YayasanSilaKelima" target="_blank">Youtube Sila Kelima➚</a>
+
+<a href="https://www.tiktok.com/@rizky_silakelima" target="_blank">Tiktok➚</a>
