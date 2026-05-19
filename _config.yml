@@ -31,6 +31,14 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-polyglot
+
+# Polyglot configuration
+languages:
+  en: "English"
+  id: "Bahasa Indonesia"
+default_lang: en
+exclude_from_localization: [javascript, images, css]
 exclude:
   - Gemfile
   - Gemfile.lock

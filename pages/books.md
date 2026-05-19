@@ -3,6 +3,7 @@ layout: page
 title:  "Buku"
 categories:
 permalink: /books
+lang: en
 ---
 
 ## [Tiga Pilar Agile (2019)](https://3pillarsofagile.github.io/)

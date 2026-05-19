@@ -4,6 +4,7 @@ title:  "3 Hal Menarik di Umur 30"
 date:   2021-04-29 01:32:50 +0700
 categories: renungan-tahunan
 permalink: 3-hal-menarik-di-umur-30
+lang: id
 ---
 
 Sudah satu tahun saya berkepala tiga. Berikut tiga temuan menarik di umur 30:

@@ -2,13 +2,14 @@
 layout: page
 title: "Free Webinars"
 permalink: /webinars/
+lang: en
 ---
 
 
 
 --
 
-# How to make AI imitate your voice
+# How to Make AI Imitate Your Voice
 
 ## The Problem
 
