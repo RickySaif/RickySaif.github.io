@@ -1,21 +1,45 @@
 <header class="site-header" role="banner">
+  {% assign t = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
 
   <div class="wrapper">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="margin-top: -10px;">
+    <div class="site-header-main">
+      <div class="site-brand">
         <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-        <span class="site-sub-title"> <span style="text-decoration: line-through;"> Everyone is a CEO &middot; Every CEO needs AI</span>
+        <span class="site-sub-title"> {{ t.tagline }}</span>
       </div>
+
+      <label class="menu-toggle-button mobile-menu-toggle-button" for="site-menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
       
       <!-- Language Toggle -->
       <div class="language-toggle">
         <ul class="language-list">
+          {% assign path = page.url %}
+          {% capture active_prefix %}/{{ site.active_lang }}{% endcapture %}
+          {% if site.active_lang != site.default_lang %}
+            {% assign path = path | replace_first: active_prefix, '' %}
+          {% endif %}
+          {% assign path_no_lead = path | remove_first: '/' %}
+          
+
           {% for lang in site.languages %}
             <li>
               {% if lang == site.active_lang %}
-                <span class="language-link active">{{ site.languages[lang] }}</span>
+                <span class="language-link active">{{ lang | upcase }}</span>
               {% else %}
-                <a class="language-link" href="{% if lang == site.default_lang %}/{% else %}/{{ lang }}/{% endif %}">{{ site.languages[lang] }}</a>
+                {% if lang == site.default_lang %}
+                  {% assign target = path %}
+                {% else %}
+                  {% if path_no_lead == '' %}
+                    {% assign target = '/' | append: lang | append: '/' %}
+                  {% else %}
+                    {% assign target = '/' | append: lang | append: '/' | append: path_no_lead %}
+                  {% endif %}
+                {% endif %}
+                <a class="language-link" {% static_href %}href="{{ target | relative_url }}"{% endstatic_href %}>{{ lang | upcase }}</a>
               {% endif %}
             </li>
           {% endfor %}
@@ -23,10 +47,57 @@
       </div>
     </div>
 
-    <div class="site-top-menu">
-      <a href="{% link pages/webinars.md %}">{% if site.active_lang == 'id' %}Webinar Gratis{% else %}Free Webinars{% endif %}</a> &middot;
-      <a href="{% link pages/books.md %}">{% if site.active_lang == 'id' %}Buku yang Saya Tulis{% else %}Books I Wrote{% endif %}</a> &middot;
-    </div>
+    {% assign webinars_base = '/webinars/' %}
+    {% assign books_base = '/books/' %}
+    {% if site.active_lang == site.default_lang %}
+      {% assign webinars_url = webinars_base | relative_url %}
+      {% assign books_url = books_base | relative_url %}
+    {% else %}
+      {% assign webinars_url = '/' | append: site.active_lang | append: webinars_base %}
+      {% assign books_url = '/' | append: site.active_lang | append: books_base %}
+    {% endif %}
+
+    <label class="site-menu-overlay" for="site-menu-toggle" aria-label="Close menu"></label>
+    <label class="site-menu-open" for="site-menu-toggle" aria-label="Open menu">&rarr;</label>
+
+    <nav class="site-top-menu" aria-label="Main menu">
+      <label class="site-menu-close" for="site-menu-toggle" aria-label="Close menu">&larr;</label>
+      {% if site.active_lang == site.default_lang %}
+        <a href="{{ webinars_url }}">{{ t.webinars }}</a>
+        <a href="{{ books_url }}">{{ t.books }}</a>
+      {% else %}
+        <a href="{{ webinars_url }}">{{ t.webinars }}</a>
+        <a href="{{ books_url }}">{{ t.books }}</a>
+      {% endif %}
+    </nav>
 
   </div>
 </header>
+
+<script>
+  const sidebarMenu = document.querySelector('.site-top-menu');
+  const checkbox = document.getElementById('site-menu-toggle');
+  let lastScrollY = 0;
+  
+  if (sidebarMenu && checkbox) {
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - collapse sidebar by checking checkbox
+        checkbox.checked = true;
+      }
+      // Don't auto-expand on scroll up - keep collapsed with button visible
+      
+      lastScrollY = currentScrollY;
+    });
+    
+    // Handle button clicks to remove collapsed class when expanding
+    checkbox.addEventListener('change', () => {
+      if (!checkbox.checked) {
+        // Menu is being opened - remove collapsed class
+        sidebarMenu.classList.remove('collapsed');
+      }
+    });
+  }
+</script>

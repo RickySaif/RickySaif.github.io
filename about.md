@@ -5,12 +5,8 @@ permalink: /about/
 lang: en
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+My name is Ricky Saif. I help professionals, founders, and high-agency individuals build structured AI systems that retain context, support decision-making, and help navigate life strategically.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+My work sits at the intersection of AI, agile leadership, software delivery, and practical systems for living with more agency.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Contact me if you want to discuss how AI and agile ways of working can improve your personal strategy, team, or organization.

@@ -1,7 +1,9 @@
 ---
 layout: page
-title:  "Sila Kelima "
+title:  "Posts"
 categories:
-permalink: /posts
+permalink: /posts/
 lang: en
 ---
+
+All of my English posts are listed here.

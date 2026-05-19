@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  "Buku"
+title:  "Books"
 categories:
-permalink: /books
+permalink: /books/
 lang: en
 ---
 
@@ -14,8 +14,8 @@ lang: en
           %}
 
 &nbsp;
-{% capture temp %}{% link pages/buku-agile-scrum.md %}{% endcapture %}
-## [Filosofi Agile dan Panduan Scrum (2015)]({{ temp }})
+{% capture temp %}{% link pages/agile-scrum-book.md %}{% endcapture %}
+## [Agile Philosophy and Scrum Guide (2015)]({{ temp }})
 
 {% include image.html
           img="buku-samping.JPG"

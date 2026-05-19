@@ -3,6 +3,9 @@ layout: page
 title:  "Buku Filosofi Agile dan Panduan Scrum"
 categories:
 permalink: /buku-agile-scrum
+lang: id
+lang-exclusive:
+  - id
 ---
 
 {% include image.html

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>About</title>
+  <meta name="description" content="A piece of stardust, which gets busy living, while waiting for death.">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="canonical" href="http://localhost:4000/about/">
+  <meta http-equiv="Content-Language" content="en">
+<link rel="alternate" hreflang="en" href="http://localhost:4000/about/"/>
+<link rel="alternate" hreflang="id" href="http://localhost:4000/id/about/"/>
+
+  <link rel="alternate" type="application/rss+xml" title="Ricky Saif" href="/feed.xml">
+
+  <meta name="google-site-verification" content="j8kL3EmUiE0OiS7Muh56QphQn3TJJxPROiUfxBt_vTw" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PD11PFKDS4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PD11PFKDS4');
+  </script>
+
+</head>
+
+
+  <body>
+
+    <input class="site-menu-toggle" type="checkbox" id="site-menu-toggle" aria-hidden="true">
+    <header class="site-header" role="banner">
+  
+
+  <div class="wrapper">
+    <div class="site-header-main">
+      <div class="site-brand">
+        <a class="site-title" href="/">Ricky Saif</a>
+        <span class="site-sub-title"> Everyone is a CEO &middot; Every CEO needs AI</span>
+      </div>
+
+      <label class="menu-toggle-button mobile-menu-toggle-button" for="site-menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      
+      <!-- Language Toggle -->
+      <div class="language-toggle">
+        <ul class="language-list">
+          
+          
+          
+          
+          
+
+          
+            <li>
+              
+                <span class="language-link active">EN</span>
+              
+            </li>
+          
+            <li>
+              
+                
+                <a class="language-link" href="/id/about/">ID</a>
+              
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+
+    
+    
+    
+
+    <label class="site-menu-overlay" for="site-menu-toggle" aria-label="Close menu"></label>
+    <label class="site-menu-open" for="site-menu-toggle" aria-label="Open menu">&rarr;</label>
+
+    <nav class="site-top-menu" aria-label="Main menu">
+      <label class="site-menu-close" for="site-menu-toggle" aria-label="Close menu">&larr;</label>
+      
+        <a href="/webinars/">Free Webinars</a>
+        <a href="/books/">Books I Wrote</a>
+      
+    </nav>
+
+  </div>
+</header>
+
+<script>
+  const sidebarMenu = document.querySelector('.site-top-menu');
+  const checkbox = document.getElementById('site-menu-toggle');
+  let lastScrollY = 0;
+  
+  if (sidebarMenu && checkbox) {
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - collapse sidebar by checking checkbox
+        checkbox.checked = true;
+      }
+      // Don't auto-expand on scroll up - keep collapsed with button visible
+      
+      lastScrollY = currentScrollY;
+    });
+    
+    // Handle button clicks to remove collapsed class when expanding
+    checkbox.addEventListener('change', () => {
+      if (!checkbox.checked) {
+        // Menu is being opened - remove collapsed class
+        sidebarMenu.classList.remove('collapsed');
+      }
+    });
+  }
+</script>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">About</h1>
+  </header>
+
+  <div class="post-content">
+    <p>My name is Ricky Saif. I help professionals, founders, and high-agency individuals build structured AI systems that retain context, support decision-making, and help navigate life strategically.</p>
+
+<p>My work sits at the intersection of AI, agile leadership, software delivery, and practical systems for living with more agency.</p>
+
+<p>Contact me if you want to discuss how AI and agile ways of working can improve your personal strategy, team, or organization.</p>
+
+  </div>
+
+  
+    
+
+  
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ricky Saif</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ricky Saif</li><li><a class="u-email" href="mailto:rizky.syaiful@gmail.com">rizky.syaiful@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.twitter.com/RickySaif"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">RickySaif</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A piece of stardust, which gets busy living, while waiting for death.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

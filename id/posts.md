@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Postingan"
-permalink: /id/posts/
+permalink: /posts/
 lang: id
 ---
 

@@ -3,6 +3,9 @@ layout: page
 title:  "Why Money Requires Energy?"
 categories:
 permalink: /money
+lang: en
+lang-exclusive:
+  - en
 ---
 
 Because anyone with the power of creating money from zero (or very little) energy will be too powerful, up until it's impossible to believe that he/she (or his/her successors) won't be corrupt & harmful to society.

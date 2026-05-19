@@ -35,13 +35,17 @@ plugins:
 
 # Polyglot configuration
 languages:
-  en: "English"
-  id: "Bahasa Indonesia"
+  - en
+  - id
 default_lang: en
 exclude_from_localization: [javascript, images, css]
 exclude:
   - Gemfile
   - Gemfile.lock
+  - IMPLEMENTATION_SUMMARY.md
+  - MULTILINGUAL_SETUP.md
+  - vendor
+  - vendor/bundle
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this

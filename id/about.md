@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Tentang
-permalink: /id/about/
+permalink: /about/
 lang: id
 ---
 
-Ini adalah halaman tentang saya dalam Bahasa Indonesia. Saya adalah Ricky Saif, seorang pemimpin teknis dan konsultan bisnis yang berfokus pada transformasi digital dan kepemimpinan agile.
+Nama saya Ricky Saif. Saya membantu profesional, founder, dan individu beragensi tinggi membangun sistem AI terstruktur yang mampu mempertahankan konteks, mendukung pengambilan keputusan, dan membantu menavigasi hidup secara strategis.
 
-Dengan pengalaman lebih dari 15 tahun di industri teknologi, saya telah membantu ratusan organisasi mengadopsi metodologi agile dan membangun tim yang efektif.
+Pekerjaan saya berada di irisan AI, kepemimpinan agile, pengembangan software, dan sistem praktis untuk hidup dengan agensi yang lebih kuat.
 
-Hubungi saya jika Anda ingin membahas cara AI dan metodologi agile dapat mengubah organisasi Anda.
+Hubungi saya jika Anda ingin membahas bagaimana AI dan cara kerja agile dapat meningkatkan strategi pribadi, tim, atau organisasi Anda.

@@ -4,6 +4,7 @@
     {% endif %}
         <img  src="{{ site.url }}/assets/images/{{ include.img }}"
               alt="{{ include.title }}"
+              class="img-fluid border rounded"
               {% if include.max-width %}
                 width="{{include.max-width}}"
               {% endif %}

@@ -96,7 +96,7 @@ See `MULTILINGUAL_SETUP.md` for detailed instructions on:
 ## Key Features
 
 ✨ **Active Language Detection** - Site automatically detects and highlights the current language
-✨ **Language-Aware Links** - Navigation links use `{% link %}` tags that are language-aware
+✨ **Language-Aware Links** - Navigation links use {% raw %}{% link %}{% endraw %} tags that are language-aware
 ✨ **SEO Friendly** - Proper HTML lang attributes and alternate links
 ✨ **Mobile Responsive** - Language toggle hidden on small screens
 ✨ **Easy Extension** - Simple to add more languages following the established pattern

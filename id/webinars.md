@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Webinar Gratis"
-permalink: /id/webinars/
+permalink: /webinars/
 lang: id
 ---
 
@@ -9,10 +9,10 @@ lang: id
 
 ## Masalahnya
 
-AI dapat menghemat Waktu Anda berjam-jam, tetapi ada tangkapannya:
+AI dapat menghemat waktu Anda berjam-jam, tetapi ada tantangannya:
 
-- **AI menelurkan email Anda dan tidak terdengar seperti Anda?** Anda menghabiskan lebih banyak waktu menulis ulang daripada menulis.
-- **Menelurkan surat lamaran dalam 5 detik dengan AI, tetapi Anda menghabiskan 5 menit menulis ulangnya?** Itu bukan penghematan waktu.
+- **AI membuat draf email, tetapi tidak terdengar seperti Anda?** Anda menghabiskan lebih banyak waktu menulis ulang daripada menulis.
+- **Surat lamaran selesai dalam 5 detik dengan AI, tetapi Anda menghabiskan 5 menit untuk menulis ulangnya?** Itu bukan penghematan waktu.
 - **Nada generik, suara salah.** Merek pribadi Anda hilang dalam terjemahan.
 
 ## Mengapa Ini Penting
