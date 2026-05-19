@@ -9,7 +9,7 @@ Because anyone with the power of creating money from zero (or very little) energ
 
 It's just human nature.
 
-That's why, **I don't blame past & current Indonesian governments, because they just follow the global system on each time. I even only partially blame the 50s-60s USA governements, as the weakness of [one-country-printing-world's-money-with-gold-as-the-only-reserve](https://en.wikipedia.org/wiki/Bretton_Woods_system) solution decided in 1944 is quite obvious since the beginning.**
+That's why, **I don't blame past & current Indonesian governments, because they just follow the global system on each time -- as any other countries. I even only partially blame the 50s-60s USA governements; as the weakness of [one-country-printing-world's-money-with-gold-as-the-only-reserve](https://en.wikipedia.org/wiki/Bretton_Woods_system) solution decided in 1944 is quite obvious since the beginning.**
 
 Wait.. wait.. so?
 
@@ -77,7 +77,9 @@ If you're not a USA citizen, your central bank will be more immune to USA & worl
 
 Do not dream that bitcoin will be the only money & currency in this world. Not because it's impossible, but because the change is too dramatic to our current system.
 
-### What Am I Doing Now?
+### My Dream & My Goal
+
+> Bitcoin as the main currency for global trade & country's reserve, by promoting it to as many people as possible, so that we can stop the ongoing widening of income inequality.
 
 I'm saving in bitcoin & gold. And spreading this idea to Indonesian -- my people. To make it simpler & more inviting, I wrap it with the fifth principle of our nation (Pancasila):
 
