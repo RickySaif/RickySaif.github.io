@@ -15,7 +15,7 @@ lang: id
 Buku ini membahas tiga pilar utama Agile dan bagaimana menerapkannya dalam proyek Anda.
 
 &nbsp;
-{% capture agile_book_url %}{% link pages/buku-agile-scrum.md %}{% endcapture %}
+{% capture agile_book_url %}{% link id/buku-agile-scrum.md %}{% endcapture %}
 ## [Filosofi Agile dan Panduan Scrum (2015)]({{ agile_book_url }})
 
 {% include image.html

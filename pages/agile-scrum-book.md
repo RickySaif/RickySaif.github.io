@@ -18,6 +18,8 @@ lang-exclusive:
 
 > "The Scrum guide is consistent with the Scrum Guide"<br>Joshua Partogi, Scrum.org Trainer
 
+_Yes, I worked for Joshua Partogi in 2013-2014_
+
 Building software is hard. Technical problems can often be solved through documentation, Stack Overflow, and engineering practice. The harder problems usually involve product ownership, software design decisions, internal team performance, and the long misunderstandings that happen between people.
 
 Scrum is one answer to that confusion, but many people meet Scrum through scattered explanations, expensive training, or debates that make it harder to know what actually matters. This book was written to remove that confusion and help software development teams work better.
