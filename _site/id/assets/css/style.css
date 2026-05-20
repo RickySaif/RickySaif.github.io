@@ -236,7 +236,7 @@ h6 { font-size: 16px !important; }
 .site-header .site-brand { flex: 1 1 auto; min-width: 0; line-height: 1.25; }
 .site-header .site-title { font-family: "Tiempos Text", "TiemposText", Georgia, "Times New Roman", serif; font-size: 45px; font-weight: bold; float: none; line-height: 1.15; }
 .site-header .site-sub-title { font-size: 20px; color: #828282; margin-left: 6px; }
-.site-header .site-top-menu { position: fixed; top: 97px; left: 0; z-index: 20; width: 220px; height: calc(100vh - 97px); padding: 48px 24px 24px; border-top: 1px solid #e8e8e8; border-right: 1px solid #e8e8e8; background: #fff; font-size: 16px; line-height: 1.6; transform: translateX(0); transition: opacity 0.3s ease, transform 0.2s ease; }
+.site-header .site-top-menu { position: fixed; top: 97px; left: 0; z-index: 20; width: 150px; height: calc(100vh - 97px); padding: 48px 24px 24px; border-top: 1px solid #e8e8e8; border-right: 1px solid #e8e8e8; background: #fff; font-size: 16px; line-height: 1.6; transform: translateX(0); transition: opacity 0.3s ease, transform 0.2s ease; }
 .site-header .site-top-menu a { display: block; padding: 9px 0; font-weight: 500; text-decoration: none; }
 .site-header .site-top-menu a::after { content: none; }
 .site-header .site-top-menu.collapsed { transform: translateX(-100%); pointer-events: none; }
