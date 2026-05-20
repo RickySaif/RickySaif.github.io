@@ -82,5 +82,3 @@ Buku ini ditulis untuk menghilangkan kebingungan tersebut, dan tentunya, membant
 Meski tidak ada jatah penerbit, harga tinggi karena biaya [cetak Print on Demand](http://en.wikipedia.org/wiki/Print_on_demand#Book_publishing).
 
 Hanya dijual dalam bentuk cetak &middot; Di luar ongkos kirim.
-
-Pemesanan: Annisa, di 0857 1123 0476 &amp; annisa.sholiha@gmail.com.

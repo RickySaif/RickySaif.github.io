@@ -80,5 +80,3 @@ Scrum is one answer to that confusion, but many people meet Scrum through scatte
 The price is high because this is printed on demand.
 
 Available only as a printed book. Shipping is not included.
-
-Order from Annisa at 0857 1123 0476 or annisa.sholiha@gmail.com.

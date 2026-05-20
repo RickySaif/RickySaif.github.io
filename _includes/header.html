@@ -47,13 +47,10 @@
       </div>
     </div>
 
-    {% assign webinars_base = '/webinars/' %}
     {% assign books_base = '/books/' %}
     {% if site.active_lang == site.default_lang %}
-      {% assign webinars_url = webinars_base | relative_url %}
       {% assign books_url = books_base | relative_url %}
     {% else %}
-      {% assign webinars_url = '/' | append: site.active_lang | append: webinars_base %}
       {% assign books_url = '/' | append: site.active_lang | append: books_base %}
     {% endif %}
 
@@ -62,13 +59,7 @@
 
     <nav class="site-top-menu" aria-label="Main menu">
       <label class="site-menu-close" for="site-menu-toggle" aria-label="Close menu">&larr;</label>
-      {% if site.active_lang == site.default_lang %}
-        <a href="{{ webinars_url }}">{{ t.webinars }}</a>
-        <a href="{{ books_url }}">{{ t.books }}</a>
-      {% else %}
-        <a href="{{ webinars_url }}">{{ t.webinars }}</a>
-        <a href="{{ books_url }}">{{ t.books }}</a>
-      {% endif %}
+      <a href="{{ books_url }}">{{ t.books }}</a>
     </nav>
 
   </div>
