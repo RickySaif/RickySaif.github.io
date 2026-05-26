@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://rickysaif.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://rickysaif.github.io/" rel="alternate" type="text/html" /><updated>2026-05-20T23:42:25+07:00</updated><id>http://rickysaif.github.io/feed.xml</id><title type="html">Ricky Saif</title><subtitle>A piece of stardust, which gets busy living, while waiting for death.
-</subtitle><entry xml:lang="id"><title type="html">3 Hal Menarik di Umur 30</title><link href="http://rickysaif.github.io/3-hal-menarik-di-umur-30" rel="alternate" type="text/html" title="3 Hal Menarik di Umur 30" /><published>2021-04-29T01:32:50+07:00</published><updated>2021-04-29T01:32:50+07:00</updated><id>http://rickysaif.github.io/tiga-hal-menarik-di-umur-30</id><content type="html" xml:base="http://rickysaif.github.io/3-hal-menarik-di-umur-30"><![CDATA[<p>Sudah satu tahun saya berkepala tiga. Berikut tiga temuan menarik di umur 30:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/id/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/id/" rel="alternate" type="text/html" /><updated>2026-05-21T00:41:17+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ricky Saif</title><subtitle>A piece of stardust, which gets busy living, while waiting for death.
+</subtitle><entry xml:lang="id"><title type="html">3 Hal Menarik di Umur 30</title><link href="http://localhost:4000/id/3-hal-menarik-di-umur-30" rel="alternate" type="text/html" title="3 Hal Menarik di Umur 30" /><published>2021-04-29T01:32:50+07:00</published><updated>2021-04-29T01:32:50+07:00</updated><id>http://localhost:4000/tiga-hal-menarik-di-umur-30</id><content type="html" xml:base="http://localhost:4000/3-hal-menarik-di-umur-30"><![CDATA[<p>Sudah satu tahun saya berkepala tiga. Berikut tiga temuan menarik di umur 30:</p>
 
 <h4 id="1-anak-investasi-sesungguhnya"><strong>1. Anak: Investasi Sesungguhnya</strong></h4>
 
@@ -43,7 +43,7 @@
 
 <div class="image-wrapper">
     
-        <img src="http://RickySaif.github.io/assets/images/kenaikan-harga-terendah-bitcoin.png" alt="Kenaikan Harga Terendah Bitcoin" class="img-fluid border rounded" />
+        <img src="http://localhost:4000/assets/images/kenaikan-harga-terendah-bitcoin.png" alt="Kenaikan Harga Terendah Bitcoin" class="img-fluid border rounded" />
     
     
         <p class="image-caption">BTW, tidak ada <em>bubble</em> yang bisa bertahan sepanjang 11 tahun. Bitcoin sendiri juga tidak bisa dibilang skema ponzi karena tidak punya pusat/pimpinan. Jadi, Bitcoin ini bukan tipu-tipu.</p>
@@ -64,7 +64,7 @@
 
 <div class="image-wrapper">
     
-        <img src="http://RickySaif.github.io/assets/images/CBPP-income-gain-discrepancy.png" alt="" class="img-fluid border rounded" width="450px" />
+        <img src="http://localhost:4000/assets/images/CBPP-income-gain-discrepancy.png" alt="" class="img-fluid border rounded" width="450px" />
     
     
 </div>
