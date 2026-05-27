@@ -10,10 +10,10 @@
   <meta name="description" content="A piece of stardust, which gets busy living, while waiting for death.">
 
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="canonical" href="http://localhost:4000/money">
+  <link rel="canonical" href="http://rickysaif.github.io/money">
   <meta http-equiv="Content-Language" content="en">
-<link rel="alternate" hreflang="en" href="http://localhost:4000/money"/>
-<link rel="alternate" hreflang="id" href="http://localhost:4000/id/money"/>
+<link rel="alternate" hreflang="en" href="http://RickySaif.github.io/money"/>
+<link rel="alternate" hreflang="id" href="http://RickySaif.github.io/id/money"/>
 
   <link rel="alternate" type="application/rss+xml" title="Ricky Saif" href="/feed.xml">
 
@@ -92,30 +92,26 @@
 </header>
 
 <script>
-  const sidebarMenu = document.querySelector('.site-top-menu');
   const checkbox = document.getElementById('site-menu-toggle');
   let lastScrollY = 0;
   
-  if (sidebarMenu && checkbox) {
+  if (checkbox) {
+    const isMobile = () =>
+      window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
     window.addEventListener('scroll', () => {
       const currentScrollY = window.scrollY;
       
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down - collapse sidebar by checking checkbox
-        checkbox.checked = true;
+        // Scrolling down: collapse on desktop, close on mobile.
+        // Desktop CSS uses :checked as "collapsed", mobile CSS uses :checked as "open".
+        checkbox.checked = !isMobile();
       }
       // Don't auto-expand on scroll up - keep collapsed with button visible
       
       lastScrollY = currentScrollY;
     });
     
-    // Handle button clicks to remove collapsed class when expanding
-    checkbox.addEventListener('change', () => {
-      if (!checkbox.checked) {
-        // Menu is being opened - remove collapsed class
-        sidebarMenu.classList.remove('collapsed');
-      }
-    });
   }
 </script>
 
@@ -158,7 +154,7 @@
 
 <div class="image-wrapper">
     
-        <img src="http://localhost:4000/assets/images/money/USD-and-IDR-money-supply.png" alt="USD and IDR money supply" class="img-fluid border rounded" />
+        <img src="http://RickySaif.github.io/assets/images/money/USD-and-IDR-money-supply.png" alt="USD and IDR money supply" class="img-fluid border rounded" />
     
     
         <p class="image-caption">In the USA, Indonesia, and any other countries.</p>
@@ -175,7 +171,7 @@
 
 <div class="image-wrapper">
     
-        <img src="http://localhost:4000/assets/images/money/the-cause-of-Indonesian-inequality.png" alt="The cause of Indonesian inequality" class="img-fluid border rounded" />
+        <img src="http://RickySaif.github.io/assets/images/money/the-cause-of-Indonesian-inequality.png" alt="The cause of Indonesian inequality" class="img-fluid border rounded" />
     
     
         <p class="image-caption">Up until 1978, Indonesian Rupiah had a fixed exchange rate with US Dollar, just like US Dollar to gold in the 1944-1971 era. Thus, prior to 1978, Indonesia's US Dollar reserve was psychologically limiting the Rupiah supply. Source: World Inequality Report 2022.</p>
@@ -186,7 +182,7 @@
 
 <div class="image-wrapper">
     
-        <img src="http://localhost:4000/assets/images/money/CBPP-income-gain-discrepancy-1971.png" alt="income-gain-discrepancy-in-USA-with-key-events" class="img-fluid border rounded" />
+        <img src="http://RickySaif.github.io/assets/images/money/CBPP-income-gain-discrepancy-1971.png" alt="income-gain-discrepancy-in-USA-with-key-events" class="img-fluid border rounded" />
     
     
         <p class="image-caption">Post USD-gold de-pegging in 1971 up until now, the low &amp; middle-class income increase fell compared to the rich.</p>
@@ -195,7 +191,7 @@
 
 <div class="image-wrapper">
     
-        <img src="http://localhost:4000/assets/images/money/BLS-CPI-sejak-tahun-1775.jpg" alt="CPI In United States of America since 1775" class="img-fluid border rounded" />
+        <img src="http://RickySaif.github.io/assets/images/money/BLS-CPI-sejak-tahun-1775.jpg" alt="CPI In United States of America since 1775" class="img-fluid border rounded" />
     
     
         <p class="image-caption">No war in 1971, yet the price keeps increase up until now. Without much income increase, this will hurt the poor most.</p>

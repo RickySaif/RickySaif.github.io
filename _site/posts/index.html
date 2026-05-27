@@ -10,10 +10,10 @@
   <meta name="description" content="A piece of stardust, which gets busy living, while waiting for death.">
 
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="canonical" href="http://localhost:4000/posts/">
+  <link rel="canonical" href="http://rickysaif.github.io/posts/">
   <meta http-equiv="Content-Language" content="en">
-<link rel="alternate" hreflang="en" href="http://localhost:4000/posts/"/>
-<link rel="alternate" hreflang="id" href="http://localhost:4000/id/posts/"/>
+<link rel="alternate" hreflang="en" href="http://RickySaif.github.io/posts/"/>
+<link rel="alternate" hreflang="id" href="http://RickySaif.github.io/id/posts/"/>
 
   <link rel="alternate" type="application/rss+xml" title="Ricky Saif" href="/feed.xml">
 
@@ -92,30 +92,26 @@
 </header>
 
 <script>
-  const sidebarMenu = document.querySelector('.site-top-menu');
   const checkbox = document.getElementById('site-menu-toggle');
   let lastScrollY = 0;
   
-  if (sidebarMenu && checkbox) {
+  if (checkbox) {
+    const isMobile = () =>
+      window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+
     window.addEventListener('scroll', () => {
       const currentScrollY = window.scrollY;
       
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down - collapse sidebar by checking checkbox
-        checkbox.checked = true;
+        // Scrolling down: collapse on desktop, close on mobile.
+        // Desktop CSS uses :checked as "collapsed", mobile CSS uses :checked as "open".
+        checkbox.checked = !isMobile();
       }
       // Don't auto-expand on scroll up - keep collapsed with button visible
       
       lastScrollY = currentScrollY;
     });
     
-    // Handle button clicks to remove collapsed class when expanding
-    checkbox.addEventListener('change', () => {
-      if (!checkbox.checked) {
-        // Menu is being opened - remove collapsed class
-        sidebarMenu.classList.remove('collapsed');
-      }
-    });
   }
 </script>
 
