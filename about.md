@@ -49,7 +49,7 @@ lang: en
   <p>Bring your own situation. Booking is a calendar link, and email reaches me directly.</p>
   <div class="rs-cta-row">
     <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}">Book a call</a>
-    <a class="rs-btn rs-btn--secondary" href="mailto:rizky.syaiful@gmail.com">rizky.syaiful@gmail.com</a>
+    <a class="rs-btn rs-btn--secondary" href="mailto:{{ site.email }}">{{ site.email }}</a>
   </div>
 </section>
 

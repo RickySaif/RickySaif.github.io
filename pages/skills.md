@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Skills"
-subtitle: "Free installable Claude skills for CEOs and the people who advise them."
+subtitle: "Free installable Claude skills for anyone who leads."
 permalink: /skills/
 lang: en
 ---
@@ -46,12 +46,12 @@ lang: en
 
   <div class="rs-skill rs-skill--soon">
     <h3>More skills are being built</h3>
-    <p>More skills for CEOs and the people who advise them are in progress. I am not naming them or dating them until they work. The WhatsApp channel below is how you hear about one when it ships.</p>
+    <p>More skills for CEOs and the people who advise them are in progress. I am not naming them or dating them until they work. Join WhatsApp below to hear about one when it ships.</p>
   </div>
 </section>
 
 {% include whatsapp-cta.html
      heading="Hear when the next skill ships"
      blurb="New skills, and what I learn advising companies on their treasury."
-     button="Join the channel"
-     note="One channel for the whole site." %}
+     button="Join on WhatsApp"
+     note="One WhatsApp, for the whole site." %}

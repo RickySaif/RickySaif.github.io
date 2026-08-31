@@ -12,6 +12,7 @@ lang: en
   <p class="rs-section-intro">Every other asset on the balance sheet gets questioned. Cash sits.</p>
   <p>Inventory turns get reviewed. Receivables get chased. Equipment gets depreciated on a schedule everyone can see. The cash reserve is the one position that is rarely examined, because the number does not move, and a number that does not move looks safe.</p>
   <p>What the number represents is a claim on a currency whose supply keeps expanding. Each expansion spreads the same real output across more units. The balance reads the same at the end of the year as it did at the start, and it buys less. Nothing on the P&amp;L flags it, because in accounting terms nothing happened: no transaction, no write-down, no impairment. There is no account called purchasing power lost.</p>
+  <p>Government bonds do not fix this either. A bond is still a claim on that same expanding currency, lent to the one issuer whose own debt is growing exponentially against the tax base that has to service it. Holding the coupon does not hedge the debasement; it lends the position out at interest and waits to be repaid in units worth less than the ones handed over.</p>
   <p>That is the whole of the argument, and it is not a forecast. It is an observation about what a cash reserve actually is: a large, unhedged, single-asset position that most companies hold by default rather than by decision.</p>
 </section>
 
@@ -48,7 +49,7 @@ lang: en
     <li>I have advised companies for thirteen years, through organizational change, and I have written two books.</li>
     <li>AmityAge commissioned me to build their Bitcoin treasury curriculum, the {% include outlink.html url=site.bta_url text="Bitcoin Treasury Academy" fill="AmityAge / Bitcoin Treasury Academy URL" %}. It is self-paced, it retains an oral exam, and it is in production. The academy is AmityAge's; I build it under their brand.</li>
     <li>I founded {% include outlink.html url=site.bitcoinstitution_url text="Bitcoinstitution" fill="Bitcoinstitution URL" %}, an on-site proctored certification of hard Bitcoin knowledge. It is live and bookable. I own it with angel investors.</li>
-    <li>A paying advisory client since mid-2026.</li>
+    <li>A paying advisory client since mid-2026. Read her story <a href="https://www.instagram.com/p/DcbGVDxCkSu/?img_index=1" target="_blank" rel="noopener">here</a>.</li>
     <li>I host the monthly Bitcoin Indonesia community meetup in Jakarta. More than 30 so far.</li>
     <li>I have spoken at Bitcoin conferences.</li>
   </ul>

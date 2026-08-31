@@ -64,5 +64,5 @@ Two books, two essays, and the posts. The books came out of thirteen years advis
 {% include whatsapp-cta.html
      heading="Get the next one on WhatsApp"
      blurb="New writing, and what I learn advising companies on Bitcoin treasury policy."
-     button="Join the channel"
-     note="One channel for the whole site." %}
+     button="Join on WhatsApp"
+     note="One WhatsApp, for the whole site." %}

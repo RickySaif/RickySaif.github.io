@@ -1,5 +1,5 @@
 {% comment %}
-  Replaces minima's default three-column footer (a Gmail mailto and a Twitter
+  Replaces minima's default three-column footer (a Gmail mailto and an X
   icon on a grey float grid). This is the last thing on every page.
 {% endcomment %}
 <footer class="site-footer" role="contentinfo">
@@ -19,7 +19,7 @@
 
       <div class="rs-footer-contact">
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-        {% if site.twitter_username %}<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">@{{ site.twitter_username }}</a>{% endif %}
+        {% if site.twitter_username %}<a href="https://x.com/{{ site.twitter_username }}" target="_blank" rel="noopener">@{{ site.twitter_username }}</a>{% endif %}
       </div>
     </div>
 

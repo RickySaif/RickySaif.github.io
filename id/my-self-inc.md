@@ -903,7 +903,7 @@ Ketika tim 8–20 orang Anda menjalani ini bersama-sama, mereka melihat perusaha
 <div class="corporate-inquiry">
   <h3>Tertarik membawa ini ke tim Anda?</h3>
   <p>Mari kita bicarakan tentang waktu, ukuran tim, dan seperti apa kesuksesan bagi Anda.</p>
-  <p><strong>Email saya:</strong> <a href="mailto:rizky.syaiful@gmail.com">rizky.syaiful@gmail.com</a></p>
+  <p><strong>Email saya:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   <p style="font-size: 14px; color: #777; margin-top: 20px;"><em>Sertakan: nama perusahaan, ukuran tim, masalah apa yang Anda coba selesaikan (misalnya, "orang terlalu reaktif," "tidak ada budaya kepemilikan," "orang tidak memiliki pertumbuhan mereka")</em></p>
 </div>
 
@@ -954,7 +954,7 @@ Workshop ini bukan tentang menjadi lebih disiplin. Ini tentang menjadi CEO perus
   <h2>Ambil Langkah Berikutnya</h2>
   <div class="cta-buttons">
     <a href="https://forms.gle/YOUR_REGISTRATION_LINK_HERE" class="cta-button primary">Daftar untuk sesi publik</a>
-    <a href="mailto:rizky.syaiful@gmail.com?subject=Pelatihan%20korporat:%20My%20Self,%20Inc" class="cta-button secondary">Inquire tentang pelatihan korporat</a>
+    <a href="mailto:{{ site.email }}?subject=Pelatihan%20korporat:%20My%20Self,%20Inc" class="cta-button secondary">Inquire tentang pelatihan korporat</a>
   </div>
 </div>
 

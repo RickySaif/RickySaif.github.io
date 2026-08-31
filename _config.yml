@@ -14,12 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ricky Saif
-email: rizky.syaiful@gmail.com
+email: ricky@bitcoinstitution.xyz
 description: >- # this means to ignore newlines until "baseurl:"
   Future-Proofing CEOs. Bitcoin for the treasury. AI for the judgment.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://RickySaif.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: RickySaif
+twitter_username: RickySaif_gh_io
 
 disqus:
   shortname: rizkysyaiful
@@ -29,8 +29,8 @@ disqus:
 # site until it is set. Set it once here and every page picks it up.
 # ---------------------------------------------------------------------------
 
-# WhatsApp Channel. ONE channel for the whole site.
-whatsapp_channel_url: "https://whatsapp.com/channel/0029VbA90wsEAKWG14Kij70x"
+# WhatsApp. ONE link for the whole site.
+whatsapp_channel_url: "https://chat.whatsapp.com/CmPHshtEo9LFk2eKS1eCrY?mode=gi_t"
 
 # Outbound proof links. These are credentials, not products -- link only.
 bta_url: "https://www.amityage.com/blog/sf5em5nu9y8uin017ouhd895cpnqxn"               # AmityAge / Bitcoin Treasury Academy

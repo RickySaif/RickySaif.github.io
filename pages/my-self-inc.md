@@ -904,7 +904,7 @@ When your 8–20 person team sits through this together, they see their company 
 <div class="corporate-inquiry">
   <h3>Interested in bringing this to your team?</h3>
   <p>Let's talk about timing, team size, and what success looks like for you.</p>
-  <p><strong>Email me:</strong> <a href="mailto:rizky.syaiful@gmail.com">rizky.syaiful@gmail.com</a></p>
+  <p><strong>Email me:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   <p style="font-size: 14px; color: #777; margin-top: 20px;"><em>Include: company name, team size, what problem you're trying to solve (e.g., "people are too reactive," "no ownership culture," "people don't own their growth")</em></p>
 </div>
 
@@ -953,14 +953,14 @@ The workshop isn't about getting more disciplined. It's about becoming CEO of yo
   <h2>Take the Next Step</h2>
   <div class="cta-buttons">
     <a href="https://forms.gle/YOUR_REGISTRATION_LINK_HERE" class="cta-button primary">Register for public session</a>
-    <a href="mailto:rizky.syaiful@gmail.com?subject=Corporate%20training:%20My%20Self,%20Inc" class="cta-button secondary">Inquire about corporate training</a>
+    <a href="mailto:{{ site.email }}?subject=Corporate%20training:%20My%20Self,%20Inc" class="cta-button secondary">Inquire about corporate training</a>
   </div>
 </div>
 
 {% include whatsapp-cta.html
      heading="Get told when the next session opens"
-     blurb="One channel. New skills, workshop dates, and what I am writing on the treasury and the judgment."
-     button="Join the channel" %}
+     blurb="On WhatsApp: new skills, workshop dates, and what I am writing on the treasury and the judgment."
+     button="Join on WhatsApp" %}
 
 <!-- ===== Addendum for AI: machine-readable spec for building the consultants ===== -->
 <section class="ai-addendum" id="addendum">
