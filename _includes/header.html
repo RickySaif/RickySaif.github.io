@@ -1,90 +1,42 @@
 <header class="site-header" role="banner">
   {% assign t = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
+  {% assign nav_items = "advisory,skills,writing,about" | split: "," %}
 
   <div class="wrapper">
     <div class="site-header-main">
       <div class="site-brand">
         <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-        <span class="site-sub-title"> {{ t.tagline }}</span>
       </div>
+
+      {% comment %}
+        Desktop nav: horizontal, sticky, with a Book a call CTA and current-page
+        state. Replaces the old fixed left rail, which overlapped body text
+        between roughly 769px and 1100px and hid itself on scroll.
+      {% endcomment %}
+      <nav class="site-nav-desktop" aria-label="Main menu">
+        {% for item in nav_items %}
+          {% assign href = "/" | append: item | append: "/" %}
+          <a href="{{ href }}" class="{% if page.url == href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
+        {% endfor %}
+        <a class="site-nav-cta" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a call</a>
+      </nav>
 
       <label class="menu-toggle-button mobile-menu-toggle-button" for="site-menu-toggle" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
       </label>
-      
-      <!-- Language Toggle -->
-      <div class="language-toggle">
-        <ul class="language-list">
-          {% assign path = page.url %}
-          {% capture active_prefix %}/{{ site.active_lang }}{% endcapture %}
-          {% if site.active_lang != site.default_lang %}
-            {% assign path = path | replace_first: active_prefix, '' %}
-          {% endif %}
-          {% assign path_no_lead = path | remove_first: '/' %}
-          
-
-          {% for lang in site.languages %}
-            <li>
-              {% if lang == site.active_lang %}
-                <span class="language-link active">{{ lang | upcase }}</span>
-              {% else %}
-                {% if lang == site.default_lang %}
-                  {% assign target = path %}
-                {% else %}
-                  {% if path_no_lead == '' %}
-                    {% assign target = '/' | append: lang | append: '/' %}
-                  {% else %}
-                    {% assign target = '/' | append: lang | append: '/' | append: path_no_lead %}
-                  {% endif %}
-                {% endif %}
-                <a class="language-link" {% static_href %}href="{{ target | relative_url }}"{% endstatic_href %}>{{ lang | upcase }}</a>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
     </div>
 
-    {% assign books_base = '/books/' %}
-    {% if site.active_lang == site.default_lang %}
-      {% assign books_url = books_base | relative_url %}
-    {% else %}
-      {% assign books_url = '/' | append: site.active_lang | append: books_base %}
-    {% endif %}
-
     <label class="site-menu-overlay" for="site-menu-toggle" aria-label="Close menu"></label>
-    <label class="site-menu-open" for="site-menu-toggle" aria-label="Open menu">&rarr;</label>
 
-    <nav class="site-top-menu" aria-label="Main menu">
+    <nav class="site-mobile-menu" aria-label="Mobile menu">
       <label class="site-menu-close" for="site-menu-toggle" aria-label="Close menu">&larr;</label>
-      <a href="{{ books_url }}">{{ t.books }}</a>
+      {% for item in nav_items %}
+        {% assign href = "/" | append: item | append: "/" %}
+        <a href="{{ href }}" class="{% if page.url == href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
+      {% endfor %}
+      <a class="rs-btn rs-btn--primary rs-btn--wide site-mobile-cta" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a call</a>
     </nav>
-
   </div>
 </header>
-
-<script>
-  const checkbox = document.getElementById('site-menu-toggle');
-  let lastScrollY = 0;
-  
-  if (checkbox) {
-    const isMobile = () =>
-      window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
-
-    window.addEventListener('scroll', () => {
-      const currentScrollY = window.scrollY;
-      
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down: collapse on desktop, close on mobile.
-        // Desktop CSS uses :checked as "collapsed", mobile CSS uses :checked as "open".
-        checkbox.checked = !isMobile();
-      }
-      // Don't auto-expand on scroll up - keep collapsed with button visible
-      
-      lastScrollY = currentScrollY;
-    });
-    
-  }
-</script>

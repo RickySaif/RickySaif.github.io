@@ -1,0 +1,28 @@
+{% comment %}
+  Replaces minima's default three-column footer (a Gmail mailto and a Twitter
+  icon on a grey float grid). This is the last thing on every page.
+{% endcomment %}
+<footer class="site-footer" role="contentinfo">
+  <div class="wrapper">
+    <div class="rs-footer">
+      <div class="rs-footer-cta">
+        <p class="rs-footer-line">Considering bitcoin on the balance sheet?</p>
+        <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a call</a>
+      </div>
+
+      <nav class="rs-footer-links" aria-label="Footer">
+        <a href="/advisory/">Advisory</a>
+        <a href="/skills/">Skills</a>
+        <a href="/writing/">Writing</a>
+        <a href="/about/">About</a>
+      </nav>
+
+      <div class="rs-footer-contact">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        {% if site.twitter_username %}<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">@{{ site.twitter_username }}</a>{% endif %}
+      </div>
+    </div>
+
+    <p class="rs-footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.title }} &middot; Jakarta, Indonesia</p>
+  </div>
+</footer>

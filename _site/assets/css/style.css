@@ -195,29 +195,43 @@ table td { border: 1px solid #e8e8e8; }
 .highlight .vi { color: #008080; }
 .highlight .il { color: #099; }
 
-body { font-family: "Tiempos Text", "TiemposText", Georgia, "Times New Roman", serif; }
+/* One accent, applied deliberately -- link colour, eyebrows, the mechanism's payoff step, the disclosure rule, and nowhere else. Kills minima's inherited #2a7ae2 link blue, which was the site's only accidental colour. */
+a { color: #9a5b00; text-decoration-color: rgba(154, 91, 0, 0.35); }
 
-h1, h2, h3, h4, h5, h6, .post-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+a:visited { color: #9a5b00; }
+
+a:hover { color: #6e4100; text-decoration-color: #6e4100; }
+
+blockquote { border-left: 3px solid #9a5b00; padding: 4px 0 4px 24px; margin: 32px 0; font-style: normal; letter-spacing: 0; font-size: 22px !important; line-height: 1.5 !important; font-weight: 400; color: #111; }
+blockquote p:last-child { margin-bottom: 0 !important; }
+
+pre, code { background: #f5f2ec; border-color: #e2dcd2; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+body { font-family: "Source Serif 4", Georgia, "Times New Roman", serif; }
+
+h1, h2, h3, h4, h5, h6, .post-title { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+h2, h3, .post-title { font-weight: 600; }
 
 /** Paragraph and body text sizing */
-body { font-size: 17px !important; }
+body { font-size: 18px !important; background: #fff; }
 
-p { font-size: 17px !important; line-height: 1.6 !important; }
+p { font-size: 18px !important; line-height: 1.65 !important; }
 
-li { font-size: 17px !important; }
+li { font-size: 18px !important; }
 
-/** Heading sizes with proper hierarchy */
-.post-title { font-size: 34px !important; }
+/** Heading sizes with proper hierarchy -- a real scale with real weight steps, not seven sizes inside a 6px band. */
+.post-title { font-size: 44px !important; font-weight: 700 !important; letter-spacing: -0.01em; line-height: 1.15 !important; }
 
-h1 { font-size: 34px !important; }
+h1 { font-size: 44px !important; font-weight: 700 !important; letter-spacing: -0.01em; }
 
-.post-content h2 { font-size: 26px !important; }
+.post-content h2 { font-size: 32px !important; }
 
-h2 { font-size: 26px !important; }
+h2 { font-size: 32px !important; line-height: 1.2 !important; }
 
-.post-content h3 { font-size: 22px !important; }
+.post-content h3 { font-size: 21px !important; }
 
-h3 { font-size: 22px !important; }
+h3 { font-size: 21px !important; line-height: 1.3 !important; }
 
 .post-content h4 { font-size: 18px !important; }
 
@@ -230,45 +244,47 @@ h6 { font-size: 16px !important; }
 /** Image captions */
 .image-caption { font-size: 15px !important; }
 
-/** header & menu */
-.site-header { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; position: inherit; padding-top: 18px; padding-bottom: 18px; }
-.site-header .site-header-main { display: flex; justify-content: flex-start; align-items: flex-start; gap: 18px; }
-.site-header .site-brand { flex: 1 1 auto; min-width: 0; line-height: 1.25; }
-.site-header .site-title { font-family: "Tiempos Text", "TiemposText", Georgia, "Times New Roman", serif; font-size: 45px; font-weight: bold; float: none; line-height: 1.15; }
-.site-header .site-sub-title { font-size: 20px; color: #828282; margin-left: 6px; }
-.site-header .site-top-menu { position: fixed; top: 97px; left: 0; z-index: 20; width: 150px; height: calc(100vh - 97px); padding: 48px 24px 24px; border-top: 1px solid #e8e8e8; border-right: 1px solid #e8e8e8; background: #fff; font-size: 16px; line-height: 1.6; transform: translateX(0); transition: opacity 0.3s ease, transform 0.2s ease; }
-.site-header .site-top-menu a { display: block; padding: 9px 0; font-weight: 500; text-decoration: none; }
-.site-header .site-top-menu a::after { content: none; }
-.site-header .site-top-menu.collapsed { transform: translateX(-100%); pointer-events: none; }
+/** header & menu Sticky horizontal header. Replaces the old fixed 150px left rail, which overlapped body text between roughly 769px and 1100px and hid itself one-way on scroll. Also drops minima's 5px top slab. */
+.site-header { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; position: sticky; top: 0; z-index: 30; background: #fff; border-top: 0; border-bottom: 1px solid #e2dcd2; padding-top: 0; padding-bottom: 0; }
+.site-header .site-header-main { display: flex; justify-content: space-between; align-items: center; gap: 18px; height: 64px; }
+.site-header .site-brand { flex: 0 0 auto; min-width: 0; line-height: 1; }
+.site-header .site-title { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; float: none; line-height: 1; color: #111; }
+.site-header .site-title:visited { color: #111; }
+.site-header .site-title:hover { color: #9a5b00; text-decoration: none; }
 
-.site-menu-toggle, .site-menu-overlay { display: none; }
+.site-nav-desktop { display: none; }
 
-.menu-toggle-button { display: none; }
+.site-nav-cta { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; color: #fff !important; background: #111; padding: 8px 16px; border-radius: 6px; text-decoration: none !important; }
+.site-nav-cta::after { content: none; }
+.site-nav-cta:hover { opacity: .85; }
 
-.site-menu-open, .site-menu-close { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; display: inline-flex; flex: 0 0 auto; width: 34px; height: 34px; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid #e8e8e8; background: #fff; color: #111; font-size: 20px; line-height: 1; text-decoration: none; cursor: pointer; }
+.menu-toggle-button { display: inline-flex; flex: 0 0 auto; width: 38px; height: 38px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; border-radius: 4px; border: 1px solid #e2dcd2; background: #fff; cursor: pointer; }
+.menu-toggle-button span { display: block; width: 18px; height: 2px; background: #111; }
 
-.site-menu-close { position: absolute; top: 12px; right: 14px; }
+.site-menu-toggle { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-.site-menu-open { position: fixed; top: 127px; left: 14px; z-index: 14; display: none; }
+.site-menu-overlay { display: none; }
 
-.site-menu-toggle:checked ~ .site-header .site-top-menu { transform: translateX(-100%); }
+.site-mobile-menu { position: fixed; top: 0; right: 0; z-index: 40; width: min(82vw, 300px); height: 100vh; padding: 24px; background: #fff; border-left: 1px solid #e2dcd2; transform: translateX(100%); transition: transform 0.25s ease; display: flex; flex-direction: column; gap: 4px; }
+.site-mobile-menu a { display: block; padding: 12px 0; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 17px; font-weight: 500; color: #111; text-decoration: none; border-bottom: 1px solid #ede8df; }
+.site-mobile-menu a.is-current { color: #9a5b00; }
 
-.site-menu-toggle:checked ~ .site-header .site-menu-open { display: inline-flex; }
+.site-mobile-menu .rs-btn--wide { width: 100% !important; margin-top: 20px; }
 
-@media only screen and (max-width: 768px) { .site-header { margin-left: 0; padding-top: 16px; padding-bottom: 16px; }
-  .site-header .site-header-main { align-items: flex-start; gap: 10px; }
-  .site-header .site-brand { flex: 1 1 min-content; order: 1; }
-  .site-header .menu-toggle-button { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; display: inline-flex; flex: 0 0 auto; width: 38px; height: 38px; align-items: center; justify-content: center; flex-direction: column; gap: 5px; border-radius: 4px; border: 1px solid #e8e8e8; background: #fff; cursor: pointer; order: 3; }
-  .site-header .menu-toggle-button span { display: block; width: 18px; height: 2px; background: #111; }
-  .site-header .site-title { display: block; font-size: 30px; }
-  .site-header .site-sub-title { display: block; margin-top: 3px; margin-left: 0; font-size: 20px; line-height: 1.25; }
-  .site-header .site-top-menu { top: 97px; left: auto; right: 0; width: min(78vw, 290px); height: calc(100vh - 97px); border-right: 0; border-left: 1px solid #e8e8e8; font-size: 16px; transform: translateX(100%); }
-  .page-content, .site-footer { margin-left: 0; }
-  .site-menu-overlay { position: fixed; inset: 0; z-index: 15; background: rgba(0, 0, 0, 0.18); cursor: pointer; }
-  .site-menu-toggle:not(:checked) ~ .site-header .site-menu-overlay { display: none; }
-  .site-menu-toggle:checked ~ .site-header .site-menu-overlay { display: block; }
-  .site-menu-toggle:checked ~ .site-header .site-top-menu { transform: translateX(0); }
-  .site-menu-toggle:checked ~ .site-header .site-menu-open { display: none; } }
+.site-menu-close { align-self: flex-end; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 22px; line-height: 1; color: #111; cursor: pointer; margin-bottom: 8px; background: none; border: 0; }
+
+.site-menu-toggle:checked ~ .site-header .site-mobile-menu { transform: translateX(0); }
+
+.site-menu-toggle:checked ~ .site-header .site-menu-overlay { display: block; position: fixed; inset: 0; z-index: 35; background: rgba(0, 0, 0, 0.18); cursor: pointer; }
+
+@media only screen and (min-width: 769px) { .site-nav-desktop { display: flex; align-items: center; gap: 24px; }
+  .site-nav-desktop a:not(.site-nav-cta) { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 500; color: #444; text-decoration: none; padding: 4px 0; border-bottom: 2px solid transparent; }
+  .site-nav-desktop a:not(.site-nav-cta):hover { color: #111; }
+  .site-nav-desktop a:not(.site-nav-cta).is-current { color: #111; border-bottom-color: #111; }
+  .site-nav-cta { padding: 8px 16px; }
+  .menu-toggle-button, .site-mobile-menu, .site-menu-overlay { display: none !important; } }
+@media only screen and (max-width: 768px) { .site-header .site-header-main { height: 60px; }
+  .site-title { font-size: 18px; } }
 /** image on text */
 .image-wrapper { text-align: center; margin-top: 23px; margin-bottom: 15px; }
 .image-wrapper .image-caption { color: #828282; max-width: 500px; margin: 0 auto; }
@@ -276,7 +292,7 @@ h6 { font-size: 16px !important; }
 hr.short { display: block; width: 20%; margin: 50px auto 40px auto; border: 1px solid #dededc; }
 
 /** Language Toggle */
-.language-toggle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; flex: 0 0 auto; margin-top: 1px; }
+.language-toggle { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; flex: 0 0 auto; margin-top: 1px; }
 .language-toggle .language-list { list-style: none; padding: 0; margin: 0; display: flex; gap: 12px; }
 .language-toggle .language-list li .language-link { font-size: 14px; color: #828282; text-decoration: none; padding: 4px 8px; border-radius: 3px; transition: all 0.3s ease; }
 .language-toggle .language-list li .language-link:hover { background-color: #f5f5f5; color: #111; }
@@ -285,3 +301,231 @@ hr.short { display: block; width: 20%; margin: 50px auto 40px auto; border: 1px 
 @media only screen and (max-width: 768px) { .language-toggle { margin-top: 0; order: 2; }
   .language-toggle .language-list { gap: 8px; }
   .language-toggle .language-list li .language-link { display: block; font-size: 16px; padding: 6px 10px; } }
+/* ========================================================================== Revamp components (2026)
+ Shared building blocks for the homepage, /advisory/, /skills/, /writing/ and /about/. Defined once here so every page reads as the same site.
+ Design language is the existing one: system-sans headings, serif body, #111 on near-white, hairline #e8e8e8 borders, generous whitespace. Mobile first -- every rule below is the small-screen rule; wider screens only add. ========================================================================== */
+.rs-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* --- Unanswered fill-ins. Deliberately loud: these must not ship unnoticed. */
+.rs-fill { display: inline-block; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px !important; line-height: 1.5; font-weight: 600; color: #8a5a00; background: #fff6e0; border: 1px dashed #e0b45e; border-radius: 5px; padding: 3px 9px; }
+.rs-fill code { font-size: 12px; background: transparent; border: 0; padding: 0; }
+
+/* --- Sections ------------------------------------------------------------ */
+.rs-section { margin: 56px 0; padding-bottom: 56px; border-bottom: 1px solid #ede8df; }
+.rs-section:last-child { border-bottom: 0; padding-bottom: 0; }
+.rs-section > h2 { font-size: 24px !important; line-height: 1.25; margin: 0 0 8px 0; color: #111; }
+
+.rs-eyebrow { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 1.5px; font-size: 12px !important; font-weight: 700; color: #9a5b00; margin: 0 0 12px 0; }
+
+.rs-section-intro { color: #666; margin: 0 0 28px 0 !important; }
+
+/* --- Hero ---------------------------------------------------------------- */
+.rs-hero { margin: 32px 0 0 0; padding-bottom: 44px; border-bottom: 1px solid #e2dcd2; }
+.rs-hero h1 { font-size: 38px !important; line-height: 1.1; letter-spacing: -0.6px; margin: 0 0 14px 0; color: #111; }
+
+.rs-hero-engine { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 19px !important; line-height: 1.45 !important; font-weight: 600; color: #111; margin: 0 0 28px 0 !important; }
+
+.rs-hero-lead { font-size: 18px !important; line-height: 1.75 !important; color: #444; max-width: 620px; margin: 0 0 16px 0 !important; }
+.rs-hero-lead:last-of-type { margin-bottom: 32px !important; }
+
+.rs-hero-lead strong { color: #111; }
+
+/* --- Buttons ------------------------------------------------------------- */
+.rs-cta-row { display: flex; flex-direction: column; gap: 12px; align-items: stretch; margin: 28px 0 0 0; }
+
+.rs-btn { display: inline-block; text-align: center; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 600; line-height: 1.3; text-decoration: none !important; padding: 14px 26px; border-radius: 6px; border: 1px solid transparent; cursor: pointer; transition: opacity .2s ease, background .2s ease; }
+.rs-btn:after { content: none; }
+
+.rs-btn--primary { background: #111; color: #fff !important; border-color: #111; }
+.rs-btn--primary:hover { opacity: .85; }
+.rs-btn--primary:disabled { opacity: .45; cursor: not-allowed; }
+
+.rs-btn--secondary { background: #fff; color: #111 !important; border-color: #d6d6d6; }
+.rs-btn--secondary:hover { background: #f5f5f5; }
+
+.rs-btn--wide { width: 100%; }
+
+/* --- The two fronts ------------------------------------------------------ */
+.rs-fronts { display: grid; grid-template-columns: 1fr; gap: 18px; margin: 28px 0 0 0; }
+
+.rs-front { border: 1px solid #e2dcd2; border-radius: 12px; padding: 26px 22px; background: #f5f2ec; }
+.rs-front h3 { font-size: 21px !important; font-weight: 600; margin: 0 0 4px 0; color: #111; }
+
+.rs-front-label { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 1.4px; font-size: 11px !important; font-weight: 700; color: #767676; margin: 0 0 10px 0 !important; }
+
+/* The mechanism, one step per line, so the parallel between the two cards is visible at a glance. */
+.rs-mechanism { list-style: none; margin: 18px 0 0 0; padding: 0; counter-reset: rs-step; }
+.rs-mechanism li { position: relative; padding: 0 0 0 30px; margin: 0 0 14px 0; font-size: 15px !important; line-height: 1.6; color: #444; }
+.rs-mechanism li:last-child { margin-bottom: 0; font-weight: 600; color: #111; }
+.rs-mechanism li:before { counter-increment: rs-step; content: counter(rs-step); position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%; background: #ececec; color: #666; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center; }
+.rs-mechanism li:last-child:before { background: #9a5b00; color: #fff; }
+
+/* --- Proof strip --------------------------------------------------------- */
+.rs-proof { list-style: none; margin: 24px 0 0 0; padding: 0; }
+.rs-proof li { position: relative; padding: 0 0 0 22px; margin: 0 0 14px 0; font-size: 16px !important; line-height: 1.6; color: #444; }
+.rs-proof li:before { content: ""; position: absolute; left: 0; top: 10px; width: 7px; height: 7px; border-radius: 50%; background: #111; }
+.rs-proof li:last-child { margin-bottom: 0; }
+
+/* --- Plain bordered card, used for the offer and for callouts ------------ */
+.rs-card { border: 1px solid #e2dcd2; border-radius: 12px; padding: 26px 22px; background: #fff; box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04), 0 8px 24px -12px rgba(17, 17, 17, 0.1); margin: 24px 0; }
+.rs-card h3 { font-size: 21px !important; font-weight: 600; margin: 0 0 10px 0; color: #111; }
+.rs-card p:last-child { margin-bottom: 0; }
+
+.rs-card--wash { background: #f5f2ec; }
+
+/* --- Disclosure. A stated interest, made impossible to miss. ------------- */
+.rs-disclosure { border-left: 3px solid #9a5b00; background: #f5f2ec; border-radius: 0 8px 8px 0; padding: 18px 20px; margin: 24px 0; }
+.rs-disclosure p { font-size: 15px !important; line-height: 1.7 !important; color: #444; margin: 0; }
+.rs-disclosure strong { color: #111; }
+
+/* --- Definition rows: "who it's for", pricing, engagement shape ---------- */
+.rs-rows { margin: 24px 0; border-top: 1px solid #e2dcd2; }
+.rs-rows > div { padding: 18px 0; border-bottom: 1px solid #e2dcd2; }
+
+.rs-row-label { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px !important; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #767676; margin: 0 0 6px 0 !important; }
+
+.rs-row-value { font-size: 16px !important; line-height: 1.65 !important; color: #444; margin: 0 !important; }
+.rs-row-value strong { color: #111; }
+
+/* --- Skill card ---------------------------------------------------------- */
+.rs-skill { border: 1px solid #e2dcd2; border-radius: 12px; padding: 28px 22px; background: #fff; margin: 28px 0; }
+.rs-skill h3 { font-size: 21px !important; font-weight: 600; line-height: 1.3; margin: 0 0 6px 0; color: #111; }
+
+.rs-skill-mechanism { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px !important; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; color: #767676; margin: 0 0 18px 0 !important; }
+
+.rs-skill--soon { border-style: dashed; background: #f5f2ec; color: #666; }
+
+.rs-seats { list-style: none; margin: 18px 0; padding: 0; }
+.rs-seats li { padding: 10px 0; border-top: 1px solid #ede8df; font-size: 15px !important; line-height: 1.6; color: #444; }
+.rs-seats li:first-child { border-top: 0; }
+.rs-seats li strong { color: #111; }
+
+/* --- Writing index ------------------------------------------------------- */
+.rs-entries { margin: 24px 0 0 0; }
+
+.rs-entry { padding: 20px 0; border-top: 1px solid #ede8df; }
+.rs-entry:first-child { border-top: 0; padding-top: 0; }
+.rs-entry h3 { font-size: 21px !important; font-weight: 600; line-height: 1.35; margin: 0 0 6px 0; }
+.rs-entry p { font-size: 15px !important; line-height: 1.65 !important; color: #666; margin: 0 !important; }
+
+.rs-entry-meta { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px !important; letter-spacing: 0.6px; text-transform: uppercase; color: #767676; margin: 0 0 6px 0 !important; }
+
+/* --- WhatsApp channel invite ---------------------------------------------- */
+.rs-whatsapp { border: 1px solid #e2dcd2; border-radius: 12px; background: #f5f2ec; padding: 30px 22px; margin: 48px 0; }
+
+.rs-whatsapp-heading { font-size: 21px !important; line-height: 1.3; margin: 0 0 8px 0 !important; color: #111; }
+
+.rs-whatsapp-blurb { font-size: 16px !important; line-height: 1.65 !important; color: #666; margin: 0 0 20px 0 !important; }
+
+.rs-whatsapp-note { font-size: 13px !important; line-height: 1.6 !important; color: #767676; margin: 14px 0 0 0 !important; }
+
+/* --- Hero: name eyebrow, subhead, portrait column ------------------------ */
+.rs-hero-name { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: .12em; font-size: 12px !important; font-weight: 700; color: #9a5b00; margin: 0 0 14px 0 !important; }
+
+.rs-hero-subhead { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px !important; line-height: 1.5 !important; font-weight: 500; color: #666; max-width: 620px; margin: 0 0 22px 0 !important; }
+
+.rs-hero-grid { display: flex; flex-direction: column-reverse; gap: 28px; }
+
+.rs-hero-content { min-width: 0; }
+
+.rs-hero-portrait { display: block; width: 140px; height: 175px; object-fit: cover; border-radius: 8px; border: 1px solid #e2dcd2; box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04), 0 8px 24px -12px rgba(17, 17, 17, 0.1); }
+
+@media (min-width: 860px) { .rs-hero-grid { flex-direction: row; align-items: flex-start; justify-content: space-between; gap: 48px; }
+  .rs-hero-content { flex: 1 1 auto; }
+  .rs-hero-portrait-wrap { flex: 0 0 auto; }
+  .rs-hero-portrait { width: 260px; height: 325px; } }
+/* --- Proof strip: four hard numbers --------------------------------------- */
+.rs-proof-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 16px; margin: 28px 0 0 0; padding: 0; list-style: none; }
+
+.rs-proof-strip li { border-left: 2px solid #e2dcd2; padding-left: 14px; }
+
+.rs-proof-strip .num { display: block; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 700; color: #111; line-height: 1; }
+
+.rs-proof-strip .label { display: block; margin-top: 4px; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: #767676; }
+
+@media (min-width: 620px) { .rs-proof-strip { grid-template-columns: repeat(4, 1fr); } }
+/* --- Credential band ------------------------------------------------------ */
+.rs-credentials { display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: center; padding: 22px 0; margin: 32px 0 0 0; border-top: 1px solid #e2dcd2; border-bottom: 1px solid #e2dcd2; }
+
+.rs-credentials a, .rs-credentials span { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #666; text-decoration: none; }
+
+.rs-credentials a:hover { color: #9a5b00; }
+
+/* --- The two debasements: SVG diagram at rest, cards on narrow screens --- */
+.rs-debasement-diagram { display: none; }
+
+.rs-debasement-diagram svg { width: 100%; height: auto; display: block; }
+
+@media (min-width: 700px) { .rs-debasement-diagram { display: block; margin-top: 28px; }
+  .rs-debasement-cards { display: none; } }
+/* --- Offer cards: paid gets visual primacy -------------------------------- */
+.rs-offer--paid { background: #111; border-color: #111; }
+.rs-offer--paid h3, .rs-offer--paid p, .rs-offer--paid .rs-tab-meta { color: #fff; }
+.rs-offer--paid .rs-tab-meta { color: rgba(255, 255, 255, 0.62); }
+.rs-offer--paid .rs-btn--primary { background: #fff; border-color: #fff; color: #111 !important; }
+.rs-offer--paid .rs-btn--primary:hover { opacity: .88; }
+.rs-offer--paid .rs-btn--secondary { background: transparent; border-color: rgba(255, 255, 255, 0.4); color: #fff !important; }
+.rs-offer--paid .rs-btn--secondary:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* --- What you can verify: numbers + credential cards ---------------------- */
+.rs-verify-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 28px 0 0 0; }
+
+.rs-verify-card { border: 1px solid #e2dcd2; border-radius: 10px; padding: 20px; background: #fff; box-shadow: 0 1px 2px rgba(17, 17, 17, 0.04), 0 8px 24px -12px rgba(17, 17, 17, 0.1); }
+
+.rs-verify-card h3 { font-size: 16px !important; margin: 0 0 6px 0; color: #111; }
+
+.rs-verify-card p { font-size: 14.5px !important; color: #666; margin: 0 !important; }
+
+@media (min-width: 700px) { .rs-verify-grid { grid-template-columns: repeat(3, 1fr); } }
+/* --- Close band: booking CTA on ink ---------------------------------------- */
+.rs-close-band { background: #111; border-radius: 14px; padding: 40px 28px; text-align: center; }
+.rs-close-band h2 { color: #fff; }
+.rs-close-band p { color: rgba(255, 255, 255, 0.72); }
+.rs-close-band .rs-btn--primary { background: #fff; color: #111 !important; border-color: #fff; }
+.rs-close-band .rs-btn--primary:hover { opacity: .88; }
+.rs-close-band .rs-cta-row { justify-content: center; }
+
+/* --- Footer ---------------------------------------------------------------- */
+.site-footer { border-top: 1px solid #e2dcd2; background: #f5f2ec; padding: 40px 0 28px 0; }
+
+.rs-footer { display: flex; flex-direction: column; gap: 24px; }
+
+.rs-footer-cta { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+
+.rs-footer-line { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 19px !important; font-weight: 600; color: #111; margin: 0 !important; }
+
+.rs-footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+.rs-footer-links a { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; color: #444; text-decoration: none; }
+.rs-footer-links a:hover { color: #9a5b00; }
+
+.rs-footer-contact { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; color: #666; }
+
+.rs-footer-contact a { color: #666; text-decoration: none; }
+.rs-footer-contact a:hover { color: #9a5b00; }
+
+.rs-footer-copyright { margin: 28px 0 0 0 !important; padding-top: 20px; border-top: 1px solid #e2dcd2; font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12.5px !important; color: #767676; }
+
+@media (min-width: 620px) { .rs-footer { flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; } }
+/* --- Wider screens ------------------------------------------------------- */
+@media only screen and (min-width: 620px) { .rs-hero { margin-top: 44px; padding-bottom: 56px; }
+  .rs-hero h1 { font-size: 52px !important; }
+  .rs-hero-engine { font-size: 21px !important; }
+  .rs-cta-row { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .rs-btn--wide { width: auto; }
+  .rs-fronts { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .rs-section { margin: 72px 0; padding-bottom: 72px; }
+  .rs-front, .rs-card, .rs-skill, .rs-whatsapp { padding-left: 28px; padding-right: 28px; }
+  .rs-rows > div { display: grid; grid-template-columns: 190px 1fr; gap: 20px; align-items: baseline; }
+  .rs-row-label { margin-bottom: 0 !important; } }
+/* ========================================================================== The bridge line and the two-front tabs
+ The bridge is the one line that names the shared logic between the two fronts. The tabs below it split the two offers apart so each gets its own panel instead of the treasury having a section and the judgment having none.
+ Tabs are CSS-only: radio inputs plus :checked sibling selectors, the same mechanism the mobile menu already uses. No JavaScript, no framework. The radios stay focusable, so arrow keys switch panels. ========================================================================== */
+.rs-bridge { position: relative; text-align: center; font-size: 18px !important; line-height: 1.55 !important; color: #666; max-width: 520px; margin: 40px auto 0 auto !important; padding-top: 34px; }
+.rs-bridge:before { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 56px; height: 1px; background: #dededc; }
+.rs-bridge strong { color: #111; font-weight: 600; }
+
+/* .rs-tab-meta is kept -- reused as the "Paid engagement" / "Free, installable" label on the two always-visible offer cards below. The radio-input CSS-only tab mechanism itself is gone: it hid whichever offer wasn't checked by default, on a homepage where a first-time visitor doesn't yet know which half he wants. */
+.rs-tab-meta { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; letter-spacing: 1.4px; font-size: 11px !important; font-weight: 700; color: #767676; margin: 0 0 10px 0 !important; }
+
+@media only screen and (min-width: 620px) { .rs-bridge { font-size: 19px !important; } }

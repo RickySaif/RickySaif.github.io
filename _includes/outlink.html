@@ -1,0 +1,14 @@
+{% comment %}
+  An outbound proof link, or a visible [FILL: ...] marker while the URL is unset.
+
+  Parameters:
+    url   - the destination (may be empty; usually a site.* config value)
+    text  - the link text
+    fill  - what to ask for in the marker when url is empty
+{% endcomment %}
+{%- assign target = include.url | default: '' -%}
+{%- if target != '' -%}
+<a href="{{ target }}" target="_blank" rel="noopener">{{ include.text }}</a>
+{%- else -%}
+{{ include.text }} <span class="rs-fill">[FILL: {{ include.fill }}]</span>
+{%- endif -%}

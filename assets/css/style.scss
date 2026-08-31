@@ -3,11 +3,60 @@
 
 @import "{{ site.theme }}";
 
-$sidebar-width: 150px;
-$header-offset: 97px;
-$claude-body-font: "Tiempos Text", "TiemposText", Georgia, "Times New Roman", serif;
-$heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$ui-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-height: 64px;
+$claude-body-font: "Source Serif 4", Georgia, "Times New Roman", serif;
+$heading-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$ui-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$rs-ink:        #111;
+$rs-body:       #444;
+$rs-muted:      #666;
+$rs-faint:      #767676;
+$rs-line:       #e2dcd2;
+$rs-line-soft:  #ede8df;
+$rs-wash:       #f5f2ec;
+
+$rs-accent:       #9a5b00;
+$rs-accent-hover: #6e4100;
+$rs-accent-soft:  #fbf6ee;
+
+$rs-shadow: 0 1px 2px rgba(17,17,17,.04), 0 8px 24px -12px rgba(17,17,17,.10);
+
+/* One accent, applied deliberately -- link colour, eyebrows, the mechanism's
+   payoff step, the disclosure rule, and nowhere else. Kills minima's
+   inherited #2a7ae2 link blue, which was the site's only accidental colour. */
+a {
+  color: $rs-accent;
+  text-decoration-color: rgba(154, 91, 0, 0.35);
+}
+a:visited {
+  color: $rs-accent;
+}
+a:hover {
+  color: $rs-accent-hover;
+  text-decoration-color: $rs-accent-hover;
+}
+
+blockquote {
+  border-left: 3px solid $rs-accent;
+  padding: 4px 0 4px 24px;
+  margin: 32px 0;
+  font-style: normal;
+  letter-spacing: 0;
+  font-size: 22px !important;
+  line-height: 1.5 !important;
+  font-weight: 400;
+  color: $rs-ink;
+
+  p:last-child { margin-bottom: 0 !important; }
+}
+
+pre, code {
+  background: $rs-wash;
+  border-color: $rs-line;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
 
 body{
   font-family: $claude-body-font;
@@ -23,43 +72,56 @@ h6,
   font-family: $heading-font;
 }
 
+h2, h3, .post-title {
+  font-weight: 600;
+}
+
 /** Paragraph and body text sizing */
 body {
-  font-size: 17px !important;
+  font-size: 18px !important;
+  background: #fff;
 }
 
 p {
-  font-size: 17px !important;
-  line-height: 1.6 !important;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
 }
 
 li {
-  font-size: 17px !important;
+  font-size: 18px !important;
 }
 
-/** Heading sizes with proper hierarchy */
+/** Heading sizes with proper hierarchy -- a real scale with real weight
+    steps, not seven sizes inside a 6px band. */
 .post-title {
-  font-size: 34px !important;
+  font-size: 44px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+  line-height: 1.15 !important;
 }
 
 h1 {
-  font-size: 34px !important;
+  font-size: 44px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
 }
 
 .post-content h2 {
-  font-size: 26px !important;
+  font-size: 32px !important;
 }
 
 h2 {
-  font-size: 26px !important;
+  font-size: 32px !important;
+  line-height: 1.2 !important;
 }
 
 .post-content h3 {
-  font-size: 22px !important;
+  font-size: 21px !important;
 }
 
 h3 {
-  font-size: 22px !important;
+  font-size: 21px !important;
+  line-height: 1.3 !important;
 }
 
 .post-content h4 {
@@ -83,215 +145,204 @@ h6 {
   font-size: 15px !important;
 }
 
-/** header & menu */
+/** header & menu
+    Sticky horizontal header. Replaces the old fixed 150px left rail, which
+    overlapped body text between roughly 769px and 1100px and hid itself
+    one-way on scroll. Also drops minima's 5px top slab. */
 .site-header{
   font-family: $ui-font;
-  position: inherit;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #fff;
+  border-top: 0;
+  border-bottom: 1px solid $rs-line;
+  padding-top: 0;
+  padding-bottom: 0;
 
   .site-header-main{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
     gap: 18px;
+    height: $header-height;
   }
 
   .site-brand{
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     min-width: 0;
-    line-height: 1.25;
+    line-height: 1;
   }
 
   .site-title{
-    font-family: $claude-body-font;
-    font-size: 45px;
-    font-weight: bold;
-    float: none;
-    line-height: 1.15;
-  }
-  .site-sub-title{
+    font-family: $ui-font;
     font-size: 20px;
-    color: $grey-color;
-    margin-left: 6px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    float: none;
+    line-height: 1;
+    color: $rs-ink;
+
+    &:visited{ color: $rs-ink; }
+    &:hover{ color: $rs-accent; text-decoration: none; }
   }
-  .site-top-menu{
-    position: fixed;
-    top: $header-offset;
-    left: 0;
-    z-index: 20;
-    width: $sidebar-width;
-    height: calc(100vh - #{$header-offset});
-    padding: 48px 24px 24px;
-    border-top: 1px solid $grey-color-light;
-    border-right: 1px solid $grey-color-light;
-    background: #fff;
-    font-size: 16px;
-    line-height: 1.6;
-    transform: translateX(0);
-    transition: opacity 0.3s ease, transform 0.2s ease;
-
-    a{
-      display: block;
-      padding: 9px 0;
-      font-weight: 500;
-      text-decoration: none;
-
-      &::after{
-        content: none;
-      }
-    }
-  }
-
-  .site-top-menu.collapsed {
-    transform: translateX(-100%);
-    pointer-events: none;
-  }
-
 }
 
-.site-menu-toggle,
+.site-nav-desktop{
+  display: none;
+}
+
+.site-nav-cta{
+  font-family: $ui-font;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff !important;
+  background: $rs-ink;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none !important;
+
+  &::after{ content: none; }
+  &:hover{ opacity: .85; }
+}
+
+.menu-toggle-button{
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 4px;
+  border: 1px solid $rs-line;
+  background: #fff;
+  cursor: pointer;
+
+  span{
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: $rs-ink;
+  }
+}
+
+.site-menu-toggle{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-menu-overlay{
   display: none;
 }
 
-.menu-toggle-button{
-  display: none;
+.site-mobile-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 40;
+  width: min(82vw, 300px);
+  height: 100vh;
+  padding: 24px;
+  background: #fff;
+  border-left: 1px solid $rs-line;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  a{
+    display: block;
+    padding: 12px 0;
+    font-family: $ui-font;
+    font-size: 17px;
+    font-weight: 500;
+    color: $rs-ink;
+    text-decoration: none;
+    border-bottom: 1px solid $rs-line-soft;
+
+    &.is-current{ color: $rs-accent; }
+  }
 }
 
-.site-menu-open,
+.site-mobile-menu .rs-btn--wide{
+  width: 100% !important;
+  margin-top: 20px;
+}
+
 .site-menu-close{
+  align-self: flex-end;
   font-family: $ui-font;
-  display: inline-flex;
-  flex: 0 0 auto;
-  width: 34px;
-  height: 34px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  border: 1px solid $grey-color-light;
-  background: #fff;
-  color: #111;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1;
-  text-decoration: none;
+  color: $rs-ink;
+  cursor: pointer;
+  margin-bottom: 8px;
+  background: none;
+  border: 0;
+}
+
+.site-menu-toggle:checked ~ .site-header .site-mobile-menu{
+  transform: translateX(0);
+}
+
+.site-menu-toggle:checked ~ .site-header .site-menu-overlay{
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  background: rgba(0, 0, 0, 0.18);
   cursor: pointer;
 }
 
-.site-menu-close{
-  position: absolute;
-  top: 12px;
-  right: 14px;
-}
+@media only screen and (min-width: 769px) {
+  .site-nav-desktop{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
 
-.site-menu-open{
-  position: fixed;
-  top: ($header-offset + 30px);
-  left: 14px;
-  z-index: 14;
-  display: none;
-}
+  .site-nav-desktop a:not(.site-nav-cta){
+    font-family: $ui-font;
+    font-size: 15px;
+    font-weight: 500;
+    color: $rs-body;
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
 
-.site-menu-toggle:checked ~ .site-header .site-top-menu{
-  transform: translateX(-100%);
-}
+    &:hover{ color: $rs-ink; }
+    &.is-current{ color: $rs-ink; border-bottom-color: $rs-ink; }
+  }
 
-.site-menu-toggle:checked ~ .site-header .site-menu-open{
-  display: inline-flex;
+  .site-nav-cta{
+    padding: 8px 16px;
+  }
+
+  .menu-toggle-button,
+  .site-mobile-menu,
+  .site-menu-overlay{
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .site-header{
-      margin-left: 0;
-      padding-top: 16px;
-      padding-bottom: 16px;
+  .site-header .site-header-main{
+    height: 60px;
+  }
 
-      .site-header-main{
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .site-brand{
-        flex: 1 1 min-content;
-        order: 1;
-      }
-
-      .menu-toggle-button{
-        font-family: $ui-font;
-        display: inline-flex;
-        flex: 0 0 auto;
-        width: 38px;
-        height: 38px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 5px;
-        border-radius: 4px;
-        border: 1px solid $grey-color-light;
-        background: #fff;
-        cursor: pointer;
-        order: 3;
-
-        span{
-          display: block;
-          width: 18px;
-          height: 2px;
-          background: #111;
-        }
-      }
-
-      .site-title{
-        display: block;
-        font-size: 30px;
-      }
-      .site-sub-title {
-        display: block;
-        margin-top: 3px;
-        margin-left: 0;
-        font-size: 20px;
-        line-height: 1.25;
-      }
-      .site-top-menu {
-        top: $header-offset;
-        left: auto;
-        right: 0;
-        width: min(78vw, 290px);
-        height: calc(100vh - #{$header-offset});
-        border-right: 0;
-        border-left: 1px solid $grey-color-light;
-        font-size: 16px;
-        transform: translateX(100%);
-      }
-    }
-
-    .page-content,
-    .site-footer{
-      margin-left: 0;
-    }
-
-    .site-menu-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: 15;
-      background: rgba(0, 0, 0, 0.18);
-      cursor: pointer;
-    }
-
-    .site-menu-toggle:not(:checked) ~ .site-header .site-menu-overlay{
-      display: none;
-    }
-
-    .site-menu-toggle:checked ~ .site-header .site-menu-overlay{
-      display: block;
-    }
-
-    .site-menu-toggle:checked ~ .site-header .site-top-menu{
-      transform: translateX(0);
-    }
-
-    .site-menu-toggle:checked ~ .site-header .site-menu-open{
-      display: none;
-    }
+  .site-title{
+    font-size: 18px;
+  }
 }
 
 /** image on text */
@@ -366,4 +417,856 @@ hr.short{
       }
     }
   }
+}
+
+
+/* ==========================================================================
+   Revamp components (2026)
+
+   Shared building blocks for the homepage, /advisory/, /skills/, /writing/
+   and /about/. Defined once here so every page reads as the same site.
+
+   Design language is the existing one: system-sans headings, serif body,
+   #111 on near-white, hairline #e8e8e8 borders, generous whitespace.
+   Mobile first -- every rule below is the small-screen rule; wider screens
+   only add.
+   ========================================================================== */
+
+
+.rs-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Unanswered fill-ins. Deliberately loud: these must not ship unnoticed. */
+.rs-fill {
+  display: inline-block;
+  font-family: $ui-font;
+  font-size: 13px !important;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #8a5a00;
+  background: #fff6e0;
+  border: 1px dashed #e0b45e;
+  border-radius: 5px;
+  padding: 3px 9px;
+
+  code {
+    font-size: 12px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+}
+
+/* --- Sections ------------------------------------------------------------ */
+.rs-section {
+  margin: 56px 0;
+  padding-bottom: 56px;
+  border-bottom: 1px solid $rs-line-soft;
+
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  > h2 {
+    font-size: 24px !important;
+    line-height: 1.25;
+    margin: 0 0 8px 0;
+    color: $rs-ink;
+  }
+}
+
+.rs-eyebrow {
+  font-family: $ui-font;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 12px !important;
+  font-weight: 700;
+  color: $rs-accent;
+  margin: 0 0 12px 0;
+}
+
+.rs-section-intro {
+  color: $rs-muted;
+  margin: 0 0 28px 0 !important;
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+.rs-hero {
+  margin: 32px 0 0 0;
+  padding-bottom: 44px;
+  border-bottom: 1px solid $rs-line;
+
+  h1 {
+    font-size: 38px !important;
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    margin: 0 0 14px 0;
+    color: $rs-ink;
+  }
+}
+
+.rs-hero-engine {
+  font-family: $ui-font;
+  font-size: 19px !important;
+  line-height: 1.45 !important;
+  font-weight: 600;
+  color: $rs-ink;
+  margin: 0 0 28px 0 !important;
+}
+
+.rs-hero-lead {
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+  color: $rs-body;
+  max-width: 620px;
+  margin: 0 0 16px 0 !important;
+
+  &:last-of-type {
+    margin-bottom: 32px !important;
+  }
+}
+
+.rs-hero-lead strong {
+  color: $rs-ink;
+}
+
+/* --- Buttons ------------------------------------------------------------- */
+.rs-cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  margin: 28px 0 0 0;
+}
+
+.rs-btn {
+  display: inline-block;
+  text-align: center;
+  font-family: $ui-font;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none !important;
+  padding: 14px 26px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: opacity .2s ease, background .2s ease;
+
+  &:after { content: none; }
+}
+
+.rs-btn--primary {
+  background: $rs-ink;
+  color: #fff !important;
+  border-color: $rs-ink;
+
+  &:hover { opacity: .85; }
+  &:disabled { opacity: .45; cursor: not-allowed; }
+}
+
+.rs-btn--secondary {
+  background: #fff;
+  color: $rs-ink !important;
+  border-color: #d6d6d6;
+
+  &:hover { background: #f5f5f5; }
+}
+
+.rs-btn--wide { width: 100%; }
+
+/* --- The two fronts ------------------------------------------------------ */
+.rs-fronts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 28px 0 0 0;
+}
+
+.rs-front {
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  padding: 26px 22px;
+  background: $rs-wash;
+
+  h3 {
+    font-size: 21px !important;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: $rs-ink;
+  }
+}
+
+.rs-front-label {
+  font-family: $ui-font;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: 11px !important;
+  font-weight: 700;
+  color: $rs-faint;
+  margin: 0 0 10px 0 !important;
+}
+
+/* The mechanism, one step per line, so the parallel between the two cards is
+   visible at a glance. */
+.rs-mechanism {
+  list-style: none;
+  margin: 18px 0 0 0;
+  padding: 0;
+  counter-reset: rs-step;
+
+  li {
+    position: relative;
+    padding: 0 0 0 30px;
+    margin: 0 0 14px 0;
+    font-size: 15px !important;
+    line-height: 1.6;
+    color: $rs-body;
+
+    &:last-child {
+      margin-bottom: 0;
+      font-weight: 600;
+      color: $rs-ink;
+    }
+
+    &:before {
+      counter-increment: rs-step;
+      content: counter(rs-step);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ececec;
+      color: $rs-muted;
+      font-family: $ui-font;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &:last-child:before {
+      background: $rs-accent;
+      color: #fff;
+    }
+  }
+}
+
+/* --- Proof strip --------------------------------------------------------- */
+.rs-proof {
+  list-style: none;
+  margin: 24px 0 0 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding: 0 0 0 22px;
+    margin: 0 0 14px 0;
+    font-size: 16px !important;
+    line-height: 1.6;
+    color: $rs-body;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $rs-ink;
+    }
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+/* --- Plain bordered card, used for the offer and for callouts ------------ */
+.rs-card {
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  padding: 26px 22px;
+  background: #fff;
+  box-shadow: $rs-shadow;
+  margin: 24px 0;
+
+  h3 {
+    font-size: 21px !important;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: $rs-ink;
+  }
+
+  p:last-child { margin-bottom: 0; }
+}
+
+.rs-card--wash { background: $rs-wash; }
+
+/* --- Disclosure. A stated interest, made impossible to miss. ------------- */
+.rs-disclosure {
+  border-left: 3px solid $rs-accent;
+  background: $rs-wash;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 20px;
+  margin: 24px 0;
+
+  p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: $rs-body;
+    margin: 0;
+  }
+
+  strong { color: $rs-ink; }
+}
+
+/* --- Definition rows: "who it's for", pricing, engagement shape ---------- */
+.rs-rows {
+  margin: 24px 0;
+  border-top: 1px solid $rs-line;
+
+  > div {
+    padding: 18px 0;
+    border-bottom: 1px solid $rs-line;
+  }
+}
+
+.rs-row-label {
+  font-family: $ui-font;
+  font-size: 13px !important;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: $rs-faint;
+  margin: 0 0 6px 0 !important;
+}
+
+.rs-row-value {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  color: $rs-body;
+  margin: 0 !important;
+
+  strong { color: $rs-ink; }
+}
+
+/* --- Skill card ---------------------------------------------------------- */
+.rs-skill {
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  padding: 28px 22px;
+  background: #fff;
+  margin: 28px 0;
+
+  h3 {
+    font-size: 21px !important;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 6px 0;
+    color: $rs-ink;
+  }
+}
+
+.rs-skill-mechanism {
+  font-family: $ui-font;
+  font-size: 13px !important;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: $rs-faint;
+  margin: 0 0 18px 0 !important;
+}
+
+.rs-skill--soon {
+  border-style: dashed;
+  background: $rs-wash;
+  color: $rs-muted;
+}
+
+.rs-seats {
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid $rs-line-soft;
+    font-size: 15px !important;
+    line-height: 1.6;
+    color: $rs-body;
+
+    &:first-child { border-top: 0; }
+    strong { color: $rs-ink; }
+  }
+}
+
+/* --- Writing index ------------------------------------------------------- */
+.rs-entries {
+  margin: 24px 0 0 0;
+}
+
+.rs-entry {
+  padding: 20px 0;
+  border-top: 1px solid $rs-line-soft;
+
+  &:first-child { border-top: 0; padding-top: 0; }
+
+  h3 {
+    font-size: 21px !important;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0 0 6px 0;
+  }
+
+  p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: $rs-muted;
+    margin: 0 !important;
+  }
+}
+
+.rs-entry-meta {
+  font-family: $ui-font;
+  font-size: 12px !important;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: $rs-faint;
+  margin: 0 0 6px 0 !important;
+}
+
+/* --- WhatsApp channel invite ---------------------------------------------- */
+.rs-whatsapp {
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  background: $rs-wash;
+  padding: 30px 22px;
+  margin: 48px 0;
+}
+
+.rs-whatsapp-heading {
+  font-size: 21px !important;
+  line-height: 1.3;
+  margin: 0 0 8px 0 !important;
+  color: $rs-ink;
+}
+
+.rs-whatsapp-blurb {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  color: $rs-muted;
+  margin: 0 0 20px 0 !important;
+}
+
+.rs-whatsapp-note {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: $rs-faint;
+  margin: 14px 0 0 0 !important;
+}
+
+/* --- Hero: name eyebrow, subhead, portrait column ------------------------ */
+.rs-hero-name {
+  font-family: $ui-font;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 12px !important;
+  font-weight: 700;
+  color: $rs-accent;
+  margin: 0 0 14px 0 !important;
+}
+
+.rs-hero-subhead {
+  font-family: $ui-font;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  font-weight: 500;
+  color: $rs-muted;
+  max-width: 620px;
+  margin: 0 0 22px 0 !important;
+}
+
+.rs-hero-grid {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 28px;
+}
+
+.rs-hero-content { min-width: 0; }
+
+.rs-hero-portrait {
+  display: block;
+  width: 140px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid $rs-line;
+  box-shadow: $rs-shadow;
+}
+
+@media (min-width: 860px) {
+  .rs-hero-grid {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .rs-hero-content { flex: 1 1 auto; }
+
+  .rs-hero-portrait-wrap { flex: 0 0 auto; }
+
+  .rs-hero-portrait {
+    width: 260px;
+    height: 325px;
+  }
+}
+
+/* --- Proof strip: four hard numbers --------------------------------------- */
+.rs-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 16px;
+  margin: 28px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rs-proof-strip li {
+  border-left: 2px solid $rs-line;
+  padding-left: 14px;
+}
+
+.rs-proof-strip .num {
+  display: block;
+  font-family: $heading-font;
+  font-size: 26px;
+  font-weight: 700;
+  color: $rs-ink;
+  line-height: 1;
+}
+
+.rs-proof-strip .label {
+  display: block;
+  margin-top: 4px;
+  font-family: $ui-font;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: $rs-faint;
+}
+
+@media (min-width: 620px) {
+  .rs-proof-strip { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* --- Credential band ------------------------------------------------------ */
+.rs-credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  justify-content: center;
+  padding: 22px 0;
+  margin: 32px 0 0 0;
+  border-top: 1px solid $rs-line;
+  border-bottom: 1px solid $rs-line;
+}
+
+.rs-credentials a,
+.rs-credentials span {
+  font-family: $ui-font;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: $rs-muted;
+  text-decoration: none;
+}
+
+.rs-credentials a:hover { color: $rs-accent; }
+
+/* --- The two debasements: SVG diagram at rest, cards on narrow screens --- */
+.rs-debasement-diagram { display: none; }
+
+.rs-debasement-diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .rs-debasement-diagram { display: block; margin-top: 28px; }
+  .rs-debasement-cards { display: none; }
+}
+
+/* --- Offer cards: paid gets visual primacy -------------------------------- */
+.rs-offer--paid {
+  background: $rs-ink;
+  border-color: $rs-ink;
+
+  h3, p, .rs-tab-meta { color: #fff; }
+  .rs-tab-meta { color: rgba(255, 255, 255, .62); }
+
+  .rs-btn--primary {
+    background: #fff;
+    border-color: #fff;
+    color: $rs-ink !important;
+
+    &:hover { opacity: .88; }
+  }
+
+  .rs-btn--secondary {
+    background: transparent;
+    border-color: rgba(255, 255, 255, .4);
+    color: #fff !important;
+
+    &:hover { background: rgba(255, 255, 255, .08); }
+  }
+}
+
+/* --- What you can verify: numbers + credential cards ---------------------- */
+.rs-verify-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 28px 0 0 0;
+}
+
+.rs-verify-card {
+  border: 1px solid $rs-line;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: $rs-shadow;
+}
+
+.rs-verify-card h3 {
+  font-size: 16px !important;
+  margin: 0 0 6px 0;
+  color: $rs-ink;
+}
+
+.rs-verify-card p {
+  font-size: 14.5px !important;
+  color: $rs-muted;
+  margin: 0 !important;
+}
+
+@media (min-width: 700px) {
+  .rs-verify-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Close band: booking CTA on ink ---------------------------------------- */
+.rs-close-band {
+  background: $rs-ink;
+  border-radius: 14px;
+  padding: 40px 28px;
+  text-align: center;
+
+  h2 { color: #fff; }
+  p { color: rgba(255, 255, 255, .72); }
+
+  .rs-btn--primary {
+    background: #fff;
+    color: $rs-ink !important;
+    border-color: #fff;
+
+    &:hover { opacity: .88; }
+  }
+
+  .rs-cta-row { justify-content: center; }
+}
+
+/* --- Footer ---------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid $rs-line;
+  background: $rs-wash;
+  padding: 40px 0 28px 0;
+}
+
+.rs-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rs-footer-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.rs-footer-line {
+  font-family: $heading-font;
+  font-size: 19px !important;
+  font-weight: 600;
+  color: $rs-ink;
+  margin: 0 !important;
+}
+
+.rs-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.rs-footer-links a {
+  font-family: $ui-font;
+  font-size: 14px;
+  font-weight: 500;
+  color: $rs-body;
+  text-decoration: none;
+
+  &:hover { color: $rs-accent; }
+}
+
+.rs-footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-family: $ui-font;
+  font-size: 14px;
+  color: $rs-muted;
+}
+
+.rs-footer-contact a {
+  color: $rs-muted;
+  text-decoration: none;
+
+  &:hover { color: $rs-accent; }
+}
+
+.rs-footer-copyright {
+  margin: 28px 0 0 0 !important;
+  padding-top: 20px;
+  border-top: 1px solid $rs-line;
+  font-family: $ui-font;
+  font-size: 12.5px !important;
+  color: $rs-faint;
+}
+
+@media (min-width: 620px) {
+  .rs-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+/* --- Wider screens ------------------------------------------------------- */
+@media only screen and (min-width: 620px) {
+  .rs-hero {
+    margin-top: 44px;
+    padding-bottom: 56px;
+
+    h1 { font-size: 52px !important; }
+  }
+
+  .rs-hero-engine { font-size: 21px !important; }
+
+  .rs-cta-row {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .rs-btn--wide { width: auto; }
+
+  .rs-fronts {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .rs-section {
+    margin: 72px 0;
+    padding-bottom: 72px;
+  }
+
+  .rs-front,
+  .rs-card,
+  .rs-skill,
+  .rs-whatsapp { padding-left: 28px; padding-right: 28px; }
+
+  .rs-rows > div {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 20px;
+    align-items: baseline;
+  }
+
+  .rs-row-label { margin-bottom: 0 !important; }
+}
+
+
+/* ==========================================================================
+   The bridge line and the two-front tabs
+
+   The bridge is the one line that names the shared logic between the two
+   fronts. The tabs below it split the two offers apart so each gets its own
+   panel instead of the treasury having a section and the judgment having none.
+
+   Tabs are CSS-only: radio inputs plus :checked sibling selectors, the same
+   mechanism the mobile menu already uses. No JavaScript, no framework.
+   The radios stay focusable, so arrow keys switch panels.
+   ========================================================================== */
+
+.rs-bridge {
+  position: relative;
+  text-align: center;
+  font-size: 18px !important;
+  line-height: 1.55 !important;
+  color: $rs-muted;
+  max-width: 520px;
+  margin: 40px auto 0 auto !important;
+  padding-top: 34px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 1px;
+    background: #dededc;
+  }
+
+  strong {
+    color: $rs-ink;
+    font-weight: 600;
+  }
+}
+
+/* .rs-tab-meta is kept -- reused as the "Paid engagement" / "Free,
+   installable" label on the two always-visible offer cards below. The
+   radio-input CSS-only tab mechanism itself is gone: it hid whichever
+   offer wasn't checked by default, on a homepage where a first-time
+   visitor doesn't yet know which half he wants. */
+.rs-tab-meta {
+  font-family: $ui-font;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: 11px !important;
+  font-weight: 700;
+  color: $rs-faint;
+  margin: 0 0 10px 0 !important;
+}
+
+@media only screen and (min-width: 620px) {
+  .rs-bridge { font-size: 19px !important; }
 }

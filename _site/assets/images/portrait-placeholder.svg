@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="ph-title ph-desc">
+  <title id="ph-title">Portrait placeholder</title>
+  <desc id="ph-desc">Replace assets/images/portrait-placeholder.svg with a real photograph.</desc>
+  <rect width="800" height="1000" fill="#F5F2EC"/>
+  <rect x="14" y="14" width="772" height="972" fill="none" stroke="#C9BFA8" stroke-width="4" stroke-dasharray="16 12"/>
+  <circle cx="400" cy="352" r="132" fill="#E2DCD2"/>
+  <path d="M188 800 C188 588 612 588 612 800 L612 800 L188 800 Z" fill="#E2DCD2"/>
+  <rect x="14" y="800" width="772" height="186" fill="#FBF6EE"/>
+  <line x1="14" y1="800" x2="786" y2="800" stroke="#C9BFA8" stroke-width="2"/>
+  <text x="400" y="878" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#7A4A00" text-anchor="middle">PORTRAIT — PLACEHOLDER</text>
+  <text x="400" y="922" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="22" fill="#9A6A2A" text-anchor="middle">Replace this file with a real photograph</text>
+  <text x="400" y="954" font-family="ui-monospace, Menlo, monospace" font-size="18" fill="#B08A55" text-anchor="middle">assets/images/portrait-placeholder.svg</text>
+</svg>

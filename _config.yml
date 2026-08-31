@@ -15,16 +15,33 @@
 # in the templates via {{ site.myvariable }}.
 title: Ricky Saif
 email: rizky.syaiful@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  A piece of stardust,
-  which gets busy living,
-  while waiting for death.
+description: >- # this means to ignore newlines until "baseurl:"
+  Future-Proofing CEOs. Bitcoin for the treasury. AI for the judgment.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://RickySaif.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: RickySaif
 
 disqus:
   shortname: rizkysyaiful
+
+# ---------------------------------------------------------------------------
+# Fill-ins. Every value below is rendered as a visible [FILL: ...] marker on the
+# site until it is set. Set it once here and every page picks it up.
+# ---------------------------------------------------------------------------
+
+# WhatsApp Channel. ONE channel for the whole site.
+whatsapp_channel_url: "https://whatsapp.com/channel/0029VbA90wsEAKWG14Kij70x"
+
+# Outbound proof links. These are credentials, not products -- link only.
+bta_url: "https://www.amityage.com/blog/sf5em5nu9y8uin017ouhd895cpnqxn"               # AmityAge / Bitcoin Treasury Academy
+bitcoinstitution_url: "https://bitcoinstitution.xyz/"  # Bitcoinstitution certification
+
+# Advisory booking link (Google Calendar appointment schedule).
+booking_url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Pj31GYmaSyeEc2-RC2Xq7ZRPdGa3d0RhAb_pbMhasmu6KbIiVQw9niLg4md1jQDQnbcN436Qe"
+
+# My Self, Inc skill repository.
+skill_repo_url: "https://github.com/RickySaif/my-self-inc"
+
 
 # Build settings
 markdown: kramdown
@@ -34,9 +51,11 @@ plugins:
   - jekyll-polyglot
 
 # Polyglot configuration
+# Bilingual (Indonesian) support is turned off. Only "en" builds. The id/
+# directory is excluded below so its content is not processed, copied, or
+# reachable at any URL, and carries no metadata (hreflang, sitemap, etc).
 languages:
   - en
-  - id
 default_lang: en
 exclude_from_localization: [javascript, images, css]
 exclude:
@@ -46,6 +65,7 @@ exclude:
   - MULTILINGUAL_SETUP.md
   - vendor
   - vendor/bundle
+  - id
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this

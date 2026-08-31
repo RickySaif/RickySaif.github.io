@@ -1,15 +1,25 @@
+# Nav labels and the brand tagline. Rendered by _includes/header.html.
+# Header order is: Advisory - Skills - Writing - About.
+# `books` is retained for in-page links on /writing/ and /about/; it is no
+# longer a header item.
 en:
-  tagline: "Everyone is a CEO &middot; Every CEO needs AI"
-  webinars: "Free Webinars"
-  books: "Books I Authored"
+  tagline: "Future-Proofing CEOs"
+  advisory: "Advisory"
+  skills: "Skills"
+  writing: "Writing"
   about: "About"
+  books: "Books I Authored"
+  webinars: "Free Webinars"
   posts: "Posts"
   home: "Home"
 
 id:
-  tagline: "Semua orang itu CEO &middot; Semua CEO butuh AI"
-  webinars: "Webinar Gratis"
-  books: "Buku yang Saya Tulis"
+  tagline: "Bitcoin menjaga kas &middot; AI menjaga keputusan"
+  advisory: "Advisory"
+  skills: "Skills"
+  writing: "Tulisan"
   about: "Tentang"
+  books: "Buku yang Saya Tulis"
+  webinars: "Webinar Gratis"
   posts: "Postingan"
   home: "Beranda"

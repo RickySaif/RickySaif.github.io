@@ -1,0 +1,22 @@
+{% comment %}
+  WhatsApp Channel invite. ONE channel for the whole site.
+  Every capture point points at site.whatsapp_channel_url, set once in
+  _config.yml. Do not add a second channel anywhere.
+
+  Parameters:
+    heading - the block heading      (required)
+    blurb   - one line under it      (optional)
+    button  - CTA label              (optional, defaults to "Join the WhatsApp channel")
+    note    - small print under CTA  (optional)
+{% endcomment %}
+
+<section class="rs-whatsapp">
+  <h2 class="rs-whatsapp-heading">{{ include.heading }}</h2>
+  {% if include.blurb %}<p class="rs-whatsapp-blurb">{{ include.blurb }}</p>{% endif %}
+
+  <div class="rs-cta-row">
+    <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">{{ include.button | default: 'Join the WhatsApp channel' }}</a>
+  </div>
+
+  {% if include.note %}<p class="rs-whatsapp-note">{{ include.note }}</p>{% endif %}
+</section>
