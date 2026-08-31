@@ -24,7 +24,7 @@ lang: en
       <li><strong>CEO consultant</strong> — advises your inner CEO on identity and vision: the decisions that set direction, what you say no to, and what winning actually means for you rather than for the market.</li>
       <li><strong>CSO consultant</strong> — advises your inner CSO on strategy and bets: where the leverage is, what to sequence first, what you are not doing, and when to persist versus pivot.</li>
       <li><strong>CMO consultant</strong> — advises your inner CMO on positioning and relationships: what the people who matter should believe about you, how to frame a negotiation, how to run the conversation you have been avoiding.</li>
-      <li><strong>CFO consultant</strong> — advises your inner CFO on money and capital allocation: what your runway is, what a large commitment actually buys, and what the downside looks like if it goes to zero. It treats monetary debasement — supply expansion devaluing what you already hold — as a real risk to a real treasury.</li>
+      <li><strong>CFO consultant</strong> — advises your inner CFO on money and capital allocation: what your runway is, what a large commitment actually buys, and what the downside looks like if it goes to zero.</li>
       <li><strong>COO consultant</strong> — advises your inner COO on execution: the system rather than the goal, the smallest repeatable action, and what breaks first when the quarter gets busy.</li>
       <li><strong>CHRO consultant</strong> — advises your inner CHRO on the workforce inside you: motivation, load, burnout risk, and whether a strong reaction is a signal worth acting on or noise to ride out.</li>
     </ul>
