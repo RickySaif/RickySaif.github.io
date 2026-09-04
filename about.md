@@ -10,7 +10,7 @@ lang: en
   <p class="rs-eyebrow">What I do now</p>
   <h2>Bitcoin treasury advisory</h2>
   <p class="rs-section-intro">Future-Proofing CEOs. Bitcoin for the treasury. AI for the judgment.</p>
-  <p>My name is Ricky Saif. My paid work is corporate bitcoin treasury policy and execution setup: I advise business owners, and the CFOs and advisors who serve them, on holding Bitcoin in a company treasury. I have had a paying client since mid-2026.</p>
+  <p>My name is Ricky Saif. My paid work is corporate bitcoin treasury policy and execution setup: I advise business owners, and the CFOs and advisors who serve them, on holding Bitcoin in a company treasury. I have had a paying client since mid-2026. Read her story <a href="https://www.instagram.com/p/DcbGVDxCkSu/?img_index=1" target="_blank" rel="noopener">here</a>.</p>
   <p>If you are reading this to decide whether I am safe to let near your company's cash, that is the right question to be asking. <a href="/advisory/">The advisory page</a> states who the work is for, what it costs, and how it starts, so you can judge it before you speak to me.</p>
 </section>
 
