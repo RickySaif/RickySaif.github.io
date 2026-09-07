@@ -471,6 +471,7 @@ hr.short{
   margin: 56px 0;
   padding-bottom: 56px;
   border-bottom: 1px solid $rs-line-soft;
+  scroll-margin-top: $header-height + 16px;
 
   &:last-child {
     border-bottom: 0;
@@ -483,6 +484,11 @@ hr.short{
     margin: 0 0 8px 0;
     color: $rs-ink;
   }
+}
+
+.rs-subnav {
+  margin: 24px 0 40px 0;
+  flex-wrap: wrap;
 }
 
 .rs-eyebrow {

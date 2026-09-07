@@ -6,9 +6,46 @@ permalink: /writing/
 lang: en
 ---
 
-Two books, two essays, and the posts. The books came out of thirteen years advising organizations. The essays are about money.
+Two books, two essays, and the news. The books came out of thirteen years advising organizations. The essays are about money.
 
-<section class="rs-section">
+<nav class="rs-cta-row rs-subnav" aria-label="Writing sections">
+  {% if site.posts.size > 0 %}<a class="rs-btn rs-btn--secondary" href="#news">News</a>{% endif %}
+  <a class="rs-btn rs-btn--secondary" href="#essays">Essays</a>
+  <a class="rs-btn rs-btn--secondary" href="#books">Books</a>
+</nav>
+
+{% if site.posts.size > 0 %}
+<section class="rs-section" id="news">
+  <p class="rs-eyebrow">News</p>
+  <h2>News</h2>
+
+  <div class="rs-entries">
+    {% for post in site.posts %}
+    <div class="rs-entry">
+      <p class="rs-entry-meta">{{ post.date | date: "%-d %B %Y" }}</p>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<p>News is also listed at <a href="/posts/">/posts/</a>.</p>
+{% endif %}
+
+<section class="rs-section" id="essays">
+  <p class="rs-eyebrow">Essays</p>
+  <h2>Longer arguments</h2>
+
+  <div class="rs-entries">
+    <div class="rs-entry">
+      <p class="rs-entry-meta">Essay</p>
+      <h3><a href="/money">Why Money Requires Energy?</a></h3>
+      <p>Money that costs almost nothing to create hands too much power to whoever can create it, and that corrupts them. The essay traces this from the 1944 Bretton Woods design through decades of money supply expansion, and argues for money that has to be earned with energy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rs-section" id="books">
   <p class="rs-eyebrow">Books</p>
   <h2>The two books I wrote</h2>
   <p class="rs-section-intro">I have advised companies for thirteen years. These are the two books I wrote in that time.</p>
@@ -29,37 +66,6 @@ Two books, two essays, and the posts. The books came out of thirteen years advis
 
   <p><a href="/books/">Both books, with covers, on the books page</a></p>
 </section>
-
-<section class="rs-section">
-  <p class="rs-eyebrow">Essays</p>
-  <h2>Longer arguments</h2>
-
-  <div class="rs-entries">
-    <div class="rs-entry">
-      <p class="rs-entry-meta">Essay</p>
-      <h3><a href="/money">Why Money Requires Energy?</a></h3>
-      <p>Money that costs almost nothing to create hands too much power to whoever can create it, and that corrupts them. The essay traces this from the 1944 Bretton Woods design through decades of money supply expansion, and argues for money that has to be earned with energy.</p>
-    </div>
-  </div>
-</section>
-
-{% if site.posts.size > 0 %}
-<section class="rs-section">
-  <p class="rs-eyebrow">Posts</p>
-  <h2>Posts</h2>
-
-  <div class="rs-entries">
-    {% for post in site.posts %}
-    <div class="rs-entry">
-      <p class="rs-entry-meta">{{ post.date | date: "%-d %B %Y" }}</p>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-{% endif %}
-
-<p>Posts are also listed at <a href="/posts/">/posts/</a>.</p>
 
 {% include whatsapp-cta.html
      heading="Get the next one on WhatsApp"
