@@ -193,6 +193,7 @@ h6 {
 }
 
 .site-nav-cta{
+  white-space: nowrap;
   font-family: $ui-font;
   font-size: 14px;
   font-weight: 600;
@@ -1291,3 +1292,324 @@ hr.short{
   word-break: break-word;
 }
 .rs-ai-pointer em { font-style: normal; }
+
+
+/* ==========================================================================
+   AI Consultant for CEOs (2026 rebrand)
+
+   Cases, tools, the lever, prices and the language switch. Profit is green,
+   cost reuses the accent; nothing else gets a new colour.
+   ========================================================================== */
+
+$rs-profit:      #2e6b3f;
+$rs-profit-soft: #eef5ef;
+
+/* --- Header: identity under the name, EN | ID switch ---------------------- */
+.site-header .site-brand { display: flex; flex-direction: column; gap: 4px; }
+
+.site-identity {
+  display: none;
+  font-family: $ui-font;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $rs-faint;
+}
+
+.site-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+  font-family: $ui-font;
+  font-size: 13px;
+  font-weight: 600;
+
+  a, .site-lang-current {
+    display: inline-block;
+    line-height: 1;
+    padding: 6px 8px !important;
+    border-radius: 4px;
+    border-bottom: 0 !important;
+    text-decoration: none;
+  }
+  a { color: $rs-muted !important; }
+  a:hover { color: $rs-ink !important; background: $rs-wash; }
+  .site-lang-current { color: $rs-ink; background: $rs-wash; }
+}
+
+.site-mobile-menu .site-lang { margin: 8px 0 4px 0; font-size: 15px; }
+
+@media only screen and (min-width: 769px) {
+  .site-nav-desktop { gap: 18px; }
+}
+
+@media only screen and (min-width: 1000px) {
+  .site-identity { display: block; }
+  .site-nav-desktop { gap: 22px; }
+}
+
+/* --- Prices ---------------------------------------------------------------- */
+.rs-price-note {
+  font-family: $ui-font;
+  font-size: 14px !important;
+  color: $rs-muted;
+  margin: 12px 0 0 0 !important;
+}
+
+.rs-price {
+  font-family: $ui-font;
+  font-size: 34px !important;
+  font-weight: 700;
+  line-height: 1.15 !important;
+  letter-spacing: -0.01em;
+  margin: 4px 0 12px 0 !important;
+}
+.rs-price-from,
+.rs-price-unit {
+  font-size: 15px;
+  font-weight: 500;
+  opacity: .72;
+}
+
+.rs-footer-price {
+  font-family: $ui-font;
+  font-size: 13px !important;
+  color: $rs-faint;
+  margin: 10px 0 0 0 !important;
+}
+
+/* Secondary button sitting on an ink background. */
+.rs-close-band .rs-btn--on-ink,
+.rs-btn--on-ink {
+  background: transparent;
+  border-color: rgba(255, 255, 255, .4);
+  color: #fff !important;
+
+  &:hover { background: rgba(255, 255, 255, .08); }
+}
+
+.rs-more-link {
+  font-family: $ui-font;
+  font-size: 15px !important;
+  font-weight: 600;
+  margin-top: 22px !important;
+}
+
+/* --- The lever: text beside the drawing ------------------------------------ */
+.rs-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.rs-lever svg {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 760px) {
+  .rs-split { grid-template-columns: 1.1fr 1fr; gap: 40px; }
+}
+
+/* --- Lever badge ----------------------------------------------------------- */
+.rs-lever-badge {
+  display: inline-block;
+  font-family: $ui-font;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin: 0 0 10px 0;
+}
+.rs-lever-badge--profit { color: $rs-profit; background: $rs-profit-soft; }
+.rs-lever-badge--cost   { color: $rs-accent; background: $rs-accent-soft; }
+
+/* --- Case cards ------------------------------------------------------------ */
+.rs-case-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 28px 0 0 0;
+}
+
+@media (min-width: 700px) {
+  .rs-case-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.rs-case-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: $rs-shadow;
+  color: $rs-body !important;
+  text-decoration: none !important;
+  transition: transform .15s ease, box-shadow .15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1px 2px rgba(17,17,17,.06), 0 14px 30px -14px rgba(17,17,17,.22);
+  }
+
+  h3 {
+    font-size: 19px !important;
+    color: $rs-ink;
+    margin: 0 0 8px 0;
+  }
+
+  p {
+    font-size: 15.5px !important;
+    line-height: 1.55 !important;
+    margin: 0 0 14px 0;
+  }
+}
+
+.rs-case-card-art {
+  background: $rs-wash;
+  border-bottom: 1px solid $rs-line-soft;
+  padding: 18px 0;
+  text-align: center;
+
+  .rs-case-icon { width: 150px; height: auto; }
+}
+
+.rs-case-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  padding: 20px 22px 22px;
+}
+
+.rs-case-card-more {
+  margin-top: auto;
+  font-family: $ui-font;
+  font-size: 14px;
+  font-weight: 600;
+  color: $rs-accent;
+}
+
+/* --- Case page ------------------------------------------------------------- */
+.rs-case-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  margin: 8px 0 8px 0;
+
+  .rs-eyebrow a { color: inherit; text-decoration: none; }
+}
+
+.rs-case-header-art {
+  background: $rs-wash;
+  border: 1px solid $rs-line;
+  border-radius: 14px;
+  padding: 22px;
+  text-align: center;
+
+  .rs-case-icon { width: 100%; max-width: 240px; height: auto; }
+}
+
+@media (min-width: 760px) {
+  .rs-case-header { grid-template-columns: 1.6fr 1fr; gap: 40px; }
+}
+
+.rs-case-body h2 { margin-top: 40px; }
+
+.rs-case-back {
+  font-family: $ui-font;
+  font-size: 15px !important;
+  margin-top: 24px !important;
+}
+
+/* --- Step flow: a column on phones, a row with arrows on wider screens ----- */
+.rs-flow {
+  list-style: none;
+  margin: 32px 0 8px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.rs-flow-step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 !important;
+  padding: 14px 16px;
+  border: 1px solid $rs-line;
+  border-radius: 10px;
+  background: $rs-wash;
+  font-family: $ui-font;
+  font-size: 15px !important;
+  font-weight: 500;
+  line-height: 1.35;
+  color: $rs-ink;
+}
+
+.rs-flow-num {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid $rs-line;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: $rs-muted;
+}
+
+.rs-flow-step--payoff {
+  background: $rs-ink;
+  border-color: $rs-ink;
+  color: #fff;
+
+  .rs-flow-num { background: $rs-accent; border-color: $rs-accent; color: #fff; }
+}
+
+@media (min-width: 760px) {
+  .rs-flow {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-template-columns: none;
+    gap: 22px;
+  }
+
+  .rs-flow-step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .rs-flow-step:not(:last-child)::after {
+    content: "\2192";
+    position: absolute;
+    right: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $rs-accent;
+    font-weight: 700;
+  }
+}
+
+/* --- Tools list ------------------------------------------------------------ */
+.rs-tool h3 { margin-top: 0; }
+.rs-tool-links {
+  font-family: $ui-font;
+  font-size: 15px !important;
+  font-weight: 600;
+}

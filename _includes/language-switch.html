@@ -1,0 +1,17 @@
+{% comment %}
+  EN | ID switch for the current page. static_href stops polyglot from
+  prefixing these links with the active language, so each one points at
+  exactly the URL written here. Hidden on single-language pages (old essays
+  and posts), which have no twin to switch to.
+{% endcomment %}
+{%- unless page["lang-exclusive"] or page.layout == "post" -%}
+<span class="site-lang" aria-label="Language">
+  {%- if site.active_lang == "id" -%}
+  <a {% static_href %}href="{{ page.url }}"{% endstatic_href %} hreflang="en" lang="en">EN</a>
+  <span class="site-lang-current" aria-current="true">ID</span>
+  {%- else -%}
+  <span class="site-lang-current" aria-current="true">EN</span>
+  <a {% static_href %}href="/id{{ page.url }}"{% endstatic_href %} hreflang="id" lang="id">ID</a>
+  {%- endif -%}
+</span>
+{%- endunless -%}

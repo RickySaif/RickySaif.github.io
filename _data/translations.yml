@@ -1,25 +1,46 @@
-# Nav labels and the brand tagline. Rendered by _includes/header.html.
-# Header order is: Advisory - Skills - Writing - About.
-# `books` is retained for in-page links on /writing/ and /about/; it is no
-# longer a header item.
+# Shared UI strings, per language. Rendered by _includes/header.html,
+# footer.html, head.html and the case-study templates.
+# Header order is: Consulting - Cases - Tools - Writing - About.
 en:
-  tagline: "Future-Proofing CEOs"
-  advisory: "Advisory"
-  skills: "Skills"
+  identity: "AI Consultant for CEOs"
+  tagline: "Free AI tools. More profit, less cost."
+  consulting: "Consulting"
+  cases: "Cases"
+  tools: "Tools"
   writing: "Writing"
   about: "About"
   books: "Books I Authored"
   webinars: "Free Webinars"
   posts: "Posts"
   home: "Home"
+  book_session: "Book a session"
+  price_line: "From Rp 200.000 per 1-hour online session"
+  footer_line: "Want AI to raise your profit or cut your cost?"
+  lever_profit: "Profit"
+  lever_cost: "Cost"
+  read_case: "Read the case"
+  get_tool: "Get the free tool"
+  all_cases: "All cases"
+  language_name: "English"
 
 id:
-  tagline: "Bitcoin menjaga kas &middot; AI menjaga keputusan"
-  advisory: "Advisory"
-  skills: "Skills"
+  identity: "Konsultan AI untuk CEO"
+  tagline: "Alat AI gratis. Untung naik, biaya turun."
+  consulting: "Konsultasi"
+  cases: "Studi Kasus"
+  tools: "Alat"
   writing: "Tulisan"
   about: "Tentang"
   books: "Buku yang Saya Tulis"
   webinars: "Webinar Gratis"
   posts: "Postingan"
   home: "Beranda"
+  book_session: "Pesan sesi"
+  price_line: "Mulai Rp 200.000 per sesi online 1 jam"
+  footer_line: "Ingin AI menaikkan untung atau menekan biaya Anda?"
+  lever_profit: "Untung"
+  lever_cost: "Biaya"
+  read_case: "Baca kasusnya"
+  get_tool: "Ambil alat gratisnya"
+  all_cases: "Semua studi kasus"
+  language_name: "Bahasa Indonesia"

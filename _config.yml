@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ricky Saif
-email: ricky@bitcoinstitution.xyz
+email: rizky.syaiful@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Future-Proofing CEOs. Bitcoin for the treasury. AI for the judgment.
+  AI Consultant for CEOs. Free AI tools and online sessions that raise profit and cut cost.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://RickySaif.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://rickysaif.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: RickySaif_gh_io
 
 disqus:
@@ -32,16 +32,29 @@ disqus:
 # WhatsApp. ONE link for the whole site.
 whatsapp_channel_url: "https://chat.whatsapp.com/CmPHshtEo9LFk2eKS1eCrY?mode=gi_t"
 
-# Outbound proof links. These are credentials, not products -- link only.
-bta_url: "https://www.amityage.com/blog/sf5em5nu9y8uin017ouhd895cpnqxn"               # AmityAge / Bitcoin Treasury Academy
-bitcoinstitution_url: "https://bitcoinstitution.xyz/"  # Bitcoinstitution certification
+# Free tools. Every repo lives under this GitHub org.
+github_url: "https://github.com/orgs/RickySaif/repositories"
 
-# Advisory booking link (Google Calendar appointment schedule).
+# Paid online session. One price, shown on home, /consulting/ and every case.
+session_price: "Rp 200.000"
+
+# Session booking link (Google Calendar appointment schedule).
 booking_url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2Pj31GYmaSyeEc2-RC2Xq7ZRPdGa3d0RhAb_pbMhasmu6KbIiVQw9niLg4md1jQDQnbcN436Qe"
 
-# My Self, Inc skill repository.
-skill_repo_url: "https://github.com/RickySaif/my-self-inc"
 
+
+# Case studies. One file per case in _cases/ (EN) and _cases/id/ (ID).
+collections:
+  cases:
+    output: true
+    permalink: /cases/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: cases
+    values:
+      layout: case
 
 # Build settings
 markdown: kramdown
@@ -51,13 +64,13 @@ plugins:
   - jekyll-polyglot
 
 # Polyglot configuration
-# Bilingual (Indonesian) support is turned off. Only "en" builds. The id/
-# directory is excluded below so its content is not processed, copied, or
-# reachable at any URL, and carries no metadata (hreflang, sitemap, etc).
+# English at /, Indonesian at /id/. An Indonesian page is any file with
+# `lang: id` and the same permalink as its English twin (see id/ and _cases/id/).
 languages:
   - en
+  - id
 default_lang: en
-exclude_from_localization: [javascript, images, css]
+exclude_from_localization: [javascript, images, css, assets]
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -65,7 +78,6 @@ exclude:
   - MULTILINGUAL_SETUP.md
   - vendor
   - vendor/bundle
-  - id
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this

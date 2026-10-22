@@ -1,24 +1,26 @@
 <header class="site-header" role="banner">
   {% assign t = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
-  {% assign nav_items = "advisory,skills,writing,about" | split: "," %}
+  {% assign nav_items = "consulting,cases,tools,writing,about" | split: "," %}
 
   <div class="wrapper">
     <div class="site-header-main">
       <div class="site-brand">
         <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <span class="site-identity">{{ t.identity }}</span>
       </div>
 
       {% comment %}
-        Desktop nav: horizontal, sticky, with a Book a call CTA and current-page
-        state. Replaces the old fixed left rail, which overlapped body text
-        between roughly 769px and 1100px and hid itself on scroll.
+        Desktop nav: horizontal, sticky, with a Book a session CTA and
+        current-page state. Polyglot rewrites these hrefs to /id/... on the
+        Indonesian build, so they stay plain site-relative paths.
       {% endcomment %}
       <nav class="site-nav-desktop" aria-label="Main menu">
         {% for item in nav_items %}
           {% assign href = "/" | append: item | append: "/" %}
-          <a href="{{ href }}" class="{% if page.url == href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
+          <a href="{{ href }}" class="{% if page.url contains href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
         {% endfor %}
-        <a class="site-nav-cta" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a call</a>
+        {% include language-switch.html %}
+        <a class="site-nav-cta" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
       </nav>
 
       <label class="menu-toggle-button mobile-menu-toggle-button" for="site-menu-toggle" aria-label="Open menu">
@@ -34,9 +36,10 @@
       <label class="site-menu-close" for="site-menu-toggle" aria-label="Close menu">&larr;</label>
       {% for item in nav_items %}
         {% assign href = "/" | append: item | append: "/" %}
-        <a href="{{ href }}" class="{% if page.url == href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
+        <a href="{{ href }}" class="{% if page.url contains href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
       {% endfor %}
-      <a class="rs-btn rs-btn--primary rs-btn--wide site-mobile-cta" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a call</a>
+      {% include language-switch.html %}
+      <a class="rs-btn rs-btn--primary rs-btn--wide site-mobile-cta" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
     </nav>
   </div>
 </header>
