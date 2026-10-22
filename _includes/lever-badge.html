@@ -1,0 +1,5 @@
+{% comment %}
+  Profit or Cost chip. Parameter: lever - "profit" | "cost".
+{% endcomment %}
+{% assign tb = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
+{% if include.lever == "cost" %}<span class="rs-lever-badge rs-lever-badge--cost">&darr; {{ tb.lever_cost }}</span>{% else %}<span class="rs-lever-badge rs-lever-badge--profit">&uarr; {{ tb.lever_profit }}</span>{% endif %}

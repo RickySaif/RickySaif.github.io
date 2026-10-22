@@ -1,0 +1,31 @@
+{% comment %}
+  Hero mark: AI tools are the fulcrum. Profit end goes up, cost end goes down.
+  Parameters: profit, cost, fulcrum - labels (default English).
+{% endcomment %}
+{% assign v_profit = include.profit | default: "Profit" %}
+{% assign v_cost = include.cost | default: "Cost" %}
+{% assign v_fulcrum = include.fulcrum | default: "AI tools" %}
+<div class="rs-lever" role="img" aria-label="{{ v_fulcrum }}: {{ v_profit }} up, {{ v_cost }} down">
+  <svg viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- ground -->
+    <line x1="30" y1="262" x2="410" y2="262" stroke="#e2dcd2" stroke-width="2"/>
+
+    <!-- beam, tilted: left (profit) high, right (cost) low -->
+    <line x1="52" y1="96" x2="388" y2="196" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- fulcrum -->
+    <polygon points="220,150 168,262 272,262" fill="#9a5b00"/>
+    <circle cx="220" cy="148" r="8" fill="#111"/>
+    <text x="220" y="240" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#fff">{{ v_fulcrum }}</text>
+
+    <!-- profit block on high end -->
+    <rect x="47" y="60" width="112" height="50" rx="8" fill="#2e6b3f" transform="rotate(16.6 103 85)"/>
+    <text x="103" y="91" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#fff" transform="rotate(16.6 103 85)">{{ v_profit }}</text>
+    <path d="M96 14 L84 32 L92 32 L92 50 L100 50 L100 32 L108 32 Z" fill="#2e6b3f"/>
+
+    <!-- cost block on low end -->
+    <rect x="307" y="137" width="112" height="50" rx="8" fill="#f5f2ec" stroke="#e2dcd2" transform="rotate(16.6 363 162)"/>
+    <text x="363" y="168" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#444" transform="rotate(16.6 363 162)">{{ v_cost }}</text>
+    <path d="M392 254 L380 236 L388 236 L388 218 L396 218 L396 236 L404 236 Z" fill="#9a5b00"/>
+  </svg>
+</div>

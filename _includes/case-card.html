@@ -1,0 +1,13 @@
+{% comment %}
+  One case-study card. Parameter: case - a document from site.cases.
+{% endcomment %}
+{% assign tc = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
+<a class="rs-case-card" href="{{ include.case.url }}">
+  <div class="rs-case-card-art">{% include visuals/case-icon.html key=include.case.visual %}</div>
+  <div class="rs-case-card-body">
+    {% include lever-badge.html lever=include.case.lever %}
+    <h3>{{ include.case.title }}</h3>
+    <p>{{ include.case.summary }}</p>
+    <span class="rs-case-card-more">{{ tc.read_case }} &rarr;</span>
+  </div>
+</a>

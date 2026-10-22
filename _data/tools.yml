@@ -1,0 +1,43 @@
+# Free tools, newest last. Rendered by /tools/ in both languages.
+# Add a tool: append one entry. `repo` empty -> links to site.github_url.
+# `case` is the slug of its case study in _cases/ (optional).
+# `page` is an on-site page with more detail (optional).
+- name: "Competitor-to-test-site kit"
+  lever: profit
+  case: competitor-site
+  repo: ""
+  summary:
+    en: "Playwright plus AI: study a proven competitor page and rebuild your own version to test demand."
+    id: "Playwright dan AI: pelajari halaman kompetitor yang terbukti, lalu bangun versi Anda sendiri untuk menguji permintaan."
+
+- name: "Bug reproduction and fix assistant"
+  lever: cost
+  case: bug-fixing
+  repo: ""
+  summary:
+    en: "Turn a vague bug report into exact steps, a proposed fix and a verified result."
+    id: "Ubah laporan bug yang samar menjadi langkah pasti, usulan perbaikan, dan hasil yang terverifikasi."
+
+- name: "Requirement specification writer"
+  lever: cost
+  case: requirement-specification
+  repo: ""
+  summary:
+    en: "Turn notes, chats and voice memos into one spec, with the open questions listed."
+    id: "Ubah catatan, chat, dan rekaman suara menjadi satu spesifikasi, lengkap dengan daftar pertanyaan terbuka."
+
+- name: "Gap analysis assistant"
+  lever: profit
+  case: gap-analysis
+  repo: ""
+  summary:
+    en: "Compare where you are with where you need to be, and rank the gaps by impact."
+    id: "Bandingkan posisi Anda dengan target, lalu urutkan kesenjangannya berdasarkan dampak."
+
+- name: "My Self, Inc"
+  lever: profit
+  page: /my-self-inc/
+  repo: "https://github.com/RickySaif/my-self-inc"
+  summary:
+    en: "Six AI advisors, one per seat on your inner board, that stress-test a decision before you put your name on it."
+    id: "Enam penasihat AI, satu untuk setiap kursi di dewan batin Anda, yang menguji keputusan sebelum Anda menandatanganinya."

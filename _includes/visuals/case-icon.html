@@ -1,0 +1,57 @@
+{% comment %}
+  Small illustration for a case card or case header.
+  Parameter: key - competitor | bugfix | spec | gap. Unknown keys get a
+  neutral spark, so a new case renders before it has its own drawing.
+{% endcomment %}
+<svg class="rs-case-icon" viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+{% case include.key %}
+{% when "competitor" %}
+  <!-- their page, an arrow, your page under test -->
+  <rect x="8" y="18" width="58" height="64" rx="6" fill="#f5f2ec" stroke="#e2dcd2"/>
+  <rect x="8" y="18" width="58" height="10" rx="4" fill="#e2dcd2"/>
+  <rect x="16" y="36" width="42" height="6" rx="2" fill="#cfc6b8"/>
+  <rect x="16" y="48" width="30" height="5" rx="2" fill="#e2dcd2"/>
+  <rect x="16" y="60" width="22" height="10" rx="3" fill="#cfc6b8"/>
+  <path d="M72 50 H86 M80 43 L88 50 L80 57" stroke="#9a5b00" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="94" y="18" width="58" height="64" rx="6" fill="#fff" stroke="#111" stroke-width="2"/>
+  <rect x="94" y="18" width="58" height="10" rx="4" fill="#111"/>
+  <rect x="102" y="36" width="42" height="6" rx="2" fill="#111"/>
+  <rect x="102" y="48" width="30" height="5" rx="2" fill="#cfc6b8"/>
+  <rect x="102" y="60" width="22" height="10" rx="3" fill="#2e6b3f"/>
+  <circle cx="140" cy="70" r="9" fill="#2e6b3f"/>
+  <path d="M135.5 70 L139 73.5 L145 66.5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+{% when "bugfix" %}
+  <!-- a bug, crossed into a passing check -->
+  <ellipse cx="52" cy="54" rx="18" ry="24" fill="#111"/>
+  <circle cx="52" cy="26" r="10" fill="#111"/>
+  <path d="M34 42 L20 34 M34 56 L18 56 M34 70 L20 78 M70 42 L84 34 M70 56 L86 56 M70 70 L84 78 M46 18 L40 8 M58 18 L64 8" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+  <line x1="52" y1="34" x2="52" y2="76" stroke="#444" stroke-width="2"/>
+  <path d="M92 50 H106 M100 43 L108 50 L100 57" stroke="#9a5b00" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="132" cy="50" r="20" fill="#2e6b3f"/>
+  <path d="M122 50 L129 57 L142 43" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+{% when "spec" %}
+  <!-- scattered notes become one signed spec -->
+  <rect x="8" y="16" width="34" height="26" rx="3" fill="#f5f2ec" stroke="#e2dcd2" transform="rotate(-8 25 29)"/>
+  <rect x="14" y="52" width="34" height="26" rx="3" fill="#f5f2ec" stroke="#e2dcd2" transform="rotate(6 31 65)"/>
+  <path d="M14 26 H34 M14 32 H28 M20 62 H40 M20 68 H34" stroke="#cfc6b8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M56 50 H70 M64 43 L72 50 L64 57" stroke="#9a5b00" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="80" y="10" width="64" height="82" rx="6" fill="#fff" stroke="#111" stroke-width="2"/>
+  <rect x="90" y="20" width="30" height="6" rx="2" fill="#111"/>
+  <circle cx="94" cy="38" r="3.5" fill="#2e6b3f"/><rect x="102" y="35" width="34" height="5" rx="2" fill="#cfc6b8"/>
+  <circle cx="94" cy="50" r="3.5" fill="#2e6b3f"/><rect x="102" y="47" width="28" height="5" rx="2" fill="#cfc6b8"/>
+  <circle cx="94" cy="62" r="3.5" fill="#2e6b3f"/><rect x="102" y="59" width="32" height="5" rx="2" fill="#cfc6b8"/>
+  <path d="M92 80 C98 72 104 86 110 78 S120 76 124 80" stroke="#9a5b00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+{% when "gap" %}
+  <!-- where you are, where you need to be, the gap between -->
+  <line x1="10" y1="88" x2="150" y2="88" stroke="#e2dcd2" stroke-width="2"/>
+  <rect x="26" y="52" width="34" height="36" rx="4" fill="#cfc6b8"/>
+  <rect x="114" y="14" width="34" height="74" rx="4" fill="#111"/>
+  <rect x="26" y="14" width="34" height="38" rx="4" fill="none" stroke="#9a5b00" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <path d="M70 52 V14 M66 18 L70 12 L74 18" stroke="#9a5b00" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M70 52 H64 M70 14 H64" stroke="#9a5b00" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="78" y="38" font-family="Inter, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#9a5b00">gap</text>
+{% else %}
+  <circle cx="80" cy="50" r="26" fill="#f5f2ec" stroke="#e2dcd2"/>
+  <path d="M80 30 L85 45 L100 50 L85 55 L80 70 L75 55 L60 50 L75 45 Z" fill="#9a5b00"/>
+{% endcase %}
+</svg>

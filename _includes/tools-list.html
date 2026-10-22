@@ -1,0 +1,18 @@
+{% comment %}
+  The free tools from _data/tools.yml, in the active language.
+{% endcomment %}
+{% assign tt = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
+<div class="rs-entries rs-tools">
+  {% for tool in site.data.tools %}
+  <div class="rs-entry rs-tool">
+    {% include lever-badge.html lever=tool.lever %}
+    <h3>{{ tool.name }}</h3>
+    <p>{{ tool.summary[site.active_lang] | default: tool.summary.en }}</p>
+    <p class="rs-tool-links">
+      <a href="{{ tool.repo | default: site.github_url }}" target="_blank" rel="noopener">{{ tt.get_tool }} &rarr;</a>
+      {% if tool.case %}&middot; <a href="/cases/{{ tool.case }}/">{{ tt.read_case }}</a>{% endif %}
+      {% if tool.page %}&middot; <a href="{{ tool.page }}">{% if site.active_lang == "id" %}Kerangka lengkap{% else %}Full framework{% endif %}</a>{% endif %}
+    </p>
+  </div>
+  {% endfor %}
+</div>

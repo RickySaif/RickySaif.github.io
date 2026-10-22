@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% comment %}
+  One case study. Front matter: title, summary, lever (profit|cost), order,
+  visual (case-icon key), steps (array), repo_url (optional; falls back to
+  the GitHub org), result (optional; leave empty until there is a real one).
+{% endcomment %}
+{% assign t = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
+<article class="rs-case">
+
+  <header class="rs-case-header">
+    <div class="rs-case-header-text">
+      <p class="rs-eyebrow"><a href="/cases/">{{ t.cases }}</a></p>
+      {% include lever-badge.html lever=page.lever %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="rs-hero-subhead">{{ page.summary }}</p>
+    </div>
+    <div class="rs-case-header-art">{% include visuals/case-icon.html key=page.visual %}</div>
+  </header>
+
+  {% if page.steps %}{% include visuals/flow.html steps=page.steps %}{% endif %}
+
+  <div class="post-content rs-case-body">
+    {{ content }}
+  </div>
+
+  {% if page.result and page.result != "" %}
+  <div class="rs-card rs-card--wash">
+    <p class="rs-front-label">{% if site.active_lang == "id" %}Hasil nyata{% else %}Real result{% endif %}</p>
+    <p>{{ page.result }}</p>
+  </div>
+  {% endif %}
+
+  <section class="rs-section">
+    <div class="rs-close-band">
+      {% if site.active_lang == "id" %}
+      <h2>Ajari tim Anda menjalankan ini</h2>
+      <p>Alatnya gratis. Dalam sesi online, saya jalankan bersama Anda pada kasus bisnis Anda sendiri. {{ t.price_line }}.</p>
+      {% else %}
+      <h2>Have your team run this</h2>
+      <p>The tool is free. In an online session I run it with you, on your own business case. {{ t.price_line }}.</p>
+      {% endif %}
+      <div class="rs-cta-row">
+        <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
+        <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="{{ page.repo_url | default: site.github_url }}" target="_blank" rel="noopener">{{ t.get_tool }}</a>
+      </div>
+    </div>
+  </section>
+
+  <p class="rs-case-back"><a href="/cases/">&larr; {{ t.all_cases }}</a></p>
+</article>

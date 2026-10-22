@@ -1,0 +1,13 @@
+{% comment %}
+  A left-to-right step flow (top-to-bottom on phones). The last step is the
+  payoff and carries the accent.
+  Parameter: steps - an array of short labels (e.g. page.steps).
+{% endcomment %}
+<ol class="rs-flow">
+  {% for step in include.steps %}
+  <li class="rs-flow-step{% if forloop.last %} rs-flow-step--payoff{% endif %}">
+    <span class="rs-flow-num">{{ forloop.index }}</span>
+    <span class="rs-flow-label">{{ step }}</span>
+  </li>
+  {% endfor %}
+</ol>
