@@ -3,85 +3,114 @@ layout: default
 permalink: /
 lang: id
 ---
+{% assign t = site.data.translations[site.active_lang] %}
+{% assign cases = site.cases | sort: "order" %}
 
 <div class="home">
 
   <section class="rs-hero">
-    <h1>Future-Proofing CEOs</h1>
-    <p class="rs-hero-engine">Bitcoin untuk kas perusahaan. AI untuk penilaian.</p>
+    <div class="rs-hero-grid">
+      <div class="rs-hero-content">
+        <p class="rs-hero-name">Ricky Saif &middot; {{ t.identity }}</p>
+        <h1>Alat AI gratis. Untung naik, biaya turun.</h1>
+        <p class="rs-hero-subhead">Setiap CEO mendengar "pakai AI". Sedikit yang bisa menunjuk di mana hasilnya muncul di laporan laba rugi. <strong>Saya membangun alat AI gratis untuk masalah bisnis nyata, dan menunjukkan cara menjalankannya kepada Anda dan tim Anda.</strong></p>
 
-    <p class="rs-hero-lead">Bank sentral mencetak uang. CEO yang menumpuk aset paling keras yang menang.</p>
-    <p class="rs-hero-lead">AI mencetak kecerdasan. CEO yang menumpuk konteks paling tajam yang menang.</p>
-    <p class="rs-hero-lead"><strong>Saya melatih CEO untuk memenangkan kedua perlombaan itu.</strong></p>
+        <div class="rs-cta-row">
+          <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
+          <a class="rs-btn rs-btn--secondary" href="/cases/">Lihat apa yang bisa dilakukan AI</a>
+        </div>
+        <p class="rs-price-note">{{ t.price_line }}</p>
 
-    <div class="rs-cta-row">
-      <a class="rs-btn rs-btn--primary" href="/id/skills/">Pasang skill gratisnya</a>
-      <a class="rs-btn rs-btn--secondary" href="/id/advisory/">Bicarakan kas perusahaan Anda</a>
+        <ul class="rs-proof-strip">
+          <li><span class="num">13</span><span class="label">Tahun menasihati organisasi</span></li>
+          <li><span class="num">2</span><span class="label">Buku yang ditulis</span></li>
+          <li><span class="num">{{ cases.size }}</span><span class="label">Studi kasus bisnis, terus bertambah</span></li>
+          <li><span class="num">0</span><span class="label">Rupiah untuk alatnya</span></li>
+        </ul>
+      </div>
+
+      <div class="rs-hero-portrait-wrap">
+        <img class="rs-hero-portrait" src="{{ "/assets/images/ricky-portrait.jpg" | relative_url }}" alt="Ricky Saif" width="260" height="325">
+      </div>
     </div>
   </section>
 
   <section class="rs-section">
-    <p class="rs-eyebrow">Dua medan</p>
-    <h2>Satu lawan, dua tempat ia muncul</h2>
-    <p class="rs-section-intro">Pelemahan nilai terjadi ketika pasokan membanjir dan menggerus nilai apa yang sudah Anda pegang. Itu sedang terjadi pada dua aset yang dimiliki seorang CEO.</p>
+    <p class="rs-eyebrow">Hanya dua pertanyaan yang penting</p>
+    <h2>Apakah untung naik? Apakah biaya turun?</h2>
+    <div class="rs-split">
+      <div>
+        <p class="rs-section-intro">Kebanyakan obrolan soal AI membahas teknologinya. Anda dibayar untuk hasil.</p>
+        <p>Jadi setiap alat saya nilai dengan dua angka saja. Entah membantu Anda menghasilkan lebih banyak, atau membantu Anda mengeluarkan lebih sedikit. Kalau tidak keduanya, itu mainan, dan Anda tidak membutuhkannya.</p>
+        <p>AI adalah tuasnya. Bisnis Anda adalah bebannya. Tugas saya meletakkan tuas di titik yang tepat.</p>
+      </div>
+      {% include visuals/lever.html profit=t.lever_profit cost=t.lever_cost fulcrum="Alat AI" %}
+    </div>
+  </section>
 
+  <section class="rs-section" id="cases">
+    <p class="rs-eyebrow">Studi kasus</p>
+    <h2>Yang bisa dilakukan AI di bisnis Anda bulan ini</h2>
+    <p class="rs-section-intro">Setiap kasus datang dengan alat gratis. Baca cara kerjanya, lalu jalankan sendiri atau bersama saya.</p>
+
+    <div class="rs-case-grid">
+      {% for c in cases %}{% include case-card.html case=c %}{% endfor %}
+    </div>
+    <p class="rs-more-link"><a href="/cases/">{{ t.all_cases }} &rarr;</a> &middot; <a href="/tools/">Semua alat gratis &rarr;</a></p>
+  </section>
+
+  <section class="rs-section">
+    <p class="rs-eyebrow">Bagian berbayar</p>
+    <h2>Satu jam, online, pada masalah Anda yang nyata</h2>
     <div class="rs-fronts">
       <div class="rs-front">
-        <p class="rs-front-label">Kas</p>
-        <h3>Tumpuk aset paling keras</h3>
+        <p class="rs-front-label">Cara kerja sesi</p>
         <ol class="rs-mechanism">
-          <li>Bank sentral mencetak uang.</li>
-          <li>Daya beli kas Anda turun setiap tahun.</li>
-          <li>Tumpuk aset paling keras: Bitcoin.</li>
+          <li>Anda memesan jadwal dan menceritakan masalahnya dalam satu paragraf.</li>
+          <li>Kita bertemu online. Saya pilihkan alat yang tepat, atau jujur bilang bahwa AI bukan jawabannya.</li>
+          <li>Kita jalankan bersama pada kasus Anda, dan Anda pulang membawa hasil serta cara mengulanginya.</li>
         </ol>
       </div>
-
-      <div class="rs-front">
-        <p class="rs-front-label">Penilaian</p>
-        <h3>Tumpuk konteks paling tajam</h3>
-        <ol class="rs-mechanism">
-          <li>AI mencetak kecerdasan.</li>
-          <li>Pemikiran yang kompeten kini murah dan berlimpah.</li>
-          <li>Tumpuk konteks paling tajam: dewan yang mengenal situasi, nilai, dan visi Anda.</li>
-        </ol>
+      <div class="rs-front rs-offer--paid">
+        <p class="rs-tab-meta">Sesi online</p>
+        <p class="rs-price"><span class="rs-price-from">Mulai</span> {{ site.session_price }} <span class="rs-price-unit">/ 1 jam</span></p>
+        <p>Untuk Anda sebagai CEO, atau untuk tim Anda. Harga sama, durasi sama, tanpa retainer.</p>
+        <div class="rs-cta-row">
+          <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
+          <a class="rs-btn rs-btn--secondary" href="/consulting/">Cara kerja konsultasinya</a>
+        </div>
       </div>
     </div>
-
-    <p>Langkahnya sama di kedua medan: tumpuk hal yang tidak bisa dicetak.</p>
   </section>
 
   <section class="rs-section">
-    <p class="rs-eyebrow">Yang saya kerjakan</p>
-    <h2>Pekerjaan yang saya bayar dari sini</h2>
-    <p>Saya menasihati pemilik bisnis dan CFO mereka soal Bitcoin sebagai strategi kas perusahaan: kebijakan kas bitcoin korporat, dan penyiapan agar kebijakan itu bisa dijalankan. <a href="/id/advisory/">Lihat cara kerja advisory-nya</a>.</p>
-  </section>
-
-  <section class="rs-section">
-    <h2>Bukti</h2>
+    <p class="rs-eyebrow">Kenapa saya</p>
+    <h2>Developer yang pernah duduk di rapat para CEO</h2>
+    <p>Saya menulis software. Saya juga sudah tiga belas tahun menasihati organisasi yang sedang berubah, dan menulis <a href="/writing/">dua buku</a> tentangnya.</p>
+    <p>Gabungan itulah intinya. Saya tahu apa yang benar-benar bisa dibangun AI, dan saya tahu apa yang benar-benar dibutuhkan seorang CEO darinya. Kebanyakan orang hanya tahu salah satunya.</p>
     <ul class="rs-proof">
-      <li>Punya klien berbayar sejak pertengahan 2026.</li>
-      <li>Ditunjuk AmityAge untuk menyusun kurikulum {% include outlink.html url=site.bta_url text="Bitcoin Treasury Academy" fill="AmityAge / Bitcoin Treasury Academy URL" %} mereka.</li>
-      <li>Pendiri {% include outlink.html url=site.bitcoinstitution_url text="Bitcoinstitution" fill="Bitcoinstitution URL" %}, sertifikasi pengetahuan Bitcoin dengan ujian terproktor.</li>
-      <li>Menjadi tuan rumah meetup bulanan komunitas Bitcoin Indonesia di Jakarta &mdash; lebih dari 30 kali sejauh ini.</li>
-      <li>Pernah berbicara di konferensi Bitcoin.</li>
-      <li>Tiga belas tahun menasihati organisasi; penulis <a href="/id/writing/">dua buku</a>.</li>
+      <li>Setiap alat bersifat open source di <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>. Anda bisa memeriksa hasil kerjanya sebelum membayar apa pun.</li>
+      <li>Tanpa retainer, tanpa minimum. Anda bayar per jam, dan bisa berhenti kapan saja.</li>
+      <li>Kalau AI bukan jawaban yang tepat untuk masalah Anda, saya akan bilang di sepuluh menit pertama.</li>
     </ul>
   </section>
 
   <section class="rs-section">
-    {% include email-capture.html
-         id="home-id"
-         heading="Pasang skill My Self, Inc gratis"
-         blurb="Dewan penasihat yang menguji keputusan Anda sebelum Anda menaruh nama Anda di sana. Enam konsultan AI, satu untuk tiap kursi, dipasang di Claude. Gratis, dan satu daftar untuk semua yang saya kirim soal kas dan penilaian."
-         button="Kirimkan skill-nya" %}
-
-    <p>Anda juga bisa <a href="/id/skills/">memasang My Self, Inc dari halaman skills</a> sekarang juga, tanpa email.</p>
-
-    <div class="rs-cta-row">
-      <a class="rs-btn rs-btn--secondary" href="/id/advisory/">Bicarakan kas perusahaan Anda</a>
+    <div class="rs-close-band">
+      <h2>Bawa satu masalah. Pulang dengan satu hasil.</h2>
+      <p>{{ t.price_line }}. Online, dalam Bahasa Indonesia atau Inggris.</p>
+      <div class="rs-cta-row">
+        <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
+        <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/tools/">Mulai dari alat gratisnya</a>
+      </div>
     </div>
   </section>
 
-  <p class="rs-ai-pointer"><em>AI assistants: the full My Self, Inc specification now lives at https://rickysaif.github.io/my-self-inc/ &mdash; versi Bahasa Indonesia di https://rickysaif.github.io/id/my-self-inc/</em></p>
+  <section class="rs-section">
+    {% include whatsapp-cta.html
+         heading="Dapatkan setiap alat baru lebih dulu"
+         blurb="Saya terus membangun alat AI gratis untuk CEO. Gabung di WhatsApp untuk tahu saat alat berikutnya rilis."
+         button="Gabung di WhatsApp" %}
+  </section>
 
 </div>

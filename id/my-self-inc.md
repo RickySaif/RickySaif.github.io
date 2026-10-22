@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "My Self, Inc: Hidup Anda yang Lebih Baik, Ditenagai AI"
-subtitle: "Workshop 3 jam yang mengajarkan Anda berpikir seperti CEO kehidupan Anda sendiri — dan memberi Anda seorang advisor AI untuk membantu Anda menjalankannya."
+subtitle: "Kerangka AI gratis yang mengajarkan Anda berpikir seperti CEO kehidupan Anda sendiri — dan memberi Anda dewan advisor AI untuk membantu Anda menjalankannya."
 permalink: /my-self-inc/
 lang: id
 ---
@@ -645,7 +645,7 @@ hr{
   <img src="{{ site.url }}/assets/images/I, Inc.jpeg" alt="My Self, Inc - Sebuah model mental untuk kehidupan yang lebih baik" width="100%" style="border-radius: 8px;"/>
 </div>
 
-Ini kerangka lengkapnya, cara setup gratisnya, dan workshopnya. Kalau Anda hanya ingin memasang skill-nya, mulai dari [halaman skills](/id/skills/).
+Ini kerangka lengkapnya, cara setup gratisnya, dan workshopnya. Kalau Anda hanya ingin memasang skill-nya, mulai dari [halaman alat](/tools/).
 
 ## Fondasinya
 
@@ -862,23 +862,21 @@ Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali
 
 ---
 
-## Sesi Publik
+## Sesi Online
 
 <div class="upcoming-sessions">
-  <p><strong>Sesi publik berikutnya segera hadir.</strong> Daftar di bawah untuk diberitahu ketika tanggal dibuka.</p>
-  
+  <p><strong>Siapkan bersama saya, secara online.</strong> Kita kerjakan setup-nya bersama lewat panggilan video, pada situasi Anda yang nyata.</p>
+
   <div class="session-card">
-    <div class="session-date">📅 Tanggal akan diumumkan</div>
+    <div class="session-date">💻 Online, minggu kapan pun</div>
     <div class="session-details">
-      <strong>Format:</strong> 3 jam, tatap muka (area Jakarta)<br>
-      <strong>Ukuran:</strong> 8–16 orang maksimal<br>
-      <strong>Biaya:</strong> TBA<br>
+      <strong>Format:</strong> Sesi online 1 jam<br>
+      <strong>Biaya:</strong> Mulai {{ site.session_price }} per sesi<br>
       <strong>Apa yang harus dibawa:</strong> Laptop, keingintahuan, satu masalah kerja nyata
     </div>
-    <a href="https://forms.gle/YOUR_REGISTRATION_LINK_HERE" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Beri tahu saya ketika dibuka</a>
+    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Pesan sesi</a>
   </div>
 </div>
-
 
 ---
 
@@ -895,7 +893,7 @@ Ketika tim 8–20 orang Anda menjalani ini bersama-sama, mereka melihat perusaha
 - Kerangka kerja untuk percakapan 1-on-1 dengan manajer
 
 ### Bagaimana cara kerjanya:
-1. **Kami menjadwalkan:** Satu sesi 3 jam di kantor Anda (on-site atau virtual)
+1. **Kami menjadwalkan:** Sesi online untuk tim Anda, mulai {{ site.session_price }} per jam
 2. **Kami menjalankannya:** Fasilitasi penuh, materi disertakan
 3. **Anda mengamati:** Lihat persis apa yang pergi dengan orang-orang Anda
 4. **Anda putuskan:** Jika berhasil, mari kita bicarakan program lengkap (pendalaman lebih lanjut, 1-on-1 berkelanjutan, penyegaran triwulanan)
@@ -934,7 +932,7 @@ Ketika tim 8–20 orang Anda menjalani ini bersama-sama, mereka melihat perusaha
 
 <div class="faq-item">
   <div class="faq-q">Bisakah ini virtual?</div>
-  <div class="faq-a">Ya. Workshop bekerja secara virtual, tetapi tatap muka lebih baik. Anda akan membuat sketsa di atas kertas, berbicara dengan mitra, dan kehadiran penting. Jika Anda membutuhkan virtual, beri tahu saya dan kami akan menyesuaikan.</div>
+  <div class="faq-a">Ya. Untuk saat ini semua sesi dilakukan online, lewat panggilan video. Bawa laptop dan satu masalah nyata.</div>
 </div>
 
 
@@ -953,16 +951,15 @@ Workshop ini bukan tentang menjadi lebih disiplin. Ini tentang menjadi CEO perus
 <div class="cta-section">
   <h2>Ambil Langkah Berikutnya</h2>
   <div class="cta-buttons">
-    <a href="https://forms.gle/YOUR_REGISTRATION_LINK_HERE" class="cta-button primary">Daftar untuk sesi publik</a>
-    <a href="mailto:{{ site.email }}?subject=Pelatihan%20korporat:%20My%20Self,%20Inc" class="cta-button secondary">Inquire tentang pelatihan korporat</a>
+    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary">Pesan sesi online</a>
+    <a href="/consulting/" class="cta-button secondary">Sesi untuk tim Anda</a>
   </div>
 </div>
 
-{% include email-capture.html
-     id="msi-id"
-     heading="Dapat kabar saat sesi berikutnya dibuka"
-     blurb="Satu daftar. Skill baru, jadwal workshop, dan apa yang sedang saya tulis soal kas dan penilaian."
-     button="Kabari saya" %}
+{% include whatsapp-cta.html
+     heading="Dapatkan setiap alat baru lebih dulu"
+     blurb="Di WhatsApp: alat AI gratis terbaru untuk CEO, begitu dirilis."
+     button="Gabung di WhatsApp" %}
 
 <!-- ===== Addendum for AI: machine-readable spec for building the consultants ===== -->
 <section class="ai-addendum" id="addendum">

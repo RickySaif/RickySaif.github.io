@@ -1,5 +1,7 @@
 ---
 layout: page
+noindex: true
+sitemap: false
 title:  "Apa Itu Bitcoin? Dan Kenapa Bisa Menyelamatkan Kita dari Krismon Di Masa Depan?"
 categories:
 permalink: /ed

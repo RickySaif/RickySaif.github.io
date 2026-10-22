@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "My Self, Inc: Your Better Life Powered by AI"
-subtitle: "A 3-hour workshop that teaches you to think like a CEO of your own life — and gives you an AI advisor to help you run it."
+subtitle: "A free AI framework that teaches you to think like a CEO of your own life — and gives you an AI advisor board to help you run it."
 permalink: /my-self-inc/
 lang: en
 ---
@@ -650,7 +650,7 @@ hr{
   <img src="{{ site.url }}/assets/images/I, Inc.jpeg" alt="My Self, Inc - A mental model for a better life" width="100%" style="border-radius: 8px;"/>
 </div>
 
-This is the full framework, the free setup, and the workshop. If you just want to install the skill, start on the [skills page](/skills/).
+This is the full framework, the free setup, and the workshop. If you just want to install the skill, start on the [tools page](/tools/).
 
 ## The Foundation
 
@@ -864,20 +864,19 @@ Start with STEP 1 now: read the page, then summarize the framework back to me be
 
 ---
 
-## Public Sessions
+## Online Sessions
 
 <div class="upcoming-sessions">
-  <p><strong>Next public session coming soon.</strong> Register below to be notified when dates open up.</p>
-  
+  <p><strong>Set it up with me, online.</strong> We do the setup together on a video call, on your real situation.</p>
+
   <div class="session-card">
-    <div class="session-date">📅 Dates to be announced</div>
+    <div class="session-date">💻 Online, any week</div>
     <div class="session-details">
-      <strong>Format:</strong> 3 hours, in-person (Jakarta area)<br>
-      <strong>Size:</strong> 8–16 people max<br>
-      <strong>Cost:</strong> TBA<br>
+      <strong>Format:</strong> 1-hour online session<br>
+      <strong>Cost:</strong> From {{ site.session_price }} per session<br>
       <strong>What to bring:</strong> Laptop, curiosity, one real work problem
     </div>
-    <a href="https://forms.gle/YOUR_REGISTRATION_LINK_HERE" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Notify me when it opens</a>
+    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Book a session</a>
   </div>
 </div>
 
@@ -896,7 +895,7 @@ When your 8–20 person team sits through this together, they see their company 
 - A framework for 1-on-1 conversations with managers
 
 ### How it works:
-1. **We schedule:** One 3-hour session at your office (on-site or virtual)
+1. **We schedule:** Online sessions for your team, from {{ site.session_price }} per hour
 2. **We run it:** Full facilitation, materials included
 3. **You observe:** Get to see exactly what your people leave with
 4. **You decide:** If it landed, let's talk about the full program (deeper dives, ongoing 1-on-1s, quarterly refreshes)
@@ -934,7 +933,7 @@ When your 8–20 person team sits through this together, they see their company 
 
 <div class="faq-item">
   <div class="faq-q">Can this be virtual?</div>
-  <div class="faq-a">Yes. The workshop works virtually, but in-person is better. You'll be sketching on paper, talking with partners, and the presence matters. If you need virtual, let me know and we'll adjust.</div>
+  <div class="faq-a">Yes. For now every session is online, by video call. Bring a laptop and one real problem.</div>
 </div>
 
 ---
@@ -952,14 +951,14 @@ The workshop isn't about getting more disciplined. It's about becoming CEO of yo
 <div class="cta-section">
   <h2>Take the Next Step</h2>
   <div class="cta-buttons">
-    <a href="https://forms.gle/YOUR_REGISTRATION_LINK_HERE" class="cta-button primary">Register for public session</a>
-    <a href="mailto:{{ site.email }}?subject=Corporate%20training:%20My%20Self,%20Inc" class="cta-button secondary">Inquire about corporate training</a>
+    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary">Book an online session</a>
+    <a href="/consulting/" class="cta-button secondary">Sessions for your team</a>
   </div>
 </div>
 
 {% include whatsapp-cta.html
-     heading="Get told when the next session opens"
-     blurb="On WhatsApp: new skills, workshop dates, and what I am writing on the treasury and the judgment."
+     heading="Get each new tool first"
+     blurb="On WhatsApp: new free AI tools for CEOs, as they ship."
      button="Join on WhatsApp" %}
 
 <!-- ===== Addendum for AI: machine-readable spec for building the consultants ===== -->

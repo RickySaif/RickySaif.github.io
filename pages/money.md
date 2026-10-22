@@ -1,5 +1,7 @@
 ---
 layout: page
+noindex: true
+sitemap: false
 title:  "Why Money Requires Energy?"
 categories:
 permalink: /money

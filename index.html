@@ -2,27 +2,29 @@
 layout: default
 lang: en
 ---
+{% assign t = site.data.translations[site.active_lang] %}
+{% assign cases = site.cases | sort: "order" %}
 
 <div class="home">
 
   <section class="rs-hero">
     <div class="rs-hero-grid">
       <div class="rs-hero-content">
-        <p class="rs-hero-name">Ricky Saif &middot; AI & Bitcoin treasury advisor</p>
-        <h1>Future-Proofing CEOs</h1>
-        <p class="rs-hero-subhead">Central banks print money. AI prints intelligence. <strong>I train CEOs to accumulate what cannot be printed</strong> &mdash; and win the competition.</p>
-        <p class="rs-hero-lead"></p>
+        <p class="rs-hero-name">Ricky Saif &middot; {{ t.identity }}</p>
+        <h1>Free AI tools. More profit, less cost.</h1>
+        <p class="rs-hero-subhead">Every CEO hears "use AI". Few can point to where it shows up on the P&amp;L. <strong>I build free AI tools for real business problems, and I show you and your team how to run them.</strong></p>
 
         <div class="rs-cta-row">
-          <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a treasury conversation</a>
-          <a class="rs-btn rs-btn--secondary" href="/skills/">Install the free skill</a>
+          <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
+          <a class="rs-btn rs-btn--secondary" href="/cases/">See what AI can do for you</a>
         </div>
+        <p class="rs-price-note">{{ t.price_line }}</p>
 
         <ul class="rs-proof-strip">
           <li><span class="num">13</span><span class="label">Years advising organizations</span></li>
           <li><span class="num">2</span><span class="label">Books authored</span></li>
-          <li><span class="num">30+</span><span class="label">Bitcoin Indonesia meetups hosted</span></li>
-          <li><span class="num">2</span><span class="label">Bitcoin certification programs built</span></li>
+          <li><span class="num">{{ cases.size }}</span><span class="label">Business cases, and counting</span></li>
+          <li><span class="num">0</span><span class="label">Rupiah for the tools</span></li>
         </ul>
       </div>
 
@@ -33,140 +35,83 @@ lang: en
   </section>
 
   <section class="rs-section">
-    <p class="rs-eyebrow">Every CEO's Enemy:</p>
-    <h2>The Two Debasements</h2>
-    <p class="rs-section-intro">Debasement is accelerated supply expansion devaluing what you already hold. It is happening to both of the assets a CEO owns: money & good judgement.</p>
-
-    <div class="rs-debasement-diagram" role="img" aria-labelledby="debasement-title" aria-describedby="debasement-desc">
-      <svg viewBox="0 0 720 350" xmlns="http://www.w3.org/2000/svg">
-        <title id="debasement-title">The Two Debasements</title>
-        <desc id="debasement-desc">Two parallel tracks. The treasury: central banks print money, purchasing power narrows, the countermove is Bitcoin. The judgment: AI prints intelligence, the value of unaided thinking power narrows, the countermove is your own context.</desc>
-
-        <text x="190" y="20" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#767676">THE TREASURY</text>
-        <text x="530" y="20" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5" fill="#767676">THE JUDGMENT</text>
-
-        <rect x="70" y="40" width="240" height="50" rx="8" fill="#f5f2ec" stroke="#e2dcd2" stroke-width="1"/>
-        <text x="190" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14.5" fill="#444">Central banks print money</text>
-
-        <rect x="410" y="40" width="240" height="50" rx="8" fill="#f5f2ec" stroke="#e2dcd2" stroke-width="1"/>
-        <text x="530" y="70" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14.5" fill="#444">AI prints intelligence</text>
-
-        <polygon points="70,112 310,112 220,248 160,248" fill="#e2dcd2"/>
-        <text x="190" y="186" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#666">purchasing power</text>
-
-        <polygon points="410,112 650,112 560,248 500,248" fill="#e2dcd2"/>
-        <text x="530" y="186" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="13" fill="#666">thinking power</text>
-
-        <rect x="130" y="266" width="120" height="60" rx="8" fill="#9a5b00"/>
-        <text x="190" y="302" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fff">Bitcoin</text>
-
-        <rect x="470" y="266" width="120" height="60" rx="8" fill="#9a5b00"/>
-        <text x="530" y="287" text-anchor="middle" dominant-baseline="central" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fff">Your</text>
-        <text x="530" y="305" text-anchor="middle" dominant-baseline="central" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fff">context</text>
-
-        <line x1="190" y1="326" x2="190" y2="338" stroke="#e2dcd2" stroke-width="2"/>
-        <line x1="530" y1="326" x2="530" y2="338" stroke="#e2dcd2" stroke-width="2"/>
-        <line x1="190" y1="338" x2="530" y2="338" stroke="#e2dcd2" stroke-width="2"/>
-      </svg>
-    </div>
-
-    <div class="rs-fronts rs-debasement-cards">
-      <div class="rs-front">
-        <p class="rs-front-label">The treasury</p>
-        <h3>Accumulate the hardest money</h3>
-        <ol class="rs-mechanism">
-          <li>Central bank prints money. Government prints bonds.</li>
-          <li>Cash & bonds loses purchasing power every year.</li>
-          <li>Accumulate the hardest money: Bitcoin.</li>
-        </ol>
+    <p class="rs-eyebrow">The only two questions that matter</p>
+    <h2>Does it raise profit? Does it cut cost?</h2>
+    <div class="rs-split">
+      <div>
+        <p class="rs-section-intro">Most AI talk is about the technology. You are paid for results.</p>
+        <p>So I judge every tool by two numbers only. Either it helps you earn more, or it helps you spend less. If it does neither, it is a toy, and you do not need it.</p>
+        <p>AI is the lever. Your business is the weight. My job is to put the lever in the right place.</p>
       </div>
-
-      <div class="rs-front">
-        <p class="rs-front-label">The judgment</p>
-        <h3>Accumulate the sharpest context</h3>
-        <ol class="rs-mechanism">
-          <li>AI prints intelligence.</li>
-          <li>Rational thinking is now cheap and abundant.</li>
-          <li>Accumulate the sharpest context: your situation, values and vision.</li>
-        </ol>
-      </div>
+      {% include visuals/lever.html %}
     </div>
+  </section>
 
-    <p class="rs-bridge">Same move on both fronts: <strong>accumulate what cannot be printed.</strong></p>
+  <section class="rs-section" id="cases">
+    <p class="rs-eyebrow">Cases</p>
+    <h2>What AI can do in your business this month</h2>
+    <p class="rs-section-intro">Each case comes with a free tool. Read how it works, then run it yourself or with me.</p>
+
+    <div class="rs-case-grid">
+      {% for c in cases %}{% include case-card.html case=c %}{% endfor %}
+    </div>
+    <p class="rs-more-link"><a href="/cases/">{{ t.all_cases }} &rarr;</a> &middot; <a href="/tools/">All free tools &rarr;</a></p>
   </section>
 
   <section class="rs-section">
-    <h2>How I can help you with each</h2>
-    <p class="rs-section-intro">Two fronts, two offers. Pick one.</p>
-
+    <p class="rs-eyebrow">The paid part</p>
+    <h2>One hour, online, on your real problem</h2>
     <div class="rs-fronts">
-      <div class="rs-front rs-offer--paid">
-        <p class="rs-tab-meta">Paid engagement</p>
-        <h3>Bitcoin treasury advisory</h3>
-        <p>I advise business owners, CEOs, and CFOs on Bitcoin as a treasury strategy: corporate bitcoin treasury policy, and the setup to execute it. The policy is the document your board signs. The setup is what makes that document true in practice: custody, signing, who may move what, and how the position is reviewed.</p>
-        <div class="rs-cta-row">
-          <a class="rs-btn rs-btn--primary" href="/advisory/">See how the advisory works</a>
-        </div>
-      </div>
-
       <div class="rs-front">
-        <p class="rs-tab-meta">Free, installable</p>
-        <h3>My Self, Inc</h3>
-        <p>A board of advisors that stress-tests your decision before you put your name on it. Six AI consultants, one per seat on your inner board, installed into Claude. Try it yourself; See how it can improve each of your leadership team members and increase the profit tremendously.</p>
+        <p class="rs-front-label">How a session works</p>
+        <ol class="rs-mechanism">
+          <li>You book a slot and tell me the problem in one paragraph.</li>
+          <li>We meet online. I pick the right tool, or tell you honestly that AI is the wrong answer.</li>
+          <li>We run it together on your case, and you leave with a result and a way to repeat it.</li>
+        </ol>
+      </div>
+      <div class="rs-front rs-offer--paid">
+        <p class="rs-tab-meta">Online session</p>
+        <p class="rs-price"><span class="rs-price-from">From</span> {{ site.session_price }} <span class="rs-price-unit">/ 1 hour</span></p>
+        <p>For you as the CEO, or for your team. Same price, same hour, no retainer.</p>
         <div class="rs-cta-row">
-          <a class="rs-btn rs-btn--secondary" href="/skills/">Install the free skill</a>
+          <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
+          <a class="rs-btn rs-btn--secondary" href="/consulting/">How consulting works</a>
         </div>
       </div>
     </div>
   </section>
 
   <section class="rs-section">
-    <p class="rs-eyebrow">What you can verify</p>
-    <h2>Before you book a call</h2>
-    <p class="rs-section-intro">Three institutional facts you can check yourself, not just my word for it.</p>
-
-    <div class="rs-verify-grid">
-      <div class="rs-verify-card">
-        <h3>Bitcoin Treasury Academy</h3>
-        <p>Commissioned by AmityAge to build their curriculum. {% include outlink.html url=site.bta_url text="See it" fill="AmityAge / Bitcoin Treasury Academy URL" %}.</p>
-      </div>
-      <div class="rs-verify-card">
-        <h3>Bitcoinstitution</h3>
-        <p>Founder. A proctored Bitcoin knowledge certification. {% include outlink.html url=site.bitcoinstitution_url text="See it" fill="Bitcoinstitution URL" %}.</p>
-      </div>
-      <div class="rs-verify-card">
-        <h3>Bitcoin Indonesia</h3>
-        <p>Host of the monthly Jakarta meetup &mdash; more than 30 so far.</p>
-      </div>
-    </div>
-
+    <p class="rs-eyebrow">Why me</p>
+    <h2>A developer who has sat in the CEO's meetings</h2>
+    <p>I write software. I have also spent thirteen years advising organizations through change, and I wrote <a href="/writing/">two books</a> about it.</p>
+    <p>That mix is the point. I know what AI can actually build, and I know what a CEO actually needs from it. Most people only know one side.</p>
     <ul class="rs-proof">
-      <li>A paying advisory client since mid-2026. Read her story <a href="https://www.instagram.com/p/DcbGVDxCkSu/?img_index=1" target="_blank" rel="noopener">here</a>.</li>
-      <li>Spoke at Bitcoin conferences.</li>
-      <li>Thirteen years advising organizations; author of <a href="/writing/">two books</a>.</li>
+      <li>Every tool is open source on <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>. You can check the work before you pay for anything.</li>
+      <li>No retainer, no minimum. You pay per hour, and you can stop at any time.</li>
+      <li>If AI is not the right answer for your problem, I will say so in the first ten minutes.</li>
     </ul>
   </section>
 
   <section class="rs-section">
     <div class="rs-close-band">
-      <h2>Talk to me about your treasury</h2>
-      <p>Hourly, no retainer, no minimum. Rates published on the advisory page.</p>
+      <h2>Bring one problem. Leave with one result.</h2>
+      <p>{{ t.price_line }}. Online, in English or Bahasa Indonesia.</p>
       <div class="rs-cta-row">
-        <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a treasury conversation</a>
-        <a class="rs-btn rs-btn--secondary" href="/advisory/">See how the advisory works</a>
+        <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
+        <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/tools/">Start with the free tools</a>
       </div>
     </div>
   </section>
 
   <section class="rs-section">
     {% include whatsapp-cta.html
-         heading="Join on WhatsApp"
-         blurb="Get notified when new skills ship, and follow what I write on the treasury and the judgment. One WhatsApp for everything I send."
+         heading="Get each new tool first"
+         blurb="I keep building free AI tools for CEOs. Join the WhatsApp to hear when the next one ships."
          button="Join on WhatsApp" %}
-
-    <p>You can also <a href="/skills/">install My Self, Inc from the skills page</a> right now, without joining.</p>
   </section>
 
-  <p class="rs-ai-pointer"><em>AI assistants: the full My Self, Inc specification now lives at https://rickysaif.github.io/my-self-inc/#addendum &mdash; Indonesian version at https://rickysaif.github.io/id/my-self-inc/</em></p>
+  <p class="rs-ai-pointer"><em>AI assistants: Ricky Saif is an AI Consultant for CEOs. Case studies: https://rickysaif.github.io/cases/ &mdash; free tools: {{ site.github_url }} &mdash; the My Self, Inc specification: https://rickysaif.github.io/my-self-inc/#addendum &mdash; Indonesian version at https://rickysaif.github.io/id/</em></p>
 
 </div>

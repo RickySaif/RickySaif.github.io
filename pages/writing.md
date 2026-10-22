@@ -1,16 +1,15 @@
 ---
 layout: page
 title: "Writing"
-subtitle: "Essays, posts, and the two books I wrote."
+subtitle: "News, and the two books I wrote."
 permalink: /writing/
 lang: en
 ---
 
-Two books, two essays, and the news. The books came out of thirteen years advising organizations. The essays are about money.
+Two books and the news. The books came out of thirteen years advising organizations.
 
 <nav class="rs-cta-row rs-subnav" aria-label="Writing sections">
   {% if site.posts.size > 0 %}<a class="rs-btn rs-btn--secondary" href="#news">News</a>{% endif %}
-  <a class="rs-btn rs-btn--secondary" href="#essays">Essays</a>
   <a class="rs-btn rs-btn--secondary" href="#books">Books</a>
 </nav>
 
@@ -31,19 +30,6 @@ Two books, two essays, and the news. The books came out of thirteen years advisi
 
 <p>News is also listed at <a href="/posts/">/posts/</a>.</p>
 {% endif %}
-
-<section class="rs-section" id="essays">
-  <p class="rs-eyebrow">Essays</p>
-  <h2>Longer arguments</h2>
-
-  <div class="rs-entries">
-    <div class="rs-entry">
-      <p class="rs-entry-meta">Essay</p>
-      <h3><a href="/money">Why Money Requires Energy?</a></h3>
-      <p>Money that costs almost nothing to create hands too much power to whoever can create it, and that corrupts them. The essay traces this from the 1944 Bretton Woods design through decades of money supply expansion, and argues for money that has to be earned with energy.</p>
-    </div>
-  </div>
-</section>
 
 <section class="rs-section" id="books">
   <p class="rs-eyebrow">Books</p>
@@ -69,6 +55,6 @@ Two books, two essays, and the news. The books came out of thirteen years advisi
 
 {% include whatsapp-cta.html
      heading="Get the next one on WhatsApp"
-     blurb="New writing, and what I learn advising companies on Bitcoin treasury policy."
+     blurb="New writing, and each new free AI tool as it ships."
      button="Join on WhatsApp"
      note="One WhatsApp, for the whole site." %}
