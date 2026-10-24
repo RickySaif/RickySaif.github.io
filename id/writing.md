@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Tulisan"
-subtitle: "Kabar terbaru, dan dua buku yang saya tulis."
+subtitle: "Artikel terbaru, dan dua buku yang saya tulis."
 permalink: /writing/
 lang: id
 ---
@@ -9,14 +9,14 @@ lang: id
 Dua buku dan kabar terbaru. Bukunya lahir dari tiga belas tahun menasihati organisasi.
 
 <nav class="rs-cta-row rs-subnav" aria-label="Bagian tulisan">
-  {% if site.posts.size > 0 %}<a class="rs-btn rs-btn--secondary" href="#news">Kabar</a>{% endif %}
+  {% if site.posts.size > 0 %}<a class="rs-btn rs-btn--secondary" href="#news">Artikel</a>{% endif %}
   <a class="rs-btn rs-btn--secondary" href="#books">Buku</a>
 </nav>
 
 {% if site.posts.size > 0 %}
 <section class="rs-section" id="news">
-  <p class="rs-eyebrow">Kabar</p>
-  <h2>Kabar terbaru</h2>
+  <p class="rs-eyebrow">Artikel</p>
+  <h2>Artikel terbaru</h2>
 
   <div class="rs-entries">
     {% for post in site.posts %}
