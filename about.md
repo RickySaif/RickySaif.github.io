@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-subtitle: "I am an AI Consultant for CEOs. I build free AI tools for real business problems, and I help CEOs and their teams put them to work."
+subtitle: "I am a tech advisor to CEOs. Right now I lead with AI: I build free AI tools for real business problems, and I help CEOs and their teams put them to work."
 permalink: /about/
 lang: en
 ---
@@ -35,9 +35,9 @@ lang: en
 <section class="rs-section">
   <p class="rs-eyebrow">Talk to me</p>
   <h2>Start with one problem</h2>
-  <p>Booking is a calendar link, and email reaches me directly. {{ site.data.translations.en.price_line }}.</p>
+  <p>Join the WhatsApp channel to hear when a new tool ships. Email reaches me directly.</p>
   <div class="rs-cta-row">
-    <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a session</a>
+    <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">Join WA Channel</a>
     <a class="rs-btn rs-btn--secondary" href="mailto:{{ site.email }}">{{ site.email }}</a>
   </div>
 </section>

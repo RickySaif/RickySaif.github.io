@@ -1295,7 +1295,7 @@ hr.short{
 
 
 /* ==========================================================================
-   AI Consultant for CEOs (2026 rebrand)
+   Tech Advisor to CEOs (2026 rebrand)
 
    Cases, tools, the lever, prices and the language switch. Profit is green,
    cost reuses the accent; nothing else gets a new colour.
@@ -1413,6 +1413,14 @@ $rs-profit-soft: #eef5ef;
   margin: 0 auto;
 }
 
+.rs-lever-caption {
+  max-width: 420px;
+  margin: 12px auto 0 !important;
+  color: $rs-muted;
+  font-size: 14px;
+  text-align: center;
+}
+
 @media (min-width: 760px) {
   .rs-split { grid-template-columns: 1.1fr 1fr; gap: 40px; }
 }
@@ -1431,6 +1439,93 @@ $rs-profit-soft: #eef5ef;
 }
 .rs-lever-badge--profit { color: $rs-profit; background: $rs-profit-soft; }
 .rs-lever-badge--cost   { color: $rs-accent; background: $rs-accent-soft; }
+
+/* --- Free-tool cards (home) ------------------------------------------------ */
+$rs-cost-red:      #b3261e;
+$rs-cost-red-soft: #fdf0ee;
+
+/* One column everywhere: each card is wide enough for problem | solution. */
+.rs-tool-stack,
+.rs-tool-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  max-width: 880px;
+  margin: 24px auto 0;
+}
+
+.rs-tool-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: $rs-shadow;
+
+  h3 {
+    font-size: 19px !important;
+    color: $rs-ink;
+    margin: 0 0 6px 0;
+  }
+
+  p {
+    font-size: 15.5px !important;
+    line-height: 1.55 !important;
+    margin: 0 0 14px 0;
+  }
+}
+
+.rs-tool-impact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 12px 22px;
+  font-family: $ui-font;
+  font-weight: 700;
+}
+
+.rs-tool-impact-label { font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+.rs-tool-impact-range { font-size: 20px; }
+
+.rs-tool-impact--revenue { color: $rs-profit;   background: $rs-profit-soft; }
+.rs-tool-impact--cost    { color: $rs-cost-red; background: $rs-cost-red-soft; }
+
+.rs-tool-card-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 18px 22px 22px;
+}
+
+.rs-tool-card-col > :last-child { margin-bottom: 0 !important; }
+
+@media (min-width: 680px) {
+  .rs-tool-card-body { grid-template-columns: 1fr 1fr; gap: 0; padding: 20px 0 22px; }
+  .rs-tool-card-col { padding: 0 24px; }
+  .rs-tool-card-col--problem { border-right: 1px solid $rs-line-soft; }
+}
+
+.rs-tool-card-label {
+  font-family: $ui-font;
+  font-size: 12px !important;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: $rs-muted;
+  margin: 0 0 4px 0 !important;
+}
+
+.rs-tool-card-problem { color: $rs-body; }
+
+.rs-tool-card-link {
+  font-family: $ui-font;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rs-lever-center { max-width: 520px; margin: 0 auto; }
 
 /* --- Case cards ------------------------------------------------------------ */
 .rs-case-grid {

@@ -21,7 +21,7 @@ lang: id
     <h2>Masalah Anda tidak ada di daftar ini?</h2>
     <p>Bawa ke sesi. Kalau AI bisa membantu, kita cari tahu bersama. Kalau tidak bisa, saya akan bilang. {{ site.data.translations.id.price_line }}.</p>
     <div class="rs-cta-row">
-      <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Pesan sesi</a>
+      <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">Gabung Channel WA</a>
     </div>
   </div>
 </section>

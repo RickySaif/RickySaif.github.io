@@ -54,6 +54,12 @@ lang: id
 </section>
 
 <section class="rs-section">
+  <p class="rs-eyebrow">Berkelanjutan</p>
+  <h2>Mastermind</h2>
+  <p>GitHub Ricky Saif punya banyak software gratis yang bisa menghemat puluhan juta setiap tahun. Join Mastermind bareng batch kecil pebisnis untuk ikut sesi live mingguan berisi rekap berita tech terbaru yang bisa meningkatkan revenue &amp; mengurangi cost.</p>
+</section>
+
+<section class="rs-section">
   <p class="rs-eyebrow">Bertanggung jawab</p>
   <h2>Data Anda, keputusan Anda, kata-kata Anda</h2>
   <ul class="rs-proof">
@@ -87,7 +93,7 @@ lang: id
     <h2>Bawa satu masalah</h2>
     <p>Langsung ke kalender saya. Tidak perlu persiapan selain satu paragraf.</p>
     <div class="rs-cta-row">
-      <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Pesan sesi</a>
+      <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">Gabung Channel WA</a>
       <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/tools/">Coba alat gratisnya dulu</a>
     </div>
   </div>

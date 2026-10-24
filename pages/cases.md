@@ -21,7 +21,7 @@ lang: en
     <h2>Have a problem that is not on this list?</h2>
     <p>Bring it to a session. If AI can help, we find out together. If it cannot, I will tell you. {{ site.data.translations.en.price_line }}.</p>
     <div class="rs-cta-row">
-      <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a session</a>
+      <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">Join WA Channel</a>
     </div>
   </div>
 </section>

@@ -2,8 +2,31 @@
 # Add a tool: append one entry. `repo` empty -> links to site.github_url.
 # `case` is the slug of its case study in _cases/ (optional).
 # `page` is an on-site page with more detail (optional).
+# `flagship: true` puts the tool in the top block on the home page (three max).
+# `range` is the potential impact, shown on the card, e.g. "Rp 50-200 jt / year".
+#   A plain string, or en:/id: when the wording differs per language.
+#   Leave it empty to show only the label. Never put a number here you cannot defend.
+# `problem` is the one-paragraph current problem shown on the card.
+- name: "Ownership Framework"
+  lever: cost
+  flagship: true
+  range:
+    en: "From one QA engineer's salary to your company's value"
+    id: "Dari gaji satu QA engineer sampai nilai perusahaan Anda"
+  problem:
+    en: "AI-powered hackers find the holes before your team does. One high-severity bug can cost real money. And vibe-coded apps turn into spaghetti code nobody dares to touch."
+    id: "Hacker yang dibantu AI menemukan celah lebih dulu dari tim Anda. Satu bug berat bisa berarti kerugian finansial nyata. Dan aplikasi hasil vibecoding berubah jadi spaghetti code yang tak ada yang berani menyentuhnya."
+  repo: "https://github.com/RickySaif/Ownership-Framework"
+  summary:
+    en: "Claude Code skills that let you tell AI to run all kinds of testing: reading the code, checking the database, even using your software in the browser like a human."
+    id: "Skill Claude Code agar Anda bisa menyuruh AI melakukan berbagai testing lewat membaca kode, database, sampai menggunakan software dari browser seperti manusia."
+
 - name: "Competitor-to-test-site kit"
   lever: profit
+  range: ""
+  problem:
+    en: "A competitor's new offer seems to work. Testing the same idea means six weeks and a quote you must defend to the board, and by then the window has closed."
+    id: "Penawaran baru kompetitor Anda sepertinya laku. Menguji ide yang sama berarti enam minggu dan penawaran harga yang harus Anda pertahankan di depan direksi. Saat selesai, momennya sudah lewat."
   case: competitor-site
   repo: ""
   summary:
@@ -12,6 +35,10 @@
 
 - name: "Bug reproduction and fix assistant"
   lever: cost
+  range: ""
+  problem:
+    en: "Checkout is broken, the vendor wants screenshots, and two weeks later the ticket is still open while the invoice counts the hours."
+    id: "Checkout rusak, vendor minta tangkapan layar, dan dua minggu kemudian tiketnya masih terbuka sementara tagihan terus menghitung jam."
   case: bug-fixing
   repo: ""
   summary:
@@ -20,6 +47,10 @@
 
 - name: "Requirement specification writer"
   lever: cost
+  range: ""
+  problem:
+    en: "You explained what you wanted, the vendor nodded, and three months later you got something else. Every fix is now a paid change request."
+    id: "Anda sudah menjelaskan maunya, vendor mengangguk, dan tiga bulan kemudian yang datang berbeda. Setiap perbaikan kini jadi change request berbayar."
   case: requirement-specification
   repo: ""
   summary:
@@ -28,6 +59,10 @@
 
 - name: "Gap analysis assistant"
   lever: profit
+  range: ""
+  problem:
+    en: "Sales are flat, or a competitor is winning deals you used to win. \"Something is missing\" is not a plan."
+    id: "Penjualan stagnan, atau kompetitor memenangkan deal yang dulu Anda menangkan. \"Ada yang kurang\" bukan rencana."
   case: gap-analysis
   repo: ""
   summary:
@@ -36,6 +71,10 @@
 
 - name: "My Self, Inc"
   lever: profit
+  range: ""
+  problem:
+    en: "Big decisions are made alone, and nobody around you is paid to say where the plan is weak."
+    id: "Keputusan besar diambil sendirian, dan tidak ada orang di sekitar Anda yang dibayar untuk menunjukkan titik lemah rencananya."
   page: /my-self-inc/
   repo: "https://github.com/RickySaif/my-self-inc"
   summary:

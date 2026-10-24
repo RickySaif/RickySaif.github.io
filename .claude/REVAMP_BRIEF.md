@@ -1,4 +1,4 @@
-# Site brief: Ricky Saif, AI Consultant for CEOs (rebrand, Oct 2026)
+# Site brief: Ricky Saif, Tech Advisor to CEOs (rebrand, Oct 2026)
 
 Replaces the 2026 "Future-Proofing CEOs / Bitcoin treasury" brief. Bitcoin is gone from the
 positioning entirely. Old essays (`/money`, `/id/ed`) stay reachable but are `noindex`,
@@ -9,7 +9,7 @@ Ricky's public face. Connect with as many CEOs and business owners as possible. 
 from free tools into paid one-hour online sessions.
 
 ## Positioning
-- Identity: **AI Consultant for CEOs** (ID: Konsultan AI untuk CEO).
+- Identity: **Tech Advisor to CEOs** (ID: Penasihat Teknologi untuk CEO), AI is the lead offer.
 - Tagline: "Free AI tools. More profit, less cost." / "Alat AI gratis. Untung naik, biaya turun."
 - Every tool and case is tagged with one lever: **profit** or **cost**.
 - Why Ricky: software developer + 13 years advising organizations + 2 books.

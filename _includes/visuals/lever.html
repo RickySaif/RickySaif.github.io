@@ -1,6 +1,6 @@
 {% comment %}
   Hero mark: AI tools are the fulcrum. Profit end goes up, cost end goes down.
-  Parameters: profit, cost, fulcrum - labels (default English).
+  Parameters: profit, cost, fulcrum - labels (default English); caption - optional line under the drawing.
 {% endcomment %}
 {% assign v_profit = include.profit | default: "Profit" %}
 {% assign v_cost = include.cost | default: "Cost" %}
@@ -28,4 +28,5 @@
     <text x="363" y="168" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#444" transform="rotate(16.6 363 162)">{{ v_cost }}</text>
     <path d="M392 254 L380 236 L388 236 L388 218 L396 218 L396 236 L404 236 Z" fill="#9a5b00"/>
   </svg>
+  {% if include.caption %}<p class="rs-lever-caption">{{ include.caption }}</p>{% endif %}
 </div>

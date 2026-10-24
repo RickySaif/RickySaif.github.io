@@ -54,6 +54,12 @@ lang: en
 </section>
 
 <section class="rs-section">
+  <p class="rs-eyebrow">Recurring</p>
+  <h2>Mastermind</h2>
+  <p>Ricky Saif's GitHub holds many free tools that can save tens of millions of rupiah every year. Join a small-batch Mastermind of business owners for weekly live sessions: a recap of the latest tech news that can raise revenue and cut cost.</p>
+</section>
+
+<section class="rs-section">
   <p class="rs-eyebrow">How we do it responsibly</p>
   <h2>Your data, your decisions, your words</h2>
   <ul class="rs-proof">
@@ -87,7 +93,7 @@ lang: en
     <h2>Bring one problem</h2>
     <p>Straight to my calendar. Nothing needs to be prepared beyond one paragraph.</p>
     <div class="rs-cta-row">
-      <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Book a session</a>
+      <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">Join WA Channel</a>
       <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/tools/">Try the free tools first</a>
     </div>
   </div>

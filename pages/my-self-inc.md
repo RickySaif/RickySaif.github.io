@@ -876,7 +876,7 @@ Start with STEP 1 now: read the page, then summarize the framework back to me be
       <strong>Cost:</strong> From {{ site.session_price }} per session<br>
       <strong>What to bring:</strong> Laptop, curiosity, one real work problem
     </div>
-    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Book a session</a>
+    <a href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Join WA Channel</a>
   </div>
 </div>
 
@@ -951,7 +951,7 @@ The workshop isn't about getting more disciplined. It's about becoming CEO of yo
 <div class="cta-section">
   <h2>Take the Next Step</h2>
   <div class="cta-buttons">
-    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary">Book an online session</a>
+    <a href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener" class="cta-button primary">Join WA Channel</a>
     <a href="/consulting/" class="cta-button secondary">Sessions for your team</a>
   </div>
 </div>

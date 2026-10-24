@@ -16,7 +16,7 @@
 title: Ricky Saif
 email: rizky.syaiful@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  AI Consultant for CEOs. Free AI tools and online sessions that raise profit and cut cost.
+  Tech advisor to CEOs. Free AI tools and online sessions that raise profit and cut cost.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rickysaif.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: RickySaif_gh_io
@@ -78,6 +78,8 @@ exclude:
   - MULTILINGUAL_SETUP.md
   - vendor
   - vendor/bundle
+  - graphify-out
+  - .graphifyignore
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this

@@ -874,7 +874,7 @@ Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali
       <strong>Biaya:</strong> Mulai {{ site.session_price }} per sesi<br>
       <strong>Apa yang harus dibawa:</strong> Laptop, keingintahuan, satu masalah kerja nyata
     </div>
-    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Pesan sesi</a>
+    <a href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Gabung Channel WA</a>
   </div>
 </div>
 
@@ -951,7 +951,7 @@ Workshop ini bukan tentang menjadi lebih disiplin. Ini tentang menjadi CEO perus
 <div class="cta-section">
   <h2>Ambil Langkah Berikutnya</h2>
   <div class="cta-buttons">
-    <a href="{{ site.booking_url }}" target="_blank" rel="noopener" class="cta-button primary">Pesan sesi online</a>
+    <a href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener" class="cta-button primary">Gabung Channel WA</a>
     <a href="/consulting/" class="cta-button secondary">Sesi untuk tim Anda</a>
   </div>
 </div>

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tentang
-subtitle: "Saya Konsultan AI untuk CEO. Saya membangun alat AI gratis untuk masalah bisnis nyata, dan membantu CEO beserta timnya memakainya."
+subtitle: "Saya penasihat teknologi-nya CEO. Saat ini saya fokus di AI: saya membangun alat AI gratis untuk masalah bisnis nyata, dan membantu CEO beserta timnya memakainya."
 permalink: /about/
 lang: id
 ---
@@ -35,9 +35,9 @@ lang: id
 <section class="rs-section">
   <p class="rs-eyebrow">Bicara dengan saya</p>
   <h2>Mulai dari satu masalah</h2>
-  <p>Pemesanan lewat tautan kalender, dan email langsung sampai ke saya. {{ site.data.translations.id.price_line }}.</p>
+  <p>Gabung channel WhatsApp untuk tahu saat alat baru rilis. Email langsung sampai ke saya.</p>
   <div class="rs-cta-row">
-    <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">Pesan sesi</a>
+    <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">Gabung Channel WA</a>
     <a class="rs-btn rs-btn--secondary" href="mailto:{{ site.email }}">{{ site.email }}</a>
   </div>
 </section>

@@ -1,0 +1,26 @@
+{% comment %}
+  One free-tool card for the home page. Parameter: tool - an entry from site.data.tools.
+  Order: potential impact (green = revenue up, red = cost cut), then current problem
+  and the solution side by side (stacked on phones).
+{% endcomment %}
+{% assign tc = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
+{% assign is_cost = false %}{% if include.tool.lever == "cost" %}{% assign is_cost = true %}{% endif %}
+<article class="rs-tool-card">
+  <div class="rs-tool-impact {% if is_cost %}rs-tool-impact--cost{% else %}rs-tool-impact--revenue{% endif %}">
+    <span class="rs-tool-impact-label">{% if is_cost %}&darr; {{ tc.impact_cost }}{% else %}&uarr; {{ tc.impact_revenue }}{% endif %}</span>
+    {% assign range = include.tool.range[site.active_lang] | default: include.tool.range.en | default: include.tool.range %}
+    {% if range and range != "" %}<span class="rs-tool-impact-range">{{ range }}</span>{% endif %}
+  </div>
+  <div class="rs-tool-card-body">
+    <div class="rs-tool-card-col rs-tool-card-col--problem">
+      <p class="rs-tool-card-label">{{ tc.problem_label }}</p>
+      <p class="rs-tool-card-problem">{{ include.tool.problem[site.active_lang] | default: include.tool.problem.en }}</p>
+    </div>
+    <div class="rs-tool-card-col">
+      <p class="rs-tool-card-label">{{ tc.solution_label }}</p>
+      <h3>{{ include.tool.name }}</h3>
+      <p class="rs-tool-card-summary">{{ include.tool.summary[site.active_lang] | default: include.tool.summary.en }}</p>
+      <a class="rs-tool-card-link" href="{{ include.tool.repo | default: site.github_url }}" target="_blank" rel="noopener">{{ tc.get_tool }} &rarr;</a>
+    </div>
+  </div>
+</article>

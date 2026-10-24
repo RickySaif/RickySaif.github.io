@@ -12,21 +12,8 @@ lang: id
     <div class="rs-hero-grid">
       <div class="rs-hero-content">
         <p class="rs-hero-name">Ricky Saif &middot; {{ t.identity }}</p>
-        <h1>Alat AI gratis. Untung naik, biaya turun.</h1>
-        <p class="rs-hero-subhead">Setiap CEO mendengar "pakai AI". Sedikit yang bisa menunjuk di mana hasilnya muncul di laporan laba rugi. <strong>Saya membangun alat AI gratis untuk masalah bisnis nyata, dan menunjukkan cara menjalankannya kepada Anda dan tim Anda.</strong></p>
-
-        <div class="rs-cta-row">
-          <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
-          <a class="rs-btn rs-btn--secondary" href="/cases/">Lihat apa yang bisa dilakukan AI</a>
-        </div>
-        <p class="rs-price-note">{{ t.price_line }}</p>
-
-        <ul class="rs-proof-strip">
-          <li><span class="num">13</span><span class="label">Tahun menasihati organisasi</span></li>
-          <li><span class="num">2</span><span class="label">Buku yang ditulis</span></li>
-          <li><span class="num">{{ cases.size }}</span><span class="label">Studi kasus bisnis, terus bertambah</span></li>
-          <li><span class="num">0</span><span class="label">Rupiah untuk alatnya</span></li>
-        </ul>
+        <h1>Tools AI gratis.<br>Untung naik,<br>biaya turun.</h1>
+        <p class="rs-hero-subhead">AI bukan keren-kerenan. Sales harus naik. Cost harus turun. <strong>Saya membuat tools AI gratis agar CEO bisa tingkatkan pemasukan &amp; tekan pengeluaran.</strong></p>
       </div>
 
       <div class="rs-hero-portrait-wrap">
@@ -36,81 +23,26 @@ lang: id
   </section>
 
   <section class="rs-section">
-    <p class="rs-eyebrow">Hanya dua pertanyaan yang penting</p>
-    <h2>Apakah untung naik? Apakah biaya turun?</h2>
-    <div class="rs-split">
-      <div>
-        <p class="rs-section-intro">Kebanyakan obrolan soal AI membahas teknologinya. Anda dibayar untuk hasil.</p>
-        <p>Jadi setiap alat saya nilai dengan dua angka saja. Entah membantu Anda menghasilkan lebih banyak, atau membantu Anda mengeluarkan lebih sedikit. Kalau tidak keduanya, itu mainan, dan Anda tidak membutuhkannya.</p>
-        <p>AI adalah tuasnya. Bisnis Anda adalah bebannya. Tugas saya meletakkan tuas di titik yang tepat.</p>
-      </div>
-      {% include visuals/lever.html profit=t.lever_profit cost=t.lever_cost fulcrum="Alat AI" %}
-    </div>
-  </section>
-
-  <section class="rs-section" id="cases">
-    <p class="rs-eyebrow">Studi kasus</p>
-    <h2>Yang bisa dilakukan AI di bisnis Anda bulan ini</h2>
-    <p class="rs-section-intro">Setiap kasus datang dengan alat gratis. Baca cara kerjanya, lalu jalankan sendiri atau bersama saya.</p>
-
-    <div class="rs-case-grid">
-      {% for c in cases %}{% include case-card.html case=c %}{% endfor %}
-    </div>
-    <p class="rs-more-link"><a href="/cases/">{{ t.all_cases }} &rarr;</a> &middot; <a href="/tools/">Semua alat gratis &rarr;</a></p>
-  </section>
-
-  <section class="rs-section">
-    <p class="rs-eyebrow">Bagian berbayar</p>
-    <h2>Satu jam, online, pada masalah Anda yang nyata</h2>
-    <div class="rs-fronts">
-      <div class="rs-front">
-        <p class="rs-front-label">Cara kerja sesi</p>
-        <ol class="rs-mechanism">
-          <li>Anda memesan jadwal dan menceritakan masalahnya dalam satu paragraf.</li>
-          <li>Kita bertemu online. Saya pilihkan alat yang tepat, atau jujur bilang bahwa AI bukan jawabannya.</li>
-          <li>Kita jalankan bersama pada kasus Anda, dan Anda pulang membawa hasil serta cara mengulanginya.</li>
-        </ol>
-      </div>
-      <div class="rs-front rs-offer--paid">
-        <p class="rs-tab-meta">Sesi online</p>
-        <p class="rs-price"><span class="rs-price-from">Mulai</span> {{ site.session_price }} <span class="rs-price-unit">/ 1 jam</span></p>
-        <p>Untuk Anda sebagai CEO, atau untuk tim Anda. Harga sama, durasi sama, tanpa retainer.</p>
-        <div class="rs-cta-row">
-          <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
-          <a class="rs-btn rs-btn--secondary" href="/consulting/">Cara kerja konsultasinya</a>
-        </div>
-      </div>
+    <div class="rs-tool-stack">
+      {% assign flagship = site.data.tools | where: "flagship", true | slice: 0, 3 %}
+      {% for tool in flagship %}{% include tool-card.html tool=tool %}{% endfor %}
     </div>
   </section>
 
   <section class="rs-section">
-    <p class="rs-eyebrow">Kenapa saya</p>
-    <h2>Developer yang pernah duduk di rapat para CEO</h2>
-    <p>Saya menulis software. Saya juga sudah tiga belas tahun menasihati organisasi yang sedang berubah, dan menulis <a href="/writing/">dua buku</a> tentangnya.</p>
-    <p>Gabungan itulah intinya. Saya tahu apa yang benar-benar bisa dibangun AI, dan saya tahu apa yang benar-benar dibutuhkan seorang CEO darinya. Kebanyakan orang hanya tahu salah satunya.</p>
-    <ul class="rs-proof">
-      <li>Setiap alat bersifat open source di <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>. Anda bisa memeriksa hasil kerjanya sebelum membayar apa pun.</li>
-      <li>Tanpa retainer, tanpa minimum. Anda bayar per jam, dan bisa berhenti kapan saja.</li>
-      <li>Kalau AI bukan jawaban yang tepat untuk masalah Anda, saya akan bilang di sepuluh menit pertama.</li>
+    <p class="rs-eyebrow">Siapa Ricky</p>
+    <ul class="rs-proof-strip">
+      <li><span class="num">13</span><span class="label">Tahun menasihati organisasi</span></li>
+      <li><span class="num">2</span><span class="label">Buku yang ditulis</span></li>
+      <li><span class="num">{{ cases.size }}</span><span class="label">Studi kasus bisnis, terus bertambah</span></li>
+      <li><span class="num">0</span><span class="label">Rupiah untuk alatnya</span></li>
     </ul>
   </section>
 
   <section class="rs-section">
-    <div class="rs-close-band">
-      <h2>Bawa satu masalah. Pulang dengan satu hasil.</h2>
-      <p>{{ t.price_line }}. Online, dalam Bahasa Indonesia atau Inggris.</p>
-      <div class="rs-cta-row">
-        <a class="rs-btn rs-btn--primary" href="{{ site.booking_url }}" target="_blank" rel="noopener">{{ t.book_session }}</a>
-        <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/tools/">Mulai dari alat gratisnya</a>
-      </div>
+    <div class="rs-lever-center">
+      {% include visuals/lever.html profit=t.lever_profit cost=t.lever_cost fulcrum="Alat AI" caption='Setiap CEO mendengar "pakai AI". Sedikit yang bisa menunjuk di mana hasilnya muncul di laporan laba rugi.' %}
     </div>
-  </section>
-
-  <section class="rs-section">
-    {% include whatsapp-cta.html
-         heading="Dapatkan setiap alat baru lebih dulu"
-         blurb="Saya terus membangun alat AI gratis untuk CEO. Gabung di WhatsApp untuk tahu saat alat berikutnya rilis."
-         button="Gabung di WhatsApp" %}
   </section>
 
 </div>
