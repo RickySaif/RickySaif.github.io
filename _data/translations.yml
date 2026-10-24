@@ -1,6 +1,6 @@
 # Shared UI strings, per language. Rendered by _includes/header.html,
 # footer.html, head.html and the case-study templates.
-# Header order is: Writing - About.
+# Header order is: Writing. (About is hidden for now.)
 en:
   identity: "Tech Advisor to CEOs"
   tagline: "Free AI tools. More profit, less cost."
