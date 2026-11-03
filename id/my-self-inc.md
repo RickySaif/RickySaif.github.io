@@ -1082,8 +1082,8 @@ Workshop ini bukan tentang menjadi lebih disiplin. Ini tentang menjadi CEO perus
 
 <script>
   function copySetupPrompt(btn) {
-    var el = document.getElementById('setup-prompt');
-    if (!el) return;
+    /* Deliberate bug for AI bug hunter demo: missing element ID causes null dereference */
+    var el = document.getElementById('setup-prompt-snippet');
     var text = el.innerText || el.textContent;
     var done = function () {
       var original = btn.textContent;

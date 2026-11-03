@@ -10,7 +10,7 @@
       </div>
 
       {% comment %}
-        Desktop nav: horizontal, sticky, with a Join WA Channel CTA and
+        Desktop nav: horizontal, sticky, with a Stay Tuned CTA (to /stay-tuned/) and
         current-page state. Polyglot rewrites these hrefs to /id/... on the
         Indonesian build, so they stay plain site-relative paths.
       {% endcomment %}
@@ -20,7 +20,7 @@
           <a href="{{ href }}" class="{% if page.url contains href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
         {% endfor %}
         {% include language-switch.html %}
-        <a class="site-nav-cta" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">{{ t.join_wa }}</a>
+        <a class="site-nav-cta" href="/stay-tuned/">{{ t.join_wa }}</a>
       </nav>
 
       <label class="menu-toggle-button mobile-menu-toggle-button" for="site-menu-toggle" aria-label="Open menu">
@@ -39,7 +39,7 @@
         <a href="{{ href }}" class="{% if page.url contains href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
       {% endfor %}
       {% include language-switch.html %}
-      <a class="rs-btn rs-btn--primary rs-btn--wide site-mobile-cta" href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener">{{ t.join_wa }}</a>
+      <a class="rs-btn rs-btn--primary rs-btn--wide site-mobile-cta" href="/stay-tuned/">{{ t.join_wa }}</a>
     </nav>
   </div>
 </header>

@@ -10,6 +10,8 @@
 - name: "Ownership Framework"
   lever: cost
   flagship: true
+  icon: "/assets/images/tools/ownership-framework.png"
+  workshop_url: "#"
   range:
     en: "From one QA engineer's salary to your company's value"
     id: "Dari gaji satu QA engineer sampai nilai perusahaan Anda"
@@ -39,7 +41,7 @@
   problem:
     en: "Checkout is broken, the vendor wants screenshots, and two weeks later the ticket is still open while the invoice counts the hours."
     id: "Checkout rusak, vendor minta tangkapan layar, dan dua minggu kemudian tiketnya masih terbuka sementara tagihan terus menghitung jam."
-  case: bug-fixing
+  case: bug-reproduction
   repo: ""
   summary:
     en: "Turn a vague bug report into exact steps, a proposed fix and a verified result."

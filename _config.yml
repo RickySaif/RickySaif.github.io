@@ -16,7 +16,7 @@
 title: Ricky Saif
 email: rizky.syaiful@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Tech advisor to CEOs. Free AI tools and online sessions that raise profit and cut cost.
+  CEO's AI Enabler. Free AI tools and online sessions that raise profit and cut cost.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rickysaif.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: RickySaif_gh_io
@@ -31,6 +31,10 @@ disqus:
 
 # WhatsApp. ONE link for the whole site.
 whatsapp_channel_url: "https://chat.whatsapp.com/CmPHshtEo9LFk2eKS1eCrY?mode=gi_t"
+
+# The two language channels, offered side by side on /stay-tuned/.
+whatsapp_channel_url_en: "https://whatsapp.com/channel/0029VbBuAJD2UPBOhpeowq26"
+whatsapp_channel_url_id: "https://whatsapp.com/channel/0029VbA90wsEAKWG14Kij70x"
 
 # Free tools. Every repo lives under this GitHub org.
 github_url: "https://github.com/orgs/RickySaif/repositories"

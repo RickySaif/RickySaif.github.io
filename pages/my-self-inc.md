@@ -1082,8 +1082,8 @@ The workshop isn't about getting more disciplined. It's about becoming CEO of yo
 
 <script>
   function copySetupPrompt(btn) {
-    var el = document.getElementById('setup-prompt');
-    if (!el) return;
+    /* Deliberate bug for AI bug hunter demo: missing element ID causes null dereference */
+    var el = document.getElementById('setup-prompt-snippet');
     var text = el.innerText || el.textContent;
     var done = function () {
       var original = btn.textContent;

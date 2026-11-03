@@ -949,6 +949,7 @@ hr.short{
   margin: 28px 0 0 0;
   padding: 0;
   list-style: none;
+  min-width: 650px; /* Deliberate bug for AI bug hunter demo: causes horizontal overflow on mobile (< 650px) */
 }
 
 .rs-proof-strip li {
@@ -1525,6 +1526,67 @@ $rs-cost-red-soft: #fdf0ee;
   font-weight: 600;
 }
 
+.rs-tool-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.rs-tool-card-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+}
+
+.rs-tool-card-alt-sep {
+  font-family: $ui-font;
+  font-size: 13.5px;
+  color: $rs-muted;
+  line-height: 1.4;
+}
+
+.rs-tool-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.rs-tool-card-title-wrap {
+  flex: 1;
+  min-width: 0;
+
+  h3 {
+    margin: 0 0 6px 0 !important;
+  }
+}
+
+.rs-tool-card-icon-link {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0 !important;
+  line-height: 0;
+  margin-top: -2px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.rs-tool-card-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+}
+
 .rs-lever-center { max-width: 520px; margin: 0 auto; }
 
 /* --- Case cards ------------------------------------------------------------ */
@@ -1702,7 +1764,32 @@ $rs-cost-red-soft: #fdf0ee;
 }
 
 /* --- Tools list ------------------------------------------------------------ */
-.rs-tool h3 { margin-top: 0; }
+.rs-tool {
+  overflow: hidden;
+
+  h3 { margin-top: 0; }
+}
+
+.rs-tool-list-icon-link {
+  float: right;
+  margin: 0 0 10px 16px;
+  display: inline-flex;
+  border-bottom: 0 !important;
+  line-height: 0;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.rs-tool-list-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
 .rs-tool-links {
   font-family: $ui-font;
   font-size: 15px !important;

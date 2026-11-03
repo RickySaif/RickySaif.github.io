@@ -16,11 +16,34 @@
       <p class="rs-tool-card-label">{{ tc.problem_label }}</p>
       <p class="rs-tool-card-problem">{{ include.tool.problem[site.active_lang] | default: include.tool.problem.en }}</p>
     </div>
-    <div class="rs-tool-card-col">
-      <p class="rs-tool-card-label">{{ tc.solution_label }}</p>
-      <h3>{{ include.tool.name }}</h3>
+    <div class="rs-tool-card-col rs-tool-card-col--solution">
+      <div class="rs-tool-card-header">
+        <div class="rs-tool-card-title-wrap">
+          <p class="rs-tool-card-label">{{ tc.solution_label }}</p>
+          <h3>{{ include.tool.name }}</h3>
+        </div>
+        {% if include.tool.icon %}
+        <a class="rs-tool-card-icon-link" href="{{ include.tool.repo | default: site.github_url }}" target="_blank" rel="noopener" aria-label="{{ include.tool.name }}">
+          <img class="rs-tool-card-icon" src="{{ include.tool.icon | relative_url }}" alt="" width="56" height="56">
+        </a>
+        {% endif %}
+      </div>
       <p class="rs-tool-card-summary">{{ include.tool.summary[site.active_lang] | default: include.tool.summary.en }}</p>
-      <a class="rs-tool-card-link" href="{{ include.tool.repo | default: site.github_url }}" target="_blank" rel="noopener">{{ tc.get_tool }} &rarr;</a>
+      <div class="rs-tool-card-actions">
+        <a class="rs-tool-card-link" href="{{ include.tool.repo | default: site.github_url }}" target="_blank" rel="noopener">{{ tc.get_tool }} &rarr;</a>
+        {% if include.tool.workshop_url %}
+        <div class="rs-tool-card-alt">
+          <span class="rs-tool-card-alt-sep">{{ tc.or_label | default: "atau" }}</span>
+          <a class="rs-tool-card-link rs-tool-card-link--workshop" href="{{ include.tool.workshop_url }}" onclick="openWorkshopModal(event, this)">{{ tc.attend_workshop | default: "Hadiri workshop onlinenya" }} &rarr;</a>
+        </div>
+        <script>
+          function openWorkshopModal(e, link) {
+            /* Deliberate bug for AI bug hunter demo: unhandled TypeError on click */
+            window.WorkshopModal.init({ target: link.getAttribute('href') });
+          }
+        </script>
+        {% endif %}
+      </div>
     </div>
   </div>
 </article>

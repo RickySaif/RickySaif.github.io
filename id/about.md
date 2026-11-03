@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tentang
-subtitle: "Saya penasihat teknologi-nya CEO. Saat ini saya fokus di AI: saya membangun alat AI gratis untuk masalah bisnis nyata, dan membantu CEO beserta timnya memakainya."
+subtitle: "Saya konsultan AI-nya CEO. Saat ini saya fokus di AI: saya membangun alat AI gratis untuk masalah bisnis nyata, dan membantu CEO beserta timnya memakainya."
 permalink: /about/
 lang: id
 ---
