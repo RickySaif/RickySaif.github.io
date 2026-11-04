@@ -114,10 +114,11 @@ const $=id=>document.getElementById(id);
 const log=m=>{const l=$('log');l.textContent+=m+'\n';l.scrollTop=1e9;};
 const MODEL='eventhorizon0/tarteel-ai-onnx-whisper-base-ar-quran';
 const HAS_GPU=!!navigator.gpu;
+const SO={graphOptimizationLevel:'basic',enableCpuMemArena:false,enableMemPattern:false};
 const PROFILES=[
- {id:'q8',label:'Seimbang · q8 · sekitar 230 MB (disarankan)',dtype:{encoder_model:'q8',decoder_model_merged:'q8'},device:'wasm'},
- {id:'q4',label:'Kecil · q4 · sekitar 140 MB',dtype:{encoder_model:'q4',decoder_model_merged:'q4'},device:'wasm'},
- ...(HAS_GPU?[{id:'fp16',label:'Cepat · fp16 · WebGPU · sekitar 145 MB',dtype:{encoder_model:'fp16',decoder_model_merged:'fp16'},device:'webgpu'}]:[])
+ {id:'q4',label:'Kecil · q4 · sekitar 140 MB (coba ini dulu)',dtype:{encoder_model:'q4',decoder_model_merged:'q4'},device:'wasm'},
+ {id:'q8',label:'Besar · q8 · sekitar 230 MB (berat di memori)',dtype:{encoder_model:'q8',decoder_model_merged:'q8'},device:'wasm'},
+ ...(HAS_GPU?[{id:'fp16',label:'Cepat · fp16 · WebGPU · sekitar 145 MB (iOS 26)',dtype:{encoder_model:'fp16',decoder_model_merged:'fp16'},device:'webgpu'}]:[])
 ];
 PROFILES.forEach(p=>$('prof').append(new Option(p.label,p.id)));
 log('WebGPU: '+(HAS_GPU?'ada':'tidak ada')+' · '+navigator.userAgent);
@@ -137,13 +138,14 @@ $('load').onclick=async()=>{
     const T=await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1');
     T.env.allowLocalModels=false;
     log('Pustaka dimuat '+((performance.now()-t0)/1000).toFixed(1)+' dtk');
-    asr=await T.pipeline('automatic-speech-recognition',MODEL,{dtype:p.dtype,device:p.device,
+    if(T.env.backends&&T.env.backends.onnx&&T.env.backends.onnx.wasm) T.env.backends.onnx.wasm.numThreads=1;
+    asr=await T.pipeline('automatic-speech-recognition',MODEL,{dtype:p.dtype,device:p.device,session_options:SO,
       progress_callback:e=>{ if(e.status==='progress'&&e.file){files[e.file]={l:e.loaded,t:e.total};const L=Object.values(files).reduce((a,b)=>a+b.l,0),Tt=Object.values(files).reduce((a,b)=>a+b.t,0);$('bar').style.width=(100*L/Tt)+'%';$('lstat').textContent=`Mengunduh… ${(L/1e6).toFixed(0)} / ${(Tt/1e6).toFixed(0)} MB`;}
         else if(e.status==='ready') $('lstat').textContent='Menyiapkan model…'; }});
     const s=((performance.now()-t0)/1000).toFixed(1);
     $('bar').style.width='100%'; $('lstat').textContent='Siap ✅ (dimuat '+s+' dtk)'; log('Model siap: '+p.id+' / '+p.device+' / '+s+' dtk');
     $('mic').disabled=false; $('status').textContent='Pilih ayat, ketuk tombol, baca, lalu ketuk lagi.';
-  }catch(e){ $('lstat').textContent='Gagal memuat: '+(e&&e.message||e); log('GAGAL muat: '+(e&&e.stack||e)); }
+  }catch(e){ const msg=String((e&&e.message)||e); $('lstat').textContent='Gagal memuat: '+msg.slice(0,300); $('log').textContent=''; log('GAGAL muat ('+p.id+'): '+msg); log((e&&e.stack||'').split('\n').slice(0,4).join('\n')); log('---'); }
   loading=false; $('load').disabled=false; };
 
 async function toPCM(blob){
