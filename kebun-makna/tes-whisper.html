@@ -118,9 +118,16 @@ const SO={graphOptimizationLevel:'basic',enableCpuMemArena:false,enableMemPatter
 const PROFILES=[
  {id:'q4',label:'Kecil · q4 · sekitar 140 MB (coba ini dulu)',dtype:{encoder_model:'q4',decoder_model_merged:'q4'},device:'wasm'},
  {id:'mix',label:'Kualitas · encoder penuh + decoder q4 · sekitar 205 MB',dtype:{encoder_model:'fp32',decoder_model_merged:'q4'},device:'wasm'},
- ...(HAS_GPU?[{id:'fp16',label:'Cepat · fp16 · WebGPU · sekitar 145 MB (iOS 26)',dtype:{encoder_model:'fp16',decoder_model_merged:'fp16'},device:'webgpu'}]:[])
+
 ];
 PROFILES.forEach(p=>$('prof').append(new Option(p.label,p.id)));
+if(HAS_GPU) navigator.gpu.requestAdapter().then(ad=>{
+  if(!ad){ log('WebGPU: tidak ada adapter'); return; }
+  const f16=ad.features.has('shader-f16'); log('WebGPU shader-f16: '+(f16?'ada':'tidak ada'));
+  const add=p=>{PROFILES.push(p);$('prof').append(new Option(p.label,p.id));};
+  add({id:'gpu',label:'Eksperimen · WebGPU · encoder penuh + decoder q4 · sekitar 205 MB',dtype:{encoder_model:'fp32',decoder_model_merged:'q4'},device:'webgpu'});
+  if(f16) add({id:'fp16',label:'Eksperimen · WebGPU · fp16 · sekitar 145 MB',dtype:{encoder_model:'fp16',decoder_model_merged:'fp16'},device:'webgpu'});
+}).catch(e=>log('WebGPU adapter gagal: '+e));
 log('WebGPU: '+(HAS_GPU?'ada':'tidak ada')+' · '+navigator.userAgent);
 DATA.forEach(s=>$('sur').append(new Option(`${s.no}. ${s.name}`,s.no)));
 function fillAy(){const s=DATA.find(x=>x.no==$('sur').value);$('ay').replaceChildren(...s.ayat.map(a=>new Option('Ayat '+a.n,a.n)));render();}
@@ -145,7 +152,7 @@ $('load').onclick=async()=>{
     const s=((performance.now()-t0)/1000).toFixed(1);
     $('bar').style.width='100%'; $('lstat').textContent='Siap ✅ (dimuat '+s+' dtk)'; log('Model siap: '+p.id+' / '+p.device+' / '+s+' dtk');
     $('mic').disabled=false; $('status').textContent='Pilih ayat, ketuk tombol, baca, lalu ketuk lagi.';
-  }catch(e){ const msg=String((e&&e.message)||e); $('lstat').textContent='Gagal memuat: '+msg.slice(0,300); $('log').textContent=''; log('GAGAL muat ('+p.id+'): '+msg); log((e&&e.stack||'').split('\n').slice(0,4).join('\n')); log('---'); }
+  }catch(e){ let msg=String((e&&e.message)||e); if(/^\d+$/.test(msg)) msg='kode galat WebAssembly '+msg+' (biasanya fitur GPU/memori tidak didukung). Coba profil q4.'; $('lstat').textContent='Gagal memuat: '+msg.slice(0,300); $('log').textContent=''; log('GAGAL muat ('+p.id+'): '+msg); log((e&&e.stack||'').split('\n').slice(0,4).join('\n')); log('---'); }
   loading=false; $('load').disabled=false; };
 
 async function toPCM(blob){
