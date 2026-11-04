@@ -48,7 +48,7 @@ pre.log{white-space:pre-wrap;font-size:12px;background:#fff;border:2px dashed #C
     <select id="prof"></select>
     <div style="margin-top:10px"><button class="btn green mic" id="load" style="font-size:18px;padding:12px">⬇️ Muat model</button></div>
     <div class="meter"><i id="bar"></i></div>
-    <div class="status" id="lstat">Belum dimuat. Pakai Wi-Fi: unduhan 140–230 MB.</div>
+    <div class="status" id="lstat">Belum dimuat. Pakai Wi-Fi: unduhan 140–205 MB.</div>
   </div>
   <div class="frame">
     <div class="row"><div><label for="sur">Surat</label><select id="sur"></select></div><div><label for="ay">Ayat</label><select id="ay"></select></div></div>
@@ -117,7 +117,7 @@ const HAS_GPU=!!navigator.gpu;
 const SO={graphOptimizationLevel:'basic',enableCpuMemArena:false,enableMemPattern:false};
 const PROFILES=[
  {id:'q4',label:'Kecil · q4 · sekitar 140 MB (coba ini dulu)',dtype:{encoder_model:'q4',decoder_model_merged:'q4'},device:'wasm'},
- {id:'q8',label:'Besar · q8 · sekitar 230 MB (berat di memori)',dtype:{encoder_model:'q8',decoder_model_merged:'q8'},device:'wasm'},
+ {id:'mix',label:'Kualitas · encoder penuh + decoder q4 · sekitar 205 MB',dtype:{encoder_model:'fp32',decoder_model_merged:'q4'},device:'wasm'},
  ...(HAS_GPU?[{id:'fp16',label:'Cepat · fp16 · WebGPU · sekitar 145 MB (iOS 26)',dtype:{encoder_model:'fp16',decoder_model_merged:'fp16'},device:'webgpu'}]:[])
 ];
 PROFILES.forEach(p=>$('prof').append(new Option(p.label,p.id)));
