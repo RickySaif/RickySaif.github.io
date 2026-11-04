@@ -74,7 +74,7 @@ languages:
   - en
   - id
 default_lang: en
-exclude_from_localization: [javascript, images, css, assets]
+exclude_from_localization: [javascript, images, css, assets, kebun-makna]
 exclude:
   - Gemfile
   - Gemfile.lock
