@@ -154,14 +154,22 @@ async function toPCM(blob){
   const n=Math.ceil(dec.duration*16000), off=new OfflineAudioContext(1,n,16000); const src=off.createBufferSource(); src.buffer=dec; src.connect(off.destination); src.start();
   const out=await off.startRendering(); return {pcm:out.getChannelData(0),dur:dec.duration};
 }
+function voiceStats(pcm){ const W=1600; let peak=0,voiced=0; const rms=[]; for(let i=0;i+W<=pcm.length;i+=W){ let s=0; for(let j=0;j<W;j++){ const v=pcm[i+j]; s+=v*v; const a=Math.abs(v); if(a>peak) peak=a; } rms.push(Math.sqrt(s/W)); }
+  const sorted=[...rms].sort((a,b)=>a-b); const floor=sorted[Math.floor(sorted.length*0.2)]||0; const thr=Math.max(0.012,floor*3);
+  rms.forEach(r=>{ if(r>thr) voiced+=0.1; }); return {peak,voiced}; }
 let mr=null,stream=null;
 $('mic').onclick=async()=>{
   if(mr){ mr.stop(); return; }
   try{ stream=await navigator.mediaDevices.getUserMedia({audio:true}); }catch(e){ $('status').textContent='Mikrofon tidak diizinkan ('+e.name+'). Izinkan mikrofon untuk halaman ini di pengaturan browser.'; return; }
   const chunks=[]; mr=new MediaRecorder(stream); mr.ondataavailable=e=>e.data.size&&chunks.push(e.data);
   mr.onstop=async()=>{ stream.getTracks().forEach(t=>t.stop()); const type=mr.mimeType; mr=null; $('mic').textContent='🎙️ Mulai baca'; $('mic').className='btn mic'; $('mic').disabled=true; $('status').textContent='Mendengarkan…';
-    try{ const {pcm,dur}=await toPCM(new Blob(chunks,{type})); const t0=performance.now();
-      const out=await asr(pcm,{language:'arabic',task:'transcribe',chunk_length_s:30}); const sec=(performance.now()-t0)/1000;
+    try{ const {pcm,dur}=await toPCM(new Blob(chunks,{type}));
+      const vd=voiceStats(pcm); log(`Suara: puncak ${vd.peak.toFixed(3)}, bersuara ${vd.voiced.toFixed(1)} dtk dari ${dur.toFixed(1)} dtk`);
+      if(vd.voiced<0.6){ $('status').textContent='Tidak ada suara yang terdengar. Dekatkan perangkat ke mulut dan coba lagi.'; $('mic').disabled=false; return; }
+      const t0=performance.now(); let out;
+      try{ out=await asr(pcm,{language:'arabic',task:'transcribe',is_multilingual:true,chunk_length_s:30}); }
+      catch(e1){ log('Percobaan 1 gagal: '+e1.message); out=await asr(pcm,{chunk_length_s:30}); }
+      const sec=(performance.now()-t0)/1000;
       const text=(out.text||'').trim(); log(`Rekaman ${dur.toFixed(1)} dtk (${type}) → ${sec.toFixed(1)} dtk proses → "${text}"`);
       show(text,dur,sec);
     }catch(e){ $('status').textContent='Gagal memproses: '+(e&&e.message||e); log('GAGAL proses: '+(e&&e.stack||e)); }
