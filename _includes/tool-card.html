@@ -6,6 +6,11 @@
 {% assign tc = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
 {% assign is_cost = false %}{% if include.tool.lever == "cost" %}{% assign is_cost = true %}{% endif %}
 <article class="rs-tool-card">
+  {% if include.tool.banner %}
+  <a class="rs-tool-card-banner" href="{{ include.tool.repo | default: site.github_url }}" target="_blank" rel="noopener">
+    <img src="{{ include.tool.banner | relative_url }}" alt="{{ include.tool.banner_alt[site.active_lang] | default: include.tool.banner_alt.en | default: include.tool.name | escape }}" width="1500" height="500" loading="lazy">
+  </a>
+  {% endif %}
   <div class="rs-tool-impact {% if is_cost %}rs-tool-impact--cost{% else %}rs-tool-impact--revenue{% endif %}">
     <span class="rs-tool-impact-label">{% if is_cost %}&darr; {{ tc.impact_cost }}{% else %}&uarr; {{ tc.impact_revenue }}{% endif %}</span>
     {% assign range = include.tool.range[site.active_lang] | default: include.tool.range.en | default: include.tool.range %}
@@ -22,7 +27,7 @@
           <p class="rs-tool-card-label">{{ tc.solution_label }}</p>
           <h3>{{ include.tool.name }}</h3>
         </div>
-        {% if include.tool.icon %}
+        {% if include.tool.icon and include.tool.banner == nil %}
         <a class="rs-tool-card-icon-link" href="{{ include.tool.repo | default: site.github_url }}" target="_blank" rel="noopener" aria-label="{{ include.tool.name }}">
           <img class="rs-tool-card-icon" src="{{ include.tool.icon | relative_url }}" alt="" width="56" height="56">
         </a>

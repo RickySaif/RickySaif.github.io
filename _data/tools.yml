@@ -2,15 +2,19 @@
 # Add a tool: append one entry. `repo` empty -> links to site.github_url.
 # `case` is the slug of its case study in _cases/ (optional).
 # `page` is an on-site page with more detail (optional).
+# `banner` (+ `banner_alt`) is the wide image shown on top of the card, taken from the repo README.
 # `flagship: true` puts the tool in the top block on the home page (three max).
 # `range` is the potential impact, shown on the card, e.g. "Rp 50-200 jt / year".
 #   A plain string, or en:/id: when the wording differs per language.
 #   Leave it empty to show only the label. Never put a number here you cannot defend.
 # `problem` is the one-paragraph current problem shown on the card.
-- name: "Ownership Framework"
+- name: "BugHunterr"
   lever: cost
   flagship: true
-  icon: "/assets/images/tools/ownership-framework.png"
+  banner: "/assets/images/tools/bughunterr-banner.webp"
+  banner_alt:
+    en: "BugHunterr: a friendly tuyul ghost catches a red bug with a magnifying glass over a browser window."
+    id: "BugHunterr: tuyul ramah menangkap bug merah dengan kaca pembesar di atas jendela browser."
   workshop_url: "#"
   range:
     en: "From one QA engineer's salary to your company's value"
@@ -18,10 +22,26 @@
   problem:
     en: "AI-powered hackers find the holes before your team does. One high-severity bug can cost real money. And vibe-coded apps turn into spaghetti code nobody dares to touch."
     id: "Hacker yang dibantu AI menemukan celah lebih dulu dari tim Anda. Satu bug berat bisa berarti kerugian finansial nyata. Dan aplikasi hasil vibecoding berubah jadi spaghetti code yang tak ada yang berani menyentuhnya."
-  repo: "https://github.com/RickySaif/Ownership-Framework"
+  repo: "https://github.com/RickySaif/BugHunterr"
   summary:
-    en: "Claude Code skills that let you tell AI to run all kinds of testing: reading the code, checking the database, even using your software in the browser like a human."
-    id: "Skill Claude Code agar Anda bisa menyuruh AI melakukan berbagai testing lewat membaca kode, database, sampai menggunakan software dari browser seperti manusia."
+    en: "An AI agent (Claude Code or Codex) hunts bugs in your web app with a real browser, the code and the database. Every bug comes with a video, a regression test and a fix prompt."
+    id: "Agen AI (Claude Code atau Codex) memburu bug di aplikasi web Anda lewat browser sungguhan, kode, dan database. Setiap bug disertai video, tes regresi, dan prompt perbaikan."
+
+- name: "Scouterr"
+  lever: profit
+  flagship: true
+  banner: "/assets/images/tools/scouterr-banner.webp"
+  banner_alt:
+    en: "Scouterr: a scout tuyul ghost peeks through binoculars at people's profiles. Find the right people. You make the call."
+    id: "Scouterr: tuyul pramuka mengintip lewat teropong ke profil orang. Temukan orang yang tepat. Anda yang memutuskan."
+  range: ""
+  problem:
+    en: "The right buyers and the right hires are already out there in public posts and profiles. Finding them by hand takes days, and bulk outreach gets you ignored or blocked."
+    id: "Pembeli dan kandidat yang tepat sebenarnya sudah ada di postingan dan profil publik. Mencarinya manual makan berhari-hari, dan pesan massal membuat Anda diabaikan atau diblokir."
+  repo: "https://github.com/RickySaif/scouterr"
+  summary:
+    en: "Scouterr Leads finds likely buyers in public posts and prepares a gradual approach. Scouterr Talent finds and ranks people worth hiring. A person approves every action."
+    id: "Scouterr Leads menemukan calon pembeli dari postingan publik dan menyiapkan pendekatan bertahap. Scouterr Talent menemukan dan meranking kandidat yang layak direkrut. Manusia menyetujui setiap aksi."
 
 - name: "Competitor-to-test-site kit"
   lever: profit

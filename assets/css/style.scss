@@ -4,30 +4,33 @@
 @import "{{ site.theme }}";
 
 $header-height: 64px;
-$claude-body-font: "Source Serif 4", Georgia, "Times New Roman", serif;
-$heading-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$ui-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$claude-body-font: var(--rs-font-sans);
+$heading-font: var(--rs-font-display);
+$ui-font: var(--rs-font-sans);
 
-$rs-ink:        #111;
-$rs-body:       #444;
-$rs-muted:      #666;
-$rs-faint:      #767676;
-$rs-line:       #e2dcd2;
-$rs-line-soft:  #ede8df;
-$rs-wash:       #f5f2ec;
+/* Brand system (../brand, tokens in brand-tokens.css). Every colour below is a
+   CSS variable, so light and dark come from the tokens, not from this file. */
+$rs-ink:        var(--rs-ink);
+$rs-body:       var(--rs-text);
+$rs-muted:      var(--rs-text-secondary);
+$rs-faint:      var(--rs-text-tertiary);
+$rs-line:       var(--rs-hairline);
+$rs-line-soft:  var(--rs-hairline);
+$rs-wash:       var(--rs-surface-sunken);
+$grey-color:    var(--rs-text-secondary);
 
-$rs-accent:       #9a5b00;
-$rs-accent-hover: #6e4100;
-$rs-accent-soft:  #fbf6ee;
+$rs-accent:       var(--rs-accent);
+$rs-accent-hover: var(--rs-accent-hover);
+$rs-accent-soft:  var(--rs-accent-soft);
 
-$rs-shadow: 0 1px 2px rgba(17,17,17,.04), 0 8px 24px -12px rgba(17,17,17,.10);
+$rs-shadow: var(--rs-shadow-sm);
 
 /* One accent, applied deliberately -- link colour, eyebrows, the mechanism's
    payoff step, the disclosure rule, and nowhere else. Kills minima's
    inherited #2a7ae2 link blue, which was the site's only accidental colour. */
 a {
   color: $rs-accent;
-  text-decoration-color: rgba(154, 91, 0, 0.35);
+  text-decoration-color: color-mix(in srgb, var(--rs-accent) 40%, transparent);
 }
 a:visited {
   color: $rs-accent;
@@ -79,7 +82,7 @@ h2, h3, .post-title {
 /** Paragraph and body text sizing */
 body {
   font-size: 18px !important;
-  background: #fff;
+  background: var(--rs-surface);
 }
 
 p {
@@ -154,7 +157,7 @@ h6 {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #fff;
+  background: var(--rs-surface);
   border-top: 0;
   border-bottom: 1px solid $rs-line;
   padding-top: 0;
@@ -197,10 +200,10 @@ h6 {
   font-family: $ui-font;
   font-size: 14px;
   font-weight: 600;
-  color: #fff !important;
-  background: $rs-ink;
+  color: var(--rs-on-primary) !important;
+  background: var(--rs-primary);
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: var(--rs-radius-sm);
   text-decoration: none !important;
 
   &::after{ content: none; }
@@ -218,7 +221,7 @@ h6 {
   gap: 5px;
   border-radius: 4px;
   border: 1px solid $rs-line;
-  background: #fff;
+  background: var(--rs-surface);
   cursor: pointer;
 
   span{
@@ -253,7 +256,7 @@ h6 {
   width: min(82vw, 300px);
   height: 100vh;
   padding: 24px;
-  background: #fff;
+  background: var(--rs-surface);
   border-left: 1px solid $rs-line;
   transform: translateX(100%);
   transition: transform 0.25s ease;
@@ -362,7 +365,7 @@ hr.short{
   display: block;
 	width: 20%;
 	margin: 50px auto 40px auto;
-	border: 1px solid #dededc;
+	border: 1px solid var(--rs-hairline);
 }
 
 /** Language Toggle */
@@ -388,14 +391,14 @@ hr.short{
         transition: all 0.3s ease;
         
         &:hover {
-          background-color: #f5f5f5;
-          color: #111;
+          background-color: var(--rs-surface-sunken);
+          color: var(--rs-ink);
         }
         
         &.active {
-          color: #111;
+          color: var(--rs-ink);
           font-weight: 600;
-          background-color: #f0f0f0;
+          background-color: var(--rs-surface-sunken);
           cursor: default;
         }
       }
@@ -453,9 +456,9 @@ hr.short{
   font-size: 13px !important;
   line-height: 1.5;
   font-weight: 600;
-  color: #8a5a00;
-  background: #fff6e0;
-  border: 1px dashed #e0b45e;
+  color: var(--rs-caution);
+  background: color-mix(in srgb, var(--rs-caution) 12%, var(--rs-surface));
+  border: 1px dashed var(--rs-caution);
   border-radius: 5px;
   padding: 3px 9px;
 
@@ -574,20 +577,20 @@ hr.short{
 }
 
 .rs-btn--primary {
-  background: $rs-ink;
-  color: #fff !important;
-  border-color: $rs-ink;
+  background: var(--rs-primary);
+  color: var(--rs-on-primary) !important;
+  border-color: var(--rs-primary);
 
   &:hover { opacity: .85; }
   &:disabled { opacity: .45; cursor: not-allowed; }
 }
 
 .rs-btn--secondary {
-  background: #fff;
+  background: var(--rs-surface);
   color: $rs-ink !important;
-  border-color: #d6d6d6;
+  border-color: var(--rs-hairline);
 
-  &:hover { background: #f5f5f5; }
+  &:hover { background: var(--rs-surface-sunken); }
 }
 
 .rs-btn--wide { width: 100%; }
@@ -655,7 +658,7 @@ hr.short{
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #ececec;
+      background: var(--rs-surface-sunken);
       color: $rs-muted;
       font-family: $ui-font;
       font-size: 11px;
@@ -666,7 +669,7 @@ hr.short{
 
     &:last-child:before {
       background: $rs-accent;
-      color: #fff;
+      color: var(--rs-on-primary);
     }
   }
 }
@@ -705,7 +708,7 @@ hr.short{
   border: 1px solid $rs-line;
   border-radius: 12px;
   padding: 26px 22px;
-  background: #fff;
+  background: var(--rs-surface);
   box-shadow: $rs-shadow;
   margin: 24px 0;
 
@@ -774,7 +777,7 @@ hr.short{
   border: 1px solid $rs-line;
   border-radius: 12px;
   padding: 28px 22px;
-  background: #fff;
+  background: var(--rs-surface);
   margin: 28px 0;
 
   h3 {
@@ -949,7 +952,6 @@ hr.short{
   margin: 28px 0 0 0;
   padding: 0;
   list-style: none;
-  min-width: 650px; /* Deliberate bug for AI bug hunter demo: causes horizontal overflow on mobile (< 650px) */
 }
 
 .rs-proof-strip li {
@@ -1021,16 +1023,16 @@ hr.short{
 
 /* --- Offer cards: paid gets visual primacy -------------------------------- */
 .rs-offer--paid {
-  background: $rs-ink;
-  border-color: $rs-ink;
+  background: var(--rs-sovereign);
+  border-color: var(--rs-sovereign);
 
-  h3, p, .rs-tab-meta { color: #fff; }
-  .rs-tab-meta { color: rgba(255, 255, 255, .62); }
+  h3, p, .rs-tab-meta { color: var(--rs-on-sovereign); }
+  .rs-tab-meta { color: var(--rs-on-sovereign-muted); }
 
   .rs-btn--primary {
-    background: #fff;
-    border-color: #fff;
-    color: $rs-ink !important;
+    background: var(--rs-on-sovereign);
+    border-color: var(--rs-on-sovereign);
+    color: var(--rs-sovereign) !important;
 
     &:hover { opacity: .88; }
   }
@@ -1038,7 +1040,7 @@ hr.short{
   .rs-btn--secondary {
     background: transparent;
     border-color: rgba(255, 255, 255, .4);
-    color: #fff !important;
+    color: var(--rs-on-sovereign) !important;
 
     &:hover { background: rgba(255, 255, 255, .08); }
   }
@@ -1056,7 +1058,7 @@ hr.short{
   border: 1px solid $rs-line;
   border-radius: 10px;
   padding: 20px;
-  background: #fff;
+  background: var(--rs-surface);
   box-shadow: $rs-shadow;
 }
 
@@ -1078,18 +1080,18 @@ hr.short{
 
 /* --- Close band: booking CTA on ink ---------------------------------------- */
 .rs-close-band {
-  background: $rs-ink;
-  border-radius: 14px;
+  background: var(--rs-sovereign);
+  border-radius: var(--rs-radius-lg);
   padding: 40px 28px;
   text-align: center;
 
-  h2 { color: #fff; }
-  p { color: rgba(255, 255, 255, .72); }
+  h2 { color: var(--rs-on-sovereign); }
+  p { color: var(--rs-on-sovereign-muted); }
 
   .rs-btn--primary {
-    background: #fff;
-    color: $rs-ink !important;
-    border-color: #fff;
+    background: var(--rs-on-sovereign);
+    color: var(--rs-sovereign) !important;
+    border-color: var(--rs-on-sovereign);
 
     &:hover { opacity: .88; }
   }
@@ -1251,7 +1253,7 @@ hr.short{
     transform: translateX(-50%);
     width: 56px;
     height: 1px;
-    background: #dededc;
+    background: var(--rs-hairline);
   }
 
   strong {
@@ -1285,10 +1287,10 @@ hr.short{
   max-width: 760px;
   margin: 56px auto 24px auto;
   padding-top: 20px;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid var(--rs-hairline);
   font-size: 12.5px;
   line-height: 1.6;
-  color: #9a9a9a;
+  color: var(--rs-text-tertiary);
   text-align: center;
   word-break: break-word;
 }
@@ -1302,8 +1304,8 @@ hr.short{
    cost reuses the accent; nothing else gets a new colour.
    ========================================================================== */
 
-$rs-profit:      #2e6b3f;
-$rs-profit-soft: #eef5ef;
+$rs-profit:      var(--rs-positive);
+$rs-profit-soft: color-mix(in srgb, var(--rs-positive) 12%, var(--rs-surface));
 
 /* --- Header: identity under the name, EN | ID switch ---------------------- */
 .site-header .site-brand { display: flex; flex-direction: column; gap: 4px; }
@@ -1318,29 +1320,48 @@ $rs-profit-soft: #eef5ef;
   color: $rs-faint;
 }
 
+/* EN | ID switch: two round flags in a segmented pill. */
 .site-lang {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  line-height: 1;
-  font-family: $ui-font;
-  font-size: 13px;
-  font-weight: 600;
+  gap: 2px;
+  padding: 3px;
+  line-height: 0;
+  border-radius: var(--rs-radius-pill);
+  background: var(--rs-surface-sunken);
 
-  a, .site-lang-current {
-    display: inline-block;
-    line-height: 1;
-    padding: 6px 8px !important;
-    border-radius: 4px;
-    border-bottom: 0 !important;
+  .site-flag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0 !important;
+    border-radius: 50%;
+    border: 0 !important;
+    background: transparent;
     text-decoration: none;
+    transition: background var(--rs-motion-base) var(--rs-motion-ease), box-shadow var(--rs-motion-base) var(--rs-motion-ease);
+
+    img {
+      display: block;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(14, 26, 43, .14);
+      opacity: .6;
+      filter: grayscale(.9);
+      transition: opacity var(--rs-motion-base) var(--rs-motion-ease), filter var(--rs-motion-base) var(--rs-motion-ease);
+    }
   }
-  a { color: $rs-muted !important; }
-  a:hover { color: $rs-ink !important; background: $rs-wash; }
-  .site-lang-current { color: $rs-ink; background: $rs-wash; }
+  a.site-flag:hover { background: var(--rs-surface); box-shadow: var(--rs-shadow-sm); }
+  a.site-flag:hover img { opacity: 1; filter: none; }
+  .site-flag.is-current { background: var(--rs-surface); box-shadow: var(--rs-shadow-sm); cursor: default; }
+  .site-flag.is-current img { opacity: 1; filter: none; }
 }
 
-.site-mobile-menu .site-lang { margin: 8px 0 4px 0; font-size: 15px; }
+.site-mobile-menu .site-lang { margin: 8px 0 4px 0; align-self: flex-start; }
 
 @media only screen and (min-width: 769px) {
   .site-nav-desktop { gap: 18px; }
@@ -1386,7 +1407,7 @@ $rs-profit-soft: #eef5ef;
 .rs-btn--on-ink {
   background: transparent;
   border-color: rgba(255, 255, 255, .4);
-  color: #fff !important;
+  color: var(--rs-on-sovereign) !important;
 
   &:hover { background: rgba(255, 255, 255, .08); }
 }
@@ -1442,8 +1463,8 @@ $rs-profit-soft: #eef5ef;
 .rs-lever-badge--cost   { color: $rs-accent; background: $rs-accent-soft; }
 
 /* --- Free-tool cards (home) ------------------------------------------------ */
-$rs-cost-red:      #b3261e;
-$rs-cost-red-soft: #fdf0ee;
+$rs-cost-red:      var(--rs-critical);
+$rs-cost-red-soft: color-mix(in srgb, var(--rs-critical) 10%, var(--rs-surface));
 
 /* One column everywhere: each card is wide enough for problem | solution. */
 .rs-tool-stack,
@@ -1461,7 +1482,7 @@ $rs-cost-red-soft: #fdf0ee;
   border: 1px solid $rs-line;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: var(--rs-surface);
   box-shadow: $rs-shadow;
 
   h3 {
@@ -1607,7 +1628,7 @@ $rs-cost-red-soft: #fdf0ee;
   border: 1px solid $rs-line;
   border-radius: 12px;
   overflow: hidden;
-  background: #fff;
+  background: var(--rs-surface);
   box-shadow: $rs-shadow;
   color: $rs-body !important;
   text-decoration: none !important;
@@ -1615,7 +1636,7 @@ $rs-cost-red-soft: #fdf0ee;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 1px 2px rgba(17,17,17,.06), 0 14px 30px -14px rgba(17,17,17,.22);
+    box-shadow: 0 1px 2px rgba(14,26,43,.08), 0 14px 30px -14px rgba(14,26,43,.24);
   }
 
   h3 {
@@ -1721,7 +1742,7 @@ $rs-cost-red-soft: #fdf0ee;
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--rs-surface);
   border: 1px solid $rs-line;
   font-size: 13px;
   font-weight: 700;
@@ -1731,11 +1752,11 @@ $rs-cost-red-soft: #fdf0ee;
 }
 
 .rs-flow-step--payoff {
-  background: $rs-ink;
-  border-color: $rs-ink;
-  color: #fff;
+  background: var(--rs-sovereign);
+  border-color: var(--rs-sovereign);
+  color: var(--rs-on-sovereign);
 
-  .rs-flow-num { background: $rs-accent; border-color: $rs-accent; color: #fff; }
+  .rs-flow-num { background: $rs-accent; border-color: $rs-accent; color: var(--rs-on-primary); }
 }
 
 @media (min-width: 760px) {
@@ -1794,4 +1815,165 @@ $rs-cost-red-soft: #fdf0ee;
   font-family: $ui-font;
   font-size: 15px !important;
   font-weight: 600;
+}
+
+
+/* ==========================================================================
+   Brand system layer (../brand/DESIGN.md)
+
+   Mist canvas, white only on lifted cards, Source Serif 4 on headings and
+   system sans for everything else, one blue for interaction, Sovereign navy
+   for anchor surfaces and the single filled button, a brass seal. Light and
+   dark come from brand-tokens.css. Placed last so it wins over the rules above.
+   ========================================================================== */
+
+body {
+  background: var(--rs-canvas);
+  color: var(--rs-text);
+  font-family: var(--rs-font-sans) !important;
+  font-size: var(--rs-size-body) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+p  { font-size: var(--rs-size-body) !important; line-height: 1.6 !important; }
+li { font-size: var(--rs-size-body) !important; }
+
+h1, h2, h3, .post-title {
+  font-family: var(--rs-font-display);
+  font-weight: 600 !important;
+  color: var(--rs-ink);
+}
+h1, .post-title { font-size: var(--rs-size-h1) !important; line-height: 1.1 !important; letter-spacing: var(--rs-tracking-h1); }
+h2, .post-content h2 { font-size: var(--rs-size-h2) !important; line-height: 1.18 !important; letter-spacing: var(--rs-tracking-h2); }
+h3, .post-content h3 { font-size: var(--rs-size-h3) !important; line-height: 1.25 !important; }
+h4, .post-content h4 { font-family: var(--rs-font-sans); font-size: var(--rs-size-h4) !important; font-weight: 600; color: var(--rs-ink); }
+
+@media (max-width: 600px) {
+  h1, .post-title { font-size: 34px !important; }
+  h2, .post-content h2 { font-size: 26px !important; }
+  h3, .post-content h3 { font-size: 21px !important; }
+}
+
+.wrapper { max-width: var(--rs-container); }
+.post-content p, .rs-section-intro { max-width: var(--rs-measure); }
+
+a { color: var(--rs-accent); }
+a:visited { color: var(--rs-accent); }
+a:hover { color: var(--rs-accent-hover); }
+:focus-visible { outline: 2px solid var(--rs-focus); outline-offset: 2px; border-radius: var(--rs-radius-xs); }
+
+blockquote { border-left-color: var(--rs-brass); font-family: var(--rs-font-display); }
+pre, code { background: var(--rs-surface-sunken); border-color: var(--rs-hairline); font-family: var(--rs-font-mono); }
+
+/* Header: lockup on the canvas, a soft shadow instead of a rule. */
+.site-header {
+  background: var(--rs-canvas);
+  border-bottom: 0;
+  box-shadow: 0 1px 0 var(--rs-hairline);
+}
+.site-header .site-title { display: inline-flex; align-items: center; line-height: 0; }
+.site-lockup { display: block; height: 46px; width: auto; }
+.site-mobile-menu { background: var(--rs-surface); }
+.menu-toggle-button { background: var(--rs-surface); border-radius: var(--rs-radius-sm); }
+
+/* Sections are separated by space, not lines. */
+.rs-section { margin: var(--rs-section-gap) 0; padding-bottom: 0; border-bottom: 0; }
+.rs-section:first-child { margin-top: var(--rs-space-12); }
+
+.rs-eyebrow,
+.rs-hero-name {
+  font: var(--rs-text-eyebrow);
+  letter-spacing: var(--rs-tracking-eyebrow);
+  color: var(--rs-brass-text);
+  text-transform: uppercase;
+}
+
+/* Cards: lifted by shadow, 18px radius, no border. */
+.rs-card, .rs-tool-card, .rs-case-card, .rs-verify-card, .rs-skill, .rs-front, .rs-entry.rs-tool {
+  border: 0;
+  border-radius: var(--rs-radius-lg);
+  background: var(--rs-surface);
+  box-shadow: var(--rs-shadow-sm);
+}
+.rs-card--wash, .rs-front { background: var(--rs-surface); }
+.rs-disclosure { background: var(--rs-surface); border-left-color: var(--rs-brass); }
+.rs-lever-badge { letter-spacing: .08em; }
+
+/* Numbers are figures: mono, tabular, audited-looking. */
+.rs-proof-strip .num,
+.rs-price {
+  font-family: var(--rs-font-mono);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: var(--rs-tracking-figure);
+}
+.rs-proof-strip li { border-left-color: var(--rs-brass); }
+
+/* Home hero: the flagship Sovereign surface, brass measure above the H1. */
+.rs-hero {
+  margin: var(--rs-space-8) 0 0 0;
+  padding: var(--rs-space-12) var(--rs-space-8);
+  border-bottom: 0;
+  border-radius: var(--rs-radius-lg);
+  background: linear-gradient(180deg, var(--rs-sovereign-raised), var(--rs-sovereign));
+  color: var(--rs-on-sovereign-muted);
+
+  h1 { color: var(--rs-on-sovereign); font-size: clamp(34px, 6vw, 52px) !important; line-height: 1.06 !important; letter-spacing: var(--rs-tracking-display); max-width: 16ch; }
+  h1::before { content: ""; display: block; width: 40px; height: 2px; background: var(--rs-brass); margin: 0 0 var(--rs-space-6) 0; }
+  .rs-hero-name { color: var(--rs-brass); }
+  .rs-hero-subhead { color: var(--rs-on-sovereign-muted); font-family: var(--rs-font-sans); font-weight: 400; font-size: var(--rs-size-lead) !important; }
+  .rs-hero-subhead strong { color: var(--rs-on-sovereign); font-weight: 600; }
+  .rs-hero-portrait { border: 0; border-radius: var(--rs-radius-md); box-shadow: none; }
+}
+@media (max-width: 600px) { .rs-hero { padding: var(--rs-space-8) var(--rs-space-6); } }
+
+/* Case header subhead sits on the canvas, not on Sovereign. */
+.rs-case-header .rs-hero-subhead { color: var(--rs-text-secondary); font-family: var(--rs-font-sans); font-weight: 400; }
+
+/* Buttons: one filled Sovereign button per view. */
+.rs-btn, .site-nav-cta { border-radius: var(--rs-radius-sm); transition: background var(--rs-motion-base) var(--rs-motion-ease), opacity var(--rs-motion-base) var(--rs-motion-ease); }
+.rs-btn--primary:hover, .site-nav-cta:hover { opacity: 1; background: var(--rs-sovereign-raised); border-color: var(--rs-sovereign-raised); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rs-btn--primary:hover, :root:not([data-theme="light"]) .site-nav-cta:hover { background: var(--rs-accent-hover); border-color: var(--rs-accent-hover); } }
+
+/* Footer: Sovereign band with the reverse mark. */
+.site-footer {
+  background: var(--rs-sovereign);
+  border-top: 0;
+  color: var(--rs-on-sovereign-muted);
+  margin-top: var(--rs-section-gap);
+
+  a, a:visited { color: var(--rs-on-sovereign); }
+  a:hover { color: var(--rs-brass); }
+  p, .rs-footer-line, .rs-footer-copyright, .rs-footer-price { color: var(--rs-on-sovereign-muted); }
+  .rs-footer-line { font-family: var(--rs-font-display); font-size: var(--rs-size-h3) !important; color: var(--rs-on-sovereign); }
+}
+
+/* Tool cards: the README banner leads each card. */
+.rs-tool-card-banner {
+  display: block;
+  line-height: 0;
+  border-bottom: 0 !important;
+  background: var(--rs-sovereign);
+  overflow: hidden;
+
+  img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: cover; transition: transform var(--rs-motion-slow) var(--rs-motion-ease); }
+  &:hover img { transform: scale(1.015); }
+}
+.rs-tool-list-banner {
+  display: block;
+  line-height: 0;
+  margin: calc(-1 * var(--rs-card-padding)) calc(-1 * var(--rs-card-padding)) var(--rs-space-4);
+  border-radius: var(--rs-radius-lg) var(--rs-radius-lg) 0 0;
+  overflow: hidden;
+  border-bottom: 0 !important;
+  img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 1; object-fit: cover; }
+}
+.rs-tools { display: grid; gap: var(--rs-space-6); }
+.rs-entry.rs-tool { padding: var(--rs-card-padding); overflow: hidden; }
+.rs-entry.rs-tool:first-child { padding-top: var(--rs-card-padding); }
+.rs-tool-card-link, .rs-more-link { color: var(--rs-accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
 }

@@ -5,13 +5,15 @@
   and posts), which have no twin to switch to.
 {% endcomment %}
 {%- unless page["lang-exclusive"] or page.layout == "post" -%}
-<span class="site-lang" aria-label="Language">
+{%- assign flag_en = "/assets/images/flags/gb.svg" | relative_url -%}
+{%- assign flag_id = "/assets/images/flags/id.svg" | relative_url -%}
+<span class="site-lang" role="group" aria-label="Language">
   {%- if site.active_lang == "id" -%}
-  <a {% static_href %}href="{{ page.url }}"{% endstatic_href %} hreflang="en" lang="en">EN</a>
-  <span class="site-lang-current" aria-current="true">ID</span>
+  <a class="site-flag" {% static_href %}href="{{ page.url }}"{% endstatic_href %} hreflang="en" lang="en" aria-label="English" title="English"><img src="{{ flag_en }}" alt="" width="22" height="22"></a>
+  <span class="site-flag is-current" aria-current="true" aria-label="Bahasa Indonesia" title="Bahasa Indonesia"><img src="{{ flag_id }}" alt="" width="22" height="22"></span>
   {%- else -%}
-  <span class="site-lang-current" aria-current="true">EN</span>
-  <a {% static_href %}href="/id{{ page.url }}"{% endstatic_href %} hreflang="id" lang="id">ID</a>
+  <span class="site-flag is-current" aria-current="true" aria-label="English" title="English"><img src="{{ flag_en }}" alt="" width="22" height="22"></span>
+  <a class="site-flag" {% static_href %}href="/id{{ page.url }}"{% endstatic_href %} hreflang="id" lang="id" aria-label="Bahasa Indonesia" title="Bahasa Indonesia"><img src="{{ flag_id }}" alt="" width="22" height="22"></a>
   {%- endif -%}
 </span>
 {%- endunless -%}

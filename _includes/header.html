@@ -5,8 +5,12 @@
   <div class="wrapper">
     <div class="site-header-main">
       <div class="site-brand">
-        <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-        <span class="site-identity">{{ t.identity }}</span>
+        <a class="site-title" href="{{ "/" | relative_url }}" aria-label="{{ site.title | escape }}, {{ t.identity }}">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="{{ "/assets/images/brand/rs-lockup-reverse.svg" | relative_url }}">
+            <img class="site-lockup" src="{{ "/assets/images/brand/rs-lockup.svg" | relative_url }}" alt="{{ site.title | escape }}, {{ t.identity }}" width="190" height="50">
+          </picture>
+        </a>
       </div>
 
       {% comment %}

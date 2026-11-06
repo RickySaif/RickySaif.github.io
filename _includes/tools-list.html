@@ -5,7 +5,11 @@
 <div class="rs-entries rs-tools">
   {% for tool in site.data.tools %}
   <div class="rs-entry rs-tool">
-    {% if tool.icon %}
+    {% if tool.banner %}
+    <a class="rs-tool-list-banner" href="{{ tool.repo | default: site.github_url }}" target="_blank" rel="noopener">
+      <img src="{{ tool.banner | relative_url }}" alt="{{ tool.banner_alt[site.active_lang] | default: tool.banner_alt.en | default: tool.name | escape }}" width="1500" height="500" loading="lazy">
+    </a>
+    {% elsif tool.icon %}
     <a class="rs-tool-list-icon-link" href="{{ tool.repo | default: site.github_url }}" target="_blank" rel="noopener" aria-label="{{ tool.name }}">
       <img class="rs-tool-list-icon" src="{{ tool.icon | relative_url }}" alt="" width="48" height="48">
     </a>
