@@ -1,6 +1,6 @@
 ---
 title: "Memperbaiki bug tanpa saling lempar dengan vendor"
-summary: "Ubah laporan bug yang samar menjadi langkah reproduksi, usulan perbaikan dari AI, dan hasil yang terverifikasi, supaya Anda berhenti membayar bolak-balik berminggu-minggu."
+summary: "Ubah laporan bug yang samar menjadi langkah reproduksi, usulan perbaikan dari AI, dan hasil yang terverifikasi, supaya Anda tidak lagi membayar untuk bolak-balik berminggu-minggu."
 lever: cost
 order: 2
 visual: bugfix
@@ -14,17 +14,17 @@ result: ""
 lang: id
 ---
 
-## Masalah sang CEO
+## Masalahnya
 
-Pelanggan bilang checkout rusak. Tim Anda meneruskannya ke vendor. Vendor minta tangkapan layar. Dua minggu kemudian tiketnya masih terbuka, dan tagihannya tetap menghitung jam.
+Pelanggan bilang checkout rusak. Tim Anda meneruskannya ke vendor. Vendor minta tangkapan layar. Dua minggu kemudian tiketnya masih terbuka, sementara tagihan per jamnya terus berjalan.
 
-Pernah mengalaminya? Bug-nya jarang menjadi bagian yang mahal. **Menunggunya yang mahal.**
+Pernah mengalaminya? Yang mahal jarang bug-nya. **Yang mahal adalah menunggunya.**
 
 ## Yang dikerjakan AI
 
-AI pertama-tama mengubah keluhan menjadi langkah reproduksi yang presisi: halaman mana, langkah apa, browser apa, apa yang diharapkan, dan apa yang terjadi. Bug yang bisa direproduksi sudah setengah terperbaiki.
+AI pertama-tama mengubah keluhan menjadi langkah reproduksi yang presisi: halaman mana, langkah apa, browser apa, apa yang diharapkan, dan apa yang terjadi. Bug yang bisa direproduksi sudah setengah jalan diperbaiki.
 
-Lalu AI membaca kode yang relevan, mengusulkan perbaikan, dan menjalankan langkah yang sama sekali lagi untuk membuktikan perbaikannya berhasil. Orang di tim Anda meninjaunya sebelum apa pun dirilis.
+Lalu AI membaca kode yang relevan, mengusulkan perbaikan, dan menjalankan langkah yang sama sekali lagi untuk membuktikan perbaikannya berhasil. Sebelum apa pun dirilis, orang di tim Anda meninjaunya dulu.
 
 ## Yang Anda dapatkan
 
@@ -34,4 +34,4 @@ Lalu AI membaca kode yang relevan, mengusulkan perbaikan, dan menjalankan langka
 
 ## Siapa yang mengerjakan
 
-Tim Anda, dengan AI di sampingnya. Dalam sesi, saya memasangnya di codebase atau sistem Anda yang sebenarnya, dan kita memperbaiki satu bug nyata bersama.
+Tim Anda sendiri, dibantu AI. Dalam sesi, saya memasangnya di codebase atau sistem Anda yang sebenarnya, dan kita memperbaiki satu bug nyata bersama.

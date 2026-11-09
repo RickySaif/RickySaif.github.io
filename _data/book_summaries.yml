@@ -1,0 +1,36 @@
+# Book summaries, rendered by /book-summary/ in both languages, one card per book,
+# in the order listed here. Add a book: append one entry.
+#
+# - title: "Book title"            # as published
+#   author: "Author Name"
+#   year: 2020                     # optional
+#   cover: "/assets/images/books/<slug>.jpg"   # optional, portrait cover
+#   link: "https://..."            # optional, where to get the book
+#   summary:                       # one short paragraph
+#     en: "..."
+#     id: "..."
+#   takeaways:                     # 3-5 short points
+#     en: ["...", "..."]
+#     id: ["...", "..."]
+
+- title: "The Laws of Human Nature"
+  author: "Robert Greene"
+  year: 2018
+  cover: "/assets/images/books/laws-of-human-nature.jpg"
+  link: "https://openlibrary.org/isbn/9780525428145"
+  summary:
+    en: "Robert Greene's field guide to the forces that drive people, including you. Through eighteen laws and the lives of figures from Pericles to Martin Luther King Jr., he shows how irrationality, narcissism, envy, short-term thinking and the pull of the group quietly shape decisions. For a CEO, it is a manual for reading the room, the board and yourself before emotion makes the call."
+    id: "Panduan lapangan Robert Greene tentang kekuatan yang menggerakkan manusia, termasuk diri Anda. Lewat delapan belas hukum dan kisah tokoh dari Pericles hingga Martin Luther King Jr., ia menunjukkan bagaimana irasionalitas, narsisme, iri hati, pikiran jangka pendek, dan tarikan kelompok diam-diam membentuk keputusan. Bagi CEO, buku ini adalah pedoman untuk membaca suasana, dewan direksi, dan diri sendiri sebelum emosi yang mengambil keputusan."
+  takeaways:
+    en:
+      - "Master your emotional self first. Most bad decisions are feelings dressed up as logic."
+      - "Judge people by their patterns of behaviour over time, not by the mask they wear in a meeting."
+      - "Think long term. Step back from the urgent and ask where today's choice leads in five years."
+      - "Envy and grandiosity grow quietly as you succeed. Watch for them in others and in yourself."
+      - "Groups pull individuals toward conformity. Build a team that is allowed to disagree with you."
+    id:
+      - "Kuasai sisi emosional Anda lebih dulu. Banyak keputusan buruk sebenarnya perasaan yang menyamar sebagai logika."
+      - "Nilai orang dari pola perilakunya dari waktu ke waktu, bukan dari topeng yang ia pakai saat rapat."
+      - "Berpikirlah jangka panjang. Mundur sejenak dari yang mendesak, lalu tanyakan ke mana keputusan hari ini membawa Anda lima tahun lagi."
+      - "Iri hati dan rasa hebat diri tumbuh diam-diam seiring kesuksesan. Waspadai pada orang lain dan pada diri sendiri."
+      - "Kelompok menarik individu untuk ikut arus. Bangun tim yang boleh tidak setuju dengan Anda."

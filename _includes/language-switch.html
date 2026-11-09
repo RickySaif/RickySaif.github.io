@@ -8,12 +8,12 @@
 {%- assign flag_en = "/assets/images/flags/gb.svg" | relative_url -%}
 {%- assign flag_id = "/assets/images/flags/id.svg" | relative_url -%}
 <span class="site-lang" role="group" aria-label="Language">
-  {%- if site.active_lang == "id" -%}
-  <a class="site-flag" {% static_href %}href="{{ page.url }}"{% endstatic_href %} hreflang="en" lang="en" aria-label="English" title="English"><img src="{{ flag_en }}" alt="" width="22" height="22"></a>
-  <span class="site-flag is-current" aria-current="true" aria-label="Bahasa Indonesia" title="Bahasa Indonesia"><img src="{{ flag_id }}" alt="" width="22" height="22"></span>
-  {%- else -%}
+  {%- if site.active_lang == "en" -%}
   <span class="site-flag is-current" aria-current="true" aria-label="English" title="English"><img src="{{ flag_en }}" alt="" width="22" height="22"></span>
-  <a class="site-flag" {% static_href %}href="/id{{ page.url }}"{% endstatic_href %} hreflang="id" lang="id" aria-label="Bahasa Indonesia" title="Bahasa Indonesia"><img src="{{ flag_id }}" alt="" width="22" height="22"></a>
+  <a class="site-flag" {% static_href %}href="{{ page.url }}"{% endstatic_href %} hreflang="id" lang="id" aria-label="Bahasa Indonesia" title="Bahasa Indonesia"><img src="{{ flag_id }}" alt="" width="22" height="22"></a>
+  {%- else -%}
+  <a class="site-flag" {% static_href %}href="/en{{ page.url }}"{% endstatic_href %} hreflang="en" lang="en" aria-label="English" title="English"><img src="{{ flag_en }}" alt="" width="22" height="22"></a>
+  <span class="site-flag is-current" aria-current="true" aria-label="Bahasa Indonesia" title="Bahasa Indonesia"><img src="{{ flag_id }}" alt="" width="22" height="22"></span>
   {%- endif -%}
 </span>
 {%- endunless -%}

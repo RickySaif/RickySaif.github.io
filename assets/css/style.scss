@@ -1977,3 +1977,35 @@ pre, code { background: var(--rs-surface-sunken); border-color: var(--rs-hairlin
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* --- Book summaries: one column, one lifted card per book ----------------- */
+.rs-book-list { display: grid; grid-template-columns: 1fr; gap: var(--rs-space-6); max-width: 760px; }
+.rs-book-card {
+  display: flex;
+  gap: var(--rs-space-6);
+  align-items: flex-start;
+  padding: var(--rs-card-padding);
+  border-radius: var(--rs-radius-lg);
+  background: var(--rs-surface);
+  box-shadow: var(--rs-shadow-sm);
+}
+.rs-book-cover {
+  flex: 0 0 120px;
+  width: 120px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: var(--rs-radius-xs);
+  box-shadow: var(--rs-shadow-md);
+}
+.rs-book-body { min-width: 0; }
+.rs-book-meta { font: var(--rs-text-eyebrow); letter-spacing: var(--rs-tracking-eyebrow); text-transform: uppercase; color: var(--rs-brass-text); font-size: var(--rs-size-eyebrow) !important; margin: 0 0 6px 0 !important; }
+.rs-book-title { font-size: var(--rs-size-h3) !important; line-height: 1.25 !important; margin: 0 0 var(--rs-space-3) 0; }
+.rs-book-summary { color: var(--rs-text); margin: 0 0 var(--rs-space-4) 0 !important; }
+.rs-book-label { font: var(--rs-text-eyebrow); letter-spacing: var(--rs-tracking-eyebrow); text-transform: uppercase; color: var(--rs-text-tertiary); font-size: var(--rs-size-eyebrow) !important; margin: 0 0 6px 0 !important; }
+.rs-book-takeaways { margin: 0 0 var(--rs-space-4) 1.1em; li { font-size: var(--rs-size-small) !important; line-height: 1.55; margin-bottom: 4px; color: var(--rs-text); } }
+.rs-book-link { font-size: var(--rs-size-small); font-weight: 600; }
+@media (max-width: 560px) {
+  .rs-book-card { flex-direction: column; }
+  .rs-book-cover { width: 96px; flex-basis: auto; }
+}

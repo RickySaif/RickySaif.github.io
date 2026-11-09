@@ -2,12 +2,13 @@
 # footer.html, head.html and the case-study templates.
 # Header order is: Writing. (About is hidden for now.)
 en:
-  identity: "CEO's AI Enabler"
+  identity: "CEO's Partner in the AI Era"
   tagline: "Free AI tools. More profit, less cost."
   consulting: "Consulting"
   cases: "Cases"
   tools: "Tools"
   writing: "Writing"
+  book-summary: "Book Summary"
   about: "About"
   books: "Books I Authored"
   webinars: "Free Webinars"
@@ -32,12 +33,13 @@ en:
   language_name: "English"
 
 id:
-  identity: "Konsultan AI-nya CEO"
+  identity: "Mitra CEO di Era AI"
   tagline: "Tools AI gratis. Untung naik, biaya turun."
   consulting: "Konsultasi"
   cases: "Studi Kasus"
   tools: "Alat"
   writing: "Tulisan"
+  book-summary: "Ringkasan Buku"
   about: "Tentang"
   books: "Buku yang Saya Tulis"
   webinars: "Webinar Gratis"
@@ -51,7 +53,7 @@ id:
   read_case: "Baca kasusnya"
   get_tool: "Dapatkan solusi gratisnya"
   or_label: "atau"
-  attend_workshop: "Hadiri workshop onlinenya"
+  attend_workshop: "Ikuti workshop online-nya"
   all_cases: "Semua studi kasus"
   impact_revenue: "Potensi kenaikan pendapatan:"
   impact_cost: "Potensi penghematan biaya:"

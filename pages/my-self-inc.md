@@ -786,8 +786,8 @@ In this framework I am the CEO of my own life, and the "chiefs" on my board — 
 
 STEP 1 — Learn the framework.
 Read this page in full, especially the section "Addendum for AI Consultants" at the very bottom:
-https://rickysaif.github.io/my-self-inc/
-The addendum itself is anchored at https://rickysaif.github.io/my-self-inc/#addendum
+https://rickysaif.github.io/en/my-self-inc/
+The addendum itself is anchored at https://rickysaif.github.io/en/my-self-inc/#addendum
 It defines the My Self, Inc model, the six chiefs and the consultant that advises each one, and the Report -> Advise -> Challenge -> Execute protocol.
 
 STEP 2 — Get to know me.

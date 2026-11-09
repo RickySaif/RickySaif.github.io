@@ -16,7 +16,7 @@
 title: Ricky Saif
 email: rizky.syaiful@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  CEO's AI Enabler. Free AI tools and online sessions that raise profit and cut cost.
+  CEO's Partner in the AI Era. Free AI tools and online sessions that raise profit and cut cost.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rickysaif.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: RickySaif_gh_io
@@ -68,12 +68,13 @@ plugins:
   - jekyll-polyglot
 
 # Polyglot configuration
-# English at /, Indonesian at /id/. An Indonesian page is any file with
-# `lang: id` and the same permalink as its English twin (see id/ and _cases/id/).
+# Indonesian at /, English at /en/. An English page is any file with
+# `lang: en` and the same permalink as its Indonesian twin (see id/ and _cases/id/).
+# Old /id/... links are forwarded by 404.html.
 languages:
   - en
   - id
-default_lang: en
+default_lang: id
 exclude_from_localization: [javascript, images, css, assets, kebun-makna]
 exclude:
   - Gemfile

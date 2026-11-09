@@ -1,23 +1,24 @@
 ---
 layout: null
 permalink: /sitemap.xml
-lang: en
+lang: id
 lang-exclusive:
-  - en
+  - id
 sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {%- assign entries = site.pages | concat: site.cases -%}
 {%- for p in entries -%}
-  {%- if p.sitemap == false or p.noindex or p.layout == "redirect" or p.layout == nil or p.lang == "id" -%}{%- continue -%}{%- endif -%}
+  {%- if p.sitemap == false or p.noindex or p.layout == "redirect" or p.layout == nil or p.lang == "en" -%}{%- continue -%}{%- endif -%}
   {%- unless p.url contains ".html" or p.url contains "/" -%}{%- continue -%}{%- endunless -%}
   {%- assign path = p.url | replace: "index.html", "" -%}
   {%- for lang in site.languages %}
   <url>
     <loc>{{ site.url }}{% if lang != site.default_lang %}/{{ lang }}{% endif %}{{ path }}</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ path }}"/>
-    <xhtml:link rel="alternate" hreflang="id" href="{{ site.url }}/id{{ path }}"/>
+    <xhtml:link rel="alternate" hreflang="id" href="{{ site.url }}{{ path }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}/en{{ path }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ path }}"/>
   </url>
   {%- endfor -%}
 {%- endfor %}

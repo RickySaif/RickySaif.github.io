@@ -22,9 +22,9 @@ _Iya betul, saya sudah bekerja untuk Joshua Partogi di tahun 2013-2014_
 
 "Urgh! Membuat software itu ternyata sulit ya?! Kalau teknis pengembangan, kita bisa ke Stack Overflow. Kalau urusan dengan pemilik dan perancang software kita pasrah deh, sudah biasa berlarut-larut dan penuh miskomunikasi. Belum lagi urusan memaksimalkan performa internal tim pengembang."
 
-"Dengar-dengar ada solusi bernama Scrum. Makhluk apa sih itu? Tidak diajarkan di kuliah dulu. Belajar otodidak, dibingungkan banyak versi. Ikut training, mahal. Setelah sedikit riset, banyak yang bilang manjur, tidak sedikit juga yang benar-benar kontra, ada pula yang bilang kalau agile lebih penting dari sekedar implementasi Scrum. Bingung!"
+"Dengar-dengar ada solusi bernama Scrum. Makhluk apa sih itu? Tidak diajarkan di kuliah dulu. Belajar otodidak, dibingungkan banyak versi. Ikut training, mahal. Setelah sedikit riset, banyak yang bilang manjur, tidak sedikit juga yang benar-benar kontra, ada pula yang bilang kalau agile lebih penting dari sekadar implementasi Scrum. Bingung!"
 
-Buku ini ditulis untuk menghilangkan kebingungan tersebut, dan tentunya, membantu pengembangan software anda jadi lebih baik.
+Buku ini ditulis untuk menghilangkan kebingungan tersebut, dan tentunya, membantu pengembangan software Anda jadi lebih baik.
 
 {% include image.html
             img="bukuscrum.png"
@@ -64,7 +64,7 @@ Buku ini ditulis untuk menghilangkan kebingungan tersebut, dan tentunya, membant
   - Bagaimana memanfaatkan uang untuk meningkatkan agility organisasi?
   - Adakah cara sederhana untuk terus menemukan perbaikan?
 5. **Bab V (36 halaman)**
-  - Kenapa agile software development bisa merambah ke banyak hal di luar pengembangan softaware?
+  - Kenapa agile software development bisa merambah ke banyak hal di luar pengembangan software?
   - Apa itu berarti domain agile coach juga ikut meluas?
   - Apa hal yang lebih besar yang dibawa proses-proses agile?
   - Apa dia lebih besar karena ada lebih dulu?
@@ -79,8 +79,8 @@ Buku ini ditulis untuk menghilangkan kebingungan tersebut, dan tentunya, membant
           %}
 
 &nbsp;
-## Tertarik? 300 halaman, hanya Rp. 125.000!
+## Tertarik? 300 halaman, hanya Rp 125.000!
 
-Meski tidak ada jatah penerbit, harga tinggi karena biaya [cetak Print on Demand](http://en.wikipedia.org/wiki/Print_on_demand#Book_publishing).
+Meski tanpa potongan penerbit, harganya tinggi karena biaya [cetak Print on Demand](http://en.wikipedia.org/wiki/Print_on_demand#Book_publishing).
 
 Hanya dijual dalam bentuk cetak &middot; Di luar ongkos kirim.

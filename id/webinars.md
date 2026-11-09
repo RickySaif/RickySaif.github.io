@@ -13,28 +13,28 @@ AI dapat menghemat waktu Anda berjam-jam, tetapi ada tantangannya:
 
 - **AI membuat draf email, tetapi tidak terdengar seperti Anda?** Anda menghabiskan lebih banyak waktu menulis ulang daripada menulis.
 - **Surat lamaran selesai dalam 5 detik dengan AI, tetapi Anda menghabiskan 5 menit untuk menulis ulangnya?** Itu bukan penghematan waktu.
-- **Nada generik, suara salah.** Merek pribadi Anda hilang dalam terjemahan.
+- **Nada generik, gaya yang bukan Anda.** Personal branding Anda pun hilang.
 
 ## Mengapa Ini Penting
 
-Suara Anda adalah merek pribadi Anda. Ketika AI tidak terdengar seperti Anda, setiap output terasa tidak autentik—dan orang-orang memperhatikannya.
+Suara Anda adalah merek pribadi Anda. Ketika AI tidak terdengar seperti Anda, setiap hasilnya terasa tidak autentik, dan orang menyadarinya.
 
 Solusinya? Latih AI Anda untuk memahami *bagaimana Anda berpikir dan berkomunikasi*.
 
 ## Apa yang Akan Anda Pelajari
 
-Dalam webinar gratis 30 menit ini, saya akan menunjukkan kepada Anda:
+Dalam webinar gratis 30 menit ini, saya akan menunjukkan:
 
 - **Cara menangkap suara Anda** — Kerangka kerja sederhana untuk mengajarkan AI gaya penulisan, nada, dan perspektif Anda
-- **Rekayasa prompt untuk kepribadian** — Template yang dapat Anda gunakan segera untuk mendapatkan keluaran AI yang terdengar seperti *Anda*
-- **Contoh dunia nyata** — Email, surat lamaran, posting LinkedIn, dan komunikasi profesional
-- **Pengaturan satu kali** — 15 menit bekerja untuk menghemat berjam-jam setiap bulan
+- **Prompt yang membawa kepribadian Anda** — Template siap pakai agar hasil AI terdengar seperti *Anda*
+- **Contoh nyata** — Email, surat lamaran, posting LinkedIn, dan komunikasi profesional
+- **Sekali atur** — 15 menit kerja, hemat berjam-jam setiap bulan
 
-## Untuk Siapa Ini?
+## Untuk Siapa Webinar Ini?
 
 - Profesional yang lelah menulis ulang draf AI
-- Pendiri dan CEO yang sibuk tetapi membutuhkan suara mereka di setiap pesan
-- Siapa pun yang membangun merek pribadi mereka melalui penulisan
+- Founder dan CEO yang sibuk, tetapi ingin setiap pesan tetap terdengar seperti dirinya
+- Siapa pun yang membangun personal branding lewat tulisan
 
 ## Daftar
 

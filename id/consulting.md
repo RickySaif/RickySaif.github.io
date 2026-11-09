@@ -10,8 +10,8 @@ lang: id
   <p class="rs-eyebrow">Masalahnya</p>
   <h2>Semua orang bilang "pakai AI". Tidak ada yang bilang di mana.</h2>
   <p class="rs-section-intro">Anda sudah melihat demonya. Mungkin sudah membayar beberapa langganan. Dan laporan laba ruginya tetap sama.</p>
-  <p>Itu bukan karena AI tidak bekerja. Itu karena belum ada yang menghubungkannya ke masalah spesifik di bisnis Anda, dengan angka spesifik yang terpengaruh.</p>
-  <p>Menghubungkan itulah pekerjaan saya. Saya mulai dari masalahnya, bukan dari alatnya.</p>
+  <p>Bukan karena AI tidak berfungsi. Penyebabnya, belum ada yang mengaitkannya dengan masalah spesifik di bisnis Anda, lengkap dengan angka yang ingin digerakkan.</p>
+  <p>Mengaitkan keduanya, itulah pekerjaan saya. Saya mulai dari masalahnya, bukan dari alatnya.</p>
 </section>
 
 <section class="rs-section">
@@ -31,7 +31,7 @@ lang: id
       <ol class="rs-mechanism">
         <li>Kita bertemu online, dalam Bahasa Indonesia atau Inggris.</li>
         <li>Kita jalankan alatnya bersama pada kasus Anda yang nyata, bukan demo.</li>
-        <li>Anda pulang dengan hasil, dan langkah untuk mengulanginya tanpa saya.</li>
+        <li>Sesi selesai, Anda membawa hasil plus langkah untuk mengulanginya tanpa saya.</li>
       </ol>
     </div>
   </div>
@@ -43,14 +43,14 @@ lang: id
   <div class="rs-fronts">
     <div class="rs-card">
       <h3>Sesi CEO</h3>
-      <p>Konsultasi untuk Anda. Kita pilih masalah di mana AI paling cepat balik modal, lalu putuskan langkahnya.</p>
+      <p>Konsultasi untuk Anda. Kita pilih masalah yang paling cepat balik modal kalau dibantu AI, lalu putuskan langkahnya.</p>
     </div>
     <div class="rs-card">
       <h3>Sesi tim</h3>
-      <p>Pelatihan langsung untuk orang-orang yang akan mengerjakannya. Mereka memasang alatnya dan memakainya pada tugas nyata selama saya mendampingi.</p>
+      <p>Pelatihan langsung untuk orang-orang yang akan mengerjakannya. Mereka memasang alatnya dan memakainya pada tugas nyata sambil saya dampingi.</p>
     </div>
   </div>
-  <p>Belum tahu mulai dari mana? Lihat <a href="/cases/">studi kasusnya</a>. Setiap kasus adalah masalah yang bisa saya bawakan dalam sesi hari ini.</p>
+  <p>Belum tahu mulai dari mana? Lihat <a href="/cases/">studi kasusnya</a>. Setiap kasus bisa langsung kita kerjakan dalam sesi.</p>
 </section>
 
 <section class="rs-section">
@@ -63,8 +63,8 @@ lang: id
   <p class="rs-eyebrow">Bertanggung jawab</p>
   <h2>Data Anda, keputusan Anda, kata-kata Anda</h2>
   <ul class="rs-proof">
-    <li>Anda yang menentukan data apa yang dilihat AI. Data sensitif tetap di luar, kecuali Anda memutuskan lain.</li>
-    <li>Orang di pihak Anda meninjau setiap hasil sebelum dipakai.</li>
+    <li>Anda yang menentukan data apa yang dilihat AI. Data sensitif tidak ikut, kecuali Anda memutuskan lain.</li>
+    <li>Setiap hasil ditinjau orang dari pihak Anda sebelum dipakai.</li>
     <li>Saat mempelajari kompetitor, kita belajar dari apa yang sudah mereka buktikan. Kita tidak pernah menyalin kode, teks, gambar, atau merek mereka.</li>
   </ul>
 </section>

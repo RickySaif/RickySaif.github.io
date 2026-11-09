@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "My Self, Inc: Hidup Anda yang Lebih Baik, Ditenagai AI"
-subtitle: "Kerangka AI gratis yang mengajarkan Anda berpikir seperti CEO kehidupan Anda sendiri — dan memberi Anda dewan advisor AI untuk membantu Anda menjalankannya."
+title:  "My Self, Inc: Hidup yang Lebih Baik dengan Bantuan AI"
+subtitle: "Kerangka berpikir gratis untuk menjadi CEO atas hidup Anda sendiri, lengkap dengan dewan penasihat AI yang membantu Anda menjalankannya."
 permalink: /my-self-inc/
 lang: id
 ---
@@ -657,27 +657,27 @@ Karena untuk pertama kalinya dalam sejarah manusia, semua orang — berarti semu
 
 Artinya: Anda tinggal selangkah lagi untuk punya hidup yang lebih baik.
 
-Izin saya tunjukkan jalannya.
+Izinkan saya menunjukkan jalannya.
 
 <div class="image-wrapper">
   <img src="{{ site.url }}/assets/images/pp/pp-hijau.jpeg" alt="Ricky Saif" width="150px"/>
 </div>
 
-Nama saya Ricky Saif. Sejak 2013, [saya membantu organisasi bertransformasi](/id/buku-agile-scrum). Hari ini, saya membantu para profesional, pebisnis, dan individu mengarungi hidup secara lebih strategis dengan AI.
+Nama saya Ricky Saif. Sejak 2013, [saya membantu organisasi bertransformasi](/buku-agile-scrum). Hari ini, saya membantu para profesional, pebisnis, dan individu mengarungi hidup secara lebih strategis dengan AI.
 
-Ini dimulai dari model mental yang saya ciptakan bernama **My Self, Inc.** Di bahasa Indonesia, bisa disebut **PT. Diri Saya**.
+Semuanya berawal dari model mental ciptaan saya bernama **My Self, Inc.** Di bahasa Indonesia, bisa disebut **PT Diri Saya**.
 
-### Apa Model Mentalnya?
+### Seperti Apa Model Mentalnya?
 
 Inilah fondasinya. Anda adalah sebuah perusahaan dengan lima elemen:
 
 - **Anda, sebagai kesadaran** — Anda adalah CEO
 - **Dewan Direksi Anda** — suara-suara di kepala Anda (nilai, logika, ambisi, ketakutan, pengalaman masa lalu)
 - **Karyawan Anda** — emosi Anda (takut, semangat, ragu diri, motivasi), yang menggerakkan mesin
-- **Perbendaharaan Anda** — uang, waktu, dan energi Anda. Modal yang harus dialokasikan.
+- **Kas Anda** — uang, waktu, dan energi Anda. Modal yang harus dialokasikan.
 - **Mesin Anda** — tubuh Anda dan aset berwujudnya: mesin, bangunan, kendaraan
 
-Itu saja sudah cukup menjelaskan banyak tentang kehidupan. Tapi belum gagasan intinya.
+Itu saja sudah menjelaskan banyak hal tentang hidup. Tapi itu belum gagasan intinya.
 
 Inilah gagasan inti My Self, Inc: **CEO tidak mengelola karyawan secara langsung. Dewan Direksi yang melakukannya.**
 
@@ -696,7 +696,7 @@ Anda, sebagai CEO, menetapkan identitas dan visi perusahaan:
 - Bagaimana Anda ingin mati?
 - Bagaimana Anda ingin dikenang?
 
-Semakin jelas identitas dan visi Anda, semakin mudah menyelaraskan Dewan Direksi Anda. Untungnya, identitas dan visi perusahaan itu dinamis — tidak tetap.
+Semakin jelas identitas dan visi Anda, semakin mudah menyelaraskan Dewan Direksi Anda. Untungnya, identitas dan visi perusahaan itu dinamis, tidak kaku.
 
 Sekarang bayangkan sebaliknya.
 
@@ -706,7 +706,7 @@ Anda merasa terjebak dalam diri yang terasa bukan milik Anda, namun Anda tidak t
 
 ### Sekarang Bayangkan Konsultan AI untuk Dewan Direksi Anda
 
-Bayangkan Dewan Direksi Anda mendapatkan akses pada kebijaksanaan praktis dari pikiran-pikiran terbesar dalam sejarah. Mereka menjadi lebih kuat.
+Bayangkan Dewan Direksi Anda mendapat akses ke kebijaksanaan praktis para pemikir terbesar dalam sejarah. Mereka menjadi lebih kuat.
 
 Dan ini penting karena emosi itu berisik, tidak rasional, dan impulsif. Direktur yang lemah tidak akan bisa mengelolanya.
 
@@ -714,11 +714,11 @@ Tanpa direktur yang kuat, CEO tidak akan bisa apa-apa. Emosi akan mengarahkan di
 
 ### Jadi Bagaimana Ini Bisa Membantu Anda?
 
-Sederhana. Setiap direksi melaporkan situasinya ke masing-masing konsultan AI.
+Sederhana. Setiap direktur melaporkan situasinya ke konsultan AI-nya masing-masing.
 
-Jika sarannya rasional, jalankan. Jika tidak, beri informasi terus sampai konsultan AI memberikan saran yang rasional.
+Jika sarannya rasional, jalankan. Jika tidak, terus beri informasi sampai sarannya rasional.
 
-Mudah bukan? Yang sulit adalah pengaturan awalnya.
+Mudah, bukan? Yang sulit adalah pengaturan awalnya.
 
 Untuk memberikan saran yang benar-benar berguna, konsultan AI membutuhkan konteks — konteks Anda. Dua orang kembar identik pun akan punya konteks kehidupan yang berbeda.
 
@@ -726,22 +726,22 @@ Ada dua cara menyelesaikan pengaturan awal itu. Anda bisa membangunnya sendiri, 
 
 ### Kenapa Ini Sulit Tanpa Sistem
 
-Sebagian besar profesional memiliki keterampilan teknis yang solid, tetapi terjebak secara mental. Anda menunggu instruksi, menyalahkan keadaan, dan membiarkan kritikus dalam diri Anda mengendalikan pertunjukan.
+Sebagian besar profesional memiliki keterampilan teknis yang solid, tetapi terjebak secara mental: menunggu instruksi, menyalahkan keadaan, dan membiarkan suara kritis di kepala memegang kendali.
 
-Ini bukan kemalasan. **Ini adalah perilaku yang dipelajari.**
+Ini bukan kemalasan. **Ini perilaku yang terbentuk dari kebiasaan.**
 
 <ul class="problem-list">
-  <li>Anda menunggu untuk diberitahu apa yang perlu ditingkatkan sebelum mengambil tindakan</li>
-  <li>Anda tidak melihat karir Anda sebagai perusahaan yang Anda pimpin. Anda hanya melihatnya sebagai pekerjaan yang Anda datangi</li>
-  <li>Emosi Anda (takut, ragu diri, kewalahan) membuat keputusan, bukan Anda</li>
-  <li>Pada hari Jumat, Anda merasa seperti hal-hal terjadi *kepada* Anda, bukan *oleh* Anda</li>
+  <li>Anda menunggu diberi tahu apa yang perlu diperbaiki sebelum bertindak</li>
+  <li>Anda tidak melihat karier Anda sebagai perusahaan yang Anda pimpin, tetapi sekadar tempat kerja yang Anda datangi setiap hari</li>
+  <li>Yang mengambil keputusan adalah emosi Anda (takut, ragu, kewalahan), bukan Anda</li>
+  <li>Setiap Jumat, Anda merasa hidup sekadar terjadi <em>pada</em> Anda, bukan Anda yang mengendalikannya</li>
 </ul>
 
 Dalam workshop ini, Anda akan belajar untuk:
 - Melihat diri Anda sebagai CEO, bukan hanya karyawan
 - Menyelaraskan Dewan Direksi internal Anda sehingga mereka berhenti melawan Anda
-- Membuat emosi menjadi bagian dari perusahaan Anda, bukan bos
-- Membangun advisor AI yang mengenal Anda dan memberi Anda nasihat jujur
+- Menempatkan emosi sebagai karyawan, bukan bos
+- Membangun penasihat AI yang mengenal Anda dan memberi Anda nasihat jujur
 
 ---
 
@@ -773,27 +773,27 @@ Dalam workshop ini, Anda akan belajar untuk:
     <div class="step-num">3</div>
     <div class="step-body">
       <h3>Tempel prompt ini ke Claude</h3>
-      <p>Prompt ini menyuruh Claude membaca halaman ini, mempelajari kerangka My Self, Inc, mewawancarai Anda, dan menyiapkan satu konsultan untuk tiap direktur di dewan Anda.</p>
+      <p>Prompt ini meminta Claude membaca halaman ini, mempelajari kerangka My Self, Inc, mewawancarai Anda, dan menyiapkan satu konsultan untuk tiap direktur di dewan Anda.</p>
       <div class="prompt-box">
         <button class="prompt-copy-btn" type="button" onclick="copySetupPrompt(this)">Salin</button>
-        <pre id="setup-prompt">Saya ingin kamu menyiapkan tim penasihat AI pribadi saya berdasarkan kerangka "My Self, Inc" (PT. Diri Saya).
+        <pre id="setup-prompt">Saya ingin kamu menyiapkan tim penasihat AI pribadi saya berdasarkan kerangka "My Self, Inc" (PT Diri Saya).
 
-Dalam kerangka ini saya adalah CEO dari hidup saya sendiri, dan para "direktur" di dewan saya — CEO, CSO, CMO, CFO, COO, CHRO — adalah suara-suara di kepala saya sendiri. Tugasmu BUKAN memerankan para direktur itu. Tugasmu adalah membangun satu KONSULTAN AI untuk tiap direktur: spesialis dari luar yang kepadanya direktur itu melapor, meminta saran, dan membantah sampai sarannya rasional.
+Dalam kerangka ini saya adalah CEO dari hidup saya sendiri, dan para "direktur" di dewan saya — CEO, CSO, CMO, CFO, COO, CHRO — adalah suara-suara di kepala saya sendiri. Tugasmu BUKAN memerankan para direktur itu. Tugasmu adalah membangun satu KONSULTAN AI untuk tiap direktur: spesialis dari luar tempat direktur itu melapor, meminta saran, dan membantah sampai sarannya rasional.
 
 LANGKAH 1 — Pelajari kerangkanya.
 Baca halaman ini secara utuh, terutama bagian "Addendum for AI Consultants" di paling bawah:
-https://rickysaif.github.io/id/my-self-inc/
-Adendumnya sendiri berjangkar di https://rickysaif.github.io/id/my-self-inc/#addendum
-Di sana dijelaskan model My Self, Inc, enam direktur beserta konsultan yang menasihati masing-masing, dan protokol Lapor -> Menasihati -> Membantah -> Menjalankan.
+https://rickysaif.github.io/my-self-inc/
+Bagian adendumnya bisa langsung dibuka di https://rickysaif.github.io/my-self-inc/#addendum
+Di sana dijelaskan model My Self, Inc, enam direktur beserta konsultan yang menasihati masing-masing, dan protokol Lapor -> Saran -> Bantah -> Jalankan.
 
 LANGKAH 2 — Kenali saya.
-Wawancarai saya satu tema pada satu waktu untuk mengumpulkan konteks yang dibutuhkan para konsultan ini: identitas & visi, kerja & strategi, uang, operasional harian & kesehatan, relasi & reputasi, serta kehidupan emosional. Ajukan pertanyaan lanjutan yang tajam, dan jangan pindah tema sebelum tema yang sekarang cukup jelas untuk dinasihati.
+Wawancarai saya satu tema demi satu tema untuk mengumpulkan konteks yang dibutuhkan para konsultan ini: identitas & visi, kerja & strategi, uang, operasional harian & kesehatan, relasi & reputasi, serta kehidupan emosional. Ajukan pertanyaan lanjutan yang tajam, dan jangan pindah tema sebelum tema yang sekarang cukup jelas untuk dijadikan dasar saran.
 
 LANGKAH 3 — Ingat saya.
 Simpan fakta-fakta penting ke memorimu supaya para konsultan saya mengenal saya di setiap percakapan berikutnya.
 
 LANGKAH 4 — Bangun konsultan saya.
-Siapkan enam konsultan AI — satu untuk menasihati tiap direktur: CEO, CSO, CMO, CFO, COO, CHRO — sebagai skill yang bisa saya panggil dengan namanya. Masing-masing harus mengikuti persona, cakupan, dan protokol Lapor -> Menasihati -> Membantah -> Menjalankan dari adendum, memakai konteks saya yang tersimpan, dan terus memperbaiki sarannya setiap kali saya membantah sampai sarannya benar-benar rasional.
+Siapkan enam konsultan AI — satu untuk menasihati tiap direktur: CEO, CSO, CMO, CFO, COO, CHRO — sebagai skill yang bisa saya panggil dengan namanya. Masing-masing harus mengikuti persona, cakupan, dan protokol Lapor -> Saran -> Bantah -> Jalankan dari adendum, memakai konteks saya yang tersimpan, dan terus memperbaiki sarannya setiap kali saya membantah sampai sarannya benar-benar rasional.
 
 Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali ke saya sebelum kita mulai wawancara.</pre>
       </div>
@@ -809,16 +809,16 @@ Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali
   <div class="flow-item">
     <div class="flow-time">0:00–0:30</div>
     <div class="flow-content">
-      <div class="flow-title">Opening: Setup Masalah</div>
-      <div class="flow-desc">Anda akan memahami mengapa kebanyakan orang tetap terjebak, dan mengapa hari ini mengubah itu.</div>
+      <div class="flow-title">Pembukaan: Memetakan Masalah</div>
+      <div class="flow-desc">Anda akan memahami mengapa kebanyakan orang tetap terjebak, dan apa yang membuat hari ini berbeda.</div>
     </div>
   </div>
   
   <div class="flow-item">
     <div class="flow-time">0:30–1:30</div>
     <div class="flow-content">
-      <div class="flow-title">Segment 1: System Thinking Sketching</div>
-      <div class="flow-desc">Pelajari model My Self, Inc. Sketsa sistem Anda sendiri. Debrief pasangan dengan peserta lain. Anda akan melihat diri Anda berbeda.</div>
+      <div class="flow-title">Sesi 1: Sketsa Systems Thinking</div>
+      <div class="flow-desc">Pelajari model My Self, Inc. Buat sketsa sistem Anda sendiri, lalu diskusikan berpasangan dengan peserta lain. Anda akan melihat diri Anda dari sudut yang berbeda.</div>
     </div>
   </div>
   
@@ -826,23 +826,23 @@ Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali
     <div class="flow-time">1:30–1:45</div>
     <div class="flow-content">
       <div class="flow-title">Istirahat</div>
-      <div class="flow-desc">Istirahat + percakapan informal</div>
+      <div class="flow-desc">Rehat sambil ngobrol santai</div>
     </div>
   </div>
   
   <div class="flow-item">
     <div class="flow-time">1:45–2:15</div>
     <div class="flow-content">
-      <div class="flow-title">Segment 2: Demo Konsultan AI</div>
-      <div class="flow-desc">Demo langsung dengan masalah nyata dari ruangan. Lihat apa yang berubah ketika Claude mengenal konteks Anda.</div>
+      <div class="flow-title">Sesi 2: Demo Konsultan AI</div>
+      <div class="flow-desc">Demo langsung dengan masalah nyata dari peserta. Lihat apa yang berubah ketika Claude mengenal konteks Anda.</div>
     </div>
   </div>
   
   <div class="flow-item">
     <div class="flow-time">2:15–3:00</div>
     <div class="flow-content">
-      <div class="flow-title">Segment 3: Bangun Advisor AI Anda Sendiri</div>
-      <div class="flow-desc">Hands on keyboard. Anda menyiapkan Board Penasihat Claude pribadi Anda. Anda pergi dengan alat nyata yang akan Anda gunakan Senin pagi.</div>
+      <div class="flow-title">Sesi 3: Bangun Penasihat AI Anda Sendiri</div>
+      <div class="flow-desc">Langsung praktik. Anda menyiapkan dewan penasihat pribadi di Claude, dan menutup sesi dengan alat nyata yang siap dipakai Senin pagi.</div>
     </div>
   </div>
 </div>
@@ -850,13 +850,13 @@ Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali
 
 ---
 
-## Anda Akan Pergi Dengan
+## Yang Anda Dapatkan
 
 <ul class="benefits-list">
-  <li>Model mental yang akan Anda gunakan untuk setiap keputusan untuk sisa karir Anda</li>
-  <li>Advisor AI yang berfungsi (Claude) disesuaikan dengan konteks, nilai, dan tujuan Anda</li>
-  <li>Satu komitmen spesifik yang akan Anda ambil minggu ini</li>
-  <li>Akses ke komunitas alumni orang-orang yang menjalankan hidup mereka seperti CEO</li>
+  <li>Model mental untuk setiap keputusan sepanjang karier Anda</li>
+  <li>Penasihat AI (Claude) yang sudah berjalan, disesuaikan dengan konteks, nilai, dan tujuan Anda</li>
+  <li>Satu komitmen spesifik untuk dijalankan minggu ini</li>
+  <li>Akses ke komunitas alumni yang menjalani hidup layaknya CEO</li>
 </ul>
 
 
@@ -868,11 +868,11 @@ Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali
   <p><strong>Siapkan bersama saya, secara online.</strong> Kita kerjakan setup-nya bersama lewat panggilan video, pada situasi Anda yang nyata.</p>
 
   <div class="session-card">
-    <div class="session-date">💻 Online, minggu kapan pun</div>
+    <div class="session-date">💻 Online, kapan saja</div>
     <div class="session-details">
       <strong>Format:</strong> Sesi online 1 jam<br>
       <strong>Biaya:</strong> Mulai {{ site.session_price }} per sesi<br>
-      <strong>Apa yang harus dibawa:</strong> Laptop, keingintahuan, satu masalah kerja nyata
+      <strong>Yang perlu disiapkan:</strong> Laptop, rasa ingin tahu, dan satu masalah kerja yang nyata
     </div>
     <a href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener" class="cta-button primary" style="display: inline-block; padding: 10px 24px; margin-top: 12px;">Gabung Channel WA</a>
   </div>
@@ -882,27 +882,27 @@ Mulai dari LANGKAH 1 sekarang: baca halamannya, lalu rangkum kerangkanya kembali
 
 ## Untuk Perusahaan: Pelatihan Korporat In-House
 
-**My Self, Inc bekerja bahkan lebih baik untuk tim.**
+**My Self, Inc justru lebih ampuh untuk tim.**
 
-Ketika tim 8–20 orang Anda menjalani ini bersama-sama, mereka melihat perusahaan mereka berbeda. Kerangka kerja yang sama yang membantu individu menjadi bahasa bersama tentang bagaimana Anda menjalankan departemen Anda.
+Saat 8–20 orang di tim Anda menjalaninya bersama, cara mereka memandang perusahaan ikut berubah. Kerangka yang membantu tiap individu itu menjadi bahasa bersama tentang cara departemen Anda dijalankan.
 
 ### Apa yang didapat tim Anda:
-- Model mental untuk kepemilikan (bukan menunggu instruksi)
-- Alat yang benar-benar akan mereka gunakan (bukan "pelatihan" yang dilupakan pada hari Kamis)
-- Output nyata sebelum mereka pergi (semua orang menyiapkan advisor mereka sendiri)
-- Kerangka kerja untuk percakapan 1-on-1 dengan manajer
+- Model mental tentang rasa memiliki (tidak lagi menunggu instruksi)
+- Alat yang benar-benar akan mereka gunakan (bukan "pelatihan" yang sudah terlupa hari Kamis)
+- Hasil nyata sebelum sesi selesai (setiap orang menyiapkan penasihat AI-nya sendiri)
+- Kerangka untuk obrolan 1-on-1 dengan atasan
 
-### Bagaimana cara kerjanya:
+### Cara kerjanya:
 1. **Kami menjadwalkan:** Sesi online untuk tim Anda, mulai {{ site.session_price }} per jam
 2. **Kami menjalankannya:** Fasilitasi penuh, materi disertakan
-3. **Anda mengamati:** Lihat persis apa yang pergi dengan orang-orang Anda
-4. **Anda putuskan:** Jika berhasil, mari kita bicarakan program lengkap (pendalaman lebih lanjut, 1-on-1 berkelanjutan, penyegaran triwulanan)
+3. **Anda menilai:** Lihat sendiri apa yang dibawa pulang tim Anda
+4. **Anda putuskan:** Jika berhasil, kita bicarakan program lengkapnya (pendalaman materi, 1-on-1 rutin, penyegaran per kuartal)
 
 <div class="corporate-inquiry">
   <h3>Tertarik membawa ini ke tim Anda?</h3>
-  <p>Mari kita bicarakan tentang waktu, ukuran tim, dan seperti apa kesuksesan bagi Anda.</p>
+  <p>Mari bicarakan jadwal, jumlah anggota tim, dan hasil seperti apa yang Anda anggap berhasil.</p>
   <p><strong>Email saya:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-  <p style="font-size: 14px; color: #777; margin-top: 20px;"><em>Sertakan: nama perusahaan, ukuran tim, masalah apa yang Anda coba selesaikan (misalnya, "orang terlalu reaktif," "tidak ada budaya kepemilikan," "orang tidak memiliki pertumbuhan mereka")</em></p>
+  <p style="font-size: 14px; color: #777; margin-top: 20px;"><em>Sertakan: nama perusahaan, jumlah anggota tim, dan masalah yang ingin diselesaikan (misalnya "tim terlalu reaktif", "belum ada budaya rasa memiliki", "orang tidak bertanggung jawab atas perkembangan dirinya")</em></p>
 </div>
 
 
@@ -911,27 +911,27 @@ Ketika tim 8–20 orang Anda menjalani ini bersama-sama, mereka melihat perusaha
 ## FAQ
 
 <div class="faq-item">
-  <div class="faq-q">Apakah ini pidato motivasional atau pelatihan sebenarnya?</div>
-  <div class="faq-a">Pelatihan sebenarnya. Anda akan keluar dengan model mental dan alat, bukan hanya perasaan terinspirasi. Pada jam kedua, orang sedang membuat sketsa sistem di atas kertas. Pada jam ketiga, mereka menggunakan AI untuk mendapatkan nasihat nyata tentang masalah nyata. Inspirasi itu nyata karena hasilnya nyata.</div>
+  <div class="faq-q">Ini seminar motivasi atau pelatihan sungguhan?</div>
+  <div class="faq-a">Pelatihan sungguhan. Anda pulang membawa model mental dan alat, bukan sekadar rasa terinspirasi. Di jam kedua, peserta sudah membuat sketsa sistem di atas kertas. Di jam ketiga, mereka memakai AI untuk mendapat nasihat nyata atas masalah nyata. Inspirasinya nyata karena hasilnya nyata.</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Bagaimana jika saya sudah sadar diri? Apakah ini akan terlihat jelas?</div>
-  <div class="faq-a">Bahkan orang yang paling sadar diri akan terkejut oleh diri mereka sendiri. Kerangka kerja My Self, Inc membuat sesuatu terlihat yang sebelumnya tidak terlihat. Advisor AI bekerja berbeda dari apa pun yang Anda gunakan. Datanglah dengan ragu-ragu — umpan balik terbaik datang dari orang-orang yang tidak yakin sebelumnya.</div>
+  <div class="faq-q">Bagaimana kalau saya sudah cukup mengenal diri sendiri? Apakah isinya akan terasa terlalu jelas?</div>
+  <div class="faq-a">Orang yang paling mengenal dirinya pun tetap bisa dibuat terkejut. Kerangka My Self, Inc memperlihatkan hal-hal yang sebelumnya tidak terlihat, dan penasihat AI ini bekerja berbeda dari alat apa pun yang pernah Anda pakai. Silakan datang dengan skeptis. Masukan terbaik justru datang dari orang yang awalnya ragu.</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Apakah advisor AI benar-benar berguna, atau hanya jebakan?</div>
-  <div class="faq-a">Itu berguna jika Anda benar-benar menggunakannya. AI hanya sebaik konteks yang Anda berikan kepadanya. Di workshop, saya akan menunjukkan Anda cara menulis konteks yang membuatnya menjadi Board of Directors pribadi Anda. Setelah itu, terserah Anda untuk peduli cukup untuk mengajukan pertanyaan nyata kepadanya.</div>
+  <div class="faq-q">Apakah penasihat AI ini benar-benar berguna, atau cuma gimik?</div>
+  <div class="faq-a">Berguna, asal benar-benar Anda pakai. AI hanya sebaik konteks yang Anda berikan. Di workshop, saya tunjukkan cara menulis konteks yang membuatnya menjadi Dewan Direksi pribadi Anda. Setelah itu, tinggal Anda yang perlu cukup peduli untuk mengajukan pertanyaan yang sungguh-sungguh.</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Apa perbedaan antara ini dan program 10 minggu?</div>
-  <div class="faq-a">Ini adalah pintu. Anda belajar modelnya. Anda membangun alatnya. Anda membuat satu komitmen. Program 10 minggu adalah tempat Anda pergi lebih dalam: rencana pertumbuhan pribadi, kemitraan akuntabilitas, 1-on-1 bulanan, dan perubahan perilaku nyata. Workshop ini adalah bagaimana Anda mendapatkan hak untuk melakukan program yang lebih lama dengan percaya diri.</div>
+  <div class="faq-q">Apa bedanya dengan program 10 minggu?</div>
+  <div class="faq-a">Workshop ini pintu masuknya. Anda mempelajari modelnya, membangun alatnya, dan membuat satu komitmen. Di program 10 minggu, Anda masuk lebih dalam: rencana pengembangan diri, partner akuntabilitas, 1-on-1 bulanan, dan perubahan perilaku yang nyata. Lewat workshop ini, Anda bisa memutuskan dengan yakin apakah program yang lebih panjang itu cocok untuk Anda.</div>
 </div>
 
 <div class="faq-item">
-  <div class="faq-q">Bisakah ini virtual?</div>
+  <div class="faq-q">Apakah bisa online?</div>
   <div class="faq-a">Ya. Untuk saat ini semua sesi dilakukan online, lewat panggilan video. Bawa laptop dan satu masalah nyata.</div>
 </div>
 
@@ -940,16 +940,16 @@ Ketika tim 8–20 orang Anda menjalani ini bersama-sama, mereka melihat perusaha
 
 ## Filosofinya
 
-**Semua orang adalah CEO kehidupan mereka sendiri. Setiap CEO membutuhkan Board of Directors.**
+**Setiap orang adalah CEO atas hidupnya sendiri. Dan setiap CEO butuh Dewan Direksi.**
 
-Jika Anda menjalankan perusahaan seperti yang Anda jalankan hidup Anda, itu akan bangkrut. Jadi mari kita perbaiki itu. Bukan dengan motivasi. Dengan sistem, kerangka kerja, dan advisor yang mengenal Anda.
+Kalau perusahaan dijalankan seperti cara Anda menjalani hidup, besar kemungkinan ia bangkrut. Mari kita perbaiki. Bukan dengan motivasi, melainkan dengan sistem, kerangka, dan penasihat yang mengenal Anda.
 
-Workshop ini bukan tentang menjadi lebih disiplin. Ini tentang menjadi CEO perusahaan Anda sendiri.
+Workshop ini bukan soal menjadi lebih disiplin, melainkan soal menjadi CEO atas diri Anda sendiri.
 
 **Siap? Mari kita mulai.**
 
 <div class="cta-section">
-  <h2>Ambil Langkah Berikutnya</h2>
+  <h2>Langkah Selanjutnya</h2>
   <div class="cta-buttons">
     <a href="{{ site.whatsapp_channel_url }}" target="_blank" rel="noopener" class="cta-button primary">Gabung Channel WA</a>
     <a href="/consulting/" class="cta-button secondary">Sesi untuk tim Anda</a>
@@ -1087,7 +1087,7 @@ Workshop ini bukan tentang menjadi lebih disiplin. Ini tentang menjadi CEO perus
     var text = el.innerText || el.textContent;
     var done = function () {
       var original = btn.textContent;
-      btn.textContent = '✓ Copied';
+      btn.textContent = '✓ Tersalin';
       btn.classList.add('copied');
       setTimeout(function () { btn.textContent = original; btn.classList.remove('copied'); }, 2000);
     };

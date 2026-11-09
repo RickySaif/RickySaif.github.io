@@ -15,13 +15,13 @@ lang: id
 
 <section class="rs-section">
   <p class="rs-eyebrow">Yang Anda dapat</p>
-  <h2>Hanya yang layak untuk waktu Anda</h2>
+  <h2>Hanya yang sepadan dengan waktu Anda</h2>
   <ul class="rs-proof">
     <li><strong>Alat gratis baru.</strong> Catatan singkat tentang masalah yang diselesaikannya, plus tautan untuk mengambilnya.</li>
     <li><strong>Studi kasus baru.</strong> Bagaimana masalah bisnis nyata diselesaikan, dalam hitungan untung atau biaya.</li>
     <li><strong>Workshop online.</strong> Tanggal dan topiknya, saat pendaftaran dibuka.</li>
   </ul>
-  <p>Saya posting saat ada yang rilis, bukan menurut jadwal. Bisa dibisukan atau ditinggalkan kapan saja.</p>
+  <p>Saya posting saat ada yang rilis, bukan menurut jadwal. Channel ini bisa Anda bisukan atau tinggalkan kapan saja.</p>
 </section>
 
 <section class="rs-section">
@@ -29,7 +29,7 @@ lang: id
   <h2>Dua channel, kabar yang sama</h2>
   <p>Kedua channel membawa kabar yang sama. Pilih bahasa yang lebih nyaman Anda baca.</p>
   <div class="rs-cta-row">
-    <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url_id }}" target="_blank" rel="noopener" hreflang="id">Langganan dalam Bahasa Indonesia</a>
-    <a class="rs-btn rs-btn--secondary" href="{{ site.whatsapp_channel_url_en }}" target="_blank" rel="noopener" hreflang="en">Langganan dalam Bahasa Inggris</a>
+    <a class="rs-btn rs-btn--primary" href="{{ site.whatsapp_channel_url_id }}" target="_blank" rel="noopener" hreflang="id">Ikuti channel Bahasa Indonesia</a>
+    <a class="rs-btn rs-btn--secondary" href="{{ site.whatsapp_channel_url_en }}" target="_blank" rel="noopener" hreflang="en">Ikuti channel Bahasa Inggris</a>
   </div>
 </section>

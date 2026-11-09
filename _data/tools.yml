@@ -21,7 +21,7 @@
     id: "Dari gaji satu QA engineer sampai nilai perusahaan Anda"
   problem:
     en: "AI-powered hackers find the holes before your team does. One high-severity bug can cost real money. And vibe-coded apps turn into spaghetti code nobody dares to touch."
-    id: "Hacker yang dibantu AI menemukan celah lebih dulu dari tim Anda. Satu bug berat bisa berarti kerugian finansial nyata. Dan aplikasi hasil vibecoding berubah jadi spaghetti code yang tak ada yang berani menyentuhnya."
+    id: "Hacker yang dibantu AI menemukan celah lebih dulu dari tim Anda. Satu bug berat bisa berarti kerugian finansial nyata. Dan aplikasi hasil vibecoding berubah jadi spaghetti code yang tak seorang pun berani menyentuh."
   repo: "https://github.com/RickySaif/BugHunterr"
   summary:
     en: "An AI agent (Claude Code or Codex) hunts bugs in your web app with a real browser, the code and the database. Every bug comes with a video, a regression test and a fix prompt."
@@ -41,26 +41,26 @@
   repo: "https://github.com/RickySaif/scouterr"
   summary:
     en: "Scouterr Leads finds likely buyers in public posts and prepares a gradual approach. Scouterr Talent finds and ranks people worth hiring. A person approves every action."
-    id: "Scouterr Leads menemukan calon pembeli dari postingan publik dan menyiapkan pendekatan bertahap. Scouterr Talent menemukan dan meranking kandidat yang layak direkrut. Manusia menyetujui setiap aksi."
+    id: "Scouterr Leads menemukan calon pembeli dari postingan publik dan menyiapkan pendekatan bertahap. Scouterr Talent menemukan dan meranking kandidat yang layak direkrut. Setiap aksi harus disetujui manusia."
 
 - name: "Competitor-to-test-site kit"
   lever: profit
   range: ""
   problem:
     en: "A competitor's new offer seems to work. Testing the same idea means six weeks and a quote you must defend to the board, and by then the window has closed."
-    id: "Penawaran baru kompetitor Anda sepertinya laku. Menguji ide yang sama berarti enam minggu dan penawaran harga yang harus Anda pertahankan di depan direksi. Saat selesai, momennya sudah lewat."
+    id: "Penawaran baru kompetitor Anda sepertinya laku. Menguji ide yang sama butuh enam minggu, plus penawaran harga yang harus Anda pertanggungjawabkan di depan direksi. Saat semuanya selesai, momennya sudah lewat."
   case: competitor-site
   repo: ""
   summary:
     en: "Playwright plus AI: study a proven competitor page and rebuild your own version to test demand."
-    id: "Playwright dan AI: pelajari halaman kompetitor yang terbukti, lalu bangun versi Anda sendiri untuk menguji permintaan."
+    id: "Playwright dan AI: pelajari halaman kompetitor yang sudah terbukti laku, lalu bangun versi Anda sendiri untuk menguji minat pasar."
 
 - name: "Bug reproduction and fix assistant"
   lever: cost
   range: ""
   problem:
     en: "Checkout is broken, the vendor wants screenshots, and two weeks later the ticket is still open while the invoice counts the hours."
-    id: "Checkout rusak, vendor minta tangkapan layar, dan dua minggu kemudian tiketnya masih terbuka sementara tagihan terus menghitung jam."
+    id: "Checkout rusak, vendor minta tangkapan layar, dan dua minggu kemudian tiketnya masih terbuka sementara tagihan per jamnya terus berjalan."
   case: bug-reproduction
   repo: ""
   summary:
@@ -72,7 +72,7 @@
   range: ""
   problem:
     en: "You explained what you wanted, the vendor nodded, and three months later you got something else. Every fix is now a paid change request."
-    id: "Anda sudah menjelaskan maunya, vendor mengangguk, dan tiga bulan kemudian yang datang berbeda. Setiap perbaikan kini jadi change request berbayar."
+    id: "Anda sudah menjelaskan apa yang Anda mau, vendor mengangguk, dan tiga bulan kemudian yang datang berbeda. Setiap perbaikan kini jadi change request berbayar."
   case: requirement-specification
   repo: ""
   summary:
@@ -101,4 +101,4 @@
   repo: "https://github.com/RickySaif/my-self-inc"
   summary:
     en: "Six AI advisors, one per seat on your inner board, that stress-test a decision before you put your name on it."
-    id: "Enam penasihat AI, satu untuk setiap kursi di dewan batin Anda, yang menguji keputusan sebelum Anda menandatanganinya."
+    id: "Enam penasihat AI, satu untuk setiap kursi di dewan batin Anda, yang menguji keputusan Anda sebelum benar-benar diambil."

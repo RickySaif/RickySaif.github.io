@@ -1,32 +1,36 @@
 {% comment %}
-  Hero mark: AI tools are the fulcrum. Profit end goes up, cost end goes down.
-  Parameters: profit, cost, fulcrum - labels (default English); caption - optional line under the drawing.
+  Hero mark: "positive jaws". Revenue and cost run flat; when AI tools arrive,
+  revenue climbs, cost falls, and the widening gap (brass) is the profit.
+  Both effects happen together, so this is not a trade-off.
+  Parameters: revenue, profit, cost, fulcrum - labels (default English);
+  caption - optional line under the drawing.
 {% endcomment %}
+{% assign v_revenue = include.revenue | default: "Revenue" %}
 {% assign v_profit = include.profit | default: "Profit" %}
 {% assign v_cost = include.cost | default: "Cost" %}
 {% assign v_fulcrum = include.fulcrum | default: "AI tools" %}
-<div class="rs-lever" role="img" aria-label="{{ v_fulcrum }}: {{ v_profit }} up, {{ v_cost }} down">
-  <svg viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <!-- ground -->
-    <line x1="30" y1="262" x2="410" y2="262" stroke="var(--rs-hairline)" stroke-width="2"/>
+<div class="rs-lever" role="img" aria-label="{{ v_fulcrum }}: {{ v_revenue }} up, {{ v_cost }} down, {{ v_profit }} grows">
+  <svg viewBox="0 0 440 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- the profit gap: between the revenue line and the cost line, after AI arrives -->
+    <path d="M40 140 H130 C200 140 280 80 380 62 L380 238 C280 220 200 160 130 160 H40 Z" fill="var(--rs-brass)" fill-opacity=".22"/>
 
-    <!-- beam, tilted: left (profit) high, right (cost) low -->
-    <line x1="52" y1="96" x2="388" y2="196" stroke="var(--rs-ink)" stroke-width="6" stroke-linecap="round"/>
+    <!-- where AI tools arrive -->
+    <line x1="130" y1="36" x2="130" y2="272" stroke="var(--rs-text-tertiary)" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <rect x="82" y="280" width="96" height="30" rx="15" fill="var(--rs-accent)"/>
+    <text x="130" y="300" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="var(--rs-surface)">{{ v_fulcrum }}</text>
 
-    <!-- fulcrum -->
-    <polygon points="220,150 168,262 272,262" fill="var(--rs-accent)"/>
-    <circle cx="220" cy="148" r="8" fill="var(--rs-ink)"/>
-    <text x="220" y="240" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="var(--rs-surface)">{{ v_fulcrum }}</text>
+    <!-- revenue: flat, then up -->
+    <path d="M40 140 H130 C200 140 280 80 380 62" fill="none" stroke="var(--rs-positive)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="380" cy="62" r="6" fill="var(--rs-positive)"/>
+    <text x="380" y="42" text-anchor="end" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700" fill="var(--rs-positive)">&uarr; {{ v_revenue }}</text>
 
-    <!-- profit block on high end -->
-    <rect x="47" y="60" width="112" height="50" rx="8" fill="var(--rs-positive)" transform="rotate(16.6 103 85)"/>
-    <text x="103" y="91" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="var(--rs-surface)" transform="rotate(16.6 103 85)">{{ v_profit }}</text>
-    <path d="M96 14 L84 32 L92 32 L92 50 L100 50 L100 32 L108 32 Z" fill="var(--rs-positive)"/>
+    <!-- cost: flat, then down -->
+    <path d="M40 160 H130 C200 160 280 220 380 238" fill="none" stroke="var(--rs-critical)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="380" cy="238" r="6" fill="var(--rs-critical)"/>
+    <text x="380" y="266" text-anchor="end" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700" fill="var(--rs-critical)">&darr; {{ v_cost }}</text>
 
-    <!-- cost block on low end -->
-    <rect x="307" y="137" width="112" height="50" rx="8" fill="var(--rs-surface-sunken)" stroke="var(--rs-hairline)" transform="rotate(16.6 363 162)"/>
-    <text x="363" y="168" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="var(--rs-text)" transform="rotate(16.6 363 162)">{{ v_cost }}</text>
-    <path d="M392 254 L380 236 L388 236 L388 218 L396 218 L396 236 L404 236 Z" fill="var(--rs-accent)"/>
+    <!-- the result, once -->
+    <text x="292" y="156" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="var(--rs-brass-text)">{{ v_profit }}</text>
   </svg>
   {% if include.caption %}<p class="rs-lever-caption">{{ include.caption }}</p>{% endif %}
 </div>

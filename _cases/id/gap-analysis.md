@@ -1,6 +1,6 @@
 ---
-title: "Analisis kesenjangan: posisi Anda sekarang, dan ke mana harus sampai"
-summary: "Bandingkan bisnis atau produk Anda dengan posisi yang seharusnya, atau dengan kompetitor, dan dapatkan daftar kesenjangan yang diurutkan berdasarkan mana yang paling layak ditutup duluan."
+title: "Analisis kesenjangan: posisi Anda sekarang, dan target yang harus dicapai"
+summary: "Bandingkan bisnis atau produk Anda dengan posisi yang seharusnya, atau dengan kompetitor, dan dapatkan daftar kesenjangan yang diurutkan dari yang paling layak ditutup duluan."
 lever: profit
 order: 4
 visual: gap
@@ -14,15 +14,15 @@ result: ""
 lang: id
 ---
 
-## Masalah sang CEO
+## Masalahnya
 
 Anda tahu ada yang kurang. Penjualan stagnan, atau kompetitor memenangkan deal yang dulu Anda menangkan. Tapi "ada yang kurang" bukanlah rencana.
 
-Kebanyakan analisis kesenjangan mati di slide presentasi. Kenapa? Karena isinya mendaftar semuanya, dan daftar semuanya tidak punya langkah pertama.
+Kebanyakan analisis kesenjangan mati di slide presentasi. Kenapa? Karena isinya mendaftar segala hal, dan daftar segala hal tidak punya langkah pertama.
 
 ## Yang dikerjakan AI
 
-AI mengumpulkan gambaran saat ini dari apa yang Anda berikan: penawaran, proses, situs, dan angka Anda. Hal yang sama dilakukan untuk target, yang bisa berupa sasaran Anda sendiri tahun depan, atau kompetitor yang sedang lebih unggul.
+AI mengumpulkan gambaran kondisi saat ini dari apa yang Anda berikan: penawaran, proses, situs, dan angka Anda. Hal yang sama dilakukan untuk target, yang bisa berupa sasaran Anda sendiri tahun depan, atau kompetitor yang sedang lebih unggul.
 
 Lalu AI menyandingkan keduanya, menamai setiap kesenjangan, dan mengurutkannya berdasarkan **dampak terhadap keuntungan** dan **usaha untuk menutupnya**.
 

@@ -1,0 +1,29 @@
+---
+layout: default
+permalink: /404.html
+lang: id
+lang-exclusive:
+  - id
+sitemap: false
+noindex: true
+title: "Halaman tidak ditemukan"
+---
+{% comment %}
+  Indonesian became the default language in Nov 2026: Indonesian moved from
+  /id/... to /, and English moved from / to /en/. This page forwards old links:
+  /id/x -> /x, and any other missing path -> /en/x when that English page exists.
+{% endcomment %}
+<script>
+(function () {
+  var p = location.pathname, rest = location.search + location.hash;
+  if (p === "/id" || p.indexOf("/id/") === 0) { location.replace((p.slice(3) || "/") + rest); return; }
+  if (p.indexOf("/en/") === 0) return;
+  fetch("/en" + p, { method: "HEAD" }).then(function (r) { if (r.ok) location.replace("/en" + p + rest); });
+})();
+</script>
+<section class="rs-section">
+  <p class="rs-eyebrow">404</p>
+  <h1>Halaman ini tidak ditemukan</h1>
+  <p>Tautannya mungkin sudah lama atau salah ketik. Kembali ke <a href="/">beranda</a>, atau lihat <a href="/writing/">tulisan</a> saya.</p>
+  <p lang="en">Page not found. Go to the <a href="/en/">English home page</a>.</p>
+</section>

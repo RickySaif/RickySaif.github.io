@@ -1,14 +1,14 @@
 ---
 layout: page
 title: "Alat gratis"
-subtitle: "Alat AI untuk CEO dan timnya. Gratis, open source, dan masing-masing membidik untung atau biaya."
+subtitle: "Alat AI untuk CEO dan timnya. Gratis, open source, dan masing-masing untuk menaikkan untung atau menekan biaya."
 permalink: /tools/
 lang: id
 ---
 
 <section class="rs-section">
   <p>Setiap alat di sini menyelesaikan satu masalah bisnis, dan semuanya gratis di <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>. Ambil, jalankan, ubah sesuka Anda.</p>
-  <p>Kenapa dibagikan gratis? Karena alat yang sudah Anda coba sendiri adalah bukti terbaik yang bisa saya berikan. Kalau Anda ingin dibantu menjalankannya pada kasus Anda sendiri, untuk itulah <a href="/consulting/">sesi berbayar</a> ada.</p>
+  <p>Kenapa dibagikan gratis? Karena alat yang sudah Anda coba sendiri adalah bukti terbaik yang bisa saya berikan. Kalau Anda ingin dibantu menjalankannya pada kasus Anda sendiri, <a href="/consulting/">sesi berbayar</a> memang dibuat untuk itu.</p>
 </section>
 
 <section class="rs-section">
@@ -19,7 +19,7 @@ lang: id
 </section>
 
 {% include whatsapp-cta.html
-     heading="Dapat kabar saat alat berikutnya rilis"
-     blurb="Saya terus membangun. Alat baru muncul di WhatsApp lebih dulu."
+     heading="Dapatkan kabar saat alat berikutnya rilis"
+     blurb="Saya terus membangun. Alat baru selalu muncul lebih dulu di WhatsApp."
      button="Gabung di WhatsApp"
-     note="Satu WhatsApp, untuk seluruh situs." %}
+     note="Satu channel WhatsApp untuk semua kabar." %}

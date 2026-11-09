@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-subtitle: "I am the CEO's AI Enabler. Right now I lead with AI: I build free AI tools for real business problems, and I help CEOs and their teams put them to work."
+subtitle: "I am the CEO's Partner in the AI Era. Right now I lead with AI: I build free AI tools for real business problems, and I help CEOs and their teams put them to work."
 permalink: /about/
 lang: en
 ---

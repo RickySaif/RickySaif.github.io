@@ -1,0 +1,23 @@
+{% comment %}
+  One book summary card. Parameter: book - an entry from site.data.book_summaries.
+{% endcomment %}
+{% assign lang = site.active_lang %}
+{% assign summary = include.book.summary[lang] | default: include.book.summary.en %}
+{% assign takeaways = include.book.takeaways[lang] | default: include.book.takeaways.en %}
+<article class="rs-book-card">
+  {% if include.book.cover %}
+  <img class="rs-book-cover" src="{{ include.book.cover | relative_url }}" alt="{% if lang == 'id' %}Sampul{% else %}Cover of{% endif %} {{ include.book.title | escape }}" width="120" height="180" loading="lazy">
+  {% endif %}
+  <div class="rs-book-body">
+    <p class="rs-book-meta">{{ include.book.author }}{% if include.book.year %} &middot; {{ include.book.year }}{% endif %}</p>
+    <h2 class="rs-book-title">{{ include.book.title }}</h2>
+    {% if summary %}<p class="rs-book-summary">{{ summary }}</p>{% endif %}
+    {% if takeaways and takeaways.size > 0 %}
+    <p class="rs-book-label">{% if lang == "id" %}Poin penting{% else %}Key takeaways{% endif %}</p>
+    <ul class="rs-book-takeaways">
+      {% for point in takeaways %}<li>{{ point }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% if include.book.link %}<a class="rs-book-link" href="{{ include.book.link }}" target="_blank" rel="noopener">{% if lang == "id" %}Lihat bukunya{% else %}See the book{% endif %} &rarr;</a>{% endif %}
+  </div>
+</article>
