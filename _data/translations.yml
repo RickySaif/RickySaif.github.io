@@ -3,11 +3,11 @@
 # Header order is: Writing. (About is hidden for now.)
 en:
   identity: "CEO's Partner in the AI Era"
-  tagline: "Free AI tools. More profit, less cost."
+  tagline: "Free AI tools. More revenue, less cost."
   consulting: "Consulting"
   cases: "Cases"
   tools: "Tools"
-  writing: "Writing"
+  writing: "Articles"
   book-summary: "Book Summary"
   about: "About"
   books: "Books I Authored"
@@ -33,12 +33,12 @@ en:
   language_name: "English"
 
 id:
-  identity: "Mitra CEO di Era AI"
+  identity: "Partner CEO di Era AI"
   tagline: "Tools AI gratis. Untung naik, biaya turun."
   consulting: "Konsultasi"
   cases: "Studi Kasus"
   tools: "Alat"
-  writing: "Tulisan"
+  writing: "Artikel"
   book-summary: "Ringkasan Buku"
   about: "Tentang"
   books: "Buku yang Saya Tulis"

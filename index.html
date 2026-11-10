@@ -7,11 +7,15 @@ lang: en
 
 <div class="home">
 
+  <div class="rs-hero-banner">
+    <img src="{{ "/assets/images/hero-why.png" | relative_url }}" alt="" width="776" height="630">
+  </div>
+
   <section class="rs-hero">
     <div class="rs-hero-grid">
       <div class="rs-hero-content">
         <p class="rs-hero-name">Ricky Saif &middot; {{ t.identity }}</p>
-        <h1>Free AI tools.<br>More profit,<br>less cost.</h1>
+        <h1>Free AI tools.<br>More revenue,<br>less cost.</h1>
         <p class="rs-hero-subhead">AI is not for show. Sales must go up. Cost must come down. <strong>I build free AI tools that CEOs can use to raise revenue and cut expenses.</strong></p>
       </div>
 
@@ -28,14 +32,53 @@ lang: en
     </div>
   </section>
 
-  <section class="rs-section">
+  <section class="rs-section" id="bio">
     <p class="rs-eyebrow">Who's Ricky</p>
+    <h2>A developer who has sat in the CEO's meetings</h2>
+
+    <div class="rs-bio-narrative">
+      <p>Computer Science graduate from Universitas Indonesia (2013) with 13 years of experience advising organizations through agile transformation, team redesign, and software execution.</p>
+      <p>Began as a software developer before founding <strong>AgileCampus.org</strong> (exited), coaching teams across <strong>BAPPENAS</strong>, <strong>Telkom Indigo</strong>, and <strong>IDEMIA</strong>; leading culture and employee engagement at <strong>Alterra</strong> (improving Gallup engagement by 17%); and guiding large-scale agile transformation (LeSS) across 4 squads and 35 engineers and product professionals at <strong>Dkatalis / Bank Jago</strong>.</p>
+      <p>At the executive level, worked directly in the <strong>CEO Office at Paxful / Echo Base Global</strong>, running competitive intelligence across global fintech and digital asset infrastructure while building AI-assisted market monitoring systems. Currently, facilitating 4 platform teams in a top classified ship-classification project, while holding a strategic partnership with a leading global educational institution in corporate treasury.</p>
+      <p>That mix is why I start every conversation with CEOs from business leverage: I know what software and AI can actually build, and I know where it must show up on the P&amp;L&mdash;raising revenue or cutting cost.</p>
+    </div>
+
     <ul class="rs-proof-strip">
       <li><span class="num">13</span><span class="label">Years advising organizations</span></li>
       <li><span class="num">2</span><span class="label">Books authored</span></li>
       <li><span class="num">{{ cases.size }}</span><span class="label">Business cases, and counting</span></li>
       <li><span class="num">0</span><span class="label">Rupiah for the tools</span></li>
     </ul>
+
+    <div class="rs-bio-books">
+      <p class="rs-eyebrow">Books</p>
+      <h3>The two books I authored</h3>
+      <p class="rs-section-intro">Written across thirteen years of helping organizations adopt agile delivery and navigate change.</p>
+
+      <div class="rs-books-grid">
+        <a class="rs-book-col" href="https://3pillarsofagile.github.io/" target="_blank" rel="noopener">
+          <div class="rs-book-cover-wrap">
+            <img src="{{ "/assets/images/buku-tiga-pilar-agile-rizky-syaiful.jpg" | relative_url }}" alt="Three Pillars of Agile - Rizky Syaiful" width="88" height="118" loading="lazy">
+          </div>
+          <div class="rs-book-info">
+            <p class="rs-book-meta">Book &middot; 2019</p>
+            <h4>Tiga Pilar Agile</h4>
+            <p>The core pillars of organizational agility and team autonomy &rarr;</p>
+          </div>
+        </a>
+
+        <a class="rs-book-col" href="/buku-agile-scrum">
+          <div class="rs-book-cover-wrap">
+            <img src="{{ "/assets/images/buku-samping.JPG" | relative_url }}" alt="Agile Philosophy and Scrum Guide - Rizky Syaiful" width="88" height="118" loading="lazy">
+          </div>
+          <div class="rs-book-info">
+            <p class="rs-book-meta">Book &middot; 2015</p>
+            <h4>Agile Philosophy and Scrum Guide</h4>
+            <p>Practical guide on agile philosophy and Scrum in production environments &rarr;</p>
+          </div>
+        </a>
+      </div>
+    </div>
   </section>
 
   <section class="rs-section">

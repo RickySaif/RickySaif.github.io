@@ -18,6 +18,8 @@
       {% for point in takeaways %}<li>{{ point }}</li>{% endfor %}
     </ul>
     {% endif %}
-    {% if include.book.link %}<a class="rs-book-link" href="{{ include.book.link }}" target="_blank" rel="noopener">{% if lang == "id" %}Lihat bukunya{% else %}See the book{% endif %} &rarr;</a>{% endif %}
+    {% assign book_link = include.book.link | default: site.whatsapp_channel_url %}
+    {% assign custom_link_text = include.book.link_text[lang] | default: include.book.link_text %}
+    {% if book_link %}<a class="rs-book-link" href="{{ book_link }}" target="_blank" rel="noopener">{% if custom_link_text %}{{ custom_link_text }}{% elsif lang == "id" %}Gabung daftar tunggu di grup WhatsApp kami{% else %}Join the waiting list in our Whatsapp group{% endif %} &rarr;</a>{% endif %}
   </div>
 </article>
