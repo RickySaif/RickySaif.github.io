@@ -30,6 +30,16 @@
   <link rel="icon" href="{{ "/assets/images/brand/rs-favicon.svg" | relative_url }}" type="image/svg+xml">
   <link rel="icon" href="{{ "/assets/images/brand/favicon.ico" | relative_url }}" sizes="48x48">
   <link rel="apple-touch-icon" href="{{ "/assets/images/brand/rs-app-icon-180.png" | relative_url }}">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).then(function (reg) {
+          reg.update();
+        }).catch(function () {});
+      });
+    }
+  </script>
   <meta name="theme-color" content="#F2F5F7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B1320" media="(prefers-color-scheme: dark)">
 
