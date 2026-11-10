@@ -9,7 +9,7 @@ lang: id
 <div class="home">
 
   <div class="rs-hero-banner">
-    <img src="{{ "/assets/images/hero-why.png" | relative_url }}" alt="" width="776" height="630">
+    {% include visuals/lever.html id="hero" revenue="Pendapatan" profit=t.lever_profit cost=t.lever_cost fulcrum="Menggunakan AI" fulcrum_width=142 time="Waktu" %}
   </div>
 
   <section class="rs-hero">
@@ -84,7 +84,7 @@ lang: id
 
   <section class="rs-section">
     <div class="rs-lever-center">
-      {% include visuals/lever.html revenue="Pendapatan" profit=t.lever_profit cost=t.lever_cost fulcrum="Alat AI" caption='Setiap CEO mendengar "pakai AI". Sedikit yang bisa menunjukkan di mana hasilnya terlihat di laporan laba rugi.' %}
+      {% include visuals/lever.html revenue="Pendapatan" profit=t.lever_profit cost=t.lever_cost fulcrum="Menggunakan AI" fulcrum_width=142 time="Waktu" id="why" caption='Setiap CEO mendengar "pakai AI". Sedikit yang bisa menunjukkan di mana hasilnya terlihat di laporan laba rugi.' %}
     </div>
   </section>
 

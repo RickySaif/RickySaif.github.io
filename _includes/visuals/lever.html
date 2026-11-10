@@ -1,36 +1,223 @@
 {% comment %}
-  Hero mark: "positive jaws". Revenue and cost run flat; when AI tools arrive,
-  revenue climbs, cost falls, and the widening gap (brass) is the profit.
-  Both effects happen together, so this is not a trade-off.
-  Parameters: revenue, profit, cost, fulcrum - labels (default English);
+  Hero mark: "positive jaws", drawn over time. Before AI tools, revenue slips
+  and cost creeps up, so the gap is closing. When AI tools arrive, revenue
+  climbs, cost falls, and the widening gap (brass) is the profit.
+
+  The markup below is the finished drawing, so it reads correctly without
+  JavaScript and under prefers-reduced-motion. The script at the bottom plays
+  it left to right once when it scrolls into view, and again on click.
+
+  Parameters: revenue, profit, cost, fulcrum, time - labels (default English);
+  fulcrum_width - width of the fulcrum pill in drawing units (default 96);
+  id - unique per page when included more than once (default "lever");
   caption - optional line under the drawing.
 {% endcomment %}
 {% assign v_revenue = include.revenue | default: "Revenue" %}
 {% assign v_profit = include.profit | default: "Profit" %}
 {% assign v_cost = include.cost | default: "Cost" %}
-{% assign v_fulcrum = include.fulcrum | default: "AI tools" %}
-<div class="rs-lever" role="img" aria-label="{{ v_fulcrum }}: {{ v_revenue }} up, {{ v_cost }} down, {{ v_profit }} grows">
-  <svg viewBox="0 0 440 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <!-- the profit gap: between the revenue line and the cost line, after AI arrives -->
-    <path d="M40 140 H130 C200 140 280 80 380 62 L380 238 C280 220 200 160 130 160 H40 Z" fill="var(--rs-brass)" fill-opacity=".22"/>
+{% assign v_fulcrum = include.fulcrum | default: "Using AI" %}
+{% assign v_fw = include.fulcrum_width | default: 96 | plus: 0 %}
+{% assign v_fx = v_fw | divided_by: 2 %}
+{% assign v_time = include.time | default: "Time" %}
+{% assign v_id = include.id | default: "lever" %}
+<div class="rs-lever" data-lever role="img" aria-label="{{ v_time }}: {{ v_revenue }} down, {{ v_cost }} up. {{ v_fulcrum }}: {{ v_revenue }} up, {{ v_cost }} down, {{ v_profit }} grows">
+  <svg viewBox="22 14 380 314" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" font-family="Inter, -apple-system, sans-serif" font-weight="700">
+    <defs>
+      <!-- everything that has "happened so far" is revealed through this -->
+      <clipPath id="rs-lever-clip-{{ v_id }}"><rect data-clip x="30" y="14" width="372" height="262"/></clipPath>
+    </defs>
+
+    <!-- time axis: faint track, elapsed part on top, a tick per period -->
+    <path d="M40 296 H392" fill="none" stroke="var(--rs-text-tertiary)" stroke-opacity=".35" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M400 296 L390 291 V301 Z" fill="var(--rs-text-tertiary)" stroke="var(--rs-text-tertiary)" stroke-width="1" stroke-linejoin="round"/>
+    <line data-elapsed x1="40" y1="296" x2="390" y2="296" stroke="var(--rs-text-tertiary)" stroke-width="1.5" stroke-linecap="round"/>
+    <g data-ticks stroke="var(--rs-text-tertiary)" stroke-width="1.5" stroke-linecap="round">
+      <line x1="40" y1="291" x2="40" y2="301"/>
+      <line x1="83" y1="291" x2="83" y2="301"/>
+      <line x1="126" y1="291" x2="126" y2="301"/>
+      <line x1="169" y1="291" x2="169" y2="301"/>
+      <line x1="212" y1="291" x2="212" y2="301"/>
+      <line x1="255" y1="291" x2="255" y2="301"/>
+      <line x1="298" y1="291" x2="298" y2="301"/>
+      <line x1="341" y1="291" x2="341" y2="301"/>
+    </g>
+    <text x="398" y="320" text-anchor="end" font-size="12" font-weight="600" letter-spacing=".08em" fill="var(--rs-text-tertiary)">{{ v_time | upcase }}</text>
+
+    <!-- "now": only visible while playing -->
+    <g class="rs-lever-now">
+      <line data-now-line x1="384" y1="62" x2="384" y2="296" stroke="var(--rs-text-tertiary)" stroke-opacity=".4" stroke-width="1"/>
+      <circle data-now-dot cx="384" cy="296" r="4.5" fill="var(--rs-accent)"/>
+    </g>
+
+    <g clip-path="url(#rs-lever-clip-{{ v_id }})">
+      <!-- the profit gap: between the revenue line and the cost line -->
+      <path d="M40 130 C85 131 137 139 169 142 S280 84 384 62 L384 238 C280 216 201 154 169 158 C137 161 85 169 40 170 Z" fill="var(--rs-brass)" fill-opacity=".22"/>
+      <!-- revenue: slipping, then up -->
+      <path data-revenue d="M40 130 C85 131 137 139 169 142 S280 84 384 62" fill="none" stroke="var(--rs-positive)" stroke-width="4" stroke-linecap="round"/>
+      <!-- cost: creeping up, then down -->
+      <path data-cost d="M40 170 C85 169 137 161 169 158 S280 216 384 238" fill="none" stroke="var(--rs-critical)" stroke-width="4" stroke-linecap="round"/>
+    </g>
 
     <!-- where AI tools arrive -->
-    <line x1="130" y1="36" x2="130" y2="272" stroke="var(--rs-text-tertiary)" stroke-width="1.5" stroke-dasharray="4 5"/>
-    <rect x="82" y="280" width="96" height="30" rx="15" fill="var(--rs-accent)"/>
-    <text x="130" y="300" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="14" font-weight="700" fill="var(--rs-surface)">{{ v_fulcrum }}</text>
+    <line data-marker x1="169" y1="40" x2="169" y2="281" stroke="var(--rs-text-tertiary)" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <g class="rs-lever-pill">
+      <rect x="{{ 169 | minus: v_fx }}" y="281" width="{{ v_fw }}" height="30" rx="15" fill="var(--rs-accent)"/>
+      <text x="169" y="301" text-anchor="middle" font-size="14" fill="var(--rs-surface)">{{ v_fulcrum }}</text>
+    </g>
 
-    <!-- revenue: flat, then up -->
-    <path d="M40 140 H130 C200 140 280 80 380 62" fill="none" stroke="var(--rs-positive)" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="380" cy="62" r="6" fill="var(--rs-positive)"/>
-    <text x="380" y="42" text-anchor="end" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700" fill="var(--rs-positive)">&uarr; {{ v_revenue }}</text>
+    <circle data-revenue-dot cx="384" cy="62" r="6" fill="var(--rs-positive)"/>
+    <circle data-cost-dot cx="384" cy="238" r="6" fill="var(--rs-critical)"/>
 
-    <!-- cost: flat, then down -->
-    <path d="M40 160 H130 C200 160 280 220 380 238" fill="none" stroke="var(--rs-critical)" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="380" cy="238" r="6" fill="var(--rs-critical)"/>
-    <text x="380" y="266" text-anchor="end" font-family="Inter, -apple-system, sans-serif" font-size="15" font-weight="700" fill="var(--rs-critical)">&darr; {{ v_cost }}</text>
+    <!-- line labels: ride with the dots; the arrows arrive after the lines stop.
+         The canvas-coloured halo keeps them legible as they cross the marker. -->
+    <g stroke="var(--rs-lever-bg, var(--rs-canvas))" stroke-width="5" stroke-linejoin="round" paint-order="stroke" font-size="16">
+      <text data-revenue-label x="390" y="42" text-anchor="end" fill="var(--rs-positive)"><tspan class="rs-lever-arrow">&uarr; </tspan><tspan data-name>{{ v_revenue }}</tspan></text>
+      <text data-cost-label x="390" y="268" text-anchor="end" fill="var(--rs-critical)"><tspan class="rs-lever-arrow">&darr; </tspan><tspan data-name>{{ v_cost }}</tspan></text>
+    </g>
+    <text class="rs-lever-profit" x="300" y="156" text-anchor="middle" font-size="17" fill="var(--rs-brass-text)">{{ v_profit }}</text>
 
-    <!-- the result, once -->
-    <text x="292" y="156" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="700" fill="var(--rs-brass-text)">{{ v_profit }}</text>
+    <!-- replay affordance, shown by the script once the drawing has finished -->
+    <g class="rs-lever-replay" fill="none" stroke="var(--rs-text-tertiary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M53.5 37.5 A7.5 7.5 0 1 1 51 31.9"/>
+      <path d="M51.5 26.5 V32.2 H45.8"/>
+    </g>
   </svg>
   {% if include.caption %}<p class="rs-lever-caption">{{ include.caption }}</p>{% endif %}
 </div>
+<script>
+(function () {
+  if (window.rsLeverInit) return;
+  window.rsLeverInit = true;
+
+  var X0 = 40, XM = 169, X1 = 384;      // start, AI-tools marker, end
+  var AXIS_Y = 296, MARK_TOP = 40, MARK_BOTTOM = 281;
+  var PRE = 1300, DROP = 385, HOLD = 1550, POST = 2100; // ms; HOLD = marker drop + pill + 1s pause
+
+  // y of a left-to-right path at a given x
+  function yAt(path, total, x) {
+    var lo = 0, hi = total, p;
+    for (var i = 0; i < 16; i++) {
+      var mid = (lo + hi) / 2;
+      p = path.getPointAtLength(mid);
+      if (p.x < x) lo = mid; else hi = mid;
+    }
+    return path.getPointAtLength((lo + hi) / 2).y;
+  }
+  function ease(t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+
+  function setup(root) {
+    var q = function (s) { return root.querySelector(s); };
+    var clip = q('[data-clip]'), elapsed = q('[data-elapsed]'), marker = q('[data-marker]');
+    var rev = q('[data-revenue]'), cost = q('[data-cost]');
+    var revDot = q('[data-revenue-dot]'), costDot = q('[data-cost-dot]');
+    var nowLine = q('[data-now-line]'), nowDot = q('[data-now-dot]');
+    var revLabel = q('[data-revenue-label]'), costLabel = q('[data-cost-label]');
+    var revW = 0, costW = 0;
+
+    function measure() {
+      revW = revLabel.querySelector('[data-name]').getComputedTextLength();
+      costW = costLabel.querySelector('[data-name]').getComputedTextLength();
+    }
+    // centred on the dot, but kept inside the drawing at both ends
+    function place(label, w, x, y) {
+      label.setAttribute('x', Math.min(390, Math.max(x + w / 2, 34 + w)));
+      label.setAttribute('y', y);
+    }
+    var ticks = [].slice.call(root.querySelectorAll('[data-ticks] line'));
+    var revLen = rev.getTotalLength(), costLen = cost.getTotalLength();
+    var raf = 0, start = 0;
+
+    function draw(x) {
+      var ry = yAt(rev, revLen, x), cy = yAt(cost, costLen, x);
+      clip.setAttribute('width', Math.max(0, x - 30));
+      elapsed.setAttribute('x2', x >= X1 ? 390 : x); // at the end, run into the arrowhead
+      revDot.setAttribute('cx', x); revDot.setAttribute('cy', ry);
+      costDot.setAttribute('cx', x); costDot.setAttribute('cy', cy);
+      nowDot.setAttribute('cx', x);
+      nowLine.setAttribute('x1', x); nowLine.setAttribute('x2', x);
+      nowLine.setAttribute('y1', ry);
+      place(revLabel, revW, x, ry - 20);
+      place(costLabel, costW, x, cy + 30);
+      for (var i = 0; i < ticks.length; i++) {
+        ticks[i].style.opacity = +ticks[i].getAttribute('x1') <= x + 0.5 ? 1 : 0.3;
+      }
+    }
+
+    function frame(now) {
+      var t = now - start, x;
+      if (t < PRE) {
+        x = X0 + (XM - X0) * (t / PRE);
+        marker.setAttribute('y2', MARK_TOP);
+      } else if (t < PRE + HOLD) {
+        // time pauses on the decision: the marker drops, the pill lands
+        x = XM;
+        var m = Math.min(1, (t - PRE) / DROP);
+        marker.setAttribute('y2', MARK_TOP + (MARK_BOTTOM - MARK_TOP) * ease(m));
+        root.classList.add('is-marked');
+      } else {
+        var p = Math.min(1, (t - PRE - HOLD) / POST);
+        x = XM + (X1 - XM) * ease(p);
+        marker.setAttribute('y2', MARK_BOTTOM);
+        root.classList.add('is-marked');
+        if (p > 0.45) root.classList.add('is-profit');
+        if (p >= 1) {
+          draw(X1);
+          root.classList.remove('is-playing');
+          root.classList.add('is-done');
+          raf = 0;
+          return;
+        }
+      }
+      draw(x);
+      raf = requestAnimationFrame(frame);
+    }
+
+    function play() {
+      if (raf) cancelAnimationFrame(raf);
+      root.classList.remove('is-marked', 'is-profit', 'is-done');
+      root.classList.add('is-playing');
+      marker.setAttribute('y2', MARK_TOP);
+      measure();
+      draw(X0);
+      start = performance.now();
+      raf = requestAnimationFrame(frame);
+    }
+
+    // arm: hide everything that has not happened yet, then wait to be seen
+    root.classList.add('rs-lever--armed');
+    root.setAttribute('role', 'button');
+    root.setAttribute('tabindex', '0');
+    marker.setAttribute('y2', MARK_TOP);
+    measure();
+    draw(X0);
+
+    root.addEventListener('click', play);
+    root.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+    });
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { io.disconnect(); play(); }
+      }, { threshold: 0.5 });
+      io.observe(root);
+    } else {
+      play();
+    }
+  }
+
+  function init() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    [].forEach.call(document.querySelectorAll('[data-lever]'), function (root) {
+      if (root.rsLever) return;
+      root.rsLever = true;
+      setup(root);
+    });
+  }
+
+  // run now for drawings already parsed (no flash of the finished state),
+  // and again once the page is complete for any that come later
+  init();
+  document.addEventListener('DOMContentLoaded', init);
+})();
+</script>

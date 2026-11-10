@@ -523,6 +523,13 @@ hr.short{
     max-width: 100%;
     height: auto;
   }
+
+  .rs-lever { width: 460px; max-width: 100%; }
+  .rs-lever svg { max-width: none; }
+}
+
+@media (max-width: 600px) {
+  .rs-hero-banner { margin: 20px 0 28px; padding: 8px 0; }
 }
 
 /* --- Hero ---------------------------------------------------------------- */
@@ -1560,6 +1567,37 @@ $rs-profit-soft: color-mix(in srgb, var(--rs-positive) 12%, var(--rs-surface));
   max-width: 420px;
   height: auto;
   margin: 0 auto;
+}
+
+/* Animated state. The script adds --armed, so without JS the finished
+   drawing shows as-is. */
+.rs-lever-now,
+.rs-lever-replay { opacity: 0; transition: opacity .3s ease; }
+
+.rs-lever--armed {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 12px;
+  outline-offset: 6px;
+
+  .rs-lever-profit { opacity: 0; transition: opacity .6s ease; }
+  /* fill-opacity, not opacity: these are tspans */
+  .rs-lever-arrow { fill-opacity: 0; transition: fill-opacity .2s ease; }
+
+  .rs-lever-pill {
+    opacity: 0;
+    transform: translateY(6px) scale(.7);
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: opacity .25s ease, transform .45s cubic-bezier(.34, 1.56, .64, 1);
+  }
+
+  &.is-playing .rs-lever-now { opacity: 1; }
+  &.is-marked .rs-lever-pill { opacity: 1; transform: none; }
+  &.is-profit .rs-lever-profit { opacity: 1; }
+  &.is-done .rs-lever-arrow { fill-opacity: 1; transition: fill-opacity .5s ease .5s; }
+  &.is-done .rs-lever-replay { opacity: .7; transition-delay: .5s; }
+  &.is-done:hover .rs-lever-replay { opacity: 1; transition-delay: 0s; }
 }
 
 .rs-lever-caption {
