@@ -51,11 +51,11 @@
 
     <g clip-path="url(#rs-lever-clip-{{ v_id }})">
       <!-- the profit gap: between the revenue line and the cost line -->
-      <path d="M40 130 C85 131 137 139 169 142 S280 84 384 62 L384 238 C280 216 201 154 169 158 C137 161 85 169 40 170 Z" fill="var(--rs-brass)" fill-opacity=".22"/>
+      <path d="M40 130 C85 131 137 139 169 142 S280 84 384 62 L384 170 C280 167 201 155 169 158 C137 161 85 169 40 170 Z" fill="var(--rs-brass)" fill-opacity=".22"/>
       <!-- revenue: slipping, then up -->
       <path data-revenue d="M40 130 C85 131 137 139 169 142 S280 84 384 62" fill="none" stroke="var(--rs-positive)" stroke-width="4" stroke-linecap="round"/>
-      <!-- cost: creeping up, then down -->
-      <path data-cost d="M40 170 C85 169 137 161 169 158 S280 216 384 238" fill="none" stroke="var(--rs-critical)" stroke-width="4" stroke-linecap="round"/>
+      <!-- cost: creeping up, then back down to where it started -->
+      <path data-cost d="M40 170 C85 169 137 161 169 158 S280 167 384 170" fill="none" stroke="var(--rs-critical)" stroke-width="4" stroke-linecap="round"/>
     </g>
 
     <!-- where AI tools arrive -->
@@ -66,15 +66,15 @@
     </g>
 
     <circle data-revenue-dot cx="384" cy="62" r="6" fill="var(--rs-positive)"/>
-    <circle data-cost-dot cx="384" cy="238" r="6" fill="var(--rs-critical)"/>
+    <circle data-cost-dot cx="384" cy="170" r="6" fill="var(--rs-critical)"/>
 
     <!-- line labels: ride with the dots; the arrows arrive after the lines stop.
          The canvas-coloured halo keeps them legible as they cross the marker. -->
     <g stroke="var(--rs-lever-bg, var(--rs-canvas))" stroke-width="5" stroke-linejoin="round" paint-order="stroke" font-size="16">
       <text data-revenue-label x="390" y="42" text-anchor="end" fill="var(--rs-positive)"><tspan class="rs-lever-arrow">&uarr; </tspan><tspan data-name>{{ v_revenue }}</tspan></text>
-      <text data-cost-label x="390" y="268" text-anchor="end" fill="var(--rs-critical)"><tspan class="rs-lever-arrow">&darr; </tspan><tspan data-name>{{ v_cost }}</tspan></text>
+      <text data-cost-label x="390" y="200" text-anchor="end" fill="var(--rs-critical)"><tspan class="rs-lever-arrow">&darr; </tspan><tspan data-name>{{ v_cost }}</tspan></text>
     </g>
-    <text class="rs-lever-profit" x="300" y="156" text-anchor="middle" font-size="17" fill="var(--rs-brass-text)">{{ v_profit }}</text>
+    <text class="rs-lever-profit" x="300" y="133" text-anchor="middle" font-size="17" fill="var(--rs-brass-text)">{{ v_profit }}</text>
 
     <!-- replay affordance, shown by the script once the drawing has finished -->
     <g class="rs-lever-replay" fill="none" stroke="var(--rs-text-tertiary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
