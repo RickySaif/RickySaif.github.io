@@ -1,0 +1,485 @@
+{% comment %}
+  /claude-code-id/ in the active language. Words: _data/claude_code_id.yml.
+  Meetups: _data/events.yml. Styles: assets/css/landing.scss.
+  Motion: assets/js/landing.js arms [data-reveal], [data-count-to], the
+  terminal, the phones and the timeline; without it everything is visible.
+{% endcomment %}
+{%- assign c = site.data.claude_code_id[site.active_lang] -%}
+{%- assign tt = site.data.translations[site.active_lang] -%}
+{%- assign img = "/assets/images/claude-code-id/" | relative_url -%}
+{%- assign today = site.time | date: "%Y-%m-%d" -%}
+{%- assign events = site.data.events | sort: "date" -%}
+{%- assign next = false -%}
+{%- for e in events -%}
+  {%- assign d = e.date | date: "%Y-%m-%d" -%}
+  {%- if d >= today -%}{%- assign next = e -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+
+{%- comment -%} "Register" buttons go straight to the next meetup's sign-up link.
+  Once that meetup has ended, landing.js points them back to /events/. {%- endcomment -%}
+{%- capture events_path -%}{% if site.active_lang != site.default_lang %}/{{ site.active_lang }}{% endif %}/events/{%- endcapture -%}
+{%- assign meetup_attrs = 'href="/events/"' -%}
+{%- if next and next.register_url and next.register_url != "" -%}
+  {%- capture meetup_attrs -%}href="{{ next.register_url }}" target="_blank" rel="noopener" data-cc-expires="{{ next.date | date: "%Y-%m-%d" }}T{{ next.end }}:00+07:00" data-cc-fallback="{{ events_path }}"{%- endcapture -%}
+{%- endif -%}
+
+{%- capture next_line -%}
+{%- if next -%}
+  {%- assign wd = next.date | date: "%w" | plus: 0 -%}
+  {%- assign mo = next.date | date: "%-m" | minus: 1 -%}
+  {%- assign start = next.start -%}{%- if site.active_lang == "id" -%}{%- assign start = next.start | replace: ":", "." -%}{%- endif -%}
+  {{ tt.days[wd] }}, {{ next.date | date: "%-d" }} {{ tt.months[mo] }} &middot; {{ start }} WIB &middot; {{ next.venue[site.active_lang] }}
+{%- endif -%}
+{%- endcapture -%}
+
+<!-- ============================== Hero ============================== -->
+<section class="cc-hero cc-dark">
+  <div class="cc-hero-bg" aria-hidden="true">
+    <span class="cc-glow cc-glow--warm"></span>
+    <span class="cc-glow cc-glow--blue"></span>
+  </div>
+  <div class="cc-container cc-hero-grid">
+    <div class="cc-hero-copy">
+      <p class="cc-badge" data-reveal><span class="cc-live-dot"></span>{{ c.hero.badge }}</p>
+      <h1 data-reveal style="--d:1">{{ c.hero.title_html }}</h1>
+      <p class="cc-lead" data-reveal style="--d:2">{{ c.hero.lead }}</p>
+      <div class="cc-actions" data-reveal style="--d:3">
+        <a class="cc-btn cc-btn--warm" href="{{ site.claude_code_wa_url }}" target="_blank" rel="noopener">{% include cc-icon.html name="chat" size=20 %}{{ c.hero.cta_wa }}</a>
+        <a class="cc-btn cc-btn--ghost" {{ meetup_attrs }}>{{ c.hero.cta_meetup }}{% include cc-icon.html name="arrow" size=18 %}</a>
+      </div>
+      {%- if next %}
+      <div class="cc-hero-next" data-events="upcoming" data-reveal style="--d:4">
+        <a href="/events/" data-event-end="{{ next.date | date: "%Y-%m-%d" }}T{{ next.end }}:00+07:00">
+          {% include cc-icon.html name="calendar" size=18 %}
+          <span><strong>{{ c.hero.next_label }}:</strong> {{ next_line }}</span>
+        </a>
+      </div>
+      {%- endif %}
+    </div>
+
+    {%- comment -%} Each scene's parts carry data-scene="N"; .is-scene marks the
+      one on show. Without JavaScript the first scene stays on show. {%- endcomment -%}
+    <div class="cc-hero-visual" data-reveal style="--d:2">
+      <div class="cc-term" data-cc-terminal>
+        <div class="cc-term-bar">
+          <span class="cc-dots"><i></i><i></i><i></i></span>
+          <span class="cc-term-title">
+            {%- for sc in c.terminal.scenes -%}
+            <span data-scene="{{ forloop.index0 }}"{% if forloop.first %} class="is-scene"{% endif %}>{{ sc.title }}</span>
+            {%- endfor -%}
+          </span>
+          <span class="cc-term-note">{{ c.terminal.note }}</span>
+        </div>
+        <div class="cc-term-body">
+          {%- for sc in c.terminal.scenes %}
+          <div class="cc-term-scene{% if forloop.first %} is-scene{% endif %}" data-scene="{{ forloop.index0 }}">
+            <p class="cc-term-prompt"><span class="cc-term-caret">&gt;</span> <span data-cc-type>{{ sc.prompt }}</span><span class="cc-cursor" aria-hidden="true"></span></p>
+            <ul class="cc-term-steps">
+              {%- for st in sc.steps %}
+              <li class="cc-term-step{% if forloop.last %} cc-term-step--done{% endif %}">{% if forloop.last %}{% include cc-icon.html name="spark" size=16 %}{% else %}{% include cc-icon.html name="check" size=16 %}{% endif %}<span>{{ st }}</span></li>
+              {%- endfor %}
+            </ul>
+          </div>
+          {%- endfor %}
+        </div>
+      </div>
+
+      {%- for sc in c.terminal.scenes %}
+      {%- assign r = sc.result %}
+      <div class="cc-preview cc-preview--{{ r.type }}{% if forloop.first %} is-scene{% endif %}" data-scene="{{ forloop.index0 }}" aria-hidden="true">
+        {%- case r.type -%}
+        {%- when "app" %}
+        <div class="cc-app">
+          <div class="cc-app-top"><strong>{{ r.title }}</strong><span>{{ r.month }}</span></div>
+          <p class="cc-app-label">{{ r.label }}</p>
+          <p class="cc-app-big">{{ r.value }}</p>
+          <span class="cc-app-meter"><i></i></span>
+          <ul class="cc-app-cats">
+            {%- for cat in r.cats %}
+            <li><i></i>{{ cat.name }}<b>{{ cat.amount }}</b></li>
+            {%- endfor %}
+          </ul>
+          <span class="cc-app-fab">+</span>
+        </div>
+        {%- when "video" %}
+        <div class="cc-vid">
+          <span class="cc-vid-clips"><span class="cc-vid-strip">{% for k in (1..10) %}<i></i>{% endfor %}</span>{{ r.clips }}</span>
+          <span class="cc-vid-play">{% include cc-icon.html name="play" size=18 %}</span>
+          <span class="cc-vid-side">{% include cc-icon.html name="heart" size=15 %}{% include cc-icon.html name="chat" size=15 %}{% include cc-icon.html name="share" size=15 %}</span>
+          <p class="cc-vid-caption">{{ r.caption }}</p>
+          <span class="cc-vid-bar"><i></i><b>{{ r.length }}</b></span>
+        </div>
+        {%- when "slides" %}
+        <div class="cc-sl-bar"><span class="cc-sl-logo"></span><strong>{{ r.file }}</strong></div>
+        <div class="cc-sl-slide">
+          <p class="cc-sl-title">{{ r.slide_title }}</p>
+          <div class="cc-sl-row">
+            <span class="cc-sl-chart"><i style="--h:42%"></i><i style="--h:58%"></i><i style="--h:50%"></i><i style="--h:74%"></i><i class="is-top" style="--h:92%"></i></span>
+            <span class="cc-sl-side">
+              <small>{{ r.trend_label }}</small>
+              {%- for tr in r.trends %}<span class="cc-sl-tag">&#8599; {{ tr }}</span>{% endfor %}
+            </span>
+          </div>
+        </div>
+        <div class="cc-sl-thumbs"><i class="is-on"></i><i></i><i></i><i></i><i></i></div>
+        {%- endcase %}
+      </div>
+      {%- endfor %}
+
+      {%- comment -%} Tabs need JavaScript, so landing.js unhides them. {%- endcomment %}
+      <div class="cc-scene-nav" role="group" aria-label="{{ c.terminal.nav_label }}" data-cc-scene-nav hidden>
+        {%- for sc in c.terminal.scenes %}
+        <button type="button" data-scene-tab="{{ forloop.index0 }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{% include cc-icon.html name=sc.icon size=15 %}<span>{{ sc.tab }}</span></button>
+        {%- endfor %}
+      </div>
+      {%- for sc in c.terminal.scenes %}
+      <span class="cc-chip cc-chip--b cc-chip--{{ sc.result.type }}{% if forloop.first %} is-scene{% endif %}" data-scene="{{ forloop.index0 }}"{% if sc.chip_first %} data-tag-first{% endif %}>{% include cc-icon.html name=sc.chip_icon size=16 %}{{ sc.chip }}</span>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Community =========================== -->
+<section class="cc-section">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ c.community.eyebrow }}</p>
+      <h2>{{ c.community.title }}</h2>
+      <p class="cc-sub">{{ c.community.intro }}</p>
+    </header>
+
+    <div class="cc-features">
+      {%- for f in c.community.features %}
+      <article class="cc-feature" data-reveal style="--d:{{ forloop.index }}">
+        <span class="cc-feature-icon">{% include cc-icon.html name=f.icon size=26 %}</span>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    {%- comment -%} Inside the community: screenshots from the real WhatsApp
+      community (group list, and the pinned lesson in D-04). {%- endcomment -%}
+    {%- assign co = c.community.course %}
+    <div class="cc-course">
+      <div class="cc-course-copy" data-reveal>
+        <p class="cc-eyebrow">{{ co.eyebrow }}</p>
+        <h3 class="cc-h3">{{ co.title }}</h3>
+        <p>{{ co.intro }}</p>
+        <p class="cc-howto-title">{{ co.howto_title }}</p>
+        <ol class="cc-howto">
+          {%- for h in co.howto %}
+          <li><span class="cc-howto-num">{{ forloop.index }}</span>{{ h }}</li>
+          {%- endfor %}
+        </ol>
+      </div>
+      <div class="cc-course-visual">
+        <figure class="cc-wa-phone" data-reveal style="--d:1">
+          <img class="cc-wa-head" src="{{ img }}wa-groups-head.png" alt="" width="600" height="100" loading="lazy">
+          <div class="cc-wa-screen">
+            <img src="{{ img }}wa-groups-list.png" alt="{{ co.groups_alt }}" width="600" height="1740" loading="lazy">
+          </div>
+        </figure>
+        <figure class="cc-wa-lesson" data-reveal style="--d:2">
+          <figcaption class="cc-wa-lesson-head">
+            <span class="cc-wa-badge" aria-hidden="true">D-04</span>
+            <span><strong>D-04 First App</strong><small>{% include cc-icon.html name="pushpin" size=12 %}{{ co.lesson_label }}</small></span>
+          </figcaption>
+          <img src="{{ img }}wa-lesson.png" alt="{{ co.lesson_alt }}" width="924" height="1060" loading="lazy">
+        </figure>
+        <span class="cc-chip cc-chip--course">{% include cc-icon.html name="chat" size=16 %}{{ co.chip }}</span>
+      </div>
+    </div>
+
+    <h3 class="cc-h3 cc-center cc-tracks-title" data-reveal>{{ co.tracks_title }}</h3>
+    <div class="cc-tracks">
+      {%- for t in co.tracks %}
+      <article class="cc-track cc-track--{{ t.code | downcase }}" data-reveal style="--d:{{ forloop.index0 }}">
+        <div class="cc-track-info">
+          <span class="cc-track-code" aria-hidden="true">{{ t.code }}</span>
+          <h4>{{ t.name }}</h4>
+          <p>{{ t.text }}</p>
+        </div>
+        {%- if t.code == "D" %}
+        <ol class="cc-track-steps">
+          {%- for g in site.data.claude_code_id.d_track %}
+          {%- assign g_code = g | split: " " | first %}
+          <li><span>{{ g_code }}</span>{{ g | remove_first: g_code | strip }}</li>
+          {%- endfor %}
+        </ol>
+        {%- else %}
+        <p class="cc-track-start">{{ co.start_label }} <strong>{{ t.code }}-00 Setup</strong></p>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="cc-general" data-reveal>{{ co.general_html }}</p>
+
+    <div class="cc-meetup">
+      <div class="cc-meetup-card" data-reveal>
+        <p class="cc-eyebrow"><span class="cc-live-dot"></span>{{ c.community.meetup_title }}</p>
+        {% include events-list.html which="upcoming" next=true %}
+        <a class="cc-link" href="/events/">{{ c.community.meetup_more }} {% include cc-icon.html name="arrow" size=16 %}</a>
+      </div>
+      <figure class="cc-invite" data-reveal style="--d:2">
+        <a class="cc-invite-phone" href="{{ site.claude_code_wa_url }}" target="_blank" rel="noopener">
+          <img src="{{ img }}whatsapp-group-invite.png" alt="{{ c.community.invite_alt }}" width="380" height="375" loading="lazy">
+        </a>
+        <figcaption>{% include cc-icon.html name="arrow" size=14 %}{{ c.community.invite_caption }}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== Why ============================== -->
+<section class="cc-section cc-section--surface">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ c.why.eyebrow }}</p>
+      <h2>{{ c.why.title }}</h2>
+      <p class="cc-sub">{{ c.why.intro }}</p>
+    </header>
+
+    <div class="cc-paths">
+      {%- for p in c.why.paths %}
+      <article class="cc-path{% if forloop.last %} cc-path--new{% endif %}" data-reveal style="--d:{{ forloop.index }}">
+        <span class="cc-path-icon">{% if forloop.last %}{% include cc-icon.html name="spark" size=22 %}{% else %}{% include cc-icon.html name="clock" size=22 %}{% endif %}</span>
+        <p class="cc-path-label">{{ p.label }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <div class="cc-what">
+      <div class="cc-what-copy" data-reveal>
+        <h3 class="cc-h3">{{ c.why.what_title }}</h3>
+        <p>{{ c.why.what_text }}</p>
+        <p class="cc-note">{% include cc-icon.html name="shield" size=18 %}{{ c.why.loop_note }}</p>
+      </div>
+      <ol class="cc-loop" data-reveal style="--d:1">
+        {%- for s in c.why.loop %}
+        <li style="--i:{{ forloop.index0 }}"><span class="cc-loop-num">{{ forloop.index }}</span>{{ s }}</li>
+        {%- endfor %}
+      </ol>
+    </div>
+
+    <h3 class="cc-h3 cc-center" data-reveal>{{ c.why.vs_title }}</h3>
+    <div class="cc-vs">
+      <div class="cc-vs-card" data-reveal style="--d:1">
+        <p class="cc-vs-label">{{ c.why.chat_label }}</p>
+        <div class="cc-bubble cc-bubble--me">{{ c.why.chat_user }}</div>
+        <div class="cc-bubble cc-bubble--bot">{{ c.why.chat_bot }}<code>&lt;section class="hero"&gt;&hellip;</code></div>
+        <p class="cc-vs-after cc-vs-after--meh">{% include cc-icon.html name="repeat" size=18 %}{{ c.why.chat_after }}</p>
+      </div>
+      <div class="cc-vs-card cc-vs-card--cc" data-reveal style="--d:2">
+        <p class="cc-vs-label">{{ c.why.cc_label }}</p>
+        <div class="cc-bubble cc-bubble--me">{{ c.why.cc_user }}</div>
+        <ul class="cc-vs-steps">
+          {%- for s in c.why.cc_steps %}
+          <li>{% include cc-icon.html name="check" size=16 %}{{ s }}</li>
+          {%- endfor %}
+        </ul>
+        <p class="cc-vs-after">{% include cc-icon.html name="spark" size=18 %}{{ c.why.cc_after }}</p>
+      </div>
+    </div>
+    <blockquote class="cc-analogy" data-reveal><p>{{ c.why.analogy_html }}</p></blockquote>
+  </div>
+</section>
+
+<!-- ======================== Not only code =========================== -->
+<section class="cc-section cc-dark cc-create">
+  <div class="cc-hero-bg" aria-hidden="true">
+    <span class="cc-glow cc-glow--warm cc-glow--low"></span>
+  </div>
+  <div class="cc-container">
+    <header class="cc-head" data-reveal data-cc-keep>
+      <p class="cc-eyebrow">{{ c.create.eyebrow }}</p>
+      <h2>{{ c.create.title_html }}</h2>
+      <p class="cc-sub">{{ c.create.intro }}</p>
+    </header>
+
+    <div class="cc-formats">
+      {%- for f in c.create.formats %}
+      <div class="cc-format" data-reveal style="--d:{{ forloop.index0 | modulo: 4 }}">
+        <span class="cc-format-icon">{% include cc-icon.html name=f.icon size=24 %}</span>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <h3 class="cc-h3 cc-center cc-stories-title" data-reveal>{{ c.create.stories_title }}</h3>
+    <div class="cc-stories">
+      {%- for s in c.create.stories %}
+      <article class="cc-story-card" data-reveal style="--d:{{ forloop.index0 }}">
+        <p class="cc-story-tag">{{ s.tag }}</p>
+        <h4>{{ s.title }}</h4>
+        <p>{{ s.text }}</p>
+        <p class="cc-story-links">
+          {%- for l in s.links -%}
+          <a href="{{ l.url }}"{% unless l.url contains "#" %} target="_blank" rel="noopener"{% endunless %}>{{ l.label }} {% include cc-icon.html name="arrow" size=14 %}</a>
+          {%- endfor -%}
+        </p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <p class="cc-create-closing" data-reveal>{{ c.create.closing }}</p>
+  </div>
+</section>
+
+<!-- ======================== Creator, not coder ======================= -->
+<section class="cc-section cc-section--surface">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ c.creator.eyebrow }}</p>
+      <h2>{{ c.creator.title }}</h2>
+      <p class="cc-sub">{{ c.creator.intro }}</p>
+    </header>
+    <div class="cc-personas">
+      {%- for p in c.creator.personas %}
+      <div class="cc-persona" data-reveal style="--d:{{ forloop.index }}">
+        <span class="cc-persona-icon">{% include cc-icon.html name=p.icon size=28 %}</span>
+        <p><strong>{{ p.title }}</strong> {{ p.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+    <p class="cc-honest" data-reveal>{{ c.creator.honest_html }}</p>
+  </div>
+</section>
+
+<!-- ============================ Story 1 ============================= -->
+<section class="cc-section cc-section--warm">
+  <div class="cc-container cc-story">
+    <div class="cc-story-copy">
+      <p class="cc-eyebrow" data-reveal>{{ c.story1.eyebrow }}</p>
+      <h2 data-reveal style="--d:1">{{ c.story1.title }}</h2>
+
+      <div class="cc-person" data-reveal style="--d:2">
+        <img class="cc-person-photo" src="{{ img }}nurul-bahirah.jpg" alt="{{ c.story1.photo_alt }}" width="88" height="88" loading="lazy">
+        <div>
+          <p class="cc-person-name">{{ c.story1.name }}</p>
+          <p class="cc-person-role">{{ c.story1.role }}</p>
+        </div>
+      </div>
+
+      <p data-reveal>{{ c.story1.intro_html }}</p>
+
+      <ul class="cc-ticks">
+        {%- for f in c.story1.features %}
+        <li data-reveal style="--d:{{ forloop.index }}"><span class="cc-tick-icon">{% include cc-icon.html name=f.icon size=20 %}</span><span><strong>{{ f.title }}</strong> {{ f.text }}</span></li>
+        {%- endfor %}
+      </ul>
+
+      <dl class="cc-stats" data-reveal>
+        {%- for s in c.story1.stats %}
+        <div><dt>{{ s.label }}</dt><dd>{{ s.value_html }}</dd></div>
+        {%- endfor %}
+      </dl>
+
+      <p class="cc-closing" data-reveal>{{ c.story1.closing }}</p>
+      <div class="cc-actions" data-reveal>
+        <a class="cc-btn cc-btn--ink" href="https://km.generasimerdeka.com/" target="_blank" rel="noopener">{{ c.story1.cta }}{% include cc-icon.html name="arrow" size=18 %}</a>
+        <span class="cc-url">km.generasimerdeka.com</span>
+      </div>
+    </div>
+
+    <div class="cc-phones" data-reveal data-cc-phones>
+      <span class="cc-phones-badge">{% include cc-icon.html name="clock" size=18 %}{{ c.story1.badge }}</span>
+      {%- for s in c.story1.shots %}
+      <figure class="cc-phone cc-phone--{{ forloop.index }}">
+        <div class="cc-phone-float">
+          <img src="{{ img }}{{ s.file }}" alt="{{ s.alt }}" width="540" height="1052" loading="lazy">
+        </div>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Story 2 ============================= -->
+<section class="cc-section cc-dark cc-story2" id="video">
+  <div class="cc-hero-bg" aria-hidden="true"><span class="cc-glow cc-glow--blue cc-glow--low"></span></div>
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ c.story2.eyebrow }}</p>
+      <h2>{{ c.story2.title }}</h2>
+    </header>
+
+    <div class="cc-counter-row">
+      <div class="cc-counter" data-reveal>
+        <span class="cc-counter-num" data-count-to="38">38</span>
+        <span class="cc-counter-unit">{{ c.story2.counter_unit }}</span>
+        <p class="cc-counter-label">{{ c.story2.counter_label }}</p>
+      </div>
+      <div class="cc-counter-copy" data-reveal style="--d:1">
+        <p class="cc-lead">{{ c.story2.intro }}</p>
+        <p>{{ c.story2.brief }}</p>
+      </div>
+    </div>
+
+    <figure class="cc-browser" data-reveal>
+      <div class="cc-browser-bar">
+        <span class="cc-dots"><i></i><i></i><i></i></span>
+        <span class="cc-browser-url">rizkysyaiful.github.io/scrum-ai-addendum</span>
+      </div>
+      <video controls playsinline preload="none" width="1280" height="720" poster="{{ img }}video-poster.jpg">
+        <source src="{{ "/assets/video/claude-code-38-minutes.mp4" | relative_url }}" type="video/mp4">
+      </video>
+      <figcaption>{% include cc-icon.html name="play" size=14 %}{{ c.story2.video_caption }}</figcaption>
+    </figure>
+
+    <ol class="cc-timeline" data-reveal data-cc-timeline>
+      <span class="cc-timeline-track" aria-hidden="true"><span class="cc-timeline-bar"></span></span>
+      {%- for s in c.story2.timeline %}
+      <li style="--i:{{ forloop.index0 }}">
+        <span class="cc-timeline-dot"></span>
+        <p class="cc-timeline-time">{{ s.time }}</p>
+        <h4>{{ s.title }}</h4>
+        <p>{{ s.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+
+    <div class="cc-scale" data-reveal>
+      {% include visuals/timescale.html
+           title=c.story2.ts_title
+           ai_label=c.story2.ts_ai_label
+           ai_value=c.story2.ts_ai_value
+           before_label=c.story2.ts_before_label
+           before_value=c.story2.ts_before_value
+           caption=c.story2.ts_caption %}
+      <p class="cc-footnote">{{ c.story2.footnote }}</p>
+      <a class="cc-link cc-link--light" href="https://rizkysyaiful.github.io/scrum-ai-addendum/" target="_blank" rel="noopener">{{ c.story2.result_link }} {% include cc-icon.html name="arrow" size=16 %}</a>
+    </div>
+
+    <p class="cc-question" data-reveal>{{ c.story2.question }}</p>
+  </div>
+</section>
+
+<!-- ============================== Final ============================= -->
+<section class="cc-final cc-dark">
+  <div class="cc-hero-bg" aria-hidden="true">
+    <span class="cc-glow cc-glow--warm cc-glow--center"></span>
+  </div>
+  <div class="cc-container cc-final-inner">
+    <h2 data-reveal>{{ c.final.title }}</h2>
+    <p class="cc-lead" data-reveal style="--d:1">{{ c.final.lead }}</p>
+    <div class="cc-actions cc-actions--center" data-reveal style="--d:2">
+      <a class="cc-btn cc-btn--warm cc-btn--lg" href="{{ site.claude_code_wa_url }}" target="_blank" rel="noopener">{% include cc-icon.html name="chat" size=20 %}{{ c.final.cta_wa }}</a>
+      <a class="cc-btn cc-btn--ghost cc-btn--lg" {{ meetup_attrs }}>{{ c.final.cta_meetup }}{% include cc-icon.html name="arrow" size=18 %}</a>
+    </div>
+    {%- if next %}
+    <div class="cc-hero-next cc-hero-next--center" data-events="upcoming" data-reveal style="--d:3">
+      <a href="/events/" data-event-end="{{ next.date | date: "%Y-%m-%d" }}T{{ next.end }}:00+07:00">
+        {% include cc-icon.html name="pin" size=18 %}
+        <span>{{ next_line }}</span>
+      </a>
+    </div>
+    {%- endif %}
+    <p class="cc-small" data-reveal style="--d:4">{{ c.final.small }}</p>
+  </div>
+</section>
+
+{% include events-sync.html %}

@@ -2,7 +2,7 @@
 title: "Analisis kesenjangan: posisi Anda sekarang, dan target yang harus dicapai"
 summary: "Bandingkan bisnis atau produk Anda dengan posisi yang seharusnya, atau dengan kompetitor, dan dapatkan daftar kesenjangan yang diurutkan dari yang paling layak ditutup duluan."
 lever: profit
-order: 4
+order: 2
 visual: gap
 steps:
   - "Gambarkan posisi Anda sekarang"

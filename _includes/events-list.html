@@ -1,0 +1,30 @@
+{% comment %}
+  Upcoming or past events from _data/events.yml.
+
+  Parameters:
+    which - "upcoming" (soonest first) or "past" (latest first)   (required)
+    next  - true: show only the first upcoming event (for announcements)
+
+  The split is made when the site is built, by day. The site only rebuilds on
+  a push, so _includes/events-sync.html re-checks each end time in the browser.
+  Include events-sync.html once per page, after the last list.
+{% endcomment %}
+{%- assign tt = site.data.translations[site.active_lang] -%}
+{%- assign today = site.time | date: "%Y-%m-%d" -%}
+{%- assign events = site.data.events | sort: "date" -%}
+<div class="rs-events rs-events--{{ include.which }}{% if include.next %} rs-events--next{% endif %}" data-events="{{ include.which }}">
+  <div class="rs-events-list">
+    {%- if include.which == "past" -%}
+      {%- for e in events reversed -%}
+        {%- assign d = e.date | date: "%Y-%m-%d" -%}
+        {%- if d < today %}{% include event-card.html event=e %}{% endif -%}
+      {%- endfor -%}
+    {%- else -%}
+      {%- for e in events -%}
+        {%- assign d = e.date | date: "%Y-%m-%d" -%}
+        {%- if d >= today %}{% include event-card.html event=e %}{% endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+  <p class="rs-events-empty">{% if include.which == "past" %}{{ tt.events_none_past }}{% else %}{{ tt.events_none_upcoming }}{% endif %}</p>
+</div>

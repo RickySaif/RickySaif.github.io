@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% comment %}
+  Full-width promotional page: the site header and footer, with no reading
+  column in between, so each section can run edge to edge. Used by
+  /claude-code-id/. Page styles: assets/css/landing.scss. Motion:
+  assets/js/landing.js (everything stays visible without it).
+{% endcomment %}
+<html lang="{{ site.active_lang | default: page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="cc-body">
+    <link rel="stylesheet" href="{{ "/assets/css/landing.css" | relative_url }}">
+
+    <input class="site-menu-toggle" type="checkbox" id="site-menu-toggle" aria-hidden="true">
+    {% include header.html %}
+
+    <main class="cc" aria-label="Content">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script src="{{ "/assets/js/landing.js" | relative_url }}" defer></script>
+  </body>
+
+</html>

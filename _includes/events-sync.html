@@ -1,0 +1,18 @@
+{% comment %}
+  Moves events that have ended since the last build out of the upcoming list:
+  into the past list when the page has one, otherwise off the page. Include
+  once, after the last events-list.html. Empty-list messages are pure CSS.
+{% endcomment %}
+<script>
+  (function () {
+    var now = Date.now();
+    var past = document.querySelector('[data-events="past"] .rs-events-list');
+    var cards = document.querySelectorAll('[data-events="upcoming"] [data-event-end]');
+    for (var i = 0; i < cards.length; i++) {
+      var end = Date.parse(cards[i].getAttribute("data-event-end"));
+      if (isNaN(end) || end > now) continue;
+      if (past) past.insertBefore(cards[i], past.firstChild);
+      else cards[i].parentNode.removeChild(cards[i]);
+    }
+  })();
+</script>

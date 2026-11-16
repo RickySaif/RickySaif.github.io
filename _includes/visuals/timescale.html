@@ -1,0 +1,33 @@
+{% comment %}
+  Work time drawn to scale: Claude Code's 38 minutes against the 2-3 weeks the
+  same site would have taken without AI. One line = one 8-hour working day, so
+  38 minutes is 38/480 = 7.92% of one line; the estimate is 10 full lines plus
+  5 faded ones for a possible third week.
+
+  The lines fill in when the figure scrolls into view (assets/js/landing.js).
+  Without JavaScript, or with reduced motion, they are simply drawn full.
+
+  Parameters (all required, so each language passes its own words):
+    title, ai_label, ai_value, before_label, before_value, caption
+{% endcomment %}
+<figure class="rs-timescale">
+  <p class="rs-timescale-title">{{ include.title }}</p>
+
+  <div class="rs-timescale-row rs-timescale-row--ai">
+    <p class="rs-timescale-label"><strong>{{ include.ai_label }}</strong> <span>{{ include.ai_value }}</span></p>
+    <div class="rs-timescale-days" role="img" aria-label="{{ include.ai_label }}: {{ include.ai_value }}">
+      <span class="rs-day"><span class="rs-day-fill" style="--fill: 7.92%; --i: 0"></span></span>
+    </div>
+  </div>
+
+  <div class="rs-timescale-row rs-timescale-row--before">
+    <p class="rs-timescale-label"><strong>{{ include.before_label }}</strong> <span>{{ include.before_value }}</span></p>
+    <div class="rs-timescale-days" role="img" aria-label="{{ include.before_label }}: {{ include.before_value }}">
+      {%- for i in (1..15) -%}
+      <span class="rs-day{% if i > 10 %} rs-day--maybe{% endif %}"><span class="rs-day-fill" style="--i: {{ i }}"></span></span>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <figcaption>{{ include.caption }}</figcaption>
+</figure>

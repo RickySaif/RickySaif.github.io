@@ -1,4 +1,5 @@
-# Free tools, newest last. Rendered by /tools/ in both languages.
+# Free tools, in display order. Rendered by /tools/ in both languages.
+# The site leads with sales and revenue, so the sales tool (Scouterr) comes first.
 # Add a tool: append one entry. `repo` empty -> links to site.github_url.
 # `case` is the slug of its case study in _cases/ (optional).
 # `page` is an on-site page with more detail (optional).
@@ -8,25 +9,6 @@
 #   A plain string, or en:/id: when the wording differs per language.
 #   Leave it empty to show only the label. Never put a number here you cannot defend.
 # `problem` is the one-paragraph current problem shown on the card.
-- name: "BugHunterr"
-  lever: cost
-  flagship: true
-  banner: "/assets/images/tools/bughunterr-banner.webp"
-  banner_alt:
-    en: "BugHunterr: a friendly tuyul ghost catches a red bug with a magnifying glass over a browser window."
-    id: "BugHunterr: tuyul ramah menangkap bug merah dengan kaca pembesar di atas jendela browser."
-  workshop_url: "#"
-  range:
-    en: "From one QA engineer's salary to your company's value"
-    id: "Dari gaji satu QA engineer sampai nilai perusahaan Anda"
-  problem:
-    en: "AI-powered hackers find the holes before your team does. One high-severity bug can cost real money. And vibe-coded apps turn into spaghetti code nobody dares to touch."
-    id: "Hacker yang dibantu AI menemukan celah lebih dulu dari tim Anda. Satu bug berat bisa berarti kerugian finansial nyata. Dan aplikasi hasil vibecoding berubah jadi spaghetti code yang tak seorang pun berani menyentuh."
-  repo: "https://github.com/RickySaif/BugHunterr"
-  summary:
-    en: "An AI agent (Claude Code or Codex) hunts bugs in your web app with a real browser, the code and the database. Every bug comes with a video, a regression test and a fix prompt."
-    id: "Agen AI (Claude Code atau Codex) memburu bug di aplikasi web Anda lewat browser sungguhan, kode, dan database. Setiap bug disertai video, tes regresi, dan prompt perbaikan."
-
 - name: "Scouterr"
   lever: profit
   flagship: true
@@ -42,6 +24,25 @@
   summary:
     en: "Scouterr Leads finds likely buyers in public posts and prepares a gradual approach. Scouterr Talent finds and ranks people worth hiring. A person approves every action."
     id: "Scouterr Leads menemukan calon pembeli dari postingan publik dan menyiapkan pendekatan bertahap. Scouterr Talent menemukan dan meranking kandidat yang layak direkrut. Setiap aksi harus disetujui manusia."
+
+- name: "BugHunterr"
+  lever: cost
+  flagship: false   # card hidden from the home page for now; set back to true to show it
+  banner: "/assets/images/tools/bughunterr-banner.webp"
+  banner_alt:
+    en: "BugHunterr: a friendly tuyul ghost catches a red bug with a magnifying glass over a browser window."
+    id: "BugHunterr: tuyul ramah menangkap bug merah dengan kaca pembesar di atas jendela browser."
+  workshop_url: "#"
+  range:
+    en: "From one QA engineer's salary to your company's value"
+    id: "Dari gaji satu QA engineer sampai nilai perusahaan Anda"
+  problem:
+    en: "AI-powered hackers find the holes before your team does. One high-severity bug can cost real money. And vibe-coded apps turn into spaghetti code nobody dares to touch."
+    id: "Hacker yang dibantu AI menemukan celah lebih dulu dari tim Anda. Satu bug berat bisa berarti kerugian finansial nyata. Dan aplikasi hasil vibecoding berubah jadi spaghetti code yang tak seorang pun berani menyentuh."
+  repo: "https://github.com/RickySaif/BugHunterr"
+  summary:
+    en: "An AI agent (Claude Code or Codex) hunts bugs in your web app with a real browser, the code and the database. Every bug comes with a video, a regression test and a fix prompt."
+    id: "Agen AI (Claude Code atau Codex) memburu bug di aplikasi web Anda lewat browser sungguhan, kode, dan database. Setiap bug disertai video, tes regresi, dan prompt perbaikan."
 
 - name: "Competitor-to-test-site kit"
   lever: profit

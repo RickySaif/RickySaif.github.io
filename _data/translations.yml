@@ -1,14 +1,16 @@
 # Shared UI strings, per language. Rendered by _includes/header.html,
 # footer.html, head.html and the case-study templates.
-# Header order is: Writing. (About is hidden for now.)
+# Header order is: Claude Code ID, Events (set in header.html).
 en:
   identity: "CEO's Partner in the AI Era"
-  tagline: "Free AI tools. More revenue, less cost."
+  tagline: "Free AI tools. More sales, more revenue."
   consulting: "Consulting"
   cases: "Cases"
   tools: "Tools"
   writing: "Articles"
   book-summary: "Book Summary"
+  claude-code-id: "Claude Code ID"
+  events: "Events"
   about: "About"
   books: "Books I Authored"
   webinars: "Free Webinars"
@@ -16,7 +18,7 @@ en:
   home: "Home"
   join_wa: "Stay Tuned"
   price_line: "From Rp 200.000 per 1-hour online session"
-  footer_line: "Want AI to raise your profit or cut your cost?"
+  footer_line: "Want AI to grow your sales and revenue?"
   lever_profit: "Profit"
   lever_cost: "Cost"
   read_case: "Read the case"
@@ -31,15 +33,28 @@ en:
   flagship: "Flagship"
   more_tools: "More free tools"
   language_name: "English"
+  # Events (/events/, /claude-code-id/)
+  days: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+  months: [January, February, March, April, May, June, July, August, September, October, November, December]
+  months_short: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  event_register: "Register"
+  event_register_fill: "registration link for this event in _data/events.yml"
+  event_recap: "See the recap"
+  events_upcoming: "Upcoming"
+  events_past: "Past"
+  events_none_upcoming: "The next meetup is being planned. It will be announced in the WhatsApp group."
+  events_none_past: "Nothing here yet."
 
 id:
   identity: "Partner CEO di Era AI"
-  tagline: "Tools AI gratis. Untung naik, biaya turun."
+  tagline: "Tools AI gratis. Sales naik, pendapatan tumbuh."
   consulting: "Konsultasi"
   cases: "Studi Kasus"
   tools: "Alat"
   writing: "Artikel"
   book-summary: "Ringkasan Buku"
+  claude-code-id: "Claude Code ID"
+  events: "Acara"
   about: "Tentang"
   books: "Buku yang Saya Tulis"
   webinars: "Webinar Gratis"
@@ -47,7 +62,7 @@ id:
   home: "Beranda"
   join_wa: "Stay Tuned"
   price_line: "Mulai Rp 200.000 per sesi online 1 jam"
-  footer_line: "Ingin AI menaikkan untung atau menekan biaya Anda?"
+  footer_line: "Ingin AI menaikkan sales dan pendapatan Anda?"
   lever_profit: "Untung"
   lever_cost: "Biaya"
   read_case: "Baca kasusnya"
@@ -62,3 +77,14 @@ id:
   flagship: "Unggulan"
   more_tools: "Alat gratis lainnya"
   language_name: "Bahasa Indonesia"
+  # Acara (/events/, /claude-code-id/)
+  days: [Minggu, Senin, Selasa, Rabu, Kamis, Jumat, Sabtu]
+  months: [Januari, Februari, Maret, April, Mei, Juni, Juli, Agustus, September, Oktober, November, Desember]
+  months_short: [Jan, Feb, Mar, Apr, Mei, Jun, Jul, Agu, Sep, Okt, Nov, Des]
+  event_register: "Daftar"
+  event_register_fill: "link pendaftaran acara ini di _data/events.yml"
+  event_recap: "Lihat rekapnya"
+  events_upcoming: "Akan datang"
+  events_past: "Sudah lewat"
+  events_none_upcoming: "Kopdar berikutnya sedang disiapkan. Jadwalnya diumumkan di grup WhatsApp."
+  events_none_past: "Belum ada."

@@ -8,16 +8,16 @@ lang: id
 
 <section class="rs-section">
   <p class="rs-eyebrow">Yang saya kerjakan sekarang</p>
-  <h2>AI, diukur dari untung dan biaya</h2>
-  <p class="rs-section-intro">Nama saya Ricky Saif. Saya membantu CEO menemukan bagian bisnis yang untungnya bisa dinaikkan atau biayanya bisa ditekan dengan AI, lalu membantu timnya benar-benar menjalankannya.</p>
+  <h2>AI, diukur dari sales dan pendapatan</h2>
+  <p class="rs-section-intro">Nama saya Ricky Saif. Saya membantu CEO menemukan bagian bisnis tempat AI bisa mendatangkan lebih banyak pembeli dan pendapatan, lalu membantu timnya benar-benar menjalankannya.</p>
   <p>Caranya ada dua. Saya membangun alat dan membagikannya gratis di <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>. Saya juga menjalankan sesi online berbayar satu jam untuk memakai alat itu langsung pada masalah nyata di bisnis Anda.</p>
-  <p><a href="/cases/">Studi kasusnya</a> memperlihatkan wujud nyatanya: menguji ide kompetitor yang sudah terbukti dalam hitungan hari, memperbaiki bug tanpa saling lempar dengan vendor, menulis spesifikasi yang siap diajukan ke vendor, dan menemukan kesenjangan yang paling layak ditutup duluan.</p>
+  <p><a href="/cases/">Studi kasusnya</a> memperlihatkan wujud nyatanya: menguji penawaran kompetitor yang sudah terbukti laku dalam hitungan hari, menemukan kesenjangan yang membuat Anda kalah deal, memperbaiki bug yang menghalangi penjualan, dan menulis spesifikasi yang siap diajukan ke vendor.</p>
 </section>
 
 <section class="rs-section">
   <p class="rs-eyebrow">Latar belakang saya</p>
   <h2>Developer yang tiga belas tahun duduk di ruang rapat</h2>
-  <p>Saya memulai sebagai software developer. Lalu selama tiga belas tahun saya mendampingi organisasi yang sedang berubah: agile, struktur tim, dan jurang antara apa yang diminta pemimpin dan apa yang dibangun tim.</p>
+  <p>Saya memulai sebagai pelatih pengembangan software. Lalu selama tiga belas tahun saya mendampingi organisasi yang sedang berubah: agile, struktur tim, dan jurang antara apa yang diminta pemimpin dan apa yang dibangun tim.</p>
   <p>Dari pekerjaan itu lahir dua buku. Keduanya ada di <a href="/writing/">halaman tulisan</a>.</p>
   <p>Latar belakang itu yang membuat saya selalu memulai percakapan soal AI dari masalah bisnisnya, bukan dari teknologinya. Saya sudah terlalu sering melihat alat mahal yang menyelesaikan masalah yang tidak pernah ada.</p>
 </section>
@@ -26,7 +26,7 @@ lang: id
   <p class="rs-eyebrow">Cara saya bekerja</p>
   <h2>Tiga aturan</h2>
   <ul class="rs-proof">
-    <li><strong>Masalah dulu.</strong> Kalau sebuah masalah tidak menyentuh untung atau biaya, kita tidak membuang waktu Anda untuk itu.</li>
+    <li><strong>Masalah dulu.</strong> Kalau sebuah masalah tidak menyentuh sales, pendapatan, atau untung Anda, kita tidak membuang waktu Anda untuk itu.</li>
     <li><strong>Semua bisa diperiksa.</strong> Setiap alat bersifat open source, jadi Anda bisa memeriksanya sebelum membayar apa pun.</li>
     <li><strong>Jujur.</strong> Kalau AI bukan jawabannya, saya akan bilang, meskipun itu membuat sesinya selesai lebih cepat.</li>
   </ul>

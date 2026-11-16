@@ -9,7 +9,7 @@ lang: en
 <section class="rs-section">
   <p class="rs-eyebrow">The problem</p>
   <h2>Everyone says "use AI". Nobody says where.</h2>
-  <p class="rs-section-intro">You have seen the demos. You have probably paid for a few subscriptions. And the P&amp;L looks the same.</p>
+  <p class="rs-section-intro">You have seen the demos. You have probably paid for a few subscriptions. And your sales look the same.</p>
   <p>That is not because AI does not work. It is because nobody connected it to a specific problem in your business, with a specific number attached.</p>
   <p>That connection is the work I do. I start from the problem, not from the tool.</p>
 </section>
@@ -43,7 +43,7 @@ lang: en
   <div class="rs-fronts">
     <div class="rs-card">
       <h3>CEO session</h3>
-      <p>Consulting for you. We pick the problem where AI pays back first, and decide what to do about it.</p>
+      <p>Consulting for you. We pick the problem where AI can grow your sales first, and decide what to do about it.</p>
     </div>
     <div class="rs-card">
       <h3>Team session</h3>
@@ -56,7 +56,7 @@ lang: en
 <section class="rs-section">
   <p class="rs-eyebrow">Recurring</p>
   <h2>Mastermind</h2>
-  <p>Ricky Saif's GitHub holds many free tools that can save tens of millions of rupiah every year. Join a small-batch Mastermind of business owners for weekly live sessions: a recap of the latest tech news that can raise revenue and cut cost.</p>
+  <p>Ricky Saif's GitHub holds many free tools that help you find more buyers and win more deals. Join a small-batch Mastermind of business owners for weekly live sessions: a recap of the latest tech news that can grow your sales and revenue.</p>
 </section>
 
 <section class="rs-section">

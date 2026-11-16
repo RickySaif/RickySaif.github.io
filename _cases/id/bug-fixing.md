@@ -2,7 +2,7 @@
 title: "Memperbaiki bug tanpa saling lempar dengan vendor"
 summary: "Ubah laporan bug yang samar menjadi langkah reproduksi, usulan perbaikan dari AI, dan hasil yang terverifikasi, supaya Anda tidak lagi membayar untuk bolak-balik berminggu-minggu."
 lever: cost
-order: 2
+order: 3
 visual: bugfix
 steps:
   - "Laporan samar: \"checkout rusak\""

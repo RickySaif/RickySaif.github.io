@@ -10,10 +10,12 @@
         <p class="rs-footer-line">{{ t.footer_line }}</p>
       </div>
 
+      {% comment %} Book Summary and Articles are hidden for now; remove this comment to bring them back.
       <nav class="rs-footer-links" aria-label="Footer">
         <a href="/book-summary/">{{ t["book-summary"] }}</a>
         <a href="/writing/">{{ t.writing }}</a>
       </nav>
+      {% endcomment %}
 
       <div class="rs-footer-contact">
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>

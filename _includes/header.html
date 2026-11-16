@@ -1,6 +1,9 @@
 <header class="site-header" role="banner">
   {% assign t = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
-  {% assign nav_items = "book-summary,writing" | split: "," %}
+  {% comment %} Each item is a page slug and a key in _data/translations.yml.
+     Book Summary and Articles are hidden for now. To bring them back, add
+     "book-summary,writing" to the list. {% endcomment %}
+  {% assign nav_items = "claude-code-id,events" | split: "," %}
 
   <div class="wrapper">
     <div class="site-header-main">

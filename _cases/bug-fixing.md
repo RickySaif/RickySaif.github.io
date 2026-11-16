@@ -2,7 +2,7 @@
 title: "Bug fixing without the vendor ping-pong"
 summary: "Turn a vague bug report into a reproduction, an AI-proposed fix and a verified result, so you stop paying for weeks of back-and-forth."
 lever: cost
-order: 2
+order: 3
 visual: bugfix
 steps:
   - "Vague report: \"checkout is broken\""

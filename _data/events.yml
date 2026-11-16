@@ -1,0 +1,28 @@
+# Claude Code ID meetups. Listed on /events/ (upcoming first, then past) and the
+# next upcoming one is announced on /claude-code-id/.
+#
+# One entry per event. Order in this file does not matter: pages sort by date.
+#   date          YYYY-MM-DD
+#   start, end    "HH:MM", Jakarta time (WIB)
+#   title, venue, summary   bilingual (id / en)
+#   register_url  the sign-up page on the other website. Leave it empty and the
+#                 page shows a visible [FILL] marker instead of a button.
+#   recap_url     optional, for past events (photos, recording, notes)
+#
+# An event moves from "Upcoming" to "Past" by itself once its end time passes,
+# even if the site has not been rebuilt (see _includes/events-sync.html).
+
+- date: 2026-11-18
+  start: "19:00"
+  end: "21:00"
+  title:
+    id: "Kopdar Claude Code ID: AMA & live demo"
+    en: "Claude Code ID meetup: AMA & live demo"
+  venue:
+    id: "Blora Sudirman (dekat Stasiun KRL Sudirman)"
+    en: "Blora Sudirman (near Stasiun KRL Sudirman)"
+  city: "Jakarta"
+  summary:
+    id: "Ngobrol santai, tanya apa saja soal Claude Code, dan lihat Ricky membangun sesuatu secara langsung. Gratis, tempat terbatas."
+    en: "A casual chat: ask anything about Claude Code and watch Ricky build something live. Free, limited seats."
+  register_url: "https://goakal.com/ricky-saif/claude-code-id-meetup-18-nov"

@@ -1,7 +1,8 @@
 {% comment %}
   Hero mark: "positive jaws", drawn over time. Before AI tools, revenue slips
   and cost creeps up, so the gap is closing. When AI tools arrive, revenue
-  climbs, cost falls, and the widening gap (brass) is the profit.
+  climbs, cost settles back to where it started, and the widening gap (brass)
+  is the profit. The story is led by revenue, not by cost-cutting.
 
   The markup below is the finished drawing, so it reads correctly without
   JavaScript and under prefers-reduced-motion. The script at the bottom plays
@@ -21,7 +22,7 @@
 {% assign v_time = include.time | default: "Time" %}
 {% assign v_id = include.id | default: "lever" %}
 <div class="rs-lever" data-lever role="img" aria-label="{{ v_time }}: {{ v_revenue }} down, {{ v_cost }} up. {{ v_fulcrum }}: {{ v_revenue }} up, {{ v_cost }} down, {{ v_profit }} grows">
-  <svg viewBox="22 14 380 314" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" font-family="Inter, -apple-system, sans-serif" font-weight="700">
+  <svg viewBox="22 44 380 284" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" font-family="Inter, -apple-system, sans-serif" font-weight="700">
     <defs>
       <!-- everything that has "happened so far" is revealed through this -->
       <clipPath id="rs-lever-clip-{{ v_id }}"><rect data-clip x="30" y="14" width="372" height="262"/></clipPath>
@@ -45,41 +46,41 @@
 
     <!-- "now": only visible while playing -->
     <g class="rs-lever-now">
-      <line data-now-line x1="384" y1="62" x2="384" y2="296" stroke="var(--rs-text-tertiary)" stroke-opacity=".4" stroke-width="1"/>
+      <line data-now-line x1="384" y1="92" x2="384" y2="296" stroke="var(--rs-text-tertiary)" stroke-opacity=".4" stroke-width="1"/>
       <circle data-now-dot cx="384" cy="296" r="4.5" fill="var(--rs-accent)"/>
     </g>
 
     <g clip-path="url(#rs-lever-clip-{{ v_id }})">
       <!-- the profit gap: between the revenue line and the cost line -->
-      <path d="M40 130 C85 131 137 139 169 142 S280 84 384 62 L384 170 C280 167 201 155 169 158 C137 161 85 169 40 170 Z" fill="var(--rs-brass)" fill-opacity=".22"/>
+      <path d="M40 160 C85 161 137 169 169 172 S280 114 384 92 L384 200 C280 197 201 185 169 188 C137 191 85 199 40 200 Z" fill="var(--rs-brass)" fill-opacity=".22"/>
       <!-- revenue: slipping, then up -->
-      <path data-revenue d="M40 130 C85 131 137 139 169 142 S280 84 384 62" fill="none" stroke="var(--rs-positive)" stroke-width="4" stroke-linecap="round"/>
+      <path data-revenue d="M40 160 C85 161 137 169 169 172 S280 114 384 92" fill="none" stroke="var(--rs-positive)" stroke-width="4" stroke-linecap="round"/>
       <!-- cost: creeping up, then back down to where it started -->
-      <path data-cost d="M40 170 C85 169 137 161 169 158 S280 167 384 170" fill="none" stroke="var(--rs-critical)" stroke-width="4" stroke-linecap="round"/>
+      <path data-cost d="M40 200 C85 199 137 191 169 188 S280 197 384 200" fill="none" stroke="var(--rs-critical)" stroke-width="4" stroke-linecap="round"/>
     </g>
 
     <!-- where AI tools arrive -->
-    <line data-marker x1="169" y1="40" x2="169" y2="281" stroke="var(--rs-text-tertiary)" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <line data-marker x1="169" y1="70" x2="169" y2="281" stroke="var(--rs-text-tertiary)" stroke-width="1.5" stroke-dasharray="4 5"/>
     <g class="rs-lever-pill">
       <rect x="{{ 169 | minus: v_fx }}" y="281" width="{{ v_fw }}" height="30" rx="15" fill="var(--rs-accent)"/>
       <text x="169" y="301" text-anchor="middle" font-size="14" fill="var(--rs-surface)">{{ v_fulcrum }}</text>
     </g>
 
-    <circle data-revenue-dot cx="384" cy="62" r="6" fill="var(--rs-positive)"/>
-    <circle data-cost-dot cx="384" cy="170" r="6" fill="var(--rs-critical)"/>
+    <circle data-revenue-dot cx="384" cy="92" r="6" fill="var(--rs-positive)"/>
+    <circle data-cost-dot cx="384" cy="200" r="6" fill="var(--rs-critical)"/>
 
     <!-- line labels: ride with the dots; the arrows arrive after the lines stop.
          The canvas-coloured halo keeps them legible as they cross the marker. -->
     <g stroke="var(--rs-lever-bg, var(--rs-canvas))" stroke-width="5" stroke-linejoin="round" paint-order="stroke" font-size="16">
-      <text data-revenue-label x="390" y="42" text-anchor="end" fill="var(--rs-positive)"><tspan class="rs-lever-arrow">&uarr; </tspan><tspan data-name>{{ v_revenue }}</tspan></text>
-      <text data-cost-label x="390" y="200" text-anchor="end" fill="var(--rs-critical)"><tspan class="rs-lever-arrow">&darr; </tspan><tspan data-name>{{ v_cost }}</tspan></text>
+      <text data-revenue-label x="390" y="72" text-anchor="end" fill="var(--rs-positive)"><tspan class="rs-lever-arrow">&uarr; </tspan><tspan data-name>{{ v_revenue }}</tspan></text>
+      <text data-cost-label x="390" y="230" text-anchor="end" fill="var(--rs-critical)"><tspan class="rs-lever-arrow">&darr; </tspan><tspan data-name>{{ v_cost }}</tspan></text>
     </g>
-    <text class="rs-lever-profit" x="300" y="133" text-anchor="middle" font-size="17" fill="var(--rs-brass-text)">{{ v_profit }}</text>
+    <text class="rs-lever-profit" x="300" y="163" text-anchor="middle" font-size="17" fill="var(--rs-brass-text)">{{ v_profit }}</text>
 
     <!-- replay affordance, shown by the script once the drawing has finished -->
     <g class="rs-lever-replay" fill="none" stroke="var(--rs-text-tertiary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M53.5 37.5 A7.5 7.5 0 1 1 51 31.9"/>
-      <path d="M51.5 26.5 V32.2 H45.8"/>
+      <path d="M53.5 67.5 A7.5 7.5 0 1 1 51 61.9"/>
+      <path d="M51.5 56.5 V62.2 H45.8"/>
     </g>
   </svg>
   {% if include.caption %}<p class="rs-lever-caption">{{ include.caption }}</p>{% endif %}
@@ -90,7 +91,7 @@
   window.rsLeverInit = true;
 
   var X0 = 40, XM = 169, X1 = 384;      // start, AI-tools marker, end
-  var AXIS_Y = 296, MARK_TOP = 40, MARK_BOTTOM = 281;
+  var AXIS_Y = 296, MARK_TOP = 70, MARK_BOTTOM = 281;
   var PRE = 1300, DROP = 385, HOLD = 1550, POST = 2100; // ms; HOLD = marker drop + pill + 1s pause
 
   // y of a left-to-right path at a given x

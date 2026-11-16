@@ -10,9 +10,14 @@ from free tools into paid one-hour online sessions.
 
 ## Positioning
 - Identity: **CEO's Partner in the AI Era** (ID: Konsultan AI-nya CEO), AI is the lead offer.
-- Tagline: "Free AI tools. More profit, less cost." / "Alat AI gratis. Untung naik, biaya turun."
+- Tagline: "Free AI tools. More sales, more revenue." / "Tools AI gratis. Sales naik, pendapatan tumbuh."
+- Lead with **sales and revenue** (Nov 2026). Cost-cutting is no longer part of the headline
+  message; cost tools stay, but sales and revenue tools and cases come first.
 - Every tool and case is tagged with one lever: **profit** or **cost**.
-- Why Ricky: software developer + 13 years advising organizations + 2 books.
+- Why Ricky: developer (started as a software development trainer; single-handedly built
+  AgileCampus.org's exam & certification software and Paxful's competitor scraper)
+  + 13 years advising organizations + 2 books. Headings call him a "Developer".
+  Do not mention the ship-classification project anywhere on the site.
 - Voice: `ricky-saif-voice` skill. Short paragraphs, plain words, problem first.
 
 ## Offer

@@ -2,7 +2,7 @@
 title: "Gap analysis: where you are, where you need to be"
 summary: "Compare your business or product with where it needs to be, or with a competitor, and get a prioritised list of the gaps worth closing first."
 lever: profit
-order: 4
+order: 2
 visual: gap
 steps:
   - "Describe where you are"

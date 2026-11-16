@@ -2,7 +2,7 @@
 title: "Dari catatan rapat ke spesifikasi yang siap diajukan ke vendor"
 summary: "Ubah catatan, chat, dan rekaman suara yang berserakan menjadi spesifikasi kebutuhan yang jelas, supaya penawaran harga vendor jujur dan change request berhenti menggerus anggaran."
 lever: cost
-order: 3
+order: 4
 visual: spec
 steps:
   - "Catatan, chat, rekaman suara"

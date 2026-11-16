@@ -1,0 +1,47 @@
+{% comment %}
+  One event from _data/events.yml, in the active language.
+
+  Parameters:
+    event - one entry of site.data.events (required)
+
+  The Register button only shows in an upcoming list and the recap link only
+  in a past list (CSS in style.scss), so the card can move between lists in
+  the browser (_includes/events-sync.html) without being re-rendered.
+{% endcomment %}
+{%- assign e = include.event -%}
+{%- assign lang = site.active_lang -%}
+{%- assign tt = site.data.translations[lang] -%}
+{%- assign wd = e.date | date: "%w" | plus: 0 -%}
+{%- assign mo = e.date | date: "%-m" | minus: 1 -%}
+{%- assign iso = e.date | date: "%Y-%m-%d" -%}
+{%- if lang == "id" -%}
+  {%- assign t_start = e.start | replace: ":", "." -%}{%- assign t_end = e.end | replace: ":", "." -%}
+{%- else -%}
+  {%- assign t_start = e.start -%}{%- assign t_end = e.end -%}
+{%- endif -%}
+<article class="rs-event" data-event-end="{{ iso }}T{{ e.end }}:00+07:00">
+  <div class="rs-event-date" aria-hidden="true">
+    <span class="rs-event-month">{{ tt.months_short[mo] }}</span>
+    <span class="rs-event-day">{{ e.date | date: "%-d" }}</span>
+  </div>
+  <div class="rs-event-body">
+    <p class="rs-event-when"><time datetime="{{ iso }}T{{ e.start }}:00+07:00">{{ tt.days[wd] }}, {{ e.date | date: "%-d" }} {{ tt.months[mo] }} {{ e.date | date: "%Y" }} &middot; <span class="rs-event-time">{{ t_start }}&ndash;{{ t_end }} WIB</span></time></p>
+    <h3>{{ e.title[lang] }}</h3>
+    <p class="rs-event-where">{{ e.venue[lang] }}, {{ e.city }}</p>
+    {%- if e.summary %}
+    <p class="rs-event-summary">{{ e.summary[lang] }}</p>
+    {%- endif %}
+    <div class="rs-event-actions">
+      <span class="rs-event-register">
+        {%- if e.register_url and e.register_url != "" -%}
+        <a class="rs-btn rs-btn--primary" href="{{ e.register_url }}" target="_blank" rel="noopener">{{ tt.event_register }}</a>
+        {%- else -%}
+        <span class="rs-fill">[FILL: {{ tt.event_register_fill }}]</span>
+        {%- endif -%}
+      </span>
+      {%- if e.recap_url and e.recap_url != "" %}
+      <a class="rs-event-recap" href="{{ e.recap_url }}" target="_blank" rel="noopener">{{ tt.event_recap }} &rarr;</a>
+      {%- endif %}
+    </div>
+  </div>
+</article>

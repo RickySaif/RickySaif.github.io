@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Alat gratis"
-subtitle: "Alat AI untuk CEO dan timnya. Gratis, open source, dan masing-masing untuk menaikkan untung atau menekan biaya."
+subtitle: "Alat AI untuk CEO dan timnya. Gratis, open source, dan fokus menaikkan sales dan pendapatan Anda."
 permalink: /tools/
 lang: id
 ---

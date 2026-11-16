@@ -2,7 +2,7 @@
 title: "From meeting notes to a spec your vendor can quote"
 summary: "Turn scattered notes, chats and voice memos into a clear requirement specification, so quotes are honest and change requests stop eating your budget."
 lever: cost
-order: 3
+order: 4
 visual: spec
 steps:
   - "Notes, chats, voice memos"

@@ -1,0 +1,38 @@
+{% comment %}
+  Line icons for the landing page, drawn on a 24px grid in currentColor.
+  Parameters: name (required), size (optional, default 24)
+{% endcomment %}
+{%- assign cc_icon_size = include.size | default: 24 -%}
+<svg class="cc-icon" width="{{ cc_icon_size }}" height="{{ cc_icon_size }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{%- case include.name -%}
+{%- when "book" -%}<path d="M2.5 5.5h6a3.5 3.5 0 0 1 3.5 3.5v10.5a2.5 2.5 0 0 0-2.5-2.5h-7z"/><path d="M21.5 5.5h-6A3.5 3.5 0 0 0 12 9v10.5a2.5 2.5 0 0 1 2.5-2.5h7z"/>
+{%- when "chat" -%}<path d="M20.5 11.5a8 8 0 0 1-11.7 7.1L3.5 20l1.3-4.8a8 8 0 1 1 15.7-3.7z"/><path d="M8.5 11.5h.01M12.5 11.5h.01M16.5 11.5h.01"/>
+{%- when "pushpin" -%}<path d="M9 3.5h6l-1 6 3.5 3.5v1.5h-11V13L10 9.5z"/><path d="M12 14.5V21"/>
+{%- when "pin" -%}<path d="M12 21s-7-6.1-7-11.2a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.6"/>
+{%- when "calendar" -%}<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/>
+{%- when "clock" -%}<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>
+{%- when "check" -%}<path d="m5 12.5 4.5 4.5L19 7.5"/>
+{%- when "cross" -%}<path d="M7 7l10 10M17 7 7 17"/>
+{%- when "arrow" -%}<path d="M5 12h14M13 6l6 6-6 6"/>
+{%- when "store" -%}<path d="M4 9.5 5.2 4h13.6L20 9.5"/><path d="M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5.5 11.5V20h13v-8.5"/><path d="M10 20v-5h4v5"/>
+{%- when "school" -%}<path d="m2 9.5 10-5 10 5-10 5z"/><path d="M6 11.5V16c3.5 2.5 8.5 2.5 12 0v-4.5"/><path d="M22 9.5V15"/>
+{%- when "home" -%}<path d="m3 11 9-7.5 9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M12 17.5s-3-1.8-3-3.8a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2-3 3.8-3 3.8z"/>
+{%- when "globe" -%}<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.8 3.2 2.8 13.8 0 17M12 3.5c-2.8 3.2-2.8 13.8 0 17"/>
+{%- when "repeat" -%}<path d="m17 2.5 3.5 3.5L17 9.5"/><path d="M3.5 11V9.5a3.5 3.5 0 0 1 3.5-3.5h13.5"/><path d="m7 21.5-3.5-3.5L7 14.5"/><path d="M20.5 13v1.5A3.5 3.5 0 0 1 17 18H3.5"/>
+{%- when "phone" -%}<rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18.5h2"/>
+{%- when "mic" -%}<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/>
+{%- when "users" -%}<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3a6.5 6.5 0 0 1 3.5 5.7"/>
+{%- when "shield" -%}<path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/>
+{%- when "terminal" -%}<rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="m7 9.5 3 2.5-3 2.5M12.5 15h4.5"/>
+{%- when "spark" -%}<path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"/><path d="M19 15.5c.3 1.9 1 2.6 2.5 2.9-1.5.3-2.2 1-2.5 2.9-.3-1.9-1-2.6-2.5-2.9 1.5-.3 2.2-1 2.5-2.9z"/>
+{%- when "coffee" -%}<path d="M4.5 10h12v4.5a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5z"/><path d="M16.5 11.5H18a2.5 2.5 0 0 1 0 5h-1.7"/><path d="M8.5 3.5c-.9 1 .9 2 0 3.2M12.5 3.5c-.9 1 .9 2 0 3.2"/>
+{%- when "heart" -%}<path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/>
+{%- when "share" -%}<path d="m14 5 6 6-6 6"/><path d="M20 11H10a5.5 5.5 0 0 0-5.5 5.5V19"/>
+{%- when "play" -%}<path d="M7 4.5v15l12.5-7.5z"/>
+{%- when "film" -%}<rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M7.5 4.5v15M16.5 4.5v15M3 9.5h4.5M3 14.5h4.5M16.5 9.5H21M16.5 14.5H21"/>
+{%- when "file" -%}<path d="M14 3H7a2.5 2.5 0 0 0-2.5 2.5v13A2.5 2.5 0 0 0 7 21h10a2.5 2.5 0 0 0 2.5-2.5V8.5z"/><path d="M14 3v5.5h5.5M8.5 13h7M8.5 16.5h5"/>
+{%- when "slides" -%}<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4M8.5 20h7M7.5 12.5l3-3 2.5 2 3.5-3.5"/>
+{%- when "chart" -%}<path d="M4 20V4M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx=".8"/><rect x="12.5" y="8" width="3" height="9" rx=".8"/><rect x="17.5" y="5" width="2.5" height="12" rx=".8"/>
+{%- when "image" -%}<rect x="3.5" y="4" width="17" height="16" rx="2.5"/><circle cx="9" cy="9.5" r="1.8"/><path d="m20.5 15.5-4.5-4.5L6 20"/>
+{%- endcase -%}
+</svg>

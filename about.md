@@ -8,16 +8,16 @@ lang: en
 
 <section class="rs-section">
   <p class="rs-eyebrow">What I do now</p>
-  <h2>AI, measured in profit and cost</h2>
-  <p class="rs-section-intro">My name is Ricky Saif. I help CEOs find the places where AI raises profit or cuts cost, and then I help their teams actually do it.</p>
+  <h2>AI, measured in sales and revenue</h2>
+  <p class="rs-section-intro">My name is Ricky Saif. I help CEOs find the places where AI brings in more buyers and more revenue, and then I help their teams actually do it.</p>
   <p>I do it in two ways. I build tools and give them away free on <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>. And I run paid one-hour online sessions where we use those tools on your real business problem.</p>
-  <p>The <a href="/cases/">cases</a> show what that looks like: testing a competitor's proven idea in days, fixing bugs without vendor ping-pong, writing specs vendors can quote, and finding the gaps worth closing first.</p>
+  <p>The <a href="/cases/">cases</a> show what that looks like: testing a competitor's proven offer in days, finding the gaps that lose you deals, fixing the bugs that block a sale, and writing specs vendors can quote.</p>
 </section>
 
 <section class="rs-section">
   <p class="rs-eyebrow">Where I came from</p>
   <h2>A developer who spent thirteen years in the meeting room</h2>
-  <p>I started as a software developer. Then for thirteen years I advised organizations through change: agile, team structure, and the gap between what leaders ask for and what teams build.</p>
+  <p>I started as a software development trainer. Then for thirteen years I advised organizations through change: agile, team structure, and the gap between what leaders ask for and what teams build.</p>
   <p>I wrote two books from that work. Both are on the <a href="/writing/">writing page</a>.</p>
   <p>That background is why I start every AI conversation from the business problem, not the technology. I have seen too many expensive tools solve problems nobody had.</p>
 </section>
@@ -26,7 +26,7 @@ lang: en
   <p class="rs-eyebrow">How I work</p>
   <h2>Three rules</h2>
   <ul class="rs-proof">
-    <li><strong>Problem first.</strong> If a problem does not touch profit or cost, we do not spend your hour on it.</li>
+    <li><strong>Problem first.</strong> If a problem does not touch your sales, revenue or profit, we do not spend your hour on it.</li>
     <li><strong>Show the work.</strong> Every tool is open source, so you can check it before you pay me anything.</li>
     <li><strong>Be honest.</strong> If AI is the wrong answer, I will say so, even if that ends the session early.</li>
   </ul>

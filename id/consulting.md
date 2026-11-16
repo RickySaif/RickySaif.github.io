@@ -9,7 +9,7 @@ lang: id
 <section class="rs-section">
   <p class="rs-eyebrow">Masalahnya</p>
   <h2>Semua orang bilang "pakai AI". Tidak ada yang bilang di mana.</h2>
-  <p class="rs-section-intro">Anda sudah melihat demonya. Mungkin sudah membayar beberapa langganan. Dan laporan laba ruginya tetap sama.</p>
+  <p class="rs-section-intro">Anda sudah melihat demonya. Mungkin sudah membayar beberapa langganan. Dan angka penjualannya tetap sama.</p>
   <p>Bukan karena AI tidak berfungsi. Penyebabnya, belum ada yang mengaitkannya dengan masalah spesifik di bisnis Anda, lengkap dengan angka yang ingin digerakkan.</p>
   <p>Mengaitkan keduanya, itulah pekerjaan saya. Saya mulai dari masalahnya, bukan dari alatnya.</p>
 </section>
@@ -43,7 +43,7 @@ lang: id
   <div class="rs-fronts">
     <div class="rs-card">
       <h3>Sesi CEO</h3>
-      <p>Konsultasi untuk Anda. Kita pilih masalah yang paling cepat balik modal kalau dibantu AI, lalu putuskan langkahnya.</p>
+      <p>Konsultasi untuk Anda. Kita pilih masalah tempat AI paling cepat bisa menaikkan sales Anda, lalu putuskan langkahnya.</p>
     </div>
     <div class="rs-card">
       <h3>Sesi tim</h3>
@@ -56,7 +56,7 @@ lang: id
 <section class="rs-section">
   <p class="rs-eyebrow">Berkelanjutan</p>
   <h2>Mastermind</h2>
-  <p>GitHub Ricky Saif punya banyak software gratis yang bisa menghemat puluhan juta setiap tahun. Join Mastermind bareng batch kecil pebisnis untuk ikut sesi live mingguan berisi rekap berita tech terbaru yang bisa meningkatkan revenue &amp; mengurangi cost.</p>
+  <p>GitHub Ricky Saif punya banyak software gratis yang membantu Anda menemukan lebih banyak pembeli dan memenangkan lebih banyak deal. Join Mastermind bareng batch kecil pebisnis untuk ikut sesi live mingguan berisi rekap berita tech terbaru yang bisa meningkatkan sales &amp; revenue.</p>
 </section>
 
 <section class="rs-section">

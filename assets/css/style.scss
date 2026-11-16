@@ -60,6 +60,12 @@ pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
+/* In-page links (href="#...") glide to their target instead of jumping, and
+   stop below the sticky header. Visitors who prefer reduced motion jump. */
+html { scroll-padding-top: $header-height + 16px; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
 
 body{
   font-family: $claude-body-font;
@@ -475,7 +481,6 @@ hr.short{
   margin: 56px 0;
   padding-bottom: 56px;
   border-bottom: 1px solid $rs-line-soft;
-  scroll-margin-top: $header-height + 16px;
 
   &:last-child {
     border-bottom: 0;
@@ -514,8 +519,9 @@ hr.short{
 .rs-hero-banner {
   display: flex;
   justify-content: center;
-  margin: 64px 0;
-  padding: 48px 0;
+  /* less above than below, so the drawing sits centred in the first screen */
+  margin: 40px 0 64px;
+  padding: 32px 0 48px;
 
   img {
     display: block;
@@ -2173,4 +2179,181 @@ pre, code { background: var(--rs-surface-sunken); border-color: var(--rs-hairlin
 @media (max-width: 560px) {
   .rs-book-card { flex-direction: column; }
   .rs-book-cover { width: 96px; flex-basis: auto; }
+}
+
+/* --- Events: /events/ and the next-meetup card on /claude-code-id/ --------- */
+.rs-events { margin: 24px 0 0 0; }
+.rs-events-list { display: grid; gap: 16px; }
+.rs-events-empty { color: $rs-muted; margin: 0 !important; }
+.rs-events:has(.rs-event) .rs-events-empty { display: none; }
+/* Announcement: only the soonest event. */
+.rs-events--next .rs-event ~ .rs-event { display: none; }
+
+.rs-event {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  padding: 22px 20px;
+  background: var(--rs-surface);
+  box-shadow: $rs-shadow;
+
+  h3 {
+    font-size: 21px !important;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 6px 0;
+    color: $rs-ink;
+  }
+}
+
+.rs-event-date {
+  flex: 0 0 60px;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--rs-accent-soft);
+  color: $rs-accent;
+  padding: 8px 0 10px;
+  font-family: $ui-font;
+}
+
+.rs-event-month {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.rs-event-day {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.rs-event-body { flex: 1; min-width: 0; }
+
+.rs-event-when {
+  font-family: $ui-font;
+  font-size: 13px !important;
+  font-weight: 600;
+  line-height: 1.5 !important;
+  color: $rs-accent;
+  margin: 0 0 6px 0 !important;
+}
+
+.rs-event-time { white-space: nowrap; }
+
+.rs-event-where,
+.rs-event-summary {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: $rs-body;
+  margin: 0 0 4px 0 !important;
+}
+
+.rs-event-where { font-weight: 600; color: $rs-ink; }
+
+.rs-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  margin-top: 14px;
+
+  .rs-btn { padding: 10px 20px; font-size: 14px; }
+}
+
+.rs-event-recap { font-family: $ui-font; font-size: 14px; font-weight: 600; }
+
+.rs-events--past {
+  .rs-event-register { display: none; }
+  .rs-event { background: $rs-wash; box-shadow: none; }
+  .rs-event-date { background: var(--rs-surface); color: $rs-muted; }
+  .rs-event-when { color: $rs-muted; }
+}
+.rs-events--upcoming .rs-event-recap { display: none; }
+
+/* --- Time to scale: one line = one 8-hour working day --------------------- */
+.rs-timescale {
+  margin: 28px 0;
+  padding: 24px 22px 20px;
+  border: 1px solid $rs-line;
+  border-radius: 12px;
+  background: var(--rs-surface);
+  box-shadow: $rs-shadow;
+
+  figcaption {
+    font-family: $ui-font;
+    font-size: 13px;
+    line-height: 1.5;
+    color: $rs-faint;
+    margin-top: 18px;
+  }
+}
+
+.rs-timescale-title {
+  font-family: $ui-font;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-size: 11px !important;
+  font-weight: 700;
+  color: $rs-faint;
+  margin: 0 0 18px 0 !important;
+}
+
+.rs-timescale-row + .rs-timescale-row { margin-top: 22px; }
+
+.rs-timescale-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+  font-family: $ui-font;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+  color: $rs-muted;
+  margin: 0 0 10px 0 !important;
+
+  strong { color: $rs-ink; font-weight: 600; }
+}
+
+.rs-timescale-days { display: grid; gap: 6px; }
+
+.rs-day {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--rs-surface-sunken);
+  overflow: hidden;
+}
+
+.rs-day-fill {
+  display: block;
+  height: 100%;
+  width: var(--fill, 100%);
+  border-radius: 3px;
+  background: var(--rs-text-tertiary);
+}
+
+.rs-timescale-row--ai .rs-day-fill { background: var(--rs-accent); }
+.rs-day--maybe .rs-day-fill { opacity: .35; }
+
+/* Armed by assets/js/landing.js only when the figure starts off-screen:
+   Claude's sliver grows slowly, then the working days fill one by one. */
+.rs-timescale.is-armed .rs-day-fill { width: 0; }
+.rs-timescale.is-armed.is-in .rs-day-fill {
+  width: var(--fill, 100%);
+  transition: width .45s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: calc(var(--i) * 80ms + 1s);
+}
+.rs-timescale.is-armed.is-in .rs-timescale-row--ai .rs-day-fill {
+  transition-duration: .9s;
+  transition-delay: .2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rs-timescale.is-armed .rs-day-fill { width: var(--fill, 100%); transition: none; }
 }

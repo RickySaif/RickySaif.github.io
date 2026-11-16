@@ -8,7 +8,7 @@ lang: id
 
 <section class="rs-section">
   <p>Setiap kasus berawal dari masalah yang benar-benar dihadapi CEO, bukan dari teknologinya. Isinya: apa yang dikerjakan AI, apa yang Anda dapatkan, dan keputusan mana yang tetap di tangan manusia.</p>
-  <p>Kasus bertanda Untung membantu Anda menghasilkan lebih banyak. Kasus bertanda Biaya membantu Anda berhemat.</p>
+  <p>Kasus bertanda Untung membantu Anda menjual lebih banyak dan menghasilkan lebih banyak. Kasus bertanda Biaya menjaga sistem di balik penjualan itu tetap berjalan, tanpa membuang anggaran.</p>
 
   {% assign cases = site.cases | sort: "order" %}
   <div class="rs-case-grid">

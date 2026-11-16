@@ -8,7 +8,7 @@ lang: en
 
 <section class="rs-section">
   <p>Each case starts with a problem a CEO actually has, not with the technology. It shows what the AI does, what you get, and where a person still decides.</p>
-  <p>Profit cases help you earn more. Cost cases help you spend less.</p>
+  <p>Profit cases help you sell more and earn more. Cost cases keep the systems behind those sales running, without wasting your budget.</p>
 
   {% assign cases = site.cases | sort: "order" %}
   <div class="rs-case-grid">

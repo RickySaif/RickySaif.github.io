@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Free tools"
-subtitle: "AI tools for CEOs and their teams. Free, open source, and each one aimed at profit or cost."
+subtitle: "AI tools for CEOs and their teams. Free, open source, and focused on growing your sales and revenue."
 permalink: /tools/
 lang: en
 ---
