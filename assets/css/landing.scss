@@ -926,7 +926,7 @@
 }
 
 /* The visual: a phone showing the group list (it scrolls by itself) and the
-   pinned lesson in front of it. Screenshots stay light in dark mode, like a
+   group bio in front of it. Screenshots stay light in dark mode, like a
    real phone. */
 .cc-course-visual {
   position: relative;
@@ -974,9 +974,30 @@
   background: #EFEAE2;
   box-shadow: 0 34px 60px -28px rgba(14, 26, 43, .6);
   rotate: -2deg;
-
-  img { display: block; width: calc(100% - 20px); height: auto; margin: 10px; border-radius: 10px; }
 }
+
+/* The group bio: a window onto the text that drifts up and back, like the
+   group list does. Paused on hover. */
+.cc-wa-bio {
+  --bio-h: 250px;
+  height: var(--bio-h);
+  overflow: hidden;
+  background: #FFFFFF;
+  color: #111B21;
+  font-family: var(--rs-font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.cc-wa-bio-text {
+  padding: 12px 16px 16px;
+  animation: cc-bio-scroll 28s ease-in-out infinite;
+
+  p { margin: 0 0 8px !important; font-size: 13px !important; color: inherit !important; }
+  ol, ul { margin: 0 0 8px; padding-left: 20px; }
+  li { margin: 0 0 3px; font-size: 13px; color: inherit; }
+  code { padding: 0 3px; border-radius: 3px; background: #F0F2F5; font-family: var(--rs-font-mono); font-size: 12px; }
+}
+.cc-wa-lesson:hover .cc-wa-bio-text { animation-play-state: paused; }
 
 .cc-wa-lesson-head {
   display: flex;
@@ -998,7 +1019,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #6AAE2E;
+  background: hsl(217 78% 37%); /* D-04 in the blue D series */
   color: #FFFFFF;
   font-size: 9.5px;
   font-weight: 800;
@@ -1716,31 +1737,6 @@
     color: var(--cc-on-night-faint);
   }
 }
-.cc-browser-bar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, .08);
-  background: #152238;
-}
-.cc-browser-url {
-  flex: 1;
-  min-width: 0;
-  max-width: 420px;
-  margin: 0 auto;
-  padding: 5px 12px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, .25);
-  font-family: var(--rs-font-mono);
-  font-size: 12px;
-  color: #8C9AB0;
-  text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .cc-timeline {
   position: relative;
   display: grid;
@@ -1888,6 +1884,12 @@
   28%, 100% { border-color: var(--rs-hairline); box-shadow: none; }
 }
 /* Scrolls the group list from P-00 down to D-00 and back. */
+@keyframes cc-bio-scroll {
+  0%, 14% { transform: translateY(0); }
+  50%, 64% { transform: translateY(calc(var(--bio-h) - 100%)); }
+  96%, 100% { transform: translateY(0); }
+}
+
 @keyframes cc-wa-scroll {
   0%, 12% { transform: translateY(0); }
   46%, 60% { transform: translateY(calc(var(--wa-h) - 100%)); }
@@ -1963,8 +1965,10 @@
   .cc-loop li,
   .cc-hero [data-reveal],
   .cc-wa-screen img,
+  .cc-wa-bio-text,
   .cc-live-dot::after { animation: none !important; }
   .cc-wa-screen { overflow-y: auto; }
+  .cc-wa-bio { overflow-y: auto; }
   .cc .cc-btn,
   .cc-feature,
   .cc-format,

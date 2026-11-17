@@ -12,7 +12,7 @@
 # An event moves from "Upcoming" to "Past" by itself once its end time passes,
 # even if the site has not been rebuilt (see _includes/events-sync.html).
 
-- date: 2026-11-18
+- date: 2026-11-19
   start: "19:00"
   end: "21:00"
   title:
@@ -25,4 +25,4 @@
   summary:
     id: "Ngobrol santai, tanya apa saja soal Claude Code, dan lihat Ricky membangun sesuatu secara langsung. Gratis, tempat terbatas."
     en: "A casual chat: ask anything about Claude Code and watch Ricky build something live. Free, limited seats."
-  register_url: "https://goakal.com/ricky-saif/claude-code-id-meetup-18-nov"
+  register_url: "https://goakal.com/ricky-saif/claude-code-id-meetup-19-nov"

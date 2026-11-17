@@ -111,16 +111,16 @@ id:
     course:
       eyebrow: "Ditemenin. Pelan-pelan."
       title: "Satu langkah, satu grup"
-      intro: "Tutorialnya dibagi ke beberapa grup yang berurutan. Tiap grup punya satu pesan yang di-pin: langkah yang perlu Anda ikuti. Pertanyaan soal satu langkah tetap di grup langkah itu, jadi tidak tenggelam di obrolan lain."
+      intro: "Tutorialnya dibagi ke beberapa grup yang berurutan. Tiap grup punya petunjuk di bio grupnya: langkah yang perlu Anda ikuti. Pertanyaan soal satu langkah tetap di grup langkah itu, jadi tidak tenggelam di obrolan lain."
       howto_title: "Cara pakainya"
       howto:
         - "Masuk grup sesuai urutan"
-        - "Baca pesan yang di-pin, lalu ikuti langkahnya"
+        - "Buka bio grup, lalu ikuti langkahnya"
         - "Mentok? Tanya di grup itu. Siapa pun boleh jawab."
       chip: "Tidak ada pertanyaan bodoh"
       groups_alt: "Daftar grup di komunitas WhatsApp Claude Code ID, dari P-00 Setup sampai D-00 Start Here"
-      lesson_label: "Pesan yang di-pin"
-      lesson_alt: "Pesan yang di-pin di grup D-04 First App: langkah membuat aplikasi pertama dengan Claude Code"
+      lesson_label: "Bio grup"
+      lesson_alt: "Bio grup D-04 First App: langkah membuat aplikasi pertama dengan Claude Code"
       tracks_title: "Empat jalur, pilih sesuai kebutuhan"
       tracks:
         - code: D
@@ -404,16 +404,16 @@ en:
     course:
       eyebrow: "Guided. One step at a time."
       title: "One step, one group"
-      intro: "The tutorial is split across groups, in order. Each group has one pinned message: the step to follow. Questions about a step stay in that step's group, so they don't get lost in other chat. The lessons are written in Indonesian."
+      intro: "The tutorial is split across groups, in order. Each group has its instructions in the group bio: the step to follow. Questions about a step stay in that step's group, so they don't get lost in other chat. The lessons are written in Indonesian."
       howto_title: "How it works"
       howto:
         - "Join the groups in order"
-        - "Read the pinned message and follow the steps"
+        - "Open the group bio and follow the steps"
         - "Stuck? Ask in that group. Anyone can answer."
       chip: "There are no stupid questions"
       groups_alt: "The list of groups in the Claude Code ID WhatsApp community, from P-00 Setup to D-00 Start Here"
-      lesson_label: "Pinned message"
-      lesson_alt: "The pinned message in the D-04 First App group: the steps to build a first app with Claude Code, in Indonesian"
+      lesson_label: "Group bio"
+      lesson_alt: "The D-04 First App group bio: the steps to build a first app with Claude Code, in Indonesian"
       tracks_title: "Four tracks. Pick the one you need."
       tracks:
         - code: D

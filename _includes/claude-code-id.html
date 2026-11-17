@@ -159,7 +159,7 @@
     </div>
 
     {%- comment -%} Inside the community: screenshots from the real WhatsApp
-      community (group list, and the pinned lesson in D-04). {%- endcomment -%}
+      community (group list, and the group bio of D-04). {%- endcomment -%}
     {%- assign co = c.community.course %}
     <div class="cc-course">
       <div class="cc-course-copy" data-reveal>
@@ -180,12 +180,36 @@
             <img src="{{ img }}wa-groups-list.png" alt="{{ co.groups_alt }}" width="600" height="1740" loading="lazy">
           </div>
         </figure>
-        <figure class="cc-wa-lesson" data-reveal style="--d:2">
+        <figure class="cc-wa-lesson" data-reveal style="--d:2" role="img" aria-label="{{ co.lesson_alt }}">
           <figcaption class="cc-wa-lesson-head">
             <span class="cc-wa-badge" aria-hidden="true">D-04</span>
-            <span><strong>D-04 First App</strong><small>{% include cc-icon.html name="pushpin" size=12 %}{{ co.lesson_label }}</small></span>
+            <span><strong>D-04 First App</strong><small>{% include cc-icon.html name="file" size=12 %}{{ co.lesson_label }}</small></span>
           </figcaption>
-          <img src="{{ img }}wa-lesson.png" alt="{{ co.lesson_alt }}" width="924" height="1060" loading="lazy">
+          {%- comment -%} The group bio as live text (the lessons are written in Indonesian). It scrolls by itself like the group list. {%- endcomment -%}
+          <div class="cc-wa-bio" aria-hidden="true">
+            <div class="cc-wa-bio-text">
+              <p><strong>READ ME first</strong><br><strong>Bikin aplikasi pertama</strong></p>
+              <ol>
+                <li>Bikin folder kosong, masuk, jalanin <code>claude</code></li>
+                <li>Minta yang jelas. Contoh:<br><em>"Bikinin halaman web to-do list sederhana pakai HTML, CSS, JavaScript. Tampilannya rapi dan enak dipakai di HP."</em></li>
+                <li>Plan mode: tekan Shift+Tab sampai muncul "plan mode". Claude bikin rencana dulu tanpa ngubah file. Baca, kalau cocok baru setujui.</li>
+                <li>Buka hasilnya di browser, coba pakai.</li>
+              </ol>
+              <p>Biar prompt-nya enak:</p>
+              <ul>
+                <li>Bilang tujuannya, jangan cuma "bikinin app"</li>
+                <li>Sebut batasannya (teknologi, tampilan)</li>
+                <li>Minta yang kecil dulu, tambah pelan-pelan</li>
+              </ul>
+              <p>Kalau error atau hasilnya aneh:</p>
+              <ul>
+                <li>Copy pesan error, tempel ke Claude, suruh benerin</li>
+                <li>Tekan Esc buat nyetop Claude kalau arahnya salah</li>
+                <li><code>/clear</code> buat mulai percakapan baru</li>
+              </ul>
+              <p>Aplikasinya udah jalan di browser? Lanjut ke grup D-05.</p>
+            </div>
+          </div>
         </figure>
         <span class="cc-chip cc-chip--course">{% include cc-icon.html name="chat" size=16 %}{{ co.chip }}</span>
       </div>
@@ -420,10 +444,6 @@
     </div>
 
     <figure class="cc-browser" data-reveal>
-      <div class="cc-browser-bar">
-        <span class="cc-dots"><i></i><i></i><i></i></span>
-        <span class="cc-browser-url">rizkysyaiful.github.io/scrum-ai-addendum</span>
-      </div>
       <video controls playsinline preload="none" width="1280" height="720" poster="{{ img }}video-poster.jpg">
         <source src="{{ "/assets/video/claude-code-38-minutes.mp4" | relative_url }}" type="video/mp4">
       </video>
