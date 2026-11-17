@@ -99,3 +99,6 @@ github: [metadata]
 
 # Direct WhatsApp chat with Ricky. Used by the footer "Contact me" link.
 whatsapp_direct_url: "https://wa.me/6289678601060"
+
+# WhatsApp for trying/testing Kebun Makna. Used by the Claude Code ID story button.
+kebun_makna_wa_url: "https://wa.me/62895601077462"

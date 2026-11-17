@@ -250,7 +250,7 @@ id:
     name: "Nurul Bahirah"
     role: "Istri saya · Konsultan pendidikan, lulusan Inggris"
     photo_alt: "Foto Nurul Bahirah"
-    intro_html: 'Istri saya adalah konsultan pendidikan lulusan Inggris. Dengan Claude Code, ia membuat <strong>Kebun Makna</strong>: game berkebun gratis untuk anak-anak belajar arti kata demi kata dan bacaan surat-surat pendek Juz 30. Versi pertamanya jadi dalam <strong>2 jam</strong>.'
+    intro_html: "Nurul adalah konsultan pendidikan lulusan Inggris yang ingin mengajarkan makna Al-Qur'an ke anaknya. Dengan Claude Code, ia membuat <strong>Kebun Makna</strong>: game berkebun gratis untuk anak-anak belajar arti kata demi kata dan bacaan surat-surat pendek Juz 30. Versi pertamanya jadi dalam <strong>2 jam</strong>."
     features:
       - icon: book
         title: "10 surat, An-Nas sampai Al-Fil"
@@ -270,6 +270,7 @@ id:
         value_html: "Gratis"
     badge: "Versi pertama: 2 jam"
     closing: "Ia tidak memulai dari teknologi. Ia memulai dari hal yang paling ia pahami: cara anak belajar."
+    beta: "Kebun Makna sedang tahap Beta Testing. Minat bantu menyempurnakannya?"
     cta: "Coba Kebun Makna"
     shots:
       - file: kebun-makna-builder.jpg
@@ -542,7 +543,7 @@ en:
     name: "Nurul Bahirah"
     role: "My wife · Education consultant, UK graduate"
     photo_alt: "Photo of Nurul Bahirah"
-    intro_html: 'My wife is an education consultant and a UK graduate. With Claude Code, she built <strong>Kebun Makna</strong>: a free farming game where children learn the word-by-word meaning and recitation of the short surahs of Juz 30. The first version took her <strong>2 hours</strong>.'
+    intro_html: "Nurul is an education consultant and a UK graduate who wants to teach her child the meaning of the Qur'an. With Claude Code, she built <strong>Kebun Makna</strong>: a free farming game where children learn the word-by-word meaning and recitation of the short surahs of Juz 30. The first version took her <strong>2 hours</strong>."
     features:
       - icon: book
         title: "10 surahs, An-Nas to Al-Fil"
@@ -562,6 +563,7 @@ en:
         value_html: "Free"
     badge: "First version: 2 hours"
     closing: "She didn't start from the technology. She started from what she understands best: how children learn."
+    beta: "Kebun Makna is in Beta Testing. Want to help improve it?"
     cta: "Try Kebun Makna"
     shots:
       - file: kebun-makna-builder.jpg
