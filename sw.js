@@ -5,7 +5,7 @@
  * Never cache or intercept cross-origin requests (Supabase auth/API, analytics)
  * or non-GET requests. Keep this file at /sw.js: never delete or rename it,
  * or browsers keep running the last version they saw. */
-const VERSION = "v1";
+const VERSION = "v2";
 const CACHE = "rs-" + VERSION;
 const OFFLINE_URL = "/offline.html";
 
@@ -29,6 +29,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (req.method !== "GET" || url.origin !== self.location.origin) return;
   if (url.pathname === "/sw.js") return;
+  if (url.hostname === "localhost" || url.hostname === "127.0.0.1") return;
 
   event.respondWith(
     fetch(req, { cache: "no-cache" })

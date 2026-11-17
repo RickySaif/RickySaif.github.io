@@ -1007,7 +1007,91 @@ hr.short{
 }
 
 @media (min-width: 620px) {
-  .rs-proof-strip { grid-template-columns: repeat(4, 1fr); }
+  .rs-proof-strip { grid-template-columns: repeat(3, 1fr); }
+}
+
+.rs-bio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 18px 0 28px 0;
+
+  .rs-bio-narrative {
+    margin: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  .rs-bio-grid {
+    grid-template-columns: 1fr 300px;
+    gap: 36px;
+    align-items: start;
+  }
+}
+
+.rs-bio-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rs-bio-photo-link {
+  display: block;
+  position: relative;
+  border-radius: var(--rs-radius-md, 12px);
+  overflow: hidden;
+  line-height: 0;
+  box-shadow: var(--rs-shadow-sm);
+  border: 1px solid var(--rs-hairline);
+  transition: transform var(--rs-motion-base) var(--rs-motion-ease), box-shadow var(--rs-motion-base) var(--rs-motion-ease);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--rs-shadow-md);
+  }
+}
+
+.rs-bio-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--rs-radius-md, 12px);
+}
+
+.rs-bio-play-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border-radius: var(--rs-radius-pill, 999px);
+  background: rgba(14, 26, 43, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #fff;
+  font-family: var(--rs-font-sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.rs-bio-caption {
+  font-family: var(--rs-font-sans);
+  font-size: 13.5px !important;
+  line-height: 1.5 !important;
+  color: var(--rs-text-secondary);
+  margin-top: 10px;
+
+  a {
+    color: var(--rs-accent);
+    font-weight: 600;
+  }
 }
 
 .rs-bio-narrative {
@@ -2117,7 +2201,14 @@ pre, code { background: var(--rs-surface-sunken); border-color: var(--rs-hairlin
   a, a:visited { color: var(--rs-on-sovereign); }
   a:hover { color: var(--rs-brass); }
   p, .rs-footer-line, .rs-footer-copyright, .rs-footer-price { color: var(--rs-on-sovereign-muted); }
-  .rs-footer-line { font-family: var(--rs-font-display); font-size: var(--rs-size-h3) !important; color: var(--rs-on-sovereign); }
+  /* One line at every width: the size shrinks with the viewport (about 70 characters), capped at the h3 size. */
+  .rs-footer-line {
+    font-family: var(--rs-font-display);
+    font-size: min(var(--rs-size-h3), calc((100vw - 40px) / 36)) !important;
+    white-space: nowrap;
+    color: var(--rs-on-sovereign);
+  }
+  .rs-footer-line a { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 /* Tool cards: the README banner leads each card. */

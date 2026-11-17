@@ -96,3 +96,6 @@ minima:
   date_format: "%-d %b %Y"
 
 github: [metadata]
+
+# Direct WhatsApp chat with Ricky. Used by the footer "Contact me" link.
+whatsapp_direct_url: "https://wa.me/6289678601060"

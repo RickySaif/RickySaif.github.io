@@ -1,5 +1,5 @@
 # Free tools, in display order. Rendered by /tools/ in both languages.
-# The site leads with sales and revenue, so the sales tool (Scouterr) comes first.
+# The site leads with sales and revenue, so Marketerr comes first, then Scouterr.
 # Add a tool: append one entry. `repo` empty -> links to site.github_url.
 # `case` is the slug of its case study in _cases/ (optional).
 # `page` is an on-site page with more detail (optional).
@@ -9,6 +9,22 @@
 #   A plain string, or en:/id: when the wording differs per language.
 #   Leave it empty to show only the label. Never put a number here you cannot defend.
 # `problem` is the one-paragraph current problem shown on the card.
+- name: "Marketerr"
+  lever: profit
+  flagship: true
+  banner: "/assets/images/tools/marketerr-banner.webp"
+  banner_alt:
+    en: "Marketerr: find and engage potential local marketing partners."
+    id: "Marketerr: temukan dan jalin hubungan dengan calon mitra pemasaran lokal."
+  range: ""
+  problem:
+    en: "Sales are sluggish, and holiday bonuses and shop rent are due soon."
+    id: "Penjualan seret. Sebentar lagi harus bayar THR & sewa kontrakan."
+  repo: "https://github.com/RickySaif/marketerr"
+  summary:
+    en: "Marketerr helps you find prospective buyers living near your store. Not to push them to buy, but to interact naturally from your personal account. If it clicks, they can become buyers -- or even brand ambassadors who help promote your store to friends nearby."
+    id: "Marketerr bantu kamu menemukan calon pembeli yang tinggal di dekat toko kamu. Bukan untuk disuruh beli, tapi untuk berinteraksi secara alami dengan akun pribadi kamu. Kalau jodoh, mereka bisa jadi pembeli -- atau bahkan brand ambassador yang bantu promosi toko kamu ke teman-teman di sekitarnya."
+
 - name: "Scouterr"
   lever: profit
   flagship: true
@@ -18,12 +34,12 @@
     id: "Scouterr: tuyul pramuka mengintip lewat teropong ke profil orang. Temukan orang yang tepat. Anda yang memutuskan."
   range: ""
   problem:
-    en: "The right buyers and the right hires are already out there in public posts and profiles. Finding them by hand takes days, and bulk outreach gets you ignored or blocked."
-    id: "Pembeli dan kandidat yang tepat sebenarnya sudah ada di postingan dan profil publik. Mencarinya manual makan berhari-hari, dan pesan massal membuat Anda diabaikan atau diblokir."
+    en: "Finding competent and loyal employees is tough these days. You've asked your network, but nobody has a recommendation. In the end, you're stuck in daily operations with no time to expand."
+    id: "Cari pegawai yang kompeten & loyal sekarang susah. Udah tanya kenalan, ga ada yang bisa kasih rekomendasi. Ujung-ujungnya harus terjun ke operasional harian dan jadi ga sempat ekspansi."
   repo: "https://github.com/RickySaif/scouterr"
   summary:
-    en: "Scouterr Leads finds likely buyers in public posts and prepares a gradual approach. Scouterr Talent finds and ranks people worth hiring. A person approves every action."
-    id: "Scouterr Leads menemukan calon pembeli dari postingan publik dan menyiapkan pendekatan bertahap. Scouterr Talent menemukan dan meranking kandidat yang layak direkrut. Setiap aksi harus disetujui manusia."
+    en: "Scouterr gives you a list of people who meet your specifications and have plenty of positive recommendations from their LinkedIn peers. Thousands of profiles scanned. Your company deserves the best people."
+    id: "Scouterr akan memberikan daftar orang-orang yang memenuhi spesifikasi dan juga  mendapatkan banyak rekomendasi positif dari rekan Linkedin mereka. Ribuan profile bisa ditelusuri. Perusahaan kamu layak dapat orang terbaik."
 
 - name: "BugHunterr"
   lever: cost

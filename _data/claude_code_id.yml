@@ -23,7 +23,7 @@ d_track:
 id:
   hero:
     badge: "Komunitas gratis · Jakarta"
-    title_html: 'Belajar <span class="cc-grad">Claude Code</span> dari nol. Bareng-bareng.'
+    title_html: 'Belajar <span class="cc-grad">Claude Code</span> Gratis & Bareng-bareng.'
     lead: "Grup WhatsApp dengan tutorial langkah demi langkah gratis, teman untuk bertanya, dan kopdar di Jakarta."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar kopdar"
@@ -318,7 +318,7 @@ id:
 en:
   hero:
     badge: "Free community · Jakarta"
-    title_html: 'Learn <span class="cc-grad">Claude Code</span> from zero. Together.'
+    title_html: 'Learn <span class="cc-grad">Claude Code</span> Free & Together.'
     lead: "A WhatsApp group with a free step-by-step tutorial, people to ask, and meetups in Jakarta."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the meetup"
