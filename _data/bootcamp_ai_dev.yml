@@ -1,0 +1,875 @@
+# Words and numbers for /bootcamp-ai-dev/ (template: _includes/bootcamp-ai-dev.html).
+# An internal organizer brief: Padepokan Agile x Ricky Saif. noindex, not in the sitemap.
+# `numbers` is shared by both languages and also feeds the cost calculator.
+# One block per language below; both blocks have the same keys.
+
+numbers:
+  participants: 24
+  teams: 6
+  team_size: 4
+  price_asked: 6000000
+  price_normal: 8500000
+  price_early: 7000000
+  price_team: 7500000
+  # Net profit (after the PT's tax) split. Padepokan Agile takes a share; the
+  # rest is the speakers' pool, split into equal shares. Ricky holds two shares:
+  # one as a speaker (lead facilitator) and one as the event producer.
+  split:
+    pa: 10                 # percent of net profit to Padepokan Agile
+    pa_big: 15             # proposal: from pa_big_from participants
+    pa_big_from: 30
+    speakers: 4            # 3 practitioner speakers + Ricky
+    producer_shares: 1     # extra share(s) for the event producer (Ricky)
+  contingency: 10          # percent, added on top of every cost (not on revenue tax)
+  # Run through an Indonesian PT. Percentages. To confirm with the PT's accountant.
+  tax:
+    pph_final: 0.5         # PPh final UMKM (PP 55/2022), on gross revenue, if the PT qualifies
+    pph_badan: 11          # otherwise: 22% corporate tax with the 50% facility (Pasal 31E) = 11% of profit
+    ppn: 11                # PPN effective rate, only if the PT is PKP
+  # Hotel full-board residential package, per person, twin share, 1 night
+  # (room, 3 meals, 2 coffee breaks, meeting room). Estimates: confirm on the site visit.
+  tiers:
+    premium: 1850000       # 4-5 star resort (the shortlist below)
+    budget: 1400000        # 3-4 star hotel in the same area
+  # per: pax = times the number of participants; fixed = once per event.
+  # key matches a label in costs_labels below. room uses the chosen tier.
+  costs:
+    - { key: room,       per: pax,   amount: 1850000 }
+    - { key: extras,     per: pax,   amount: 250000 }
+    - { key: ai,         per: pax,   amount: 500000 }
+    - { key: kit,        per: pax,   amount: 200000 }
+    - { key: incentive,  per: pax,   amount: 125000 }
+    - { key: payment,    per: pax,   amount: 150000 }
+    - { key: crew_rooms, per: fixed, amount: 13800000 }
+    - { key: keynote,    per: fixed, amount: 1000000 }
+    - { key: coaches,    per: fixed, amount: 14000000 }
+    - { key: bus,        per: fixed, amount: 6500000 }
+    - { key: internet,   per: fixed, amount: 4000000 }
+    - { key: fun,        per: fixed, amount: 7500000 }
+    - { key: docs,       per: fixed, amount: 4500000 }
+    - { key: prep,       per: fixed, amount: 1500000 }
+    # PPh 21 on the fixed honoraria of the keynote and the coaches (Rp 15.000.000),
+    # grossed up so they receive the agreed amount: 2.5% / 97.5% = about 2.6%.
+    # Speakers are paid from the profit pool instead (see split above).
+    - { key: pph21,      per: fixed, amount: 385000 }
+    - { key: admin,      per: fixed, amount: 3000000 }
+
+en:
+  meta_note: "Organizer brief · internal · not indexed"
+  hero:
+    badge: "Padepokan Agile × Ricky Saif · organizer brief"
+    title_html: 'Ship a <span class="cc-grad">real product</span> in two days. Then get your company to use it.'
+    lead: "AI-Powered Development Bootcamp: two days and one night in a hotel outside Jakarta. Teams build production software for a real problem, test it with real users, and leave with a 90-day plan to drive adoption at work."
+    cta_primary: "See the rundown"
+    cta_secondary: "See the numbers"
+    glance_title: "At a glance"
+    glance:
+      - label: "Format"
+        value: "2 days, 1 night, residential. Hands-on from 08:00, laptops shut at 20:00."
+      - label: "Proposed date"
+        value: "Thu–Fri, 28–29 January 2027 (weekday rates, before Ramadan)"
+      - label: "Cohort"
+        value: "24 people · 6 teams of 4 · 4 coaches"
+      - label: "Venue"
+        value: "Hill resort in Bogor, about 1.5 hours from Jakarta"
+      - label: "Price (recommended)"
+        value: "Rp 8.500.000 · early bird Rp 7.000.000"
+    chip: "Production app + adoption plan"
+
+  why:
+    eyebrow: "Why this bootcamp"
+    title: "AI made building ten times faster. Users and companies did not speed up."
+    intro: "Most AI training stops at a toy demo. Most hackathons end with a prototype nobody touches on Monday. The bottleneck has moved from writing code to knowing what to build and getting people to use it, so this bootcamp trains all three."
+    source_html: 'The idea comes from the <a href="https://rizkysyaiful.github.io/scrum-ai-addendum/" target="_blank" rel="noopener">Scrum Addendum for the AI Era</a>: builders speed up, users don&#8217;t.'
+    paths:
+      - label: "Typical AI workshop"
+        title: "A toy demo"
+        text: "A to-do app on the trainer's laptop. Nothing to show the boss on Monday."
+      - label: "Typical hackathon"
+        title: "No sleep, no users"
+        text: "A prototype built overnight for judges, not customers, and abandoned a week later."
+      - label: "This bootcamp"
+        title: "Live product, real users, a rollout plan"
+        text: "A production app that real users have tried, plus a 90-day plan to spread the way of working in your company. And eight hours of sleep."
+
+  pillars:
+    eyebrow: "Three pillars"
+    title: "Build it right, build the right thing, and get it used"
+    intro: "Each pillar has a practitioner talk, a hands-on block and a concrete artifact. About 70% of the time is hands-on."
+    list:
+      - code: "A"
+        icon: terminal
+        name: "Agentic engineering"
+        share: "~55% of the time"
+        text: "The whole path from an empty folder to a monitored production app, following the community curriculum (D-00 to D-13), compressed into two days."
+      - code: "B"
+        icon: mic
+        name: "Customer research"
+        share: "~20% of the time"
+        text: "Find the problem worth solving, interview real users, and read the signals after release. AI can draft the questions but cannot replace the people you ask."
+      - code: "C"
+        icon: users
+        name: "Adoption strategy"
+        share: "~25% of the time"
+        text: "Turn one team's success into a company habit: owner, guardrails, pilot, metrics, and a pitch to leadership."
+
+  material:
+    eyebrow: "The material"
+    title: "Twelve modules, and every one produces an artifact"
+    intro: "Each module is a short input (15–25 min) followed by building. The artifact column is what the coaches check before a team moves on."
+    head_module: "Module"
+    head_learn: "What they learn"
+    head_artifact: "Artifact"
+    head_when: "When"
+    modules:
+      - code: "A0"
+        pillar: "A"
+        name: "Setup & CLAUDE.md"
+        learn: "Claude Code, Git, GitHub, Supabase and Vercel accounts ready; a CLAUDE.md that tells the agent how the project works."
+        artifact: "Repo with CLAUDE.md"
+        when: "Prework (online)"
+      - code: "B1"
+        pillar: "B"
+        name: "Problem first"
+        learn: "Pick one top business problem. Define a leading signal (what users will do differently) and a lagging number (cost or revenue)."
+        artifact: "One-page problem brief"
+        when: "Day 1 · 09:45"
+      - code: "B2"
+        pillar: "B"
+        name: "Interviews that don't lie"
+        learn: "Ask about past behaviour, not opinions. Each team calls 3 real users from their company."
+        artifact: "3 interview notes + top 3 insights"
+        when: "Day 1 · 10:45"
+      - code: "A1"
+        pillar: "A"
+        name: "Plan mode & vertical slices"
+        learn: "Plan before code; slice by user pain, not by technical layer. Keep each slice small enough to ship in 90 minutes."
+        artifact: "Approved plan + slice list"
+        when: "Day 1 · 13:00"
+      - code: "A2"
+        pillar: "A"
+        name: "Git flow with an agent"
+        learn: "Branches, small commits, pull requests the agent writes and a human reviews."
+        artifact: "First merged PR"
+        when: "Day 1 · 13:30"
+      - code: "A3"
+        pillar: "A"
+        name: "Data, login & deploy"
+        learn: "Supabase tables with row-level security, Google login, deploy to a live URL."
+        artifact: "Slice 1 live at a public URL"
+        when: "Day 1 · 15:15"
+      - code: "B3"
+        pillar: "B"
+        name: "Put it in users' hands"
+        learn: "Send the link to the users interviewed in the morning; collect reactions overnight."
+        artifact: "Feedback log"
+        when: "Day 1 · 17:30"
+      - code: "A4"
+        pillar: "A"
+        name: "Quality at AI speed"
+        learn: "End-to-end tests, auto-checks in CI, bug hunting, letting a second agent review the code."
+        artifact: "E2E tests passing in CI"
+        when: "Day 2 · 07:45"
+      - code: "A5"
+        pillar: "A"
+        name: "Run it in production"
+        learn: "Analytics, error monitoring, secrets, hard limits on cost and data."
+        artifact: "Dashboard + alerts"
+        when: "Day 2 · 09:30"
+      - code: "C1"
+        pillar: "C"
+        name: "Why AI adoption stalls"
+        learn: "The Product Owner becomes the queue; features pile up untested; costs grow with speed. How to name a real owner and decision tiers."
+        artifact: "Stakeholder map"
+        when: "Day 2 · 13:00"
+      - code: "C2"
+        pillar: "C"
+        name: "90-day adoption plan"
+        learn: "Pilot team, success metrics, guardrails (data, security, budget), and a training path for colleagues."
+        artifact: "Adoption canvas"
+        when: "Day 2 · 13:40"
+      - code: "C3"
+        pillar: "C"
+        name: "Pitch to leadership"
+        learn: "Tell the business outcome first: problem, signal, number, what it costs to scale."
+        artifact: "7-minute demo + pitch"
+        when: "Day 2 · 15:00"
+
+  outcomes:
+    eyebrow: "The end goal"
+    title: "What every team takes home"
+    prod_title: "Production-ready means"
+    prod:
+      - "Live at a public URL with Google login"
+      - "Real data stored with row-level security"
+      - "End-to-end tests running in CI on every push"
+      - "Error monitoring and usage analytics switched on"
+      - "README and CLAUDE.md so another team can continue it"
+      - "Used by at least 3 real users from their company"
+    plan_title: "The 90-day adoption plan covers"
+    plan:
+      - "The problem, its leading signal and lagging number"
+      - "Who owns it, and which decisions they can make without asking"
+      - "The pilot: which team, which workflow, which week"
+      - "Guardrails: data, security, monthly AI budget"
+      - "How colleagues learn (the free Claude Code ID track is one option)"
+      - "Check-in: an online session with the coaches 30 days later"
+
+  rundown:
+    eyebrow: "Rundown"
+    title: "Two long days that stop at 20:00"
+    intro: "Like a hackathon, but with a full night's sleep and real users. Every block ends with something shipped or shown. Prayer times are built into the breaks."
+    legend:
+      talk: "Practitioner talk"
+      build: "Hands-on build"
+      research: "Customer research"
+      adopt: "Adoption"
+      fun: "Fun"
+      break: "Meal / break"
+      logistics: "Logistics"
+    days:
+      - name: "Prework"
+        date: "One week before · online"
+        items:
+          - { time: "19:30", kind: logistics, title: "Online kickoff (90 min)", text: "Meet the team, install and check every tool (A0), confirm each team's problem and the 3 users they can call." }
+          - { time: "After", kind: build, title: "Setup homework", text: "Repo with CLAUDE.md pushed to GitHub. Coaches check each one before Day 1." }
+      - name: "Day 1"
+        date: "Thursday · build & meet users"
+        items:
+          - { time: "06:30", kind: logistics, title: "Bus leaves Jakarta", text: "One meeting point in South Jakarta. Breakfast box on the bus." }
+          - { time: "08:00", kind: logistics, title: "Arrive, register, drop bags", text: "Rooms are ready in the afternoon; the meeting room is ready now." }
+          - { time: "08:30", kind: talk, title: "Opening speech: Ahmad (Ecomindo), TBC", text: "Why companies that build with AI will outrun those that only buy it." }
+          - { time: "08:50", kind: logistics, title: "How the two days work", text: "Teams, coaches, the definition of production-ready, the scoreboard." }
+          - { time: "09:15", kind: talk, title: "Talk: Builders speed up, users don't", text: "The Researcher. Why the problem matters more than the code now." }
+          - { time: "09:45", kind: research, title: "B1 · Problem first", text: "Each team writes its one-page problem brief." }
+          - { time: "10:30", kind: break, title: "Coffee break", text: "" }
+          - { time: "10:45", kind: research, title: "B2 · Live user interviews", text: "Teams call 3 real users by phone or video, then pull out the top 3 insights." }
+          - { time: "12:00", kind: break, title: "Lunch & Dhuhr", text: "" }
+          - { time: "13:00", kind: build, title: "A1–A2 · Plan, slice, first PR", text: "Short input, then plan mode, slicing and the first merged pull request." }
+          - { time: "14:30", kind: fun, title: "Prompt relay", text: "Teams pass one prompt down the line; the funniest working app wins." }
+          - { time: "15:00", kind: break, title: "Coffee & Asr", text: "" }
+          - { time: "15:15", kind: build, title: "A3 · Data, login, deploy", text: "Build sprint: slice 1 live at a public URL by 17:30." }
+          - { time: "17:30", kind: research, title: "Ship bell & B3", text: "Ring the bell when you go live. Send the link to your users." }
+          - { time: "18:00", kind: break, title: "Maghrib, free time", text: "Sunset by the pool or the garden." }
+          - { time: "18:45", kind: fun, title: "BBQ dinner & fireside", text: "Informal panel: war stories of AI in production, with the practitioners." }
+          - { time: "19:45", kind: build, title: "Pair coaching", text: "Optional 15 minutes with a coach to plan tomorrow." }
+          - { time: "20:00", kind: fun, title: "Laptops shut", text: "Board games, karaoke, stargazing. Or sleep." }
+      - name: "Day 2"
+        date: "Friday · harden, adopt, demo"
+        items:
+          - { time: "05:45", kind: fun, title: "Fajr & sunrise walk / yoga", text: "Optional." }
+          - { time: "06:30", kind: break, title: "Breakfast", text: "" }
+          - { time: "07:30", kind: research, title: "Morning read", text: "What did users do overnight? Each team reads its feedback log and analytics." }
+          - { time: "07:45", kind: talk, title: "Talk + A4 · Quality at AI speed", text: "The Shipper. Then E2E tests, CI auto-checks, bug hunting." }
+          - { time: "09:30", kind: build, title: "A5 · Run it in production", text: "Analytics, monitoring, hard limits. Then slice 2 from user feedback." }
+          - { time: "10:30", kind: break, title: "Coffee break", text: "" }
+          - { time: "10:45", kind: build, title: "Build sprint", text: "Finish slice 2. Production-ready checklist reviewed by a coach." }
+          - { time: "11:45", kind: break, title: "Check out, lunch, Friday prayer", text: "Men go to Friday prayer; the meeting room stays open." }
+          - { time: "13:00", kind: talk, title: "Talk + C1 · Why AI adoption stalls", text: "The Change Agent from Padepokan Agile." }
+          - { time: "13:40", kind: adopt, title: "C2 · 90-day adoption canvas", text: "Each team plans the rollout in its own company." }
+          - { time: "14:30", kind: break, title: "Coffee & Asr, demo prep", text: "" }
+          - { time: "15:00", kind: adopt, title: "C3 · Demo day", text: "7 minutes per team: live product, real user reactions, adoption plan." }
+          - { time: "16:00", kind: fun, title: "Awards & closing", text: "Prizes, certificates, group photo." }
+          - { time: "16:45", kind: logistics, title: "Bus back to Jakarta", text: "Arrives around 18:30, depending on traffic." }
+
+  fun:
+    eyebrow: "Fun in between"
+    title: "Energy is part of the design"
+    intro: "Twelve hours of building only works if people want to come back after every break."
+    list:
+      - { icon: spark, title: "Ship bell", text: "A real bell. Every team that goes live rings it, and everyone claps." }
+      - { icon: repeat, title: "Prompt relay", text: "A 20-minute team game after lunch, when energy drops." }
+      - { icon: coffee, title: "BBQ & fireside", text: "Dinner outdoors with the speakers. No slides." }
+      - { icon: heart, title: "Sunrise walk or yoga", text: "Optional, with a guide. Fresh air before the second day." }
+      - { icon: chart, title: "Live scoreboard", text: "Points for going live, real users, tests passing, and helping other teams." }
+      - { icon: users, title: "Night off", text: "Board games, karaoke, stargazing. Laptops stay shut after 20:00." }
+
+  people:
+    eyebrow: "Speakers & coaches"
+    title: "Practitioners who have done it, not presenters"
+    intro: "Names to be confirmed. These personas describe who to invite: each speaker gives one talk, joins the fireside, and judges the demo."
+    opening_label: "Opening speech"
+    opening_name: "Ahmad (Ecomindo)"
+    opening_text: "To be confirmed. A business leader's view: why building with AI is a leadership topic, not only an IT topic."
+    candidate_label: "Candidate"
+    tbd: "To be confirmed"
+    personas:
+      - name: "The Shipper"
+        pillar: "A · Agentic engineering"
+        who: "A tech lead who ships to production with Claude Code every week, at a company with real users."
+        talk: "Quality at AI speed"
+        look_for: "Can show a real repo, tests and incidents, not just slides."
+      - name: "The Researcher"
+        pillar: "B · Customer research"
+        who: "A product or UX researcher who has run more than 100 user interviews and changed a roadmap with them."
+        talk: "Builders speed up, users don't"
+        look_for: "Has stories where users said one thing and did another."
+      - name: "The Change Agent"
+        pillar: "C · Adoption strategy"
+        who: "An agile coach from Padepokan Agile who has led a company-wide change in a bank, telco or government body."
+        talk: "Why AI adoption stalls"
+        look_for: "Can talk about budgets, compliance and politics, not only ceremonies."
+      - name: "Lead facilitator"
+        pillar: "All pillars"
+        who: "Ricky Saif. Runs the room, connects the pillars, and keeps the rundown on time."
+        talk: "Opening frame and the closing synthesis"
+        look_for: ""
+    coaches_title: "4 coaches"
+    coaches_text: "Experienced Claude Code practitioners, one for every 6 participants (each takes care of about 1.5 teams). They unblock, review the production-ready checklist, and keep teams shipping."
+
+  venue:
+    eyebrow: "Venue"
+    title: "Close to Jakarta, green, and with Wi-Fi that holds 30 laptops"
+    intro: "We spend almost the whole time inside the hotel, so the view from the meeting room and the garden matters more than nearby attractions."
+    criteria_title: "Must have"
+    criteria:
+      - "Under 2 hours from South Jakarta on a weekday morning"
+      - "Meeting room with daylight and a view, for 35 people in team tables"
+      - "Dedicated bandwidth of at least 100 Mbps; we bring a backup line too"
+      - "Garden or poolside for breaks, the BBQ and the sunrise walk"
+      - "Full-board residential package, twin share, with late checkout for the room"
+      - "A prayer room close to the meeting room"
+    options:
+      - name: "Pullman Ciawi Vimala Hills"
+        area: "Ciawi, Bogor · about 1.5 h"
+        text: "Hill resort facing Gunung Gede-Pangrango. Big meeting rooms, lots of garden space."
+        pick: true
+      - name: "Royal Tulip Gunung Geulis"
+        area: "Sukaraja, Bogor · about 1.5 h"
+        text: "Golf resort with mountain views and a large conference wing."
+        pick: false
+      - name: "Aston Sentul Lake"
+        area: "Sentul · about 1 h"
+        text: "The closest option, by a lake. Less dramatic view, easiest travel."
+        pick: false
+    pick_label: "Recommended"
+    note: "Rates and Wi-Fi must be checked on a site visit. Thursday–Friday is usually cheaper than a weekend and easier for companies to send staff."
+
+  costs:
+    eyebrow: "Cost estimate"
+    title: "At Rp 6 juta the event breaks even, and the speakers work for free"
+    intro: "The estimate below assumes 24 participants at a 4–5 star resort, sold through our own networks, so there is no marketing budget. All figures are estimates to confirm with vendors."
+    head_item: "Item"
+    head_basis: "Basis"
+    head_total: "Total"
+    per_pax: "per person"
+    fixed: "fixed"
+    subtotal: "Subtotal"
+    contingency: "Contingency (10%)"
+    rev_tax: "PPh final 0.5% of revenue (at Rp 6.000.000 × 24)"
+    total: "Total cost incl. tax"
+    per_head: "Cost per participant"
+    tax_title: "Tax & administration through the PT"
+    tax_notes:
+      - "Income tax: if the PT qualifies for PPh final UMKM (turnover under Rp 4,8 miliar a year), it pays 0.5% of gross revenue, profit or not. Otherwise corporate tax is 22% of profit, effectively 11% with the small-company facility. Both are in the calculator."
+      - "PPN: only if the PT is PKP. Quote corporate prices \"excluding PPN\" and add 11% on the invoice; then PPN is pass-through and the hotel's PPN can be credited. If the price must include PPN, a Rp 8,5 juta ticket nets only about Rp 7,66 juta."
+      - "PPh 23: corporate clients may withhold 2% when they pay the PT. It is a tax prepayment, not a cost, but it lands as cash only at the annual return."
+      - "PPh 21: the PT must withhold tax on what it pays individuals. For the keynote and coaches the estimate grosses it up; speakers' profit shares have PPh 21 withheld from the share itself."
+      - "Hotel quotes: ask for nett prices. A \"++\" rate adds about 21% (service charge and tax) on top."
+    labels:
+      room: "Hotel full-board package (room twin share, 3 meals, 2 coffee breaks, meeting room)"
+      extras: "Extra coffee break on Day 2 and BBQ dinner upgrade"
+      ai: "AI credits during the event"
+      kit: "Kit: t-shirt, notebook, stickers, certificate"
+      incentive: "Thank-you vouchers for interviewed users"
+      payment: "Payment gateway & admin"
+      crew_rooms: "Rooms & meals for 6 crew and coaches (single)"
+      keynote: "Opening speaker, token of thanks"
+      coaches: "4 coaches × 2 days"
+      bus: "Bus Jakarta–venue, return"
+      internet: "Backup internet (dedicated line or satellite)"
+      fun: "Games, yoga guide, prizes"
+      docs: "Photo & video documentation"
+      prep: "Site visit & preparation"
+      pph21: "PPh 21 on keynote and coach fees (grossed up)"
+      admin: "PT administration: bookkeeping, tax filing, invoices, e-meterai, bank fees"
+    verdict_title: "Recommendation: Rp 8,5 juta normal price"
+    verdict_html: "Speakers are paid from the profit, so the price decides what they earn. At Rp 6 juta with 24 people the event only <strong>just breaks even</strong>: the speakers would work two days for almost nothing. I suggest three prices:"
+    prices:
+      - label: "Normal"
+        key: price_normal
+        note: "Corporate-paid seat"
+      - label: "Early bird"
+        key: price_early
+        note: "First 8 seats, until 4 weeks before"
+      - label: "Team of 3+"
+        key: price_team
+        note: "Per person, same company. This is the seat we want most: a team can actually adopt."
+    when_6_html: "Rp 6 juta leaves something for the speakers only with a 3–4 star hotel and participants who bring their own Claude subscription. Try it in the calculator."
+    calc_title: "Try the numbers"
+    calc_participants: "Participants"
+    calc_price: "Average ticket price"
+    calc_tier: "Venue"
+    calc_tier_premium: "4–5 star resort"
+    calc_tier_budget: "3–4 star hotel"
+    calc_ai: "AI credits included (no: participants bring their own subscription)"
+    calc_regime: "PT income tax"
+    calc_regime_final: "PPh final 0.5% of revenue"
+    calc_regime_badan: "Corporate tax, 11% of profit"
+    calc_ppn: "Ticket price already includes PPN 11% (PT is PKP)"
+    calc_revenue: "Revenue (excl. PPN)"
+    calc_cost: "Total cost"
+    calc_tax: "Income tax"
+    calc_profit: "Net profit after tax"
+    calc_pa: "Padepokan Agile"
+    calc_share: "Per speaker share"
+    calc_ricky: "Ricky (speaker + producer)"
+    calc_breakeven: "Break-even participants at this price"
+    calc_breakeven_price: "Break-even price at this size"
+    calc_note: "Speaker shares are before their own PPh 21. If the event makes a loss, there is nothing to split. Tax figures are estimates: confirm with the PT's accountant."
+
+  organizers:
+    eyebrow: "Organizers"
+    title: "Who does what"
+    split:
+      - name: "Padepokan Agile"
+        items:
+          - "Customer research and adoption content (pillars B and C)"
+          - "The Change Agent speaker and the Researcher candidate"
+          - "Selling seats through our own networks and clients, including the team-of-3 offer"
+          - "The venue contract"
+      - name: "Ricky Saif"
+        items:
+          - "Agentic engineering content (pillar A), prework and checklists"
+          - "Event producer and lead facilitator; finds the Shipper candidate and the coaches"
+          - "This page, the registration page and the participant kit"
+          - "The 30-day follow-up session"
+          - "Runs the money through his PT: invoices, tax, payouts to speakers and coaches"
+    split_note: "Agree the split in writing before registration opens."
+    money_title: "How the net profit is shared"
+    money_intro: "No fixed speaker fee: speakers share the profit, so everyone wins when the room is full. Net profit means after every cost and the PT's tax."
+    money_rows:
+      - { key: pa, label: "Padepokan Agile", text: "10% of net profit. Proposal: 15% from 30 participants, since bigger cohorts come from Padepokan Agile's network." }
+      - { key: pool, label: "Speakers' pool", text: "The rest, in equal shares: one per speaker (3 practitioners + Ricky), plus one extra share for the event producer." }
+      - { key: ricky, label: "Ricky Saif", text: "Two shares: one as lead facilitator and speaker, one as event producer." }
+    money_example: "At Rp 8.500.000 with 24 participants:"
+    money_pa: "Padepokan Agile"
+    money_share: "Each speaker"
+    money_ricky: "Ricky (2 shares)"
+    timeline_title: "Countdown"
+    timeline:
+      - { when: "This week", what: "Agree the date, the price and the profit split. Shortlist speakers." }
+      - { when: "T – 9 weeks", what: "Site visit to the 3 venues; test the Wi-Fi with 10 laptops." }
+      - { when: "T – 8 weeks", what: "Sign the venue. Open registration with the early bird." }
+      - { when: "T – 4 weeks", what: "Early bird closes. Speakers and coaches confirmed." }
+      - { when: "T – 2 weeks", what: "Minimum 18 paid seats, or move the date." }
+      - { when: "T – 1 week", what: "Online kickoff and setup homework." }
+      - { when: "T + 30 days", what: "Online check-in on every team's adoption plan." }
+
+  decisions:
+    title: "Three decisions for this week"
+    list:
+      - "The price: Rp 8,5 juta normal (recommended) or Rp 6 juta with a cheaper venue"
+      - "The date: 28–29 January 2027, or later after Eid"
+      - "The speakers: one name per persona who accepts a profit share, and confirm Ahmad for the opening"
+    small: "Internal page. Not linked from the site and not indexed by search engines."
+
+id:
+  meta_note: "Brief penyelenggara · internal · tidak diindeks"
+  hero:
+    badge: "Padepokan Agile × Ricky Saif · brief penyelenggara"
+    title_html: 'Rilis <span class="cc-grad">produk nyata</span> dalam dua hari. Lalu bawa perusahaan Anda memakainya.'
+    lead: "AI-Powered Development Bootcamp: dua hari satu malam di hotel di luar Jakarta. Tim membangun software production untuk masalah nyata, mengujinya ke pengguna nyata, dan pulang membawa rencana 90 hari untuk mendorong adopsi di kantor."
+    cta_primary: "Lihat rundown"
+    cta_secondary: "Lihat angka"
+    glance_title: "Sekilas"
+    glance:
+      - label: "Format"
+        value: "2 hari 1 malam, menginap. Praktik mulai 08.00, laptop ditutup 20.00."
+      - label: "Usulan tanggal"
+        value: "Kamis–Jumat, 28–29 Januari 2027 (tarif hari kerja, sebelum Ramadan)"
+      - label: "Peserta"
+        value: "24 orang · 6 tim isi 4 · 4 coach"
+      - label: "Tempat"
+        value: "Resor perbukitan di Bogor, sekitar 1,5 jam dari Jakarta"
+      - label: "Harga (usulan)"
+        value: "Rp 8.500.000 · early bird Rp 7.000.000"
+    chip: "Aplikasi production + rencana adopsi"
+
+  why:
+    eyebrow: "Kenapa bootcamp ini"
+    title: "AI membuat membangun sepuluh kali lebih cepat. Pengguna dan perusahaan tidak ikut cepat."
+    intro: "Kebanyakan pelatihan AI berhenti di demo mainan. Kebanyakan hackathon berakhir dengan prototipe yang tidak disentuh lagi hari Senin. Hambatannya sudah pindah, dari menulis kode ke tahu apa yang perlu dibangun dan membuat orang memakainya. Bootcamp ini melatih ketiganya."
+    source_html: 'Gagasannya dari <a href="https://rizkysyaiful.github.io/scrum-ai-addendum/" target="_blank" rel="noopener">Scrum Addendum for the AI Era</a>: pembuatnya makin cepat, penggunanya tidak.'
+    paths:
+      - label: "Workshop AI biasa"
+        title: "Demo mainan"
+        text: "Aplikasi to-do di laptop trainer. Tidak ada yang bisa ditunjukkan ke atasan hari Senin."
+      - label: "Hackathon biasa"
+        title: "Tidak tidur, tidak ada pengguna"
+        text: "Prototipe semalam untuk juri, bukan untuk pelanggan, lalu ditinggal seminggu kemudian."
+      - label: "Bootcamp ini"
+        title: "Produk live, pengguna nyata, rencana rollout"
+        text: "Aplikasi production yang sudah dicoba pengguna nyata, plus rencana 90 hari untuk menyebarkan cara kerja ini di perusahaan. Dan tidur delapan jam."
+
+  pillars:
+    eyebrow: "Tiga pilar"
+    title: "Membangun dengan benar, membangun hal yang benar, dan membuatnya dipakai"
+    intro: "Setiap pilar punya sesi praktisi, blok praktik, dan hasil kerja yang konkret. Sekitar 70% waktu untuk praktik."
+    list:
+      - code: "A"
+        icon: terminal
+        name: "Agentic engineering"
+        share: "~55% waktu"
+        text: "Jalur lengkap dari folder kosong sampai aplikasi production yang terpantau, mengikuti kurikulum komunitas (D-00 sampai D-13), dipadatkan jadi dua hari."
+      - code: "B"
+        icon: mic
+        name: "Customer research"
+        share: "~20% waktu"
+        text: "Temukan masalah yang layak diselesaikan, wawancarai pengguna nyata, dan baca sinyal setelah rilis. AI bisa menyusun pertanyaan, tapi tidak bisa menggantikan orang yang ditanya."
+      - code: "C"
+        icon: users
+        name: "Strategi adopsi"
+        share: "~25% waktu"
+        text: "Ubah keberhasilan satu tim jadi kebiasaan perusahaan: pemilik, batasan, pilot, metrik, dan pitch ke pimpinan."
+
+  material:
+    eyebrow: "Materi"
+    title: "Dua belas modul, setiap modul menghasilkan sesuatu"
+    intro: "Setiap modul diawali paparan singkat (15–25 menit) lalu langsung membangun. Kolom hasil kerja adalah yang dicek coach sebelum tim lanjut."
+    head_module: "Modul"
+    head_learn: "Yang dipelajari"
+    head_artifact: "Hasil kerja"
+    head_when: "Kapan"
+    modules:
+      - code: "A0"
+        pillar: "A"
+        name: "Setup & CLAUDE.md"
+        learn: "Akun Claude Code, Git, GitHub, Supabase, dan Vercel siap; CLAUDE.md yang menjelaskan cara kerja proyek ke agen."
+        artifact: "Repo berisi CLAUDE.md"
+        when: "Prework (online)"
+      - code: "B1"
+        pillar: "B"
+        name: "Masalah dulu"
+        learn: "Pilih satu masalah bisnis teratas. Tentukan sinyal awal (apa yang dilakukan pengguna secara berbeda) dan angka akhir (biaya atau pendapatan)."
+        artifact: "Brief masalah satu halaman"
+        when: "Hari 1 · 09.45"
+      - code: "B2"
+        pillar: "B"
+        name: "Wawancara yang jujur"
+        learn: "Tanyakan perilaku di masa lalu, bukan pendapat. Setiap tim menelepon 3 pengguna nyata dari perusahaannya."
+        artifact: "3 catatan wawancara + 3 temuan utama"
+        when: "Hari 1 · 10.45"
+      - code: "A1"
+        pillar: "A"
+        name: "Plan mode & irisan vertikal"
+        learn: "Rencana dulu, baru kode; iris berdasarkan masalah pengguna, bukan lapisan teknis. Setiap irisan cukup kecil untuk rilis dalam 90 menit."
+        artifact: "Rencana disetujui + daftar irisan"
+        when: "Hari 1 · 13.00"
+      - code: "A2"
+        pillar: "A"
+        name: "Alur Git bersama agen"
+        learn: "Branch, commit kecil, pull request ditulis agen dan direview manusia."
+        artifact: "PR pertama di-merge"
+        when: "Hari 1 · 13.30"
+      - code: "A3"
+        pillar: "A"
+        name: "Data, login & deploy"
+        learn: "Tabel Supabase dengan row-level security, login Google, deploy ke URL publik."
+        artifact: "Irisan 1 live di URL publik"
+        when: "Hari 1 · 15.15"
+      - code: "B3"
+        pillar: "B"
+        name: "Serahkan ke pengguna"
+        learn: "Kirim link ke pengguna yang diwawancarai pagi tadi; kumpulkan reaksi semalaman."
+        artifact: "Log masukan"
+        when: "Hari 1 · 17.30"
+      - code: "A4"
+        pillar: "A"
+        name: "Kualitas di kecepatan AI"
+        learn: "Tes end-to-end, cek otomatis di CI, berburu bug, agen kedua mereview kode."
+        artifact: "Tes E2E lolos di CI"
+        when: "Hari 2 · 07.45"
+      - code: "A5"
+        pillar: "A"
+        name: "Menjalankan di production"
+        learn: "Analytics, pemantauan error, secrets, batas keras untuk biaya dan data."
+        artifact: "Dashboard + alert"
+        when: "Hari 2 · 09.30"
+      - code: "C1"
+        pillar: "C"
+        name: "Kenapa adopsi AI macet"
+        learn: "Product Owner jadi antrean; fitur menumpuk tanpa dites; biaya naik seiring kecepatan. Cara menunjuk pemilik yang sebenarnya dan tingkatan keputusan."
+        artifact: "Peta pemangku kepentingan"
+        when: "Hari 2 · 13.00"
+      - code: "C2"
+        pillar: "C"
+        name: "Rencana adopsi 90 hari"
+        learn: "Tim pilot, metrik keberhasilan, batasan (data, keamanan, anggaran), dan jalur belajar untuk rekan kerja."
+        artifact: "Kanvas adopsi"
+        when: "Hari 2 · 13.40"
+      - code: "C3"
+        pillar: "C"
+        name: "Pitch ke pimpinan"
+        learn: "Sampaikan hasil bisnis dulu: masalah, sinyal, angka, dan biaya untuk memperluas."
+        artifact: "Demo + pitch 7 menit"
+        when: "Hari 2 · 15.00"
+
+  outcomes:
+    eyebrow: "Tujuan akhir"
+    title: "Yang dibawa pulang setiap tim"
+    prod_title: "Siap production artinya"
+    prod:
+      - "Live di URL publik dengan login Google"
+      - "Data nyata tersimpan dengan row-level security"
+      - "Tes end-to-end jalan di CI setiap push"
+      - "Pemantauan error dan analytics pemakaian aktif"
+      - "README dan CLAUDE.md supaya tim lain bisa melanjutkan"
+      - "Sudah dipakai minimal 3 pengguna nyata dari perusahaannya"
+    plan_title: "Rencana adopsi 90 hari berisi"
+    plan:
+      - "Masalahnya, sinyal awal, dan angka akhirnya"
+      - "Siapa pemiliknya, dan keputusan apa yang boleh ia ambil tanpa bertanya"
+      - "Pilotnya: tim mana, alur kerja mana, minggu berapa"
+      - "Batasan: data, keamanan, anggaran AI bulanan"
+      - "Cara rekan kerja belajar (jalur gratis Claude Code ID salah satu pilihan)"
+      - "Check-in: sesi online dengan para coach 30 hari kemudian"
+
+  rundown:
+    eyebrow: "Rundown"
+    title: "Dua hari panjang yang berhenti jam 20.00"
+    intro: "Seperti hackathon, tapi dengan tidur yang cukup dan pengguna nyata. Setiap blok diakhiri dengan sesuatu yang dirilis atau ditunjukkan. Waktu salat sudah masuk ke jeda."
+    legend:
+      talk: "Sesi praktisi"
+      build: "Praktik membangun"
+      research: "Customer research"
+      adopt: "Adopsi"
+      fun: "Seru-seruan"
+      break: "Makan / jeda"
+      logistics: "Logistik"
+    days:
+      - name: "Prework"
+        date: "Seminggu sebelumnya · online"
+        items:
+          - { time: "19.30", kind: logistics, title: "Kickoff online (90 menit)", text: "Kenalan dengan tim, pasang dan cek semua alat (A0), pastikan masalah tiap tim dan 3 pengguna yang bisa ditelepon." }
+          - { time: "Setelahnya", kind: build, title: "PR setup", text: "Repo dengan CLAUDE.md di-push ke GitHub. Coach mengecek satu per satu sebelum Hari 1." }
+      - name: "Hari 1"
+        date: "Kamis · membangun & bertemu pengguna"
+        items:
+          - { time: "06.30", kind: logistics, title: "Bus berangkat dari Jakarta", text: "Satu titik kumpul di Jakarta Selatan. Sarapan kotak di bus." }
+          - { time: "08.00", kind: logistics, title: "Tiba, registrasi, titip tas", text: "Kamar siap sore hari; ruang meeting sudah siap." }
+          - { time: "08.30", kind: talk, title: "Sambutan pembuka: Ahmad (Ecomindo), menunggu konfirmasi", text: "Kenapa perusahaan yang membangun dengan AI akan melaju lebih cepat daripada yang hanya membeli." }
+          - { time: "08.50", kind: logistics, title: "Cara kerja dua hari ini", text: "Tim, coach, definisi siap production, papan skor." }
+          - { time: "09.15", kind: talk, title: "Sesi: Pembuatnya makin cepat, penggunanya tidak", text: "The Researcher. Kenapa masalahnya kini lebih penting daripada kodenya." }
+          - { time: "09.45", kind: research, title: "B1 · Masalah dulu", text: "Setiap tim menulis brief masalah satu halaman." }
+          - { time: "10.30", kind: break, title: "Rehat kopi", text: "" }
+          - { time: "10.45", kind: research, title: "B2 · Wawancara pengguna langsung", text: "Tim menelepon 3 pengguna nyata lewat telepon atau video, lalu merumuskan 3 temuan utama." }
+          - { time: "12.00", kind: break, title: "Makan siang & Zuhur", text: "" }
+          - { time: "13.00", kind: build, title: "A1–A2 · Rencana, irisan, PR pertama", text: "Paparan singkat, lalu plan mode, mengiris, dan pull request pertama di-merge." }
+          - { time: "14.30", kind: fun, title: "Estafet prompt", text: "Tim mengoper satu prompt bergantian; aplikasi jalan paling lucu menang." }
+          - { time: "15.00", kind: break, title: "Rehat kopi & Asar", text: "" }
+          - { time: "15.15", kind: build, title: "A3 · Data, login, deploy", text: "Sprint membangun: irisan 1 live di URL publik paling lambat 17.30." }
+          - { time: "17.30", kind: research, title: "Lonceng rilis & B3", text: "Bunyikan lonceng saat live. Kirim link ke pengguna Anda." }
+          - { time: "18.00", kind: break, title: "Magrib, waktu bebas", text: "Senja di tepi kolam atau taman." }
+          - { time: "18.45", kind: fun, title: "Makan malam BBQ & obrolan api unggun", text: "Panel santai: cerita lapangan AI di production, bersama para praktisi." }
+          - { time: "19.45", kind: build, title: "Coaching berpasangan", text: "Opsional, 15 menit dengan coach untuk merencanakan besok." }
+          - { time: "20.00", kind: fun, title: "Laptop ditutup", text: "Board game, karaoke, lihat bintang. Atau tidur." }
+      - name: "Hari 2"
+        date: "Jumat · memperkuat, adopsi, demo"
+        items:
+          - { time: "05.45", kind: fun, title: "Subuh & jalan pagi / yoga", text: "Opsional." }
+          - { time: "06.30", kind: break, title: "Sarapan", text: "" }
+          - { time: "07.30", kind: research, title: "Bacaan pagi", text: "Apa yang dilakukan pengguna semalam? Setiap tim membaca log masukan dan analytics-nya." }
+          - { time: "07.45", kind: talk, title: "Sesi + A4 · Kualitas di kecepatan AI", text: "The Shipper. Lalu tes E2E, cek otomatis di CI, berburu bug." }
+          - { time: "09.30", kind: build, title: "A5 · Menjalankan di production", text: "Analytics, pemantauan, batas keras. Lalu irisan 2 dari masukan pengguna." }
+          - { time: "10.30", kind: break, title: "Rehat kopi", text: "" }
+          - { time: "10.45", kind: build, title: "Sprint membangun", text: "Selesaikan irisan 2. Checklist siap production direview coach." }
+          - { time: "11.45", kind: break, title: "Check-out, makan siang, salat Jumat", text: "Laki-laki salat Jumat; ruang meeting tetap buka." }
+          - { time: "13.00", kind: talk, title: "Sesi + C1 · Kenapa adopsi AI macet", text: "The Change Agent dari Padepokan Agile." }
+          - { time: "13.40", kind: adopt, title: "C2 · Kanvas adopsi 90 hari", text: "Setiap tim merencanakan rollout di perusahaannya sendiri." }
+          - { time: "14.30", kind: break, title: "Rehat kopi & Asar, persiapan demo", text: "" }
+          - { time: "15.00", kind: adopt, title: "C3 · Demo day", text: "7 menit per tim: produk live, reaksi pengguna nyata, rencana adopsi." }
+          - { time: "16.00", kind: fun, title: "Penghargaan & penutupan", text: "Hadiah, sertifikat, foto bersama." }
+          - { time: "16.45", kind: logistics, title: "Bus kembali ke Jakarta", text: "Tiba sekitar 18.30, tergantung lalu lintas." }
+
+  fun:
+    eyebrow: "Seru-seruan di sela-sela"
+    title: "Energi adalah bagian dari desain"
+    intro: "Dua belas jam membangun hanya berhasil kalau orang semangat kembali setelah setiap jeda."
+    list:
+      - { icon: spark, title: "Lonceng rilis", text: "Lonceng sungguhan. Setiap tim yang live membunyikannya, semua tepuk tangan." }
+      - { icon: repeat, title: "Estafet prompt", text: "Permainan tim 20 menit setelah makan siang, saat energi turun." }
+      - { icon: coffee, title: "BBQ & api unggun", text: "Makan malam di luar bersama pembicara. Tanpa slide." }
+      - { icon: heart, title: "Jalan pagi atau yoga", text: "Opsional, dengan pemandu. Udara segar sebelum hari kedua." }
+      - { icon: chart, title: "Papan skor live", text: "Poin untuk live, pengguna nyata, tes lolos, dan membantu tim lain." }
+      - { icon: users, title: "Malam bebas", text: "Board game, karaoke, lihat bintang. Laptop tetap tertutup setelah 20.00." }
+
+  people:
+    eyebrow: "Pembicara & coach"
+    title: "Praktisi yang sudah menjalankannya, bukan sekadar presenter"
+    intro: "Nama menunggu konfirmasi. Persona ini menggambarkan siapa yang perlu diundang: setiap pembicara mengisi satu sesi, ikut obrolan api unggun, dan menjadi juri demo."
+    opening_label: "Sambutan pembuka"
+    opening_name: "Ahmad (Ecomindo)"
+    opening_text: "Menunggu konfirmasi. Sudut pandang pemimpin bisnis: kenapa membangun dengan AI adalah urusan kepemimpinan, bukan hanya urusan IT."
+    candidate_label: "Kandidat"
+    tbd: "Menunggu konfirmasi"
+    personas:
+      - name: "The Shipper"
+        pillar: "A · Agentic engineering"
+        who: "Tech lead yang rilis ke production dengan Claude Code setiap minggu, di perusahaan dengan pengguna nyata."
+        talk: "Kualitas di kecepatan AI"
+        look_for: "Bisa menunjukkan repo, tes, dan insiden nyata, bukan hanya slide."
+      - name: "The Researcher"
+        pillar: "B · Customer research"
+        who: "Product atau UX researcher yang sudah melakukan lebih dari 100 wawancara pengguna dan mengubah roadmap karenanya."
+        talk: "Pembuatnya makin cepat, penggunanya tidak"
+        look_for: "Punya cerita saat pengguna bilang A tapi melakukan B."
+      - name: "The Change Agent"
+        pillar: "C · Strategi adopsi"
+        who: "Agile coach dari Padepokan Agile yang pernah memimpin perubahan skala perusahaan di bank, telko, atau instansi pemerintah."
+        talk: "Kenapa adopsi AI macet"
+        look_for: "Bisa bicara anggaran, kepatuhan, dan politik kantor, bukan hanya ritual."
+      - name: "Fasilitator utama"
+        pillar: "Semua pilar"
+        who: "Ricky Saif. Memandu ruangan, menyambungkan ketiga pilar, dan menjaga rundown tepat waktu."
+        talk: "Bingkai pembuka dan sintesis penutup"
+        look_for: ""
+    coaches_title: "4 coach"
+    coaches_text: "Praktisi Claude Code berpengalaman, satu untuk setiap 6 peserta (masing-masing memegang sekitar 1,5 tim). Mereka membantu saat buntu, mereview checklist siap production, dan menjaga tim terus merilis."
+
+  venue:
+    eyebrow: "Tempat"
+    title: "Dekat Jakarta, hijau, dan Wi-Fi-nya kuat untuk 30 laptop"
+    intro: "Hampir seluruh waktu kita di dalam hotel, jadi pemandangan dari ruang meeting dan tamannya lebih penting daripada tempat wisata di sekitarnya."
+    criteria_title: "Wajib ada"
+    criteria:
+      - "Di bawah 2 jam dari Jakarta Selatan pada pagi hari kerja"
+      - "Ruang meeting dengan cahaya alami dan pemandangan, untuk 35 orang dengan meja tim"
+      - "Bandwidth khusus minimal 100 Mbps; kita bawa jalur cadangan juga"
+      - "Taman atau tepi kolam untuk jeda, BBQ, dan jalan pagi"
+      - "Paket fullboard menginap, twin share, dengan late check-out ruang meeting"
+      - "Musala dekat ruang meeting"
+    options:
+      - name: "Pullman Ciawi Vimala Hills"
+        area: "Ciawi, Bogor · sekitar 1,5 jam"
+        text: "Resor perbukitan menghadap Gunung Gede-Pangrango. Ruang meeting besar, taman luas."
+        pick: true
+      - name: "Royal Tulip Gunung Geulis"
+        area: "Sukaraja, Bogor · sekitar 1,5 jam"
+        text: "Resor golf dengan pemandangan gunung dan area konferensi besar."
+        pick: false
+      - name: "Aston Sentul Lake"
+        area: "Sentul · sekitar 1 jam"
+        text: "Pilihan terdekat, di tepi danau. Pemandangan kurang dramatis, perjalanan paling mudah."
+        pick: false
+    pick_label: "Disarankan"
+    note: "Tarif dan Wi-Fi wajib dicek saat survei lokasi. Kamis–Jumat biasanya lebih murah daripada akhir pekan dan lebih mudah bagi perusahaan mengirim karyawan."
+
+  costs:
+    eyebrow: "Estimasi biaya"
+    title: "Dengan Rp 6 juta acara ini impas, dan pembicara bekerja gratis"
+    intro: "Estimasi di bawah mengasumsikan 24 peserta di resor bintang 4–5, dijual lewat jaringan kita sendiri, jadi tanpa anggaran pemasaran. Semua angka perkiraan, perlu dikonfirmasi ke vendor."
+    head_item: "Pos"
+    head_basis: "Dasar"
+    head_total: "Total"
+    per_pax: "per orang"
+    fixed: "tetap"
+    subtotal: "Subtotal"
+    contingency: "Dana cadangan (10%)"
+    rev_tax: "PPh final 0,5% dari pendapatan (pada Rp 6.000.000 × 24)"
+    total: "Total biaya termasuk pajak"
+    per_head: "Biaya per peserta"
+    tax_title: "Pajak & administrasi lewat PT"
+    tax_notes:
+      - "Pajak penghasilan: kalau PT memenuhi syarat PPh final UMKM (omzet di bawah Rp 4,8 miliar setahun), PT membayar 0,5% dari pendapatan kotor, untung atau tidak. Kalau tidak, PPh badan 22% dari laba, efektif 11% dengan fasilitas Pasal 31E. Keduanya ada di kalkulator."
+      - "PPN: hanya kalau PT sudah PKP. Tawarkan harga korporat \"belum termasuk PPN\" lalu tambahkan 11% di invoice; PPN jadi titipan dan PPN hotel bisa dikreditkan. Kalau harga harus sudah termasuk PPN, tiket Rp 8,5 juta bersihnya hanya sekitar Rp 7,66 juta."
+      - "PPh 23: klien korporat bisa memotong 2% saat membayar PT. Ini pembayaran pajak di muka, bukan biaya, tapi uangnya baru kembali saat SPT tahunan."
+      - "PPh 21: PT wajib memotong pajak atas pembayaran ke perorangan. Untuk pembicara pembuka dan coach, estimasi ini memakai gross-up; bagian laba pembicara dipotong PPh 21 dari bagiannya sendiri."
+      - "Penawaran hotel: minta harga nett. Tarif \"++\" menambah sekitar 21% (service charge dan pajak)."
+    labels:
+      room: "Paket fullboard hotel (kamar twin share, 3 kali makan, 2 rehat kopi, ruang meeting)"
+      extras: "Rehat kopi tambahan Hari 2 dan upgrade makan malam BBQ"
+      ai: "Kredit AI selama acara"
+      kit: "Kit: kaos, buku catatan, stiker, sertifikat"
+      incentive: "Voucher terima kasih untuk pengguna yang diwawancarai"
+      payment: "Payment gateway & administrasi"
+      crew_rooms: "Kamar & makan 6 kru dan coach (single)"
+      keynote: "Tanda terima kasih untuk pembicara pembuka"
+      coaches: "4 coach × 2 hari"
+      bus: "Bus Jakarta–lokasi, pulang pergi"
+      internet: "Internet cadangan (jalur khusus atau satelit)"
+      fun: "Permainan, pemandu yoga, hadiah"
+      docs: "Dokumentasi foto & video"
+      prep: "Survei lokasi & persiapan"
+      pph21: "PPh 21 atas honor pembicara pembuka dan coach (gross-up)"
+      admin: "Administrasi PT: pembukuan, lapor pajak, invoice, e-meterai, biaya bank"
+    verdict_title: "Usulan: harga normal Rp 8,5 juta"
+    verdict_html: "Pembicara dibayar dari laba, jadi harga menentukan penghasilan mereka. Dengan Rp 6 juta dan 24 peserta, acara ini <strong>hanya impas</strong>: pembicara bekerja dua hari nyaris tanpa bayaran. Saya usulkan tiga harga:"
+    prices:
+      - label: "Normal"
+        key: price_normal
+        note: "Kursi dibayar perusahaan"
+      - label: "Early bird"
+        key: price_early
+        note: "8 kursi pertama, sampai 4 minggu sebelum acara"
+      - label: "Tim 3+ orang"
+        key: price_team
+        note: "Per orang, satu perusahaan. Ini kursi yang paling kita incar: satu tim benar-benar bisa mengadopsi."
+    when_6_html: "Rp 6 juta baru menyisakan bagian untuk pembicara kalau memakai hotel bintang 3–4 dan peserta membawa langganan Claude sendiri. Coba di kalkulator."
+    calc_title: "Coba hitung"
+    calc_participants: "Peserta"
+    calc_price: "Rata-rata harga tiket"
+    calc_tier: "Tempat"
+    calc_tier_premium: "Resor bintang 4–5"
+    calc_tier_budget: "Hotel bintang 3–4"
+    calc_ai: "Kredit AI disediakan (tidak: peserta membawa langganan sendiri)"
+    calc_regime: "Pajak penghasilan PT"
+    calc_regime_final: "PPh final 0,5% dari omzet"
+    calc_regime_badan: "PPh badan, 11% dari laba"
+    calc_ppn: "Harga tiket sudah termasuk PPN 11% (PT sudah PKP)"
+    calc_revenue: "Pendapatan (tanpa PPN)"
+    calc_cost: "Total biaya"
+    calc_tax: "Pajak penghasilan"
+    calc_profit: "Laba bersih setelah pajak"
+    calc_pa: "Padepokan Agile"
+    calc_share: "Per bagian pembicara"
+    calc_ricky: "Ricky (pembicara + produser)"
+    calc_breakeven: "Jumlah peserta untuk impas di harga ini"
+    calc_breakeven_price: "Harga impas di jumlah ini"
+    calc_note: "Bagian pembicara sebelum PPh 21 masing-masing. Kalau acara rugi, tidak ada yang dibagi. Angka pajak perkiraan: konfirmasi ke akuntan PT."
+
+  organizers:
+    eyebrow: "Penyelenggara"
+    title: "Siapa mengerjakan apa"
+    split:
+      - name: "Padepokan Agile"
+        items:
+          - "Materi customer research dan adopsi (pilar B dan C)"
+          - "Pembicara The Change Agent dan kandidat The Researcher"
+          - "Menjual kursi lewat jaringan dan klien kita sendiri, termasuk penawaran tim 3 orang"
+          - "Kontrak tempat"
+      - name: "Ricky Saif"
+        items:
+          - "Materi agentic engineering (pilar A), prework, dan checklist"
+          - "Produser acara dan fasilitator utama; mencari kandidat The Shipper dan para coach"
+          - "Halaman ini, halaman pendaftaran, dan kit peserta"
+          - "Sesi tindak lanjut 30 hari"
+          - "Keuangan lewat PT-nya: invoice, pajak, pembayaran ke pembicara dan coach"
+    split_note: "Sepakati pembagian secara tertulis sebelum pendaftaran dibuka."
+    money_title: "Cara laba bersih dibagi"
+    money_intro: "Tidak ada honor tetap untuk pembicara: pembicara berbagi laba, jadi semua untung kalau ruangan penuh. Laba bersih artinya setelah semua biaya dan pajak PT."
+    money_rows:
+      - { key: pa, label: "Padepokan Agile", text: "10% dari laba bersih. Usulan: 15% mulai 30 peserta, karena kelas besar datang dari jaringan Padepokan Agile." }
+      - { key: pool, label: "Pool pembicara", text: "Sisanya, dibagi rata: satu bagian per pembicara (3 praktisi + Ricky), plus satu bagian tambahan untuk produser acara." }
+      - { key: ricky, label: "Ricky Saif", text: "Dua bagian: satu sebagai fasilitator utama dan pembicara, satu sebagai produser acara." }
+    money_example: "Pada Rp 8.500.000 dengan 24 peserta:"
+    money_pa: "Padepokan Agile"
+    money_share: "Setiap pembicara"
+    money_ricky: "Ricky (2 bagian)"
+    timeline_title: "Hitung mundur"
+    timeline:
+      - { when: "Minggu ini", what: "Sepakati tanggal, harga, dan pembagian laba. Buat daftar pendek pembicara." }
+      - { when: "H – 9 minggu", what: "Survei 3 lokasi; tes Wi-Fi dengan 10 laptop." }
+      - { when: "H – 8 minggu", what: "Tanda tangan kontrak tempat. Buka pendaftaran dengan early bird." }
+      - { when: "H – 4 minggu", what: "Early bird ditutup. Pembicara dan coach terkonfirmasi." }
+      - { when: "H – 2 minggu", what: "Minimal 18 kursi terbayar, atau geser tanggal." }
+      - { when: "H – 1 minggu", what: "Kickoff online dan PR setup." }
+      - { when: "H + 30 hari", what: "Check-in online untuk rencana adopsi setiap tim." }
+
+  decisions:
+    title: "Tiga keputusan minggu ini"
+    list:
+      - "Harga: Rp 8,5 juta normal (disarankan) atau Rp 6 juta dengan tempat yang lebih murah"
+      - "Tanggal: 28–29 Januari 2027, atau setelah Lebaran"
+      - "Pembicara: satu nama per persona yang setuju dibayar dari bagian laba, dan konfirmasi Ahmad untuk sambutan pembuka"
+    small: "Halaman internal. Tidak ditautkan dari situs dan tidak diindeks mesin pencari."

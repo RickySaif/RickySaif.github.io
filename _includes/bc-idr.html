@@ -1,0 +1,12 @@
+{%- comment -%} Rupiah with dot separators: {% include bc-idr.html n=1850000 %} gives "Rp 1.850.000". Whole numbers below 1 billion. {%- endcomment -%}
+{%- assign bc_n = include.n | plus: 0 | round -%}
+{%- assign bc_sign = "" -%}
+{%- if bc_n < 0 -%}{%- assign bc_sign = "−" -%}{%- assign bc_n = bc_n | times: -1 -%}{%- endif -%}
+{%- assign bc_m = bc_n | divided_by: 1000000 -%}
+{%- assign bc_t = bc_n | modulo: 1000000 | divided_by: 1000 -%}
+{%- assign bc_u = bc_n | modulo: 1000 -%}
+{%- assign bc_t3 = bc_t | prepend: "00" | slice: -3, 3 -%}
+{%- assign bc_u3 = bc_u | prepend: "00" | slice: -3, 3 -%}
+{%- if bc_m > 0 -%}{{ bc_sign }}Rp {{ bc_m }}.{{ bc_t3 }}.{{ bc_u3 }}
+{%- elsif bc_t > 0 -%}{{ bc_sign }}Rp {{ bc_t }}.{{ bc_u3 }}
+{%- else -%}{{ bc_sign }}Rp {{ bc_u }}{%- endif -%}
