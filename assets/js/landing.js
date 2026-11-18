@@ -12,6 +12,7 @@
  *   [data-cc-timeline]   the line draws, then each step appears
  *   [data-count-to]      counts up from 0
  *   .rs-timescale        working-day lines fill one by one
+ *   [data-cc-adstage]    proof 2: scan, flag, rewrite, Figma; loops 3 times
  *   [data-cc-terminal]   plays each scene: types the prompt, ticks the steps,
  *                        shows the result card; [data-scene-tab] switches scenes
  */
@@ -112,6 +113,53 @@
   });
 
   if (!animate) return;
+
+  // 1b. Ad workflow stage (proof 2). Four steps, matching the numbered list
+  //     beside it: scan the CSV, flag weak ads, sub-agents rewrite them (the
+  //     counter runs), Figma prints the design variations. It loops three
+  //     times, then rests on the finished state.
+  each(document.querySelectorAll("[data-cc-adstage]"), function (stage) {
+    var box = stage.closest(".cc-adcase") || stage;
+    var items = box.querySelectorAll("[data-step-ref]");
+    var count = stage.querySelector("[data-cc-adcount]");
+    var timers = [], plays = 0, maxPlays = 3;
+    var at = [400, 2300, 3700, 6300];          // ms from the start of a round
+    function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+    function set(n) {
+      for (var k = 1; k <= 4; k++) stage.classList.toggle("is-s" + k, k <= n);
+      each(items, function (li) { li.classList.toggle("is-on", +li.getAttribute("data-step-ref") === n); });
+    }
+    function countUp() {
+      var start = null, dur = 2200, to = 100;
+      (function tick(t) {
+        if (start === null) start = t;
+        var p = Math.min(1, (t - start) / dur);
+        count.textContent = Math.round(to * (1 - Math.pow(1 - p, 2))) + (p === 1 ? "+" : "");
+        if (p < 1) requestAnimationFrame(tick);
+      })(performance.now());
+    }
+    function round() {
+      plays++;
+      set(0);
+      if (count) count.textContent = "0";
+      at.forEach(function (ms, k) {
+        later(function () { set(k + 1); if (k === 2 && count) later(countUp, 600); }, ms);
+      });
+      later(function () {
+        if (plays < maxPlays) round();
+        else each(items, function (li) { li.classList.remove("is-on"); });
+      }, at[3] + 5200);
+    }
+    stage.classList.add("is-armed");
+    set(0);
+    if (count) count.textContent = "0";
+    var io = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      later(round, 500);
+    }, { threshold: 0.45 });
+    io.observe(stage);
+  });
 
   var vh = window.innerHeight || document.documentElement.clientHeight;
   var onScreen = function (el) { return el.getBoundingClientRect().top < vh * 0.88; };
