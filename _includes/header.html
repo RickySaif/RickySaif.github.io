@@ -4,6 +4,8 @@
      Book Summary and Articles are hidden for now. To bring them back, add
      "book-summary,writing" to the list. {% endcomment %}
   {% assign nav_items = "claude-code-indonesia,events" | split: "," %}
+  {% comment %} Stay Tuned opens the WhatsApp channel in the page's language. {% endcomment %}
+  {% if site.active_lang == "en" %}{% assign wa_channel = site.whatsapp_channel_url_en %}{% else %}{% assign wa_channel = site.whatsapp_channel_url_id %}{% endif %}
 
   <div class="wrapper">
     <div class="site-header-main">
@@ -17,7 +19,8 @@
       </div>
 
       {% comment %}
-        Desktop nav: horizontal, sticky, with a Stay Tuned CTA (to /stay-tuned/) and
+        Desktop nav: horizontal, sticky, with a Stay Tuned CTA (straight to the WhatsApp
+        channel in the page's language) and
         current-page state. Polyglot rewrites these hrefs to /en/... on the
         English build, so they stay plain site-relative paths.
       {% endcomment %}
@@ -27,7 +30,7 @@
           <a href="{{ href }}" class="{% if page.url contains href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
         {% endfor %}
         {% include language-switch.html %}
-        <a class="site-nav-cta" href="/stay-tuned/">{{ t.join_wa }}</a>
+        <a class="site-nav-cta" href="{{ wa_channel }}" target="_blank" rel="noopener">{{ t.join_wa }}</a>
       </nav>
 
       <label class="menu-toggle-button mobile-menu-toggle-button" for="site-menu-toggle" aria-label="Open menu">
@@ -46,7 +49,7 @@
         <a href="{{ href }}" class="{% if page.url contains href %}is-current{% endif %}"{% if page.url == href %} aria-current="page"{% endif %}>{{ t[item] }}</a>
       {% endfor %}
       {% include language-switch.html %}
-      <a class="rs-btn rs-btn--primary rs-btn--wide site-mobile-cta" href="/stay-tuned/">{{ t.join_wa }}</a>
+      <a class="rs-btn rs-btn--primary rs-btn--wide site-mobile-cta" href="{{ wa_channel }}" target="_blank" rel="noopener">{{ t.join_wa }}</a>
     </nav>
   </div>
 </header>
