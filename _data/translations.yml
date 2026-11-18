@@ -1,6 +1,6 @@
 # Shared UI strings, per language. Rendered by _includes/header.html,
 # footer.html, head.html and the case-study templates.
-# Header order is: Claude Code ID, Events (set in header.html).
+# Header order is: Claude Code Indonesia, Events (set in header.html).
 en:
   identity: "CEO's Partner in the AI Era"
   tagline: "Free AI tools. More sales, more revenue."
@@ -9,7 +9,7 @@ en:
   tools: "Tools"
   writing: "Articles"
   book-summary: "Book Summary"
-  claude-code-id: "Claude Code ID"
+  claude-code-indonesia: "Claude Code Indonesia"
   events: "Events"
   about: "About"
   books: "Books I Authored"
@@ -34,7 +34,7 @@ en:
   flagship: "Flagship"
   more_tools: "More free tools"
   language_name: "English"
-  # Events (/events/, /claude-code-id/)
+  # Events (/events/, /claude-code-indonesia/)
   days: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
   months: [January, February, March, April, May, June, July, August, September, October, November, December]
   months_short: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
@@ -54,7 +54,7 @@ id:
   tools: "Alat"
   writing: "Artikel"
   book-summary: "Ringkasan Buku"
-  claude-code-id: "Claude Code ID"
+  claude-code-indonesia: "Claude Code Indonesia"
   events: "Acara"
   about: "Tentang"
   books: "Buku yang Saya Tulis"
@@ -79,7 +79,7 @@ id:
   flagship: "Unggulan"
   more_tools: "Alat gratis lainnya"
   language_name: "Bahasa Indonesia"
-  # Acara (/events/, /claude-code-id/)
+  # Acara (/events/, /claude-code-indonesia/)
   days: [Minggu, Senin, Selasa, Rabu, Kamis, Jumat, Sabtu]
   months: [Januari, Februari, Maret, April, Mei, Juni, Juli, Agustus, September, Oktober, November, Desember]
   months_short: [Jan, Feb, Mar, Apr, Mei, Jun, Jul, Agu, Sep, Okt, Nov, Des]

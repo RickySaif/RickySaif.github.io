@@ -1,4 +1,4 @@
-# Words for /claude-code-id/ (template: _includes/claude-code-id.html).
+# Words for /claude-code-indonesia/ (template: _includes/claude-code-id.html).
 # One block per language; both blocks have the same keys. Values ending in
 # _html may contain markup. Meetup dates and places come from _data/events.yml.
 
@@ -96,7 +96,7 @@ id:
           trends: ["Reels pendek", "Carousel"]
   community:
     title: "Satu komunitas, tiga hal yang Anda dapat"
-    intro: "Claude Code ID adalah komunitas WhatsApp untuk siapa saja yang ingin mulai memakai Claude Code. Gratis, dan tidak perlu bisa coding dulu."
+    intro: "Claude Code Indonesia adalah komunitas WhatsApp untuk siapa saja yang ingin mulai memakai Claude Code. Gratis, dan tidak perlu bisa coding dulu."
     features:
       - icon: book
         title: "Tutorial langkah demi langkah"
@@ -116,7 +116,7 @@ id:
         - "Buka bio grup, lalu ikuti langkahnya"
         - "Mentok? Tanya di grup itu. Siapa pun boleh jawab."
       chip: "Tidak ada pertanyaan bodoh"
-      groups_alt: "Daftar grup di komunitas WhatsApp Claude Code ID, dari P-00 Setup sampai D-00 Start Here"
+      groups_alt: "Daftar grup di komunitas WhatsApp Claude Code Indonesia, dari P-00 Setup sampai D-00 Start Here"
       lesson_label: "Bio grup"
       lesson_alt: "Bio grup D-04 First App: langkah membuat aplikasi pertama dengan Claude Code"
       tracks_title: "Empat jalur, pilih sesuai kebutuhan"
@@ -137,7 +137,7 @@ id:
       general_html: "Ada juga grup umum: <strong>Ngobrol</strong> untuk diskusi bebas, <strong>Member Showcase</strong> untuk karya anggota, dan <strong>Kopdar</strong> untuk info &amp; dokumentasi pertemuan."
     meetup_title: "Kopdar berikutnya"
     meetup_more: "Lihat semua acara"
-    invite_alt: "Undangan grup WhatsApp Claude Code ID"
+    invite_alt: "Undangan grup WhatsApp Claude Code Indonesia"
     invite_caption: "Klik gambar untuk gabung ke grup WhatsApp"
   problem:
     eyebrow: "Terasa familiar?"
@@ -370,7 +370,7 @@ id:
     question: "Jadi, apa yang akan Anda buat dalam 38 menit?"
   final:
     title: "Jangan belajar sendirian."
-    lead: "Gabung grup WhatsApp Claude Code ID untuk tutorial langkah demi langkah gratis dan teman untuk bertanya. Atau datang langsung ke kopdar di Jakarta."
+    lead: "Gabung grup WhatsApp Claude Code Indonesia untuk tutorial langkah demi langkah gratis dan teman untuk bertanya. Atau datang langsung ke kopdar di Jakarta."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar kopdar"
     small: "Gratis. Tempat kopdar terbatas."
@@ -448,7 +448,7 @@ en:
           trends: ["Short Reels", "Carousels"]
   community:
     title: "One community, three things you get"
-    intro: "Claude Code ID is a WhatsApp community for anyone who wants to start using Claude Code. It's free, and you don't need to code first."
+    intro: "Claude Code Indonesia is a WhatsApp community for anyone who wants to start using Claude Code. It's free, and you don't need to code first."
     features:
       - icon: book
         title: "A step-by-step tutorial"
@@ -468,7 +468,7 @@ en:
         - "Open the group bio and follow the steps"
         - "Stuck? Ask in that group. Anyone can answer."
       chip: "There are no stupid questions"
-      groups_alt: "The list of groups in the Claude Code ID WhatsApp community, from P-00 Setup to D-00 Start Here"
+      groups_alt: "The list of groups in the Claude Code Indonesia WhatsApp community, from P-00 Setup to D-00 Start Here"
       lesson_label: "Group bio"
       lesson_alt: "The D-04 First App group bio: the steps to build a first app with Claude Code, in Indonesian"
       tracks_title: "Four tracks. Pick the one you need."
@@ -489,7 +489,7 @@ en:
       general_html: "There are general groups too: <strong>Ngobrol</strong> for open chat, <strong>Member Showcase</strong> for members' work, and <strong>Kopdar</strong> for meetup info &amp; documentation."
     meetup_title: "Next meetup"
     meetup_more: "See all events"
-    invite_alt: "Claude Code ID WhatsApp group invite"
+    invite_alt: "Claude Code Indonesia WhatsApp group invite"
     invite_caption: "Click the image to join the WhatsApp group"
   problem:
     eyebrow: "Sound familiar?"
@@ -718,7 +718,7 @@ en:
     question: "So, what would you create in 38 minutes?"
   final:
     title: "Don't learn it alone."
-    lead: "Join the Claude Code ID WhatsApp group for a free step-by-step tutorial and people to ask. Or come to a meetup in Jakarta."
+    lead: "Join the Claude Code Indonesia WhatsApp group for a free step-by-step tutorial and people to ask. Or come to a meetup in Jakarta."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the meetup"
     small: "Free. Meetup seats are limited."
