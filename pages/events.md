@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Events"
-subtitle: "Claude Code ID meetups and learning sessions, upcoming and past. Register with the button on each event."
+subtitle: "Claude Code Indonesia meetups and learning sessions, upcoming and past. Register with the button on each event."
 permalink: /events/
 lang: en
 ---
@@ -20,10 +20,10 @@ lang: en
 <section class="rs-section">
   <div class="rs-close-band">
     <h2>Hear about the next one</h2>
-    <p>New meetups are announced in the Claude Code ID WhatsApp group, along with the free step-by-step tutorial.</p>
+    <p>New meetups are announced in the Claude Code Indonesia WhatsApp group, along with the free step-by-step tutorial.</p>
     <div class="rs-cta-row">
       <a class="rs-btn rs-btn--primary" href="{{ site.claude_code_wa_url }}" target="_blank" rel="noopener">Join the WhatsApp group</a>
-      <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/claude-code-id/">What is Claude Code ID?</a>
+      <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/claude-code-indonesia/">What is Claude Code Indonesia?</a>
     </div>
   </div>
 </section>
