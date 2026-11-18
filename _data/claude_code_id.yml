@@ -95,7 +95,6 @@ id:
           trend_label: "Tren Instagram"
           trends: ["Reels pendek", "Carousel"]
   community:
-    eyebrow: "Menang banyak"
     title: "Satu komunitas, tiga hal yang Anda dapat"
     intro: "Claude Code ID adalah komunitas WhatsApp untuk siapa saja yang ingin mulai memakai Claude Code. Gratis, dan tidak perlu bisa coding dulu."
     features:
@@ -109,8 +108,7 @@ id:
         title: "Kopdar di Jakarta"
         text: "Ketemu langsung, tanya apa saja, dan lihat live demo."
     course:
-      eyebrow: "Ditemenin. Pelan-pelan."
-      title: "Satu langkah, satu grup"
+      title: "Satu langkah, satu grup, dibimbing pelan-pelan"
       intro: "Tutorialnya dibagi ke beberapa grup yang berurutan. Tiap grup punya petunjuk di bio grupnya: langkah yang perlu Anda ikuti. Pertanyaan soal satu langkah tetap di grup langkah itu, jadi tidak tenggelam di obrolan lain."
       howto_title: "Cara pakainya"
       howto:
@@ -141,30 +139,59 @@ id:
     meetup_more: "Lihat semua acara"
     invite_alt: "Undangan grup WhatsApp Claude Code ID"
     invite_caption: "Klik gambar untuk gabung ke grup WhatsApp"
+  problem:
+    eyebrow: "Terasa familiar?"
+    title_html: 'Bhinneka Tunggal Ika<br>(Dalam Penderitaan)'
+    personas:
+      - role: "Pemilik bisnis"
+        icon: "briefcase"
+        pains: ["Pesaing baru", "Penjualan lesu", "Hutang supplier numpuk", "Gaji karyawan terancam"]
+        wins: ["Bisa scan internet, cari calon customer", "Bisa ekspansi dengan sukses"]
+      - role: "Karyawan"
+        icon: "users"
+        pains: ["Takut di-PHK", "Rekan yang lebih muda dan gaji lebih kecil, tapi bekerja lebih cepat", "Bingung cari pemasukan tambahan"]
+        wins: ["Beres lebih banyak dengan kualitas yang lebih bagus", "Pulang langsung bisnis sampingan", "Bantu bisnis teman & keluarga pakai AI (sering dibayar padahal ga minta)"]
+      - role: "Pencari kerja"
+        icon: "search"
+        pains: ["Persaingan ketat", "Mencari pembeda", "Ingin rintis bisnis, jaga-jaga kalau ga akan dapat kerja"]
+        wins: ["CV lebih bagus", "Apply lebih banyak", "Ngonten produktif sambil bisnis sampingan", "Bantu bisnis teman & keluarga pakai AI (sering dibayar padahal ga minta)"]
+    point_lead: "Seperti Nabi Sulaiman yang memakai Jin untuk memukau Ratu Bilqis (Sheba),"
+    point: "kamu butuh super power baru. Jauh sebelum pesaingmu menguasainya."
+    answer_intro: "Kekuatan super yang kamu butuhkan bukan memindahkan singgasana Ratu Bilqis (Sheba) dalam sekejap mata. Melainkan:"
+    answer_points:
+      - "Membantu dan mengevaluasi implementasi rencana kamu seperti konsultannya CEO terkenal"
+      - "Menyisir dan menganalisa secara rasional ribuan data dalam hitungan menit, sehingga dapat keputusan terbaik — yang belum terbayang oleh kompetitor kamu"
+      - "Mengambil-alih pekerjaan kamu dengan lebih baik, lebih cerdas, dan lebih kreatif, sehingga kamu punya waktu untuk mengerjakan hal lain"
+    scene:
+      tagline_lead: "Nabi Sulaiman punya Jin."
+      tagline_html: 'Saya punya <span class="cc-grad">Claude Code</span>.'
+      alt: "Lukisan Nabi Sulaiman berdiri di tangga singgasana berhiaskan singa emas, menyambut Ratu Bilqis (Sheba)"
+      credit: "Edward Poynter, The Visit of the Queen of Sheba to King Solomon (1890). Art Gallery of New South Wales. Domain publik, via"
+      source_label: "Wikimedia Commons"
+    bridge: "Apa buktinya?"
   why:
-    eyebrow: "Kenapa ini penting"
     title: "Kenapa Claude Code akan mengubah cara kita bekerja"
-    intro: "Punya ide aplikasi atau website? Selama ini pilihannya cuma dua."
+    intro: "Butuh bikin video, laporan, analisa, atau aplikasi? Selama ini pilihannya cuma dua."
     paths:
       - label: "Pilihan 1"
-        title: "Belajar coding bertahun-tahun"
-        text: "Lama, dan tidak semua orang punya waktunya."
+        title: "Belajar sendiri bertahun-tahun"
+        text: "Editing, coding, olah data: lama, dan tidak semua orang punya waktunya."
       - label: "Pilihan 2"
-        title: "Bayar developer, lalu menunggu"
+        title: "Bayar ahlinya, lalu menunggu"
         text: "Mahal, dan sering antre berminggu-minggu."
       - label: "Pilihan 3 · Baru"
         title: "Jelaskan, lalu Claude Code yang mengerjakan"
-        text: "Anda fokus pada masalahnya. Ia yang menulis kodenya."
+        text: "Anda fokus pada masalahnya. Ia yang mengerjakan."
     what_title: "Apa itu Claude Code?"
     what_text: "Claude Code adalah AI buatan Anthropic yang bekerja langsung di komputer Anda. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
     loop:
       - "Anda menjelaskan tujuannya"
-      - "Ia membuat file dan menulis kode"
+      - "Ia membuat file, menulis kode, mengolah data"
       - "Ia menjalankan dan mengecek hasilnya"
       - "Anda menilai dan memberi masukan"
     loop_note: "Sebelum melakukan hal penting, ia minta izin dulu."
-    vs_title: "Bedanya dengan chatbot"
-    chat_label: "Chatbot biasa"
+    vs_title: "Bedanya dengan Chat AI"
+    chat_label: "Chat AI biasa"
     chat_user: "Bagaimana cara membuat landing page?"
     chat_bot: "Ini contoh kodenya, silakan disalin:"
     chat_after: "Anda yang menyalin, mencoba, dan memperbaiki kalau error."
@@ -175,80 +202,99 @@ id:
       - "Menjalankan di browser"
       - "Memperbaiki error-nya sendiri"
     cc_after: "Anda tinggal menilai hasilnya."
-    analogy_html: "Chatbot itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Claude Code seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas. Ia yang mengerjakan, dan tetap minta izin sebelum membongkar tembok."
-  create:
-    eyebrow: "Bukan cuma kode"
-    title_html: 'Namanya Claude <s class="cc-strike">Code</s>. Harusnya Claude <span class="cc-create-word">Create</span>.'
-    intro: "Kode hanya alatnya. Hasilnya bisa apa saja yang digital: animasi, video dokumenter, explainer, PDF, slide, sampai website."
-    formats:
-      - icon: play
-        title: "Animasi"
-        text: "Motion graphics dan video animasi"
-      - icon: film
-        title: "Video dokumenter"
-        text: "Menyusun rekaman, narasi, dan teks"
-      - icon: spark
-        title: "Explainer"
-        text: "Penjelasan visual yang mudah dipahami"
-      - icon: file
-        title: "PDF & ebook"
-        text: "Laporan, proposal, ebook siap cetak"
-      - icon: slides
-        title: "Slide presentasi"
-        text: "Deck rapi dari catatan Anda"
-      - icon: chart
-        title: "Data & laporan"
-        text: "Merapikan spreadsheet, membuat grafik"
-      - icon: image
-        title: "Infografis & poster"
-        text: "Visual untuk media sosial dan cetak"
-      - icon: globe
-        title: "Website & aplikasi"
-        text: "Ya, kode juga tetap bisa"
-    stories_title: "Kisah nyata di luar software"
-    stories:
-      - tag: "Iklan · Anthropic"
-        title: "Mengetes ratusan variasi iklan dalam hitungan menit"
-        text: "Tim growth marketing Anthropic, pembuat Claude Code, memakai Claude Code untuk membaca data ratusan iklan, menemukan yang kurang berhasil, lalu menulis variasi baru. Hasilnya: ratusan iklan baru dalam hitungan menit, bukan jam."
-        links:
-          - label: "claude.com"
-            url: "https://claude.com/blog/how-anthropic-teams-use-claude-code"
-      - tag: "Video animasi · Remotion"
-        title: "Dari prompt jadi video animasi"
-        text: "Remotion, alat untuk membuat video dengan kode, merilis skills resmi untuk agen AI seperti Claude Code. Agen bisa menyusun animasinya, lalu me-render videonya."
-        links:
-          - label: "remotion.dev"
-            url: "https://www.remotion.dev/docs/ai/skills"
-      - tag: "Video promosi · Ricky Saif"
-        title: "Video di halaman ini"
-        text: "Video 1 menit 45 detik di cerita 2 dibuat dengan Claude Code dan repo OpenMontage, alat produksi video open-source: dari rekaman layar mentah sampai narasi, teks, dan render akhir."
-        links:
-          - label: "Tonton di bawah"
-            url: "#video"
-    closing: "Kalau hasilnya digital dan bisa disalin, kemungkinan besar Claude Code bisa membantu membuatnya."
-  creator:
-    eyebrow: "Bukan programmer. Kreator."
-    title: "Tujuannya bukan jadi programmer. Tujuannya jadi kreator."
-    intro: "Anda tidak perlu menghafal kode. Yang Anda perlukan: paham masalahnya, tahu hasil yang Anda mau, dan bisa menilai hasilnya."
-    personas:
+    analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Claude Code seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
+    bridge: "Tempat terbaik belajar Claude Code?"
+    roles_title: "Siapa pun Anda, ada pekerjaan yang bisa ia ambil alih"
+    roles_intro: "Kalau hasilnya digital, kemungkinan besar Claude Code bisa membantu membuatnya. Beberapa contoh:"
+    roles:
       - icon: store
         title: "Pemilik toko"
-        text: "yang membuat katalog, materi promo, dan landing page sendiri"
+        text: "Katalog produk, foto promo, dan toko online sendiri. Membalas pertanyaan pelanggan yang itu-itu saja."
+      - icon: chart
+        title: "Marketer"
+        text: "Membedah ratusan iklan, menulis variasi baru, dan menyusun laporan kampanye tiap Senin pagi."
+      - icon: film
+        title: "Kreator konten"
+        text: "Memotong video panjang jadi klip pendek lengkap dengan teks, musik, dan thumbnail."
       - icon: school
         title: "Guru"
-        text: "yang membuat materi ajar, kuis, dan animasi penjelasan"
+        text: "Materi ajar, kuis interaktif, animasi penjelasan, dan rekap nilai satu kelas."
       - icon: home
         title: "Orang tua"
-        text: "yang membuat game belajar untuk anaknya"
+        text: "Game belajar yang pas untuk anaknya sendiri, seperti Kebun Makna."
       - icon: file
         title: "Konsultan"
-        text: "yang membuat laporan, proposal, dan slide untuk kliennya"
-    honest_html: "<strong>Satu catatan jujur:</strong> Claude Code bisa salah, jadi hasilnya tetap perlu dicek manusia. Karena itu lebih enak belajar bareng: kita saling berbagi cara memberi arahan yang jelas dan cara mengecek hasilnya."
+        text: "Riset pasar, laporan, proposal, dan slide klien dari catatan rapat yang berantakan."
+      - icon: users
+        title: "HR & rekruter"
+        text: "Menyaring ratusan CV dengan kriteria yang jelas, menyusun soal tes, dan materi onboarding."
+      - icon: search
+        title: "Peneliti & mahasiswa"
+        text: "Merangkum puluhan jurnal, mengolah data survei, dan membuat grafik siap sidang."
+      - icon: briefcase
+        title: "Keuangan & admin"
+        text: "Mencocokkan spreadsheet, menemukan selisih angka, dan membuat laporan bulanan otomatis."
+      - icon: book
+        title: "Penulis"
+        text: "Ebook siap cetak, cek konsistensi naskah, dan landing page untuk bukunya."
+      - icon: shield
+        title: "Legal"
+        text: "Membandingkan versi kontrak dan menandai klausul yang perlu dibaca ulang oleh manusia."
+      - icon: terminal
+        title: "Developer"
+        text: "Menulis, mengetes, dan memperbaiki kode, bahkan di proyek yang belum pernah ia lihat."
+    roles_outro_html: "Ingin Indonesia maju + dapat uang tambahan? <strong>Bantu mereka semua di atas pakai AI</strong> agar lebih efektif &amp; efisien."
+  # Proof 2, appended to the "why" section: an animated case study. The stage
+  # data is an illustration; the numbers in the copy come from the source.
+  adcase:
+    eyebrow: "Bukti 2 · Tim marketing Anthropic"
+    title: "Ratusan variasi iklan baru dalam hitungan menit, bukan jam"
+    intro_html: "Tim growth marketing Anthropic, pembuat Claude Code, bukan tim programmer. Mereka memakai Claude Code untuk pekerjaan yang dulu memakan waktu berjam-jam: membedah performa iklan dan menulis ulang yang lemah."
+    steps:
+      - "Membaca file CSV berisi ratusan iklan beserta performanya"
+      - "Menandai iklan yang performanya lemah"
+      - "Dua sub-agen menulis variasi baru, tetap di dalam batas karakter"
+      - "Plugin Figma buatannya mencetak hingga 100 variasi desain, setengah detik per batch"
+    source_label: "Sumber: claude.com"
+    source_url: "https://claude.com/blog/how-anthropic-teams-use-claude-code"
+    stage:
+      file: "iklan-kuartal-4.csv"
+      rows_label: "ratusan baris"
+      note: "Ilustrasi"
+      col_ad: "Judul iklan"
+      col_ctr: "CTR"
+      weak: "lemah"
+      new: "baru"
+      agents:
+        - "Sub-agen 1 · Analis"
+        - "Sub-agen 2 · Copywriter"
+      rows:
+        - ad: "Coba gratis 14 hari"
+          ctr: "3,8%"
+        - ad: "Solusi terbaik untuk bisnis Anda"
+          ctr: "0,4%"
+          fix: "Hemat 6 jam kerja tiap minggu"
+          len: "29/30"
+        - ad: "Gratis konsultasi pertama"
+          ctr: "3,1%"
+        - ad: "Produk berkualitas tinggi"
+          ctr: "0,6%"
+          fix: "Dipakai 2.000 tim di Indonesia"
+          len: "30/30"
+        - ad: "Daftar sekarang, kuota terbatas"
+          ctr: "2,7%"
+        - ad: "Klik untuk info lebih lanjut"
+          ctr: "0,3%"
+          fix: "Lihat demonya dalam 2 menit"
+          len: "27/30"
+      counter_label: "variasi baru ditulis"
+      figma_label: "Figma · 100 variasi desain"
+      figma_value: "0,5 detik"
   story1:
-    eyebrow: "Cerita 1 · Dari rumah kami sendiri"
+    eyebrow: "Bukti 1 · Game belajar Al-Qur'an"
     title: "Nurul Bahirah membuat versi pertama game belajar Al-Qur'an dalam 2&nbsp;jam"
     name: "Nurul Bahirah"
-    role: "Istri saya · Konsultan pendidikan, lulusan Inggris"
+    role: "Konsultan pendidikan, lulusan Inggris"
     photo_alt: "Foto Nurul Bahirah"
     intro_html: "Nurul adalah konsultan pendidikan lulusan Inggris yang ingin mengajarkan makna Al-Qur'an ke anaknya. Dengan Claude Code, ia membuat <strong>Kebun Makna</strong>: game berkebun gratis untuk anak-anak belajar arti kata demi kata dan bacaan surat-surat pendek Juz 30. Versi pertamanya jadi dalam <strong>2 jam</strong>."
     features:
@@ -266,11 +312,23 @@ id:
         value_html: "Nurul Bahirah, dengan Claude Code"
       - label: "Versi pertama"
         value_html: "2 jam"
-      - label: "Harga"
-        value_html: "Gratis"
+      - label: "Model bisnis"
+        value_html: "Gratis buat semua. Donasi jika suka."
     badge: "Versi pertama: 2 jam"
+    # Before/after card. Bars are person-hours to scale: 2 h against roughly
+    # 5 people x 5 months x 160 h = 4,000 h, so the AI bar is a sliver.
+    compare:
+      title: "Kalau dibuat dengan cara lama"
+      ai_label: "Dengan Claude Code"
+      ai_value: "2 jam · 1 orang"
+      ai_note: "Nurul sendiri, tanpa bisa coding"
+      before_label: "Sebelum ada AI"
+      before_value: "4–6 bulan · 5 orang digaji"
+      before_note: "Game designer, ilustrator pixel art, dua programmer (satu khusus pengenalan suara), dan penguji"
+      caption: "Angka “sebelum ada AI” adalah perkiraan kami untuk game seukuran versi pertama Kebun Makna."
     closing: "Ia tidak memulai dari teknologi. Ia memulai dari hal yang paling ia pahami: cara anak belajar."
-    beta: "Kebun Makna sedang tahap Beta Testing. Minat bantu menyempurnakannya?"
+    launched: "Kebun Makna sudah diluncurkan. Coba sekarang di km.generasimerdeka.com"
+    cta_url: "https://km.generasimerdeka.com"
     cta: "Coba Kebun Makna"
     shots:
       - file: kebun-makna-builder.jpg
@@ -280,11 +338,12 @@ id:
       - file: kebun-makna-lesson.jpg
         alt: "Kebun Makna: Surat An-Nas, kata menyala saat dibaca"
   story2:
-    eyebrow: "Cerita 2 · Dari saya"
-    title: "Landing page dua bahasa dalam 38&nbsp;menit"
+    bridge: "Sebelum gabung, satu bukti lagi. Yang ini bisa Anda tonton sendiri, dari brief pertama sampai hasil akhir."
+    eyebrow: "Bukti 3 · Saya sendiri"
+    title: "Website dengan animasi cantik &amp; canggih: hanya 38&nbsp;menit"
     counter_unit: "menit"
     counter_label: "Waktu kerja Claude, dari brief sampai versi akhir"
-    intro: "Saya ingin mengusulkan tambahan untuk Scrum Guide di era AI. Untuk itu, saya butuh website."
+    intro: "Saya ingin mengusulkan tambahan untuk Scrum Guide di era AI. Untuk itu, saya butuh website dengan animasi yang cantik dan canggih."
     brief: "Syaratnya tidak sedikit. Dua bahasa, Inggris dan Indonesia. Ada blog-nya. Di-hosting di GitHub Pages. Dan setiap kutipan harus sama persis dengan Scrum Guide resminya."
     video_caption: "Rekaman prosesnya, dipercepat jadi 1 menit 45 detik. Bahasa Inggris, dengan teks."
     timeline:
@@ -388,7 +447,6 @@ en:
           trend_label: "Instagram trends"
           trends: ["Short Reels", "Carousels"]
   community:
-    eyebrow: "Win big"
     title: "One community, three things you get"
     intro: "Claude Code ID is a WhatsApp community for anyone who wants to start using Claude Code. It's free, and you don't need to code first."
     features:
@@ -402,8 +460,7 @@ en:
         title: "Meetups in Jakarta"
         text: "Meet in person, ask anything, and watch a live demo."
     course:
-      eyebrow: "Guided. One step at a time."
-      title: "One step, one group"
+      title: "One step, one group, guided at your own pace"
       intro: "The tutorial is split across groups, in order. Each group has its instructions in the group bio: the step to follow. Questions about a step stay in that step's group, so they don't get lost in other chat. The lessons are written in Indonesian."
       howto_title: "How it works"
       howto:
@@ -434,30 +491,59 @@ en:
     meetup_more: "See all events"
     invite_alt: "Claude Code ID WhatsApp group invite"
     invite_caption: "Click the image to join the WhatsApp group"
+  problem:
+    eyebrow: "Sound familiar?"
+    title_html: "Different seats. Same pressure."
+    personas:
+      - role: "Business owner"
+        icon: "briefcase"
+        pains: ["New competitors", "Low sales", "Supplier debts piling up", "Payroll at risk"]
+        wins: ["Scan the internet to find prospective customers", "Expand successfully"]
+      - role: "Employee"
+        icon: "users"
+        pains: ["Afraid of layoff", "Younger colleagues on lower pay, but working faster", "Unsure where to find extra income"]
+        wins: ["Get more done, at higher quality", "Clock out and go straight to your side business", "Use AI to help friends' and family's businesses (often paid without even asking)"]
+      - role: "Job seeker"
+        icon: "search"
+        pains: ["Tight competition", "Looking for a differentiator", "Want to start a business, just in case no job comes"]
+        wins: ["A better CV", "Apply to more jobs", "Create content productively while running a side business", "Use AI to help friends' and family's businesses (often paid without even asking)"]
+    point_lead: "Just like Prophet Solomon used Jinns to impress Queen Bilqis (Sheba),"
+    point: "you need a new superpower. Long before your competitors master it."
+    answer_intro: "The superpower you need is not to teleport Queen Bilqis (Sheba)'s throne in the blink of an eye. It is to:"
+    answer_points:
+      - "Help you carry out your plans and evaluate them, like the consultants famous CEOs hire"
+      - "Sift through and rationally analyse thousands of data points in minutes, so you get to the best decision — one your competitors haven't even imagined"
+      - "Take over your work and do it better, smarter and more creatively, so you have time for other things"
+    scene:
+      tagline_lead: "Prophet Solomon had Jinns."
+      tagline_html: 'I have <span class="cc-grad">Claude Code</span>.'
+      alt: "Painting of King Solomon standing on his throne steps lined with golden lions, welcoming the Queen of Sheba"
+      credit: "Edward Poynter, The Visit of the Queen of Sheba to King Solomon (1890). Art Gallery of New South Wales. Public domain, via"
+      source_label: "Wikimedia Commons"
+    bridge: "Where's the proof?"
   why:
-    eyebrow: "Why it matters"
     title: "Why Claude Code will change the way we work"
-    intro: "Have an idea for an app or a website? Until now you had two choices."
+    intro: "Need a video, a report, an analysis or an app? Until now you had two choices."
     paths:
       - label: "Choice 1"
-        title: "Spend years learning to code"
-        text: "Slow, and not everyone has the time."
+        title: "Spend years learning it yourself"
+        text: "Editing, coding, data work: slow, and not everyone has the time."
       - label: "Choice 2"
-        title: "Pay a developer, then wait"
+        title: "Pay an expert, then wait"
         text: "Expensive, and often weeks in a queue."
       - label: "Choice 3 · New"
         title: "Explain it, and Claude Code does the work"
-        text: "You focus on the problem. It writes the code."
+        text: "You focus on the problem. It does the work."
     what_title: "What is Claude Code?"
     what_text: "Claude Code is an AI from Anthropic that works directly on your computer. You explain what you want in everyday language. Bahasa Indonesia works too."
     loop:
       - "You explain the goal"
-      - "It creates files and writes the code"
+      - "It creates files, writes code, crunches data"
       - "It runs it and checks the result"
       - "You judge it and give feedback"
     loop_note: "Before it does anything important, it asks for your permission."
-    vs_title: "How it differs from a chatbot"
-    chat_label: "A regular chatbot"
+    vs_title: "How it differs from AI chat"
+    chat_label: "A regular AI chat"
     chat_user: "How do I make a landing page?"
     chat_bot: "Here is some example code you can copy:"
     chat_after: "You copy it, try it, and fix it when it breaks."
@@ -468,80 +554,97 @@ en:
       - "Runs it in a browser"
       - "Fixes its own errors"
     cc_after: "You just judge the result."
-    analogy_html: "A chatbot is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. Claude Code is like a <strong>builder who comes to your house</strong> with tools. It does the work, and it still asks before it knocks down a wall."
-  create:
-    eyebrow: "Not only code"
-    title_html: 'It''s called Claude <s class="cc-strike">Code</s>. It should be called Claude <span class="cc-create-word">Create</span>.'
-    intro: "Code is just the tool. The result can be anything digital: animations, documentaries, explainers, PDFs, slides, and yes, websites."
-    formats:
-      - icon: play
-        title: "Animation"
-        text: "Motion graphics and animated videos"
-      - icon: film
-        title: "Documentary video"
-        text: "Footage, narration and captions, put together"
-      - icon: spark
-        title: "Explainers"
-        text: "Visual explanations that are easy to follow"
-      - icon: file
-        title: "PDFs & ebooks"
-        text: "Reports, proposals, print-ready ebooks"
-      - icon: slides
-        title: "Slide decks"
-        text: "A tidy deck from your notes"
-      - icon: chart
-        title: "Data & reports"
-        text: "Clean up spreadsheets, draw charts"
-      - icon: image
-        title: "Infographics & posters"
-        text: "Visuals for social media and print"
-      - icon: globe
-        title: "Websites & apps"
-        text: "Yes, code still works too"
-    stories_title: "Real stories beyond software"
-    stories:
-      - tag: "Ads · Anthropic"
-        title: "Testing hundreds of ad variations in minutes"
-        text: "The growth marketing team at Anthropic, the maker of Claude Code, uses Claude Code to read data on hundreds of ads, find the ones that underperform, and write new variations. The result: hundreds of new ads in minutes instead of hours."
-        links:
-          - label: "claude.com"
-            url: "https://claude.com/blog/how-anthropic-teams-use-claude-code"
-      - tag: "Animated video · Remotion"
-        title: "From a prompt to an animated video"
-        text: "Remotion, a tool for making videos with code, released official skills for AI agents such as Claude Code. The agent can put the animation together and then render the video."
-        links:
-          - label: "remotion.dev"
-            url: "https://www.remotion.dev/docs/ai/skills"
-      - tag: "Promo video · Ricky Saif"
-        title: "The video on this page"
-        text: "The 1 minute 45 second video in story 2 was made with Claude Code and the OpenMontage repo, an open-source video production tool: from raw screen recordings to narration, captions and the final render."
-        links:
-          - label: "Watch it below"
-            url: "#video"
-    closing: "If the result is digital and copyable, Claude Code can most likely help you make it."
-  creator:
-    eyebrow: "Not a programmer. A creator."
-    title: "The goal isn't to become a programmer. It's to become a creator."
-    intro: "You don't need to memorise code. You need to understand the problem, know the result you want, and be able to judge it."
-    personas:
+    analogy_html: "AI chat is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. Claude Code is like a <strong>builder who comes to your house</strong> with tools."
+    bridge: "The best place to learn Claude Code?"
+    roles_title: "Whoever you are, there's work it can take off your hands"
+    roles_intro: "If the result is digital, Claude Code can most likely help you make it. A few examples:"
+    roles:
       - icon: store
-        title: "The shop owner"
-        text: "who makes their own catalogue, promo material and landing page"
+        title: "Shop owners"
+        text: "A product catalogue, promo photos and their own online shop. Answers to the same customer questions, every day."
+      - icon: chart
+        title: "Marketers"
+        text: "Dissect hundreds of ads, write new variations, and put together the campaign report every Monday morning."
+      - icon: film
+        title: "Content creators"
+        text: "Cut long videos into short clips, with captions, music and thumbnails."
       - icon: school
-        title: "The teacher"
-        text: "who makes lessons, quizzes and animated explanations"
+        title: "Teachers"
+        text: "Lessons, interactive quizzes, animated explanations and a whole class's grade summary."
       - icon: home
-        title: "The parent"
-        text: "who makes a learning game for their child"
+        title: "Parents"
+        text: "A learning game made for their own child, like Kebun Makna."
       - icon: file
-        title: "The consultant"
-        text: "who makes reports, proposals and slides for clients"
-    honest_html: "<strong>One honest note:</strong> Claude Code can be wrong, so a person still needs to check the result. That's why learning together helps: we share how to give clear instructions and how to check the work."
+        title: "Consultants"
+        text: "Market research, reports, proposals and client slides from messy meeting notes."
+      - icon: users
+        title: "HR & recruiters"
+        text: "Screen hundreds of CVs against clear criteria, write test questions and onboarding material."
+      - icon: search
+        title: "Researchers & students"
+        text: "Summarise dozens of papers, process survey data and draw charts ready for the defence."
+      - icon: briefcase
+        title: "Finance & admin"
+        text: "Reconcile spreadsheets, find the numbers that don't add up, and automate the monthly report."
+      - icon: book
+        title: "Writers"
+        text: "A print-ready ebook, consistency checks on the manuscript, and a landing page for the book."
+      - icon: shield
+        title: "Legal"
+        text: "Compare contract versions and flag the clauses a person should read again."
+      - icon: terminal
+        title: "Developers"
+        text: "Write, test and fix code, even in a project it has never seen before."
+    roles_outro_html: "Want Indonesia to move forward and earn extra income? <strong>Help everyone above use AI</strong> to work more effectively &amp; efficiently."
+  adcase:
+    eyebrow: "Proof 2 · Anthropic's marketing team"
+    title: "Hundreds of new ad variations in minutes, not hours"
+    intro_html: "The growth marketing team at Anthropic, the maker of Claude Code, isn't a team of programmers. They use Claude Code for work that used to take hours: dissecting ad performance and rewriting the weak ones."
+    steps:
+      - "Reads a CSV file of hundreds of ads and how they performed"
+      - "Flags the ads that underperform"
+      - "Two sub-agents write new variations, within the character limits"
+      - "A Figma plugin it built produces up to 100 design variations, half a second per batch"
+    source_label: "Source: claude.com"
+    source_url: "https://claude.com/blog/how-anthropic-teams-use-claude-code"
+    stage:
+      file: "ads-q4.csv"
+      rows_label: "hundreds of rows"
+      note: "Illustration"
+      col_ad: "Ad headline"
+      col_ctr: "CTR"
+      weak: "weak"
+      new: "new"
+      agents:
+        - "Sub-agent 1 · Analyst"
+        - "Sub-agent 2 · Copywriter"
+      rows:
+        - ad: "Try it free for 14 days"
+          ctr: "3.8%"
+        - ad: "The best solution for your business"
+          ctr: "0.4%"
+          fix: "Save 6 hours of work every week"
+          len: "30/30"
+        - ad: "Free first consultation"
+          ctr: "3.1%"
+        - ad: "High-quality products"
+          ctr: "0.6%"
+          fix: "Used by 2,000 teams in Indonesia"
+          len: "30/30"
+        - ad: "Sign up now, limited seats"
+          ctr: "2.7%"
+        - ad: "Click for more information"
+          ctr: "0.3%"
+          fix: "See the demo in 2 minutes"
+          len: "25/30"
+      counter_label: "new variations written"
+      figma_label: "Figma · 100 design variations"
+      figma_value: "0.5 seconds"
   story1:
-    eyebrow: "Story 1 · From our own home"
+    eyebrow: "Proof 1 · A Qur'an learning game"
     title: "Nurul Bahirah built the first version of a Qur'an learning game in 2&nbsp;hours"
     name: "Nurul Bahirah"
-    role: "My wife · Education consultant, UK graduate"
+    role: "Education consultant, UK graduate"
     photo_alt: "Photo of Nurul Bahirah"
     intro_html: "Nurul is an education consultant and a UK graduate who wants to teach her child the meaning of the Qur'an. With Claude Code, she built <strong>Kebun Makna</strong>: a free farming game where children learn the word-by-word meaning and recitation of the short surahs of Juz 30. The first version took her <strong>2 hours</strong>."
     features:
@@ -559,11 +662,21 @@ en:
         value_html: "Nurul Bahirah, with Claude Code"
       - label: "First version"
         value_html: "2 hours"
-      - label: "Price"
-        value_html: "Free"
+      - label: "Business model"
+        value_html: "Free for everyone. Donate if you like it."
     badge: "First version: 2 hours"
+    compare:
+      title: "If it were built the old way"
+      ai_label: "With Claude Code"
+      ai_value: "2 hours · 1 person"
+      ai_note: "Nurul herself, without knowing how to code"
+      before_label: "Before AI"
+      before_value: "4–6 months · 5 paid people"
+      before_note: "A game designer, a pixel artist, two programmers (one just for speech recognition) and a tester"
+      caption: "The “before AI” figures are our estimate for a game the size of Kebun Makna's first version."
     closing: "She didn't start from the technology. She started from what she understands best: how children learn."
-    beta: "Kebun Makna is in Beta Testing. Want to help improve it?"
+    launched: "Kebun Makna has launched. Try it now at km.generasimerdeka.com"
+    cta_url: "https://km.generasimerdeka.com"
     cta: "Try Kebun Makna"
     shots:
       - file: kebun-makna-builder.jpg
@@ -573,11 +686,12 @@ en:
       - file: kebun-makna-lesson.jpg
         alt: "Kebun Makna: Surah An-Nas, each word lights up as it is recited"
   story2:
-    eyebrow: "Story 2 · From me"
-    title: "A bilingual landing page in 38&nbsp;minutes"
+    bridge: "Before you join, one more proof. This one you can watch for yourself, from the first brief to the finished site."
+    eyebrow: "Proof 3 · Me"
+    title: "A website with beautiful, sophisticated animation: just 38&nbsp;minutes"
     counter_unit: "minutes"
     counter_label: "Claude's working time, from brief to final version"
-    intro: "I wanted to propose an addendum to the Scrum Guide for the AI era. For that, I needed a website."
+    intro: "I wanted to propose an addendum to the Scrum Guide for the AI era. For that, I needed a website with beautiful, sophisticated animation."
     brief: "The brief was not small. Two languages, English and Indonesian. A blog. Hosted on GitHub Pages. And every quote had to match the official Scrum Guide word for word."
     video_caption: "The screen recording, sped up to 1 minute 45 seconds."
     timeline:
