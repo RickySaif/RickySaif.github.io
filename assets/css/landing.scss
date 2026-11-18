@@ -91,6 +91,28 @@
   p { color: var(--cc-on-night-muted); }
 }
 
+/* --- Gradient rims --------------------------------------------------------- */
+/* Cards with a gradient border: the gradient fills the whole card and a
+   rounded ::before paints the inside on top. (The usual two-background
+   padding-box trick makes Safari paint the fill with square corners while
+   the card fades in.) Each card sets --rim-fill and --rim-r. */
+.cc-trouble--win,
+.cc-point,
+.cc-path--new {
+  position: relative;
+  isolation: isolate;
+  background-origin: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border-radius: calc(var(--rim-r) - 1.5px);
+    background: var(--rim-fill);
+  }
+}
+
 /* --- Section heads ---------------------------------------------------------- */
 .cc-head {
   max-width: 760px;
@@ -855,9 +877,9 @@
 .cc-troubles--win { margin-top: clamp(40px, 6vw, 64px); }
 .cc-trouble--win {
   border: 1.5px solid transparent;
-  background:
-    linear-gradient(var(--rs-canvas), var(--rs-canvas)) padding-box,
-    linear-gradient(150deg, var(--cc-warm), rgba(240, 135, 95, .2) 55%, var(--cc-blue)) border-box;
+  --rim-fill: var(--rs-canvas);
+  --rim-r: 22px;
+  background: linear-gradient(150deg, var(--cc-warm), rgba(240, 135, 95, .2) 55%, var(--cc-blue)) border-box;
   box-shadow: 0 24px 48px -30px rgba(240, 135, 95, .55);
 }
 .cc-trouble-wins li {
@@ -922,9 +944,9 @@
   padding: clamp(32px, 5vw, 48px) clamp(24px, 5vw, 56px);
   border: 1.5px solid transparent;
   border-radius: 26px;
-  background:
-    linear-gradient(var(--cc-night), var(--cc-night)) padding-box,
-    linear-gradient(135deg, var(--cc-warm), var(--cc-blue)) border-box;
+  --rim-fill: var(--cc-night);
+  --rim-r: 26px;
+  background: linear-gradient(135deg, var(--cc-warm), var(--cc-blue)) border-box;
   box-shadow: 0 30px 60px -28px rgba(240, 135, 95, .6);
   text-align: center;
 
@@ -1450,9 +1472,9 @@
 
 .cc-path--new {
   border: 1.5px solid transparent;
-  background:
-    linear-gradient(var(--cc-night), var(--cc-night)) padding-box,
-    linear-gradient(135deg, var(--cc-warm), var(--cc-blue)) border-box;
+  --rim-fill: var(--cc-night);
+  --rim-r: 22px;
+  background: linear-gradient(135deg, var(--cc-warm), var(--cc-blue)) border-box;
   box-shadow: 0 30px 60px -28px rgba(240, 135, 95, .6);
 
   h3 { color: var(--cc-on-night); }
