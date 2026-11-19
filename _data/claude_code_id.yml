@@ -22,9 +22,8 @@ d_track:
 
 id:
   hero:
-    badge: "Komunitas gratis · Jakarta"
     title_html: 'Belajar <span class="cc-grad">Claude Code</span> Gratis & Bareng-bareng.'
-    lead: "Grup WhatsApp dengan tutorial langkah demi langkah gratis, teman untuk bertanya, dan kopdar di Jakarta."
+    lead: "Grup WhatsApp gratis berisi tutorial langkah demi langkah dan meetup offline (kopdar) setiap minggu."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar kopdar"
     next_label: "Kopdar berikutnya"
@@ -150,11 +149,11 @@ id:
       - role: "Karyawan"
         icon: "users"
         pains: ["Takut di-PHK", "Rekan yang lebih muda dan gaji lebih kecil, tapi bekerja lebih cepat", "Bingung cari pemasukan tambahan"]
-        wins: ["Beres lebih banyak dengan kualitas yang lebih bagus", "Pulang langsung bisnis sampingan", "Bantu bisnis teman & keluarga pakai AI (sering dibayar padahal ga minta)"]
+        wins: ["Beres lebih banyak dengan kualitas yang lebih bagus", "Pulang langsung bisnis sampingan", "Bantu ajarkan superpower-nya ke teman & keluarga (sering dibayar padahal ga minta)"]
       - role: "Pencari kerja"
         icon: "search"
         pains: ["Persaingan ketat", "Mencari pembeda", "Ingin rintis bisnis, jaga-jaga kalau ga akan dapat kerja"]
-        wins: ["CV lebih bagus", "Apply lebih banyak", "Ngonten produktif sambil bisnis sampingan", "Bantu bisnis teman & keluarga pakai AI (sering dibayar padahal ga minta)"]
+        wins: ["CV lebih bagus", "Apply lebih banyak", "Ngonten produktif sambil bisnis sampingan", "Bantu ajarkan superpower-nya ke teman & keluarga (sering dibayar padahal ga minta)"]
     point_lead: "Seperti Nabi Sulaiman yang memakai Jin untuk memukau Ratu Bilqis (Sheba),"
     point: "kamu butuh super power baru. Jauh sebelum pesaingmu menguasainya."
     answer_intro: "Kekuatan super yang kamu butuhkan bukan memindahkan singgasana Ratu Bilqis (Sheba) dalam sekejap mata. Melainkan:"
@@ -181,17 +180,17 @@ id:
         text: "Mahal, dan sering antre berminggu-minggu."
       - label: "Pilihan 3 · Baru"
         title: "Jelaskan, lalu Claude Code yang mengerjakan"
-        text: "Anda fokus pada masalahnya. Ia yang mengerjakan."
+        text: "Anda fokus pada masalahnya. Claude Code yang mengerjakan."
     what_title: "Apa itu Claude Code?"
     what_text: "Claude Code adalah AI buatan Anthropic yang bekerja langsung di komputer Anda. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
     loop:
       - "Anda menjelaskan tujuannya"
-      - "Ia membuat file, menulis kode, mengolah data"
-      - "Ia menjalankan dan mengecek hasilnya"
+      - "Claude Code membuat file, menulis kode, mengolah data"
+      - "Claude Code menjalankan dan mengecek hasilnya"
       - "Anda menilai dan memberi masukan"
-    loop_note: "Sebelum melakukan hal penting, ia minta izin dulu."
+    loop_note: "Sebelum melakukan hal penting, Claude Code minta izin dulu."
     vs_title: "Bedanya dengan Chat AI"
-    chat_label: "Chat AI biasa"
+    chat_label: "Chat AI biasa (lebih butuh skill prompting)"
     chat_user: "Bagaimana cara membuat landing page?"
     chat_bot: "Ini contoh kodenya, silakan disalin:"
     chat_after: "Anda yang menyalin, mencoba, dan memperbaiki kalau error."
@@ -204,7 +203,7 @@ id:
     cc_after: "Anda tinggal menilai hasilnya."
     analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Claude Code seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
     bridge: "Tempat terbaik belajar Claude Code?"
-    roles_title: "Siapa pun Anda, ada pekerjaan yang bisa ia ambil alih"
+    roles_title: "Siapa pun Anda, ada pekerjaan yang bisa Claude Code ambil alih"
     roles_intro: "Kalau hasilnya digital, kemungkinan besar Claude Code bisa membantu membuatnya. Beberapa contoh:"
     roles:
       - icon: store
@@ -242,7 +241,7 @@ id:
         text: "Membandingkan versi kontrak dan menandai klausul yang perlu dibaca ulang oleh manusia."
       - icon: terminal
         title: "Developer"
-        text: "Menulis, mengetes, dan memperbaiki kode, bahkan di proyek yang belum pernah ia lihat."
+        text: "Menulis, mengetes, dan memperbaiki kode, bahkan di proyek yang belum pernah Claude Code lihat."
     roles_outro_html: "Ingin Indonesia maju + dapat uang tambahan? <strong>Bantu mereka semua di atas pakai AI</strong> agar lebih efektif &amp; efisien."
   # Proof 2, appended to the "why" section: an animated case study. The stage
   # data is an illustration; the numbers in the copy come from the source.
@@ -352,13 +351,13 @@ id:
         text: "Saya menulis brief di terminal."
       - time: "Sebelum menulis"
         title: "Cek sumber asli"
-        text: "Ia membuka Scrum Guide di browser, mengecek versi terbaru dan lisensinya."
+        text: "Claude Code membuka Scrum Guide di browser, mengecek versi terbaru dan lisensinya."
       - time: "Menit 16"
         title: "Versi pertama"
-        text: "Dua bahasa dan desainnya, sudah ia tes sendiri di layar laptop dan HP."
+        text: "Dua bahasa dan desainnya, sudah Claude Code tes sendiri di layar laptop dan HP."
       - time: "Total 38 menit"
         title: "Versi akhir"
-        text: "Untuk setiap catatan bernomor dari saya, ia memperbaiki lalu mengecek ulang."
+        text: "Untuk setiap catatan bernomor dari saya, Claude Code memperbaiki lalu mengecek ulang."
     ts_title: "Waktu kerja, digambar sesuai skala"
     ts_ai_label: "Dengan Claude Code"
     ts_ai_value: "38 menit"
@@ -377,9 +376,8 @@ id:
 
 en:
   hero:
-    badge: "Free community · Jakarta"
     title_html: 'Learn <span class="cc-grad">Claude Code</span> Free & Together.'
-    lead: "A WhatsApp group with a free step-by-step tutorial, people to ask, and meetups in Jakarta."
+    lead: "A free WhatsApp group with step-by-step tutorials and weekly offline meetups (kopdar)."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the meetup"
     next_label: "Next meetup"
@@ -502,11 +500,11 @@ en:
       - role: "Employee"
         icon: "users"
         pains: ["Afraid of layoff", "Younger colleagues on lower pay, but working faster", "Unsure where to find extra income"]
-        wins: ["Get more done, at higher quality", "Clock out and go straight to your side business", "Use AI to help friends' and family's businesses (often paid without even asking)"]
+        wins: ["Get more done, at higher quality", "Clock out and go straight to your side business", "Help teach its superpower to friends & family (often paid without even asking)"]
       - role: "Job seeker"
         icon: "search"
         pains: ["Tight competition", "Looking for a differentiator", "Want to start a business, just in case no job comes"]
-        wins: ["A better CV", "Apply to more jobs", "Create content productively while running a side business", "Use AI to help friends' and family's businesses (often paid without even asking)"]
+        wins: ["A better CV", "Apply to more jobs", "Create content productively while running a side business", "Help teach its superpower to friends & family (often paid without even asking)"]
     point_lead: "Just like Prophet Solomon used Jinns to impress Queen Bilqis (Sheba),"
     point: "you need a new superpower. Long before your competitors master it."
     answer_intro: "The superpower you need is not to teleport Queen Bilqis (Sheba)'s throne in the blink of an eye. It is to:"
@@ -543,7 +541,7 @@ en:
       - "You judge it and give feedback"
     loop_note: "Before it does anything important, it asks for your permission."
     vs_title: "How it differs from AI chat"
-    chat_label: "A regular AI chat"
+    chat_label: "A regular AI chat (needs more prompting skill)"
     chat_user: "How do I make a landing page?"
     chat_bot: "Here is some example code you can copy:"
     chat_after: "You copy it, try it, and fix it when it breaks."
@@ -595,7 +593,7 @@ en:
       - icon: terminal
         title: "Developers"
         text: "Write, test and fix code, even in a project it has never seen before."
-    roles_outro_html: "Want Indonesia to move forward and earn extra income? <strong>Help everyone above use AI</strong> to work more effectively &amp; efficiently."
+    roles_outro_html: "Want Indonesia to move forward while you earn extra income? <strong>Help everyone above use AI</strong> to work more effectively &amp; efficiently."
   adcase:
     eyebrow: "Proof 2 · Anthropic's marketing team"
     title: "Hundreds of new ad variations in minutes, not hours"
