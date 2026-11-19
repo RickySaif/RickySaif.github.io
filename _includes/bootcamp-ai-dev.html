@@ -1,0 +1,487 @@
+{% comment %}
+  /bootcamp-ai-dev/ in the active language: an internal organizer brief for
+  the AI-Powered Development Bootcamp (Padepokan Agile x Ricky Saif).
+  Words and numbers: _data/bootcamp_ai_dev.yml. Base styles: landing.scss;
+  page styles: assets/css/bootcamp.scss. The cost table is rendered here from
+  the data; the calculator script below only recomputes it live.
+{% endcomment %}
+{%- assign b = site.data.bootcamp_ai_dev[site.active_lang] -%}
+{%- assign num = site.data.bootcamp_ai_dev.numbers -%}
+{%- assign n = num.participants -%}
+<link rel="stylesheet" href="{{ "/assets/css/bootcamp.css" | relative_url }}">
+
+<!-- ============================== Hero ============================== -->
+<section class="cc-hero cc-dark">
+  <div class="cc-hero-bg" aria-hidden="true">
+    <span class="cc-glow cc-glow--warm"></span>
+    <span class="cc-glow cc-glow--blue"></span>
+  </div>
+  <div class="cc-container cc-hero-grid">
+    <div class="cc-hero-copy">
+      <p class="cc-badge" data-reveal><span class="cc-live-dot"></span>{{ b.hero.badge }}</p>
+      <h1 data-reveal style="--d:1">{{ b.hero.title_html }}</h1>
+      <p class="cc-lead" data-reveal style="--d:2">{{ b.hero.lead }}</p>
+      <div class="cc-actions" data-reveal style="--d:3">
+        <a class="cc-btn cc-btn--warm" href="#rundown">{% include cc-icon.html name="calendar" size=20 %}{{ b.hero.cta_primary }}</a>
+        <a class="cc-btn cc-btn--ghost" href="#costs">{{ b.hero.cta_secondary }}{% include cc-icon.html name="arrow" size=18 %}</a>
+      </div>
+    </div>
+
+    <div class="bc-glance-wrap" data-reveal style="--d:2">
+      <div class="bc-glance">
+        <p class="bc-glance-title">{% include cc-icon.html name="file" size=16 %}{{ b.hero.glance_title }}</p>
+        <dl>
+          {%- for g in b.hero.glance %}
+          <div><dt>{{ g.label }}</dt><dd>{{ g.value }}</dd></div>
+          {%- endfor %}
+        </dl>
+        <div class="bc-glance-pillars" aria-hidden="true">
+          {%- for p in b.pillars.list %}<span class="bc-pill bc-pill--{{ p.code | downcase }}">{{ p.code }} · {{ p.name }}</span>{% endfor %}
+        </div>
+      </div>
+      <span class="cc-chip bc-glance-chip">{% include cc-icon.html name="spark" size=16 %}{{ b.hero.chip }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== Why ============================== -->
+<section class="cc-section cc-section--surface">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ b.why.eyebrow }}</p>
+      <h2>{{ b.why.title }}</h2>
+      <p class="cc-sub">{{ b.why.intro }}</p>
+    </header>
+    <div class="cc-paths">
+      {%- for p in b.why.paths %}
+      <article class="cc-path{% if forloop.last %} cc-path--new{% endif %}" data-reveal style="--d:{{ forloop.index }}">
+        <span class="cc-path-icon">{% if forloop.last %}{% include cc-icon.html name="spark" size=22 %}{% else %}{% include cc-icon.html name="cross" size=22 %}{% endif %}</span>
+        <p class="cc-path-label">{{ p.label }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="bc-source" data-reveal>{{ b.why.source_html }}</p>
+  </div>
+</section>
+
+<!-- ============================= Pillars ============================ -->
+<section class="cc-section" id="pillars">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ b.pillars.eyebrow }}</p>
+      <h2>{{ b.pillars.title }}</h2>
+      <p class="cc-sub">{{ b.pillars.intro }}</p>
+    </header>
+    <div class="cc-features">
+      {%- for p in b.pillars.list %}
+      <article class="cc-feature bc-pillar bc-pillar--{{ p.code | downcase }}" data-reveal style="--d:{{ forloop.index }}">
+        <span class="cc-feature-icon">{% include cc-icon.html name=p.icon size=26 %}</span>
+        <p class="bc-pillar-share">{{ p.code }} · {{ p.share }}</p>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <!-- Material -->
+    <header class="cc-head bc-subhead" data-reveal>
+      <p class="cc-eyebrow">{{ b.material.eyebrow }}</p>
+      <h3 class="cc-h3">{{ b.material.title }}</h3>
+      <p class="cc-sub">{{ b.material.intro }}</p>
+    </header>
+    <div class="bc-modules" role="table" aria-label="{{ b.material.eyebrow }}">
+      <div class="bc-module bc-module--head" role="row">
+        <span role="columnheader">{{ b.material.head_module }}</span>
+        <span role="columnheader">{{ b.material.head_learn }}</span>
+        <span role="columnheader">{{ b.material.head_artifact }}</span>
+        <span role="columnheader">{{ b.material.head_when }}</span>
+      </div>
+      {%- for m in b.material.modules %}
+      <div class="bc-module bc-module--{{ m.pillar | downcase }}" role="row" data-reveal>
+        <span class="bc-module-name" role="cell"><b class="bc-code">{{ m.code }}</b>{{ m.name }}</span>
+        <span class="bc-module-learn" role="cell">{{ m.learn }}</span>
+        <span class="bc-module-artifact" role="cell">{% include cc-icon.html name="check" size=15 %}{{ m.artifact }}</span>
+        <span class="bc-module-when" role="cell">{{ m.when }}</span>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================= Outcomes =========================== -->
+<section class="cc-section cc-dark bc-outcomes">
+  <div class="cc-hero-bg" aria-hidden="true"><span class="cc-glow cc-glow--warm cc-glow--low"></span></div>
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ b.outcomes.eyebrow }}</p>
+      <h2>{{ b.outcomes.title }}</h2>
+    </header>
+    <div class="bc-two">
+      <div class="bc-out-card" data-reveal style="--d:1">
+        <p class="bc-out-title">{% include cc-icon.html name="terminal" size=20 %}{{ b.outcomes.prod_title }}</p>
+        <ul class="bc-checks">
+          {%- for x in b.outcomes.prod %}<li>{% include cc-icon.html name="check" size=16 %}<span>{{ x }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      <div class="bc-out-card bc-out-card--plan" data-reveal style="--d:2">
+        <p class="bc-out-title">{% include cc-icon.html name="chart" size=20 %}{{ b.outcomes.plan_title }}</p>
+        <ul class="bc-checks">
+          {%- for x in b.outcomes.plan %}<li>{% include cc-icon.html name="check" size=16 %}<span>{{ x }}</span></li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Rundown =========================== -->
+<section class="cc-section cc-section--surface" id="rundown">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ b.rundown.eyebrow }}</p>
+      <h2>{{ b.rundown.title }}</h2>
+      <p class="cc-sub">{{ b.rundown.intro }}</p>
+    </header>
+    <ul class="bc-legend" data-reveal>
+      {%- for l in b.rundown.legend %}<li class="bc-kind--{{ l[0] }}"><i></i>{{ l[1] }}</li>{% endfor %}
+    </ul>
+    <div class="bc-days">
+      {%- for d in b.rundown.days %}
+      <article class="bc-day{% if forloop.first %} bc-day--pre{% endif %}" data-reveal style="--d:{{ forloop.index0 }}">
+        <header class="bc-day-head">
+          <h3>{{ d.name }}</h3>
+          <p>{{ d.date }}</p>
+        </header>
+        <ol class="bc-slots">
+          {%- for s in d.items %}
+          <li class="bc-slot bc-kind--{{ s.kind }}">
+            <span class="bc-slot-time">{{ s.time }}</span>
+            <span class="bc-slot-body"><strong>{{ s.title }}</strong>{% if s.text != "" %}<span>{{ s.text }}</span>{% endif %}</span>
+          </li>
+          {%- endfor %}
+        </ol>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <header class="cc-head bc-subhead" data-reveal>
+      <p class="cc-eyebrow">{{ b.fun.eyebrow }}</p>
+      <h3 class="cc-h3">{{ b.fun.title }}</h3>
+      <p class="cc-sub">{{ b.fun.intro }}</p>
+    </header>
+    <div class="cc-formats bc-fun">
+      {%- for f in b.fun.list %}
+      <div class="cc-format" data-reveal style="--d:{{ forloop.index0 | modulo: 3 }}">
+        <span class="cc-format-icon">{% include cc-icon.html name=f.icon size=24 %}</span>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================== People ============================ -->
+<section class="cc-section" id="speakers">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ b.people.eyebrow }}</p>
+      <h2>{{ b.people.title }}</h2>
+      <p class="cc-sub">{{ b.people.intro }}</p>
+    </header>
+
+    <div class="bc-opening" data-reveal>
+      <span class="bc-avatar bc-avatar--open" aria-hidden="true">{% include cc-icon.html name="mic" size=26 %}</span>
+      <div>
+        <p class="bc-label">{{ b.people.opening_label }}</p>
+        <p class="bc-opening-name">{{ b.people.opening_name }}</p>
+        <p>{{ b.people.opening_text }}</p>
+      </div>
+    </div>
+
+    <div class="bc-people">
+      {%- for p in b.people.personas %}
+      <article class="bc-person" data-reveal style="--d:{{ forloop.index0 }}">
+        <span class="bc-avatar" aria-hidden="true">{{ p.name | remove: "The " | slice: 0 }}</span>
+        <p class="bc-label">{{ p.pillar }}</p>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.who }}</p>
+        <p class="bc-talk">{% include cc-icon.html name="mic" size=15 %}{{ p.talk }}</p>
+        {%- if p.look_for != "" %}
+        <p class="bc-look">{{ p.look_for }}</p>
+        {%- endif %}
+        {%- if p.person %}
+        <p class="bc-cand">{{ b.people.confirmed_label }}: <strong>{{ p.person }}</strong></p>
+        {%- elsif p.look_for != "" %}
+        <p class="bc-cand">{{ b.people.candidate_label }}: <em>{{ b.people.tbd }}</em></p>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="bc-coaches" data-reveal>{% include cc-icon.html name="users" size=20 %}<span><strong>{{ b.people.coaches_title }}.</strong> {{ b.people.coaches_text }}</span></p>
+  </div>
+</section>
+
+<!-- =============================== Venue ============================ -->
+<section class="cc-section cc-section--warm" id="venue">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ b.venue.eyebrow }}</p>
+      <h2>{{ b.venue.title }}</h2>
+      <p class="cc-sub">{{ b.venue.intro }}</p>
+    </header>
+    <div class="bc-venue">
+      <div class="bc-venue-criteria" data-reveal>
+        <p class="bc-out-title">{% include cc-icon.html name="shield" size=20 %}{{ b.venue.criteria_title }}</p>
+        <ul class="bc-checks bc-checks--light">
+          {%- for x in b.venue.criteria %}<li>{% include cc-icon.html name="check" size=16 %}<span>{{ x }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      <div class="bc-venue-options">
+        {%- for v in b.venue.options %}
+        <article class="cc-path{% if v.pick %} cc-path--new{% endif %} bc-venue-card" data-reveal style="--d:{{ forloop.index }}">
+          <span class="cc-path-icon">{% include cc-icon.html name="pin" size=22 %}</span>
+          <p class="cc-path-label">{% if v.pick %}{{ b.venue.pick_label }} · {% endif %}{{ v.area }}</p>
+          <h3>{{ v.name }}</h3>
+          <p>{{ v.text }}</p>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+    <p class="bc-source" data-reveal>{{ b.venue.note }}</p>
+  </div>
+</section>
+
+<!-- =============================== Costs ============================ -->
+{%- assign c = b.costs -%}
+{%- assign subtotal = 0 -%}
+<section class="cc-section cc-section--surface" id="costs">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ c.eyebrow }}</p>
+      <h2>{{ c.title }}</h2>
+      <p class="cc-sub">{{ c.intro }}</p>
+    </header>
+
+    <div class="bc-costs-grid">
+      <div class="bc-costs-main">
+      <div class="bc-table-wrap" data-reveal>
+        <table class="bc-table">
+          <thead><tr><th>{{ c.head_item }}</th><th>{{ c.head_basis }}</th><th>{{ c.head_total }}</th></tr></thead>
+          <tbody>
+            {%- for row in num.costs %}
+            {%- if row.per == "pax" -%}{%- assign line = row.amount | times: n -%}{%- else -%}{%- assign line = row.amount -%}{%- endif -%}
+            {%- assign subtotal = subtotal | plus: line %}
+            <tr data-cost="{{ row.key }}">
+              <td>{{ c.labels[row.key] }}</td>
+              <td class="bc-basis">{% include bc-idr.html n=row.amount %} {% if row.per == "pax" %}× {{ n }} {{ c.per_pax }}{% else %}{{ c.fixed }}{% endif %}</td>
+              <td class="bc-num">{% include bc-idr.html n=line %}</td>
+            </tr>
+            {%- endfor %}
+            {%- assign reserve = subtotal | times: num.contingency | divided_by: 100 -%}
+            {%- assign rev_tax = num.price_asked | times: n | times: num.tax.pph_final | divided_by: 100 | round -%}
+            {%- assign total = subtotal | plus: reserve | plus: rev_tax -%}
+            {%- assign per_head = total | divided_by: n %}
+          </tbody>
+          <tfoot>
+            <tr><td colspan="2">{{ c.subtotal }}</td><td class="bc-num">{% include bc-idr.html n=subtotal %}</td></tr>
+            <tr><td colspan="2">{{ c.contingency }}</td><td class="bc-num">{% include bc-idr.html n=reserve %}</td></tr>
+            <tr><td colspan="2">{{ c.rev_tax }}</td><td class="bc-num">{% include bc-idr.html n=rev_tax %}</td></tr>
+            <tr class="bc-total"><td colspan="2">{{ c.total }}</td><td class="bc-num">{% include bc-idr.html n=total %}</td></tr>
+            <tr class="bc-total"><td colspan="2">{{ c.per_head }}</td><td class="bc-num">{% include bc-idr.html n=per_head %}</td></tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="bc-tax" data-reveal>
+        <p class="bc-out-title">{% include cc-icon.html name="file" size=20 %}{{ c.tax_title }}</p>
+        <ul>
+          {%- for t in c.tax_notes %}<li>{{ t }}</li>{% endfor %}
+        </ul>
+      </div>
+      </div>
+
+      <div class="bc-side">
+        <div class="bc-verdict" data-reveal>
+          <p class="bc-out-title">{% include cc-icon.html name="spark" size=20 %}{{ c.verdict_title }}</p>
+          <p>{{ c.verdict_html }}</p>
+          <ul class="bc-prices">
+            {%- for p in c.prices %}
+            <li><span class="bc-price-label">{{ p.label }}</span>{%- assign pv = num[p.key] -%}<span class="bc-price">{% include bc-idr.html n=pv %}</span><span class="bc-price-note">{{ p.note }}</span></li>
+            {%- endfor %}
+          </ul>
+          <p class="bc-small">{{ c.when_6_html }}</p>
+        </div>
+
+        <form class="bc-calc" data-bc-calc data-reveal onsubmit="return false">
+          <p class="bc-out-title">{% include cc-icon.html name="chart" size=20 %}{{ c.calc_title }}</p>
+          <label class="bc-field">
+            <span>{{ c.calc_participants }} <output data-out="n">{{ n }}</output></span>
+            <input type="range" name="n" min="8" max="20" step="1" value="{{ n }}">
+          </label>
+          <label class="bc-field">
+            <span>{{ c.calc_price }}</span>
+            <span class="bc-input-rp"><i>Rp</i><input type="number" name="price" min="1000000" step="250000" value="{{ num.price_asked }}" inputmode="numeric"></span>
+          </label>
+          <fieldset class="bc-field bc-seg">
+            <legend>{{ c.calc_tier }}</legend>
+            <label><input type="radio" name="tier" value="premium" checked><span>{{ c.calc_tier_premium }}</span></label>
+            <label><input type="radio" name="tier" value="budget"><span>{{ c.calc_tier_budget }}</span></label>
+          </fieldset>
+          <fieldset class="bc-field bc-seg">
+            <legend>{{ c.calc_regime }}</legend>
+            <label><input type="radio" name="regime" value="final" checked><span>{{ c.calc_regime_final }}</span></label>
+            <label><input type="radio" name="regime" value="badan"><span>{{ c.calc_regime_badan }}</span></label>
+          </fieldset>
+          <label class="bc-check"><input type="checkbox" name="ppn"><span>{{ c.calc_ppn }}</span></label>
+          <dl class="bc-calc-out">
+            <div><dt>{{ c.calc_revenue }}</dt><dd data-out="revenue">–</dd></div>
+            <div><dt>{{ c.calc_cost }}</dt><dd data-out="cost">–</dd></div>
+            <div><dt>{{ c.calc_tax }}</dt><dd data-out="tax">–</dd></div>
+            <div class="bc-profit"><dt>{{ c.calc_profit }}</dt><dd data-out="profit">–</dd></div>
+            <div><dt>{{ c.calc_pa }} <span data-out="pa_pct"></span></dt><dd data-out="pa">–</dd></div>
+            <div><dt>{{ c.calc_share }}</dt><dd data-out="share">–</dd></div>
+            <div><dt>{{ c.calc_ricky }}</dt><dd data-out="ricky">–</dd></div>
+            <div><dt>{{ c.calc_breakeven }}</dt><dd data-out="be_n">–</dd></div>
+            <div><dt>{{ c.calc_breakeven_price }}</dt><dd data-out="be_price">–</dd></div>
+          </dl>
+          <p class="bc-small">{{ c.calc_note }}</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} Worked example of the split at the normal price and the planned size. {%- endcomment -%}
+{%- assign cost_all = subtotal | plus: reserve -%}
+{%- assign ex_rev = num.price_normal | times: n -%}
+{%- assign ex_tax = ex_rev | times: num.tax.pph_final | divided_by: 100 | round -%}
+{%- assign ex_profit = ex_rev | minus: cost_all | minus: ex_tax -%}
+{%- assign ex_pa = ex_profit | times: num.split.pa | divided_by: 100 | round -%}
+{%- assign ex_shares = num.split.speakers | plus: num.split.producer_shares -%}
+{%- assign ex_share = ex_profit | minus: ex_pa | divided_by: ex_shares | round -%}
+{%- assign ex_ricky = ex_share | times: 2 -%}
+<!-- ============================ Organizers ========================== -->
+<section class="cc-section" id="organizers">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ b.organizers.eyebrow }}</p>
+      <h2>{{ b.organizers.title }}</h2>
+    </header>
+    <div class="bc-two">
+      {%- for o in b.organizers.split %}
+      <div class="cc-feature bc-org" data-reveal style="--d:{{ forloop.index }}">
+        <h3>{{ o.name }}</h3>
+        <ul class="bc-checks bc-checks--light">
+          {%- for x in o.items %}<li>{% include cc-icon.html name="check" size=16 %}<span>{{ x }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+
+    {%- assign o = b.organizers %}
+    <div class="bc-money" data-reveal>
+      <div class="bc-money-copy">
+        <p class="bc-out-title">{% include cc-icon.html name="chart" size=20 %}{{ o.money_title }}</p>
+        <p>{{ o.money_intro }}</p>
+        <ul class="bc-money-rows">
+          {%- for r in o.money_rows %}<li class="bc-money--{{ r.key }}"><strong>{{ r.label }}</strong><span>{{ r.text }}</span></li>{% endfor %}
+        </ul>
+      </div>
+      <div class="bc-money-ex">
+        <p class="bc-label">{{ o.money_example }}</p>
+        <dl>
+          <div><dt>{{ b.costs.calc_profit }}</dt><dd>{% include bc-idr.html n=ex_profit %}</dd></div>
+          <div><dt>{{ o.money_pa }} ({{ num.split.pa }}%)</dt><dd>{% include bc-idr.html n=ex_pa %}</dd></div>
+          <div><dt>{{ o.money_share }}</dt><dd>{% include bc-idr.html n=ex_share %}</dd></div>
+          <div class="bc-money-hi"><dt>{{ o.money_ricky }}</dt><dd>{% include bc-idr.html n=ex_ricky %}</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="bc-source" data-reveal>{{ b.organizers.split_note }}</p>
+
+    <h3 class="cc-h3 cc-center bc-countdown-title" data-reveal>{{ b.organizers.timeline_title }}</h3>
+    <ol class="bc-countdown" data-reveal>
+      {%- for t in b.organizers.timeline %}
+      <li><span class="bc-when">{{ t.when }}</span><span>{{ t.what }}</span></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<!-- ============================== Final ============================= -->
+<section class="cc-final cc-dark">
+  <div class="cc-hero-bg" aria-hidden="true">
+    <span class="cc-glow cc-glow--warm cc-glow--center"></span>
+  </div>
+  <div class="cc-container cc-final-inner">
+    <h2 data-reveal>{{ b.decisions.title }}</h2>
+    <ol class="bc-decisions" data-reveal style="--d:1">
+      {%- for d in b.decisions.list %}<li><span class="cc-loop-num">{{ forloop.index }}</span>{{ d }}</li>{% endfor %}
+    </ol>
+    <p class="cc-small" data-reveal style="--d:2">{{ b.decisions.small }}</p>
+  </div>
+</section>
+
+<script type="application/json" id="bc-numbers">{{ num | jsonify }}</script>
+<script>
+(function () {
+  "use strict";
+  var form = document.querySelector("[data-bc-calc]");
+  var src = document.getElementById("bc-numbers");
+  if (!form || !src) return;
+  var num = JSON.parse(src.textContent);
+  function rp(v) {
+    // Rupiah always uses dot separators, in both languages.
+    var s = Math.round(Math.abs(v)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return (v < 0 ? "−" : "") + "Rp " + s;
+  }
+  function out(k, v) { var el = form.querySelector('[data-out="' + k + '"]'); if (el) el.textContent = v; }
+  function costs(tier) {
+    var pax = 0, fixed = 0;
+    num.costs.forEach(function (c) {
+      var a = c.amount;
+      if (c.key === "room") a = num.tiers[tier];
+      if (c.per === "pax") pax += a; else fixed += a;
+    });
+    var k = 1 + num.contingency / 100;
+    return { pax: pax * k, fixed: fixed * k };
+  }
+  function update() {
+    var n = +form.n.value;
+    var price = +form.price.value || 0;
+    var tier = form.querySelector('input[name="tier"]:checked').value;
+    var c = costs(tier);
+    var regime = form.querySelector('input[name="regime"]:checked').value;
+    var vat = form.ppn.checked ? 1 + num.tax.ppn / 100 : 1;
+    var fin = regime === "final" ? num.tax.pph_final / 100 : 0;
+    var net = price / vat;                      // per ticket, excluding PPN
+    var cost = c.fixed + c.pax * n;
+    var revenue = net * n;
+    var pre = revenue - cost - revenue * fin;
+    var tax = regime === "final" ? revenue * fin : Math.max(0, pre) * num.tax.pph_badan / 100;
+    var profit = regime === "final" ? pre : pre - tax;
+    out("n", n);
+    out("revenue", rp(revenue));
+    out("cost", rp(cost));
+    var sp = num.split;
+    var paPct = n >= sp.pa_big_from ? sp.pa_big : sp.pa;
+    var left = Math.max(0, profit);
+    var pa = left * paPct / 100;
+    var share = (left - pa) / (sp.speakers + sp.producer_shares);
+    out("pa_pct", "(" + paPct + "%)");
+    out("pa", rp(pa));
+    out("share", rp(share));
+    out("ricky", rp(share * (1 + sp.producer_shares)));
+    out("tax", rp(tax));
+    out("profit", rp(profit));
+    form.querySelector(".bc-profit").classList.toggle("is-loss", profit < 0);
+    var margin = net * (1 - fin) - c.pax;
+    out("be_n", margin > 0 ? String(Math.ceil(c.fixed / margin)) : "–");
+    out("be_price", rp(Math.ceil(cost / n / (1 - fin) * vat / 50000) * 50000));
+  }
+  form.addEventListener("input", update);
+  form.addEventListener("change", update);
+  update();
+})();
+</script>
