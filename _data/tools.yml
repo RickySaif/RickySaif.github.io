@@ -8,6 +8,8 @@
 # `range` is the potential impact, shown on the card, e.g. "Rp 50-200 jt / year".
 #   A plain string, or en:/id: when the wording differs per language.
 #   Leave it empty to show only the label. Never put a number here you cannot defend.
+# `video` (optional) adds a "Watch demo" button that opens a modal player:
+#   src/poster are paths under /assets/video/ (compress first: 720x1280, crf 27).
 # `problem` is the one-paragraph current problem shown on the card.
 - name: "Marketerr"
   lever: profit
@@ -21,6 +23,9 @@
     en: "Sales are sluggish, and holiday bonuses and shop rent are due soon."
     id: "Penjualan seret. Sebentar lagi harus bayar THR & sewa kontrakan."
   repo: "https://github.com/RickySaif/marketerr"
+  video:
+    src: "/assets/video/marketerr-demo.mp4"
+    poster: "/assets/video/marketerr-demo-poster.jpg"
   summary:
     en: "Marketerr helps you find prospective buyers living near your store. Not to push them to buy, but to interact naturally from your personal account. If it clicks, they can become buyers -- or even brand ambassadors who help promote your store to friends nearby."
     id: "Marketerr bantu kamu menemukan calon pembeli yang tinggal di dekat toko kamu. Bukan untuk disuruh beli, tapi untuk berinteraksi secara alami dengan akun pribadi kamu. Kalau jodoh, mereka bisa jadi pembeli -- atau bahkan brand ambassador yang bantu promosi toko kamu ke teman-teman di sekitarnya."
