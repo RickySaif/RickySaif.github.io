@@ -1,5 +1,5 @@
 # Free tools, in display order. Rendered by /tools/ in both languages.
-# The site leads with sales and revenue, so Marketerr comes first, then Scouterr.
+# The site leads with sales and revenue, so Customer Servicerr comes first, then Marketerr and Scouterr.
 # Add a tool: append one entry. `repo` empty -> links to site.github_url.
 # `case` is the slug of its case study in _cases/ (optional).
 # `page` is an on-site page with more detail (optional).
@@ -11,6 +11,25 @@
 # `video` (optional) adds a "Watch demo" button that opens a modal player:
 #   src/poster are paths under /assets/video/ (compress first: 720x1280, crf 27).
 # `problem` is the one-paragraph current problem shown on the card.
+- name: "Customer Servicerr"
+  lever: profit
+  flagship: true
+  banner: "/assets/images/tools/customer-servicerr-banner.webp"
+  banner_alt:
+    en: "Customer Servicerr: automate WhatsApp with the powerful brain of Claude. Fully customizable, and free."
+    id: "Customer Servicerr: otomatisasi WhatsApp dengan otak Claude yang canggih. Bisa disesuaikan sepenuhnya, dan gratis."
+  range: ""
+  problem:
+    en: "Customers message at all hours. Slow replies lose sales, and answering the same questions all day leaves no time to run the shop."
+    id: "Pelanggan chat kapan saja. Balasnya lambat, penjualan hilang. Jawab pertanyaan yang sama seharian, jadi ga sempat ngurus toko."
+  repo: "https://github.com/RickySaif/customer-servicerr"
+  video:
+    src: "/assets/video/servicerr-demo.mp4"
+    poster: "/assets/video/servicerr-demo-poster.jpg"
+  summary:
+    en: "Customer Servicerr is your own AI customer service for WhatsApp chats, with Tokopedia and Shopee (experimental). It runs on your computer with your own Claude, so there are no per-chat fees. It answers in your shop's voice, hands the hard ones to you, and writes down everything it does. Start in Draft mode, approve each reply, and switch to Auto when you trust it."
+    id: "Customer Servicerr adalah customer service AI milik kamu sendiri untuk chat WhatsApp, plus Tokopedia dan Shopee (masih eksperimental). Jalan di komputer kamu dengan Claude kamu sendiri, jadi tanpa biaya per chat. Dia menjawab dengan gaya bicara tokomu, menyerahkan chat yang sulit ke kamu, dan mencatat semua yang dia lakukan. Mulai dari mode Draft, setujui tiap balasan, lalu pindah ke Auto kalau sudah percaya."
+
 - name: "Marketerr"
   lever: profit
   flagship: true
