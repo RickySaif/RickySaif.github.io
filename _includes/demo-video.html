@@ -1,0 +1,41 @@
+{% comment %}
+  "Watch demo" button for a tool that has a `video:` entry in _data/tools.yml.
+  Parameter: tool. Without JS the button is a plain link to the mp4; with JS it opens a
+  modal player (one shared <dialog>, emitted once per page). The video is not fetched
+  until the visitor asks for it.
+{% endcomment %}
+{% if include.tool.video %}
+{% assign dv = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
+<a class="rs-demo-btn{% if include.class %} {{ include.class }}{% endif %}" href="{{ include.tool.video.src | relative_url }}" target="_blank" rel="noopener"
+   data-rs-demo data-src="{{ include.tool.video.src | relative_url }}" data-poster="{{ include.tool.video.poster | relative_url }}" data-title="{{ include.tool.name | escape }}">
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>{{ dv.watch_demo }}
+</a>
+{% unless rs_demo_dialog_done %}
+{% assign rs_demo_dialog_done = true %}
+<dialog class="rs-demo-dialog" id="rs-demo-dialog" aria-label="{{ dv.watch_demo }}">
+  <button type="button" class="rs-demo-close" aria-label="{{ dv.close }}">&times;</button>
+  <video controls playsinline preload="none" width="720" height="1280"></video>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('rs-demo-dialog');
+  if (!dlg || typeof dlg.showModal !== 'function') return; /* old browser: links open the mp4 */
+  var vid = dlg.querySelector('video');
+  function close() { vid.pause(); dlg.close(); }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-rs-demo]');
+    if (!a) return;
+    e.preventDefault();
+    vid.setAttribute('aria-label', a.dataset.title);
+    vid.poster = a.dataset.poster;
+    if (vid.getAttribute('src') !== a.dataset.src) vid.src = a.dataset.src;
+    dlg.showModal();
+    var p = vid.play(); if (p && p.catch) p.catch(function () {});
+  });
+  dlg.querySelector('.rs-demo-close').addEventListener('click', close);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+  dlg.addEventListener('close', function () { vid.pause(); });
+})();
+</script>
+{% endunless %}
+{% endif %}

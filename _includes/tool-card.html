@@ -35,6 +35,7 @@
       </div>
       <p class="rs-tool-card-summary">{{ include.tool.summary[site.active_lang] | default: include.tool.summary.en }}</p>
       <div class="rs-tool-card-actions">
+        {% include demo-video.html tool=include.tool %}
         <a class="rs-tool-card-link" href="{{ include.tool.repo | default: site.github_url }}" target="_blank" rel="noopener">{{ tc.get_tool }} &rarr;</a>
         {% if include.tool.workshop_url %}
         <div class="rs-tool-card-alt">
