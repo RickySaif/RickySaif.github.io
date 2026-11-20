@@ -58,8 +58,12 @@ numbers:
 
 en:
   meta_note: "Organizer brief · internal · not indexed"
+  switch:
+    text: "This is Option A: a villa, one night's stay."
+    link: "See Option B: a mid-range hotel, no overnight stay"
+    url: "/bootcamp-ai-dev/b/"
   hero:
-    badge: "Padepokan Agile × Ricky Saif · organizer brief"
+    badge: "Padepokan Agile × Ricky Saif · organizer brief · Option A"
     title_html: 'Ship a <span class="cc-grad">real product</span> in two days. Then get your company to use it.'
     lead: "AI-Powered Development Bootcamp: two days and one night in a villa outside Jakarta. Teams build production software for a real problem, test it with real users, and leave with a 90-day plan to drive adoption at work."
     cta_primary: "See the rundown"
@@ -471,8 +475,12 @@ en:
 
 id:
   meta_note: "Brief penyelenggara · internal · tidak diindeks"
+  switch:
+    text: "Ini Opsi A: villa, menginap satu malam."
+    link: "Lihat Opsi B: hotel bintang 3–4, tanpa menginap"
+    url: "/bootcamp-ai-dev/b/"
   hero:
-    badge: "Padepokan Agile × Ricky Saif · brief penyelenggara"
+    badge: "Padepokan Agile × Ricky Saif · brief penyelenggara · Opsi A"
     title_html: 'Rilis <span class="cc-grad">produk nyata</span> dalam dua hari, lalu buat perusahaan Anda ikut memakainya.'
     lead: "AI-Powered Development Bootcamp: dua hari satu malam di sebuah villa di luar Jakarta. Tim membangun software production untuk masalah nyata, mengujinya ke pengguna nyata, dan pulang membawa rencana 90 hari untuk mendorong adopsi di kantor."
     cta_primary: "Lihat rundown"

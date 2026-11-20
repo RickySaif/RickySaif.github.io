@@ -1,12 +1,14 @@
 {% comment %}
   /bootcamp-ai-dev/ in the active language: an internal organizer brief for
   the AI-Powered Development Bootcamp (Padepokan Agile x Ricky Saif).
-  Words and numbers: _data/bootcamp_ai_dev.yml. Base styles: landing.scss;
+  Words and numbers: _data/bootcamp_ai_dev.yml (Option A, villa) or _data/bootcamp_ai_dev_b.yml (Option B, hotel, no overnight), chosen by `variant`. Base styles: landing.scss;
   page styles: assets/css/bootcamp.scss. The cost table is rendered here from
   the data; the calculator script below only recomputes it live.
 {% endcomment %}
-{%- assign b = site.data.bootcamp_ai_dev[site.active_lang] -%}
-{%- assign num = site.data.bootcamp_ai_dev.numbers -%}
+{%- assign variant = include.variant | default: "a" -%}
+{%- if variant == "b" -%}{%- assign bd = site.data.bootcamp_ai_dev_b -%}{%- else -%}{%- assign bd = site.data.bootcamp_ai_dev -%}{%- endif -%}
+{%- assign b = bd[site.active_lang] -%}
+{%- assign num = bd.numbers -%}
 {%- assign n = num.participants -%}
 <link rel="stylesheet" href="{{ "/assets/css/bootcamp.css" | relative_url }}">
 
@@ -25,6 +27,7 @@
         <a class="cc-btn cc-btn--warm" href="#rundown">{% include cc-icon.html name="calendar" size=20 %}{{ b.hero.cta_primary }}</a>
         <a class="cc-btn cc-btn--ghost" href="#costs">{{ b.hero.cta_secondary }}{% include cc-icon.html name="arrow" size=18 %}</a>
       </div>
+      <p class="bc-switch" data-reveal style="--d:3">{{ b.switch.text }} <a href="{{ b.switch.url | relative_url }}">{{ b.switch.link }} &rarr;</a></p>
     </div>
 
     <div class="bc-glance-wrap" data-reveal style="--d:2">
