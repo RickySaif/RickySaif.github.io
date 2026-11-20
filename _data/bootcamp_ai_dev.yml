@@ -12,14 +12,14 @@ numbers:
   price_early: 5000000
   price_team: 5500000
   # Net profit (after the PT's tax) split. Padepokan Agile takes a share; the
-  # rest is the speakers' pool, split into equal shares. Ricky holds two shares:
-  # one as a speaker (The Shipper) and one as the event producer.
+  # rest is the speakers' pool, split into equal shares (one per speaker).
+  # Ricky holds one share, as a speaker; there is no producer share.
   split:
     pa: 10                 # percent of net profit to Padepokan Agile
     pa_big: 15             # proposal: from pa_big_from participants
     pa_big_from: 15
     speakers: 3            # Harindra, Ricky and the Researcher (the lead facilitator and the opening speaker are on fixed fees)
-    producer_shares: 1     # extra share(s) for the event producer (Ricky)
+    producer_shares: 0     # no producer share: the lead facilitator's fixed fee covers producing
   contingency: 10          # percent, added on top of every cost (not on revenue tax)
   # Run through an Indonesian PT. Percentages. To confirm with the PT's accountant.
   tax:
@@ -319,7 +319,7 @@ en:
         look_for: "Can talk about budgets, compliance and politics, not only ceremonies."
       - name: "Lead facilitator"
         pillar: "All pillars"
-        who: "Hosts the event as MC, advises each speaker on their session, connects the pillars, hosts the filler sessions if needed, and keeps the rundown on time. Paid a fixed fee, no profit share."
+        who: "Hosts the event as MC, advises each speaker on their session, connects the pillars, hosts the filler sessions if needed, and keeps the rundown on time. Paid one fixed fee that also covers producing the event, no profit share. If the candidate declines, Ricky steps in."
         talk: "Opening frame and the closing synthesis"
         look_for: "Comfortable in a room of engineers and business people at once, and firm about time."
     coaches_title: "2 coaches"
@@ -384,7 +384,7 @@ en:
       project_fee: "Project admin fee"
       crew_meals: "Catering for 7 crew, coaches and speakers (staying in the same villa)"
       keynote: "Speaker fee for the opening speaker (Ahmad), and a token of thanks for the guest speaker (Idur, OKR)"
-      facilitator: "Lead facilitator: host (MC) for both days, advisor to each speaker, and hosting the filler sessions if needed"
+      facilitator: "Lead facilitator: host (MC) for both days, advisor to each speaker, hosting the filler sessions if needed, and producing the event"
       bus: "2 minibuses Jakarta–venue, return"
       fun: "Games, the bell, prizes"
       docs: "Photo & video documentation"
@@ -419,7 +419,6 @@ en:
     calc_profit: "Net profit after tax"
     calc_pa: "Padepokan Agile"
     calc_share: "Per speaker share"
-    calc_ricky: "Ricky (speaker + producer)"
     calc_breakeven: "Break-even participants at this price"
     calc_breakeven_price: "Break-even price at this size"
     calc_note: "Speaker shares are before their own PPh 21. If the event makes a loss, there is nothing to split. Tax figures are estimates: confirm with the PT's accountant."
@@ -437,7 +436,7 @@ en:
       - name: "Ricky Saif"
         items:
           - "Agentic engineering content (pillar A), prework and checklists"
-          - "Event producer and The Shipper speaker; finds the coaches and the lead facilitator"
+          - "The Shipper speaker; finds the coaches and the lead facilitator, and steps in as lead facilitator if the candidate declines"
           - "This page, the registration page and the participant kit"
           - "The 30-day follow-up session"
           - "Runs the money through his PT: invoices, tax, payouts to speakers and coaches"
@@ -446,12 +445,11 @@ en:
     money_intro: "Speakers (Harindra, Ricky and the Researcher) get no fixed fee: they share the profit, so everyone wins when the room is full. The opening speaker (Ahmad) and the lead facilitator are paid fixed fees instead. Net profit means after every cost and the PT's tax."
     money_rows:
       - { key: pa, label: "Padepokan Agile", text: "10% of net profit. Proposal: 15% from 15 participants, since bigger cohorts come from Padepokan Agile's network." }
-      - { key: pool, label: "Speakers' pool", text: "The rest, in equal shares: one per speaker (Harindra, Ricky and the Researcher), plus one extra share for the event producer." }
-      - { key: ricky, label: "Ricky Saif", text: "Two shares: one as speaker (The Shipper), one as event producer." }
+      - { key: pool, label: "Speakers' pool", text: "The rest, in equal shares: one per speaker (Harindra, Ricky and the Researcher)." }
+      - { key: ricky, label: "Ricky Saif", text: "One share as a speaker (The Shipper), like the other speakers. No producer share: the lead facilitator's fee covers producing. If the facilitator declines, Ricky steps in and takes that fee instead." }
     money_example: "At Rp 6.000.000 with 12 participants:"
     money_pa: "Padepokan Agile"
     money_share: "Each speaker"
-    money_ricky: "Ricky (2 shares)"
     timeline_title: "Countdown"
     timeline:
       - { when: "This week", what: "Agree the date, the price and the profit split. Open registration and tell companies the invoice can be issued in December. Approach the Researcher and the lead facilitator." }
@@ -734,7 +732,7 @@ id:
         look_for: "Bisa bicara anggaran, kepatuhan, dan politik kantor, bukan hanya ritual."
       - name: "Fasilitator utama"
         pillar: "Semua pilar"
-        who: "Menjadi MC, menjadi penasihat bagi tiap pembicara untuk sesinya, menyambungkan ketiga pilar, memandu sesi pengisi bila perlu, dan menjaga rundown tepat waktu. Dibayar honor tetap, tanpa bagian laba."
+        who: "Menjadi MC, menjadi penasihat bagi tiap pembicara untuk sesinya, menyambungkan ketiga pilar, memandu sesi pengisi bila perlu, dan menjaga rundown tepat waktu. Dibayar satu honor tetap yang juga mencakup produksi acara, tanpa bagian laba. Kalau kandidatnya tidak mau, Ricky menggantikan."
         talk: "Pengantar pembuka dan rangkuman penutup"
         look_for: "Nyaman memandu ruangan berisi engineer dan orang bisnis sekaligus, dan tegas soal waktu."
     coaches_title: "2 coach"
@@ -799,7 +797,7 @@ id:
       project_fee: "Biaya administrasi proyek"
       crew_meals: "Katering untuk 7 kru, coach, dan pembicara (menginap di villa yang sama)"
       keynote: "Honor pembicara pembuka (Ahmad), dan tanda terima kasih untuk pembicara tamu (Idur, OKR)"
-      facilitator: "Fasilitator utama: pemandu acara (MC) selama dua hari, penasihat bagi tiap pembicara, dan memandu sesi pengisi bila perlu"
+      facilitator: "Fasilitator utama: pemandu acara (MC) selama dua hari, penasihat bagi tiap pembicara, memandu sesi pengisi bila perlu, dan memproduksi acara"
       bus: "2 minibus Jakarta–lokasi, pulang pergi"
       fun: "Permainan, lonceng, hadiah"
       docs: "Dokumentasi foto & video"
@@ -834,7 +832,6 @@ id:
     calc_profit: "Laba bersih setelah pajak"
     calc_pa: "Padepokan Agile"
     calc_share: "Per bagian pembicara"
-    calc_ricky: "Ricky (pembicara + produser)"
     calc_breakeven: "Jumlah peserta untuk impas di harga ini"
     calc_breakeven_price: "Harga impas di jumlah ini"
     calc_note: "Bagian pembicara sebelum dipotong PPh 21 masing-masing. Kalau acara rugi, tidak ada yang dibagi. Angka pajak perkiraan: konfirmasi ke akuntan PT."
@@ -852,7 +849,7 @@ id:
       - name: "Ricky Saif"
         items:
           - "Materi agentic engineering (pilar A), prework, dan checklist"
-          - "Produser acara dan pembicara The Shipper; mencari para coach dan fasilitator utama"
+          - "Pembicara The Shipper; mencari para coach dan fasilitator utama, dan menggantikan fasilitator utama kalau kandidatnya tidak mau"
           - "Halaman ini, halaman pendaftaran, dan kit peserta"
           - "Sesi tindak lanjut 30 hari"
           - "Keuangan lewat PT-nya: invoice, pajak, pembayaran ke pembicara dan coach"
@@ -861,12 +858,11 @@ id:
     money_intro: "Pembicara (Harindra, Ricky, dan The Researcher) tidak dapat honor tetap, tapi berbagi laba, jadi semua ikut untung kalau ruangan penuh. Pembicara pembuka (Ahmad) dan fasilitator utama dibayar honor tetap. Laba bersih berarti sisa setelah semua biaya dan pajak PT."
     money_rows:
       - { key: pa, label: "Padepokan Agile", text: "10% dari laba bersih. Usulan: 15% mulai 15 peserta, karena kelas besar datang dari jaringan Padepokan Agile." }
-      - { key: pool, label: "Pool pembicara", text: "Sisanya, dibagi rata: satu bagian per pembicara (Harindra, Ricky, dan The Researcher), plus satu bagian tambahan untuk produser acara." }
-      - { key: ricky, label: "Ricky Saif", text: "Dua bagian: satu sebagai pembicara (The Shipper), satu sebagai produser acara." }
+      - { key: pool, label: "Pool pembicara", text: "Sisanya, dibagi rata: satu bagian per pembicara (Harindra, Ricky, dan The Researcher)." }
+      - { key: ricky, label: "Ricky Saif", text: "Satu bagian sebagai pembicara (The Shipper), sama seperti pembicara lain. Tidak ada bagian produser: honor fasilitator utama sudah mencakup produksi acara. Kalau fasilitator utama tidak mau, Ricky menggantikan dan menerima honor itu." }
     money_example: "Pada Rp 6.000.000 dengan 12 peserta:"
     money_pa: "Padepokan Agile"
     money_share: "Setiap pembicara"
-    money_ricky: "Ricky (2 bagian)"
     timeline_title: "Hitung mundur"
     timeline:
       - { when: "Minggu ini", what: "Sepakati tanggal, harga, dan pembagian laba. Buka pendaftaran dan kabari perusahaan bahwa invoice bisa terbit di bulan Desember. Hubungi calon The Researcher dan fasilitator utama." }

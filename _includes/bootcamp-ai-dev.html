@@ -344,8 +344,7 @@
             <div class="bc-profit"><dt>{{ c.calc_profit }}</dt><dd data-out="profit">–</dd></div>
             <div><dt>{{ c.calc_pa }} <span data-out="pa_pct"></span></dt><dd data-out="pa">–</dd></div>
             <div><dt>{{ c.calc_share }}</dt><dd data-out="share">–</dd></div>
-            <div><dt>{{ c.calc_ricky }}</dt><dd data-out="ricky">–</dd></div>
-            <div><dt>{{ c.calc_breakeven }}</dt><dd data-out="be_n">–</dd></div>
+              <div><dt>{{ c.calc_breakeven }}</dt><dd data-out="be_n">–</dd></div>
             <div><dt>{{ c.calc_breakeven_price }}</dt><dd data-out="be_price">–</dd></div>
           </dl>
           <p class="bc-small">{{ c.calc_note }}</p>
@@ -363,7 +362,6 @@
 {%- assign ex_pa = ex_profit | times: num.split.pa | divided_by: 100 | round -%}
 {%- assign ex_shares = num.split.speakers | plus: num.split.producer_shares -%}
 {%- assign ex_share = ex_profit | minus: ex_pa | divided_by: ex_shares | round -%}
-{%- assign ex_ricky = ex_share | times: 2 -%}
 <!-- ============================ Organizers ========================== -->
 <section class="cc-section" id="organizers">
   <div class="cc-container">
@@ -397,7 +395,6 @@
           <div><dt>{{ b.costs.calc_profit }}</dt><dd>{% include bc-idr.html n=ex_profit %}</dd></div>
           <div><dt>{{ o.money_pa }} ({{ num.split.pa }}%)</dt><dd>{% include bc-idr.html n=ex_pa %}</dd></div>
           <div><dt>{{ o.money_share }}</dt><dd>{% include bc-idr.html n=ex_share %}</dd></div>
-          <div class="bc-money-hi"><dt>{{ o.money_ricky }}</dt><dd>{% include bc-idr.html n=ex_ricky %}</dd></div>
         </dl>
       </div>
     </div>
@@ -475,7 +472,6 @@
     out("pa_pct", "(" + paPct + "%)");
     out("pa", rp(pa));
     out("share", rp(share));
-    out("ricky", rp(share * (1 + sp.producer_shares)));
     out("tax", rp(tax));
     out("profit", rp(profit));
     form.querySelector(".bc-profit").classList.toggle("is-loss", profit < 0);
