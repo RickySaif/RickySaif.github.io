@@ -40,20 +40,18 @@ numbers:
     - { key: snacks,     per: pax,   amount: 100000 }
     - { key: ai,         per: pax,   amount: 0 }
     - { key: kit,        per: pax,   amount: 150000 }
-    - { key: incentive,  per: pax,   amount: 125000 }
-    - { key: payment,    per: pax,   amount: 150000 }
+    - { key: incentive,  per: pax,   amount: 50000 }
+    - { key: project_fee, per: fixed, amount: 1500000 }
     - { key: crew_meals, per: fixed, amount: 1750000 }
     - { key: keynote,    per: fixed, amount: 1500000 }
-    - { key: coaches,    per: fixed, amount: 7000000 }
+    - { key: facilitator, per: fixed, amount: 3000000 }
     - { key: bus,        per: fixed, amount: 3500000 }
-    - { key: internet,   per: fixed, amount: 2000000 }
     - { key: fun,        per: fixed, amount: 3000000 }
     - { key: docs,       per: fixed, amount: 2000000 }
-    - { key: prep,       per: fixed, amount: 1500000 }
-    # PPh 21 on the fixed honoraria of the opening speaker, the guest speaker and the coaches
-    # (Rp 8.500.000), grossed up so they receive the agreed amount: 2.5% / 97.5% = about 2.6%.
+    # PPh 21 on the fixed honoraria of the opening speaker, the guest speaker and the lead facilitator
+    # (Rp 4.500.000), grossed up so they receive the agreed amount: 2.5% / 97.5% = about 2.6%.
     # Speakers are paid from the profit pool instead (see split above).
-    - { key: pph21,      per: fixed, amount: 218000 }
+    - { key: pph21,      per: fixed, amount: 115000 }
     - { key: admin,      per: fixed, amount: 2000000 }
 
 en:
@@ -61,7 +59,7 @@ en:
   switch:
     text: "This is Option A: a villa, one night's stay."
     link: "See Option B: a mid-range hotel, no overnight stay"
-    url: "/bootcamp-ai-dev/b/"
+    url: "/b/"
   hero:
     badge: "Padepokan Agile × Ricky Saif · organizer brief · Option A"
     title_html: 'Ship a <span class="cc-grad">real product</span> in two days. Then get your company to use it.'
@@ -321,7 +319,7 @@ en:
         look_for: "Can talk about budgets, compliance and politics, not only ceremonies."
       - name: "Lead facilitator"
         pillar: "All pillars"
-        who: "Runs the room, connects the pillars, and keeps the rundown on time."
+        who: "Runs the room as MC, connects the pillars, hosts the filler sessions if needed, and keeps the rundown on time."
         talk: "Opening frame and the closing synthesis"
         look_for: "Comfortable in a room of engineers and business people at once, and firm about time."
     coaches_title: "2 coaches"
@@ -374,7 +372,7 @@ en:
       - "Income tax: if the PT qualifies for PPh final UMKM (turnover under Rp 4,8 miliar a year), it pays 0.5% of gross revenue, profit or not. Otherwise corporate tax is 22% of profit, effectively 11% with the small-company facility. Both are in the calculator."
       - "PPN: only if the PT is PKP. Quote corporate prices \"excluding PPN\" and add 11% on the invoice; then PPN is pass-through and the PPN on the villa rental can be credited (if the villa owner is PKP). If the price must include PPN, a Rp 6 juta ticket nets only about Rp 5,41 juta."
       - "PPh 23: corporate clients may withhold 2% when they pay the PT. It is a tax prepayment, not a cost, but it lands as cash only at the annual return."
-      - "PPh 21: the PT must withhold tax on what it pays individuals. For the opening speaker, the guest speaker and the coaches the estimate grosses it up; speakers' profit shares have PPh 21 withheld from the share itself."
+      - "PPh 21: the PT must withhold tax on what it pays individuals. For the opening speaker, the guest speaker and the lead facilitator the estimate grosses it up; speakers' profit shares have PPh 21 withheld from the share itself."
       - "Villa quotes: ask for the final price including tax and cleaning fees, and whether extra beds, electricity or BBQ cost more."
     labels:
       room: "One night's villa rental (6 bedrooms, shared rooms, the living room as the workshop space)"
@@ -382,20 +380,18 @@ en:
       snacks: "Coffee-break snacks and drinks: we buy and prepare them ourselves"
       ai: "AI credits: the participants' own subscriptions"
       kit: "Kit: t-shirt, notebook, stickers, certificate"
-      incentive: "Thank-you vouchers for interviewed users"
-      payment: "Payment gateway & admin"
+      incentive: "E-money (Rp 50.000) as thanks for each interviewed user"
+      project_fee: "Project admin fee"
       crew_meals: "Catering for 7 crew, coaches and speakers (staying in the same villa)"
       keynote: "Opening speaker and guest speaker (OKR), tokens of thanks"
-      coaches: "2 coaches × 2 days"
+      facilitator: "Lead facilitator: MC for both days, and hosting the filler sessions if needed"
       bus: "2 minibuses Jakarta–venue, return"
-      internet: "Backup internet (4G/5G routers and data)"
       fun: "Games, the bell, prizes"
       docs: "Photo & video documentation"
-      prep: "Site visit & preparation"
-      pph21: "PPh 21 on opening speaker, guest speaker and coach fees (grossed up)"
+      pph21: "PPh 21 on opening speaker, guest speaker and lead facilitator fees (grossed up)"
       admin: "PT administration: bookkeeping, tax filing, invoices, e-meterai, bank fees"
     verdict_title: "Recommendation: Rp 6 juta normal price"
-    verdict_html: "Speakers are paid from the profit, so the price decides what they earn. In a villa with 12 people at Rp 6 juta, the net profit is about <strong>Rp 29 juta</strong> and the break-even price is only about Rp 3,6 juta, so there is room for an early bird and a team price. The date is in December so companies can pay from this year's L&D budget. I suggest three prices:"
+    verdict_html: "Speakers are paid from the profit, so the price decides what they earn. In a villa with 12 people at Rp 6 juta, the net profit is about <strong>Rp 39 juta</strong> and the break-even price is only about Rp 2,8 juta, so there is room for an early bird and a team price. The date is in December so companies can pay from this year's L&D budget. I suggest three prices:"
     prices:
       - label: "Normal"
         key: price_normal
@@ -478,7 +474,7 @@ id:
   switch:
     text: "Ini Opsi A: villa, menginap satu malam."
     link: "Lihat Opsi B: hotel bintang 3–4, tanpa menginap"
-    url: "/bootcamp-ai-dev/b/"
+    url: "/b/"
   hero:
     badge: "Padepokan Agile × Ricky Saif · brief penyelenggara · Opsi A"
     title_html: 'Rilis <span class="cc-grad">produk nyata</span> dalam dua hari, lalu buat perusahaan Anda ikut memakainya.'
@@ -738,7 +734,7 @@ id:
         look_for: "Bisa bicara anggaran, kepatuhan, dan politik kantor, bukan hanya ritual."
       - name: "Fasilitator utama"
         pillar: "Semua pilar"
-        who: "Memandu jalannya acara, menyambungkan ketiga pilar, dan menjaga rundown tepat waktu."
+        who: "Menjadi MC, memandu jalannya acara, menyambungkan ketiga pilar, memandu sesi pengisi bila perlu, dan menjaga rundown tepat waktu."
         talk: "Pengantar pembuka dan rangkuman penutup"
         look_for: "Nyaman memandu ruangan berisi engineer dan orang bisnis sekaligus, dan tegas soal waktu."
     coaches_title: "2 coach"
@@ -791,7 +787,7 @@ id:
       - "Pajak penghasilan: kalau PT memenuhi syarat PPh final UMKM (omzet di bawah Rp 4,8 miliar setahun), PT membayar 0,5% dari pendapatan kotor, untung atau tidak. Kalau tidak, PPh badan 22% dari laba, efektif 11% dengan fasilitas Pasal 31E. Keduanya ada di kalkulator."
       - "PPN: hanya kalau PT sudah PKP. Tawarkan harga korporat \"belum termasuk PPN\" lalu tambahkan 11% di invoice; PPN jadi titipan dan PPN dari sewa villa bisa dikreditkan (kalau pemilik villa PKP). Kalau harga harus sudah termasuk PPN, tiket Rp 6 juta bersihnya hanya sekitar Rp 5,41 juta."
       - "PPh 23: klien korporat bisa memotong 2% saat membayar PT. Ini pembayaran pajak di muka, bukan biaya, tapi uangnya baru kembali saat SPT tahunan."
-      - "PPh 21: PT wajib memotong pajak atas pembayaran ke perorangan. Untuk pembicara pembuka, pembicara tamu, dan coach, estimasi ini memakai gross-up; bagian laba pembicara dipotong PPh 21 dari bagiannya sendiri."
+      - "PPh 21: PT wajib memotong pajak atas pembayaran ke perorangan. Untuk pembicara pembuka, pembicara tamu, dan fasilitator utama, estimasi ini memakai gross-up; bagian laba pembicara dipotong PPh 21 dari bagiannya sendiri."
       - "Penawaran villa: minta harga final yang sudah termasuk pajak dan biaya kebersihan, dan tanya apakah kasur tambahan, listrik, atau BBQ dikenai biaya lagi."
     labels:
       room: "Sewa villa semalam (6 kamar, tidur berbagi, ruang tengah jadi ruang kerja)"
@@ -799,20 +795,18 @@ id:
       snacks: "Snack dan minuman rehat kopi: kita belanja dan siapkan sendiri"
       ai: "Kredit AI: langganan milik peserta sendiri"
       kit: "Kit: kaos, buku catatan, stiker, sertifikat"
-      incentive: "Voucher terima kasih untuk pengguna yang diwawancarai"
-      payment: "Payment gateway & administrasi"
+      incentive: "E-money Rp 50.000 sebagai tanda terima kasih untuk tiap pengguna yang diwawancarai"
+      project_fee: "Biaya administrasi proyek"
       crew_meals: "Katering untuk 7 kru, coach, dan pembicara (menginap di villa yang sama)"
       keynote: "Tanda terima kasih untuk pembicara pembuka dan pembicara tamu (OKR)"
-      coaches: "2 coach × 2 hari"
+      facilitator: "Fasilitator utama: MC selama dua hari, dan memandu sesi pengisi bila perlu"
       bus: "2 minibus Jakarta–lokasi, pulang pergi"
-      internet: "Internet cadangan (router 4G/5G dan kuota)"
       fun: "Permainan, lonceng, hadiah"
       docs: "Dokumentasi foto & video"
-      prep: "Survei lokasi & persiapan"
-      pph21: "PPh 21 atas honor pembicara pembuka, pembicara tamu, dan coach (gross-up)"
+      pph21: "PPh 21 atas honor pembicara pembuka, pembicara tamu, dan fasilitator utama (gross-up)"
       admin: "Administrasi PT: pembukuan, lapor pajak, invoice, e-meterai, biaya bank"
     verdict_title: "Usulan: harga normal Rp 6 juta"
-    verdict_html: "Pembicara dibayar dari laba, jadi harga menentukan penghasilan mereka. Dengan villa dan 12 peserta di Rp 6 juta, laba bersihnya sekitar <strong>Rp 29 juta</strong> dan harga impasnya hanya sekitar Rp 3,6 juta, jadi masih ada ruang untuk harga early bird dan harga tim. Tanggalnya Desember supaya perusahaan bisa membayar dari anggaran L&D tahun ini. Saya usulkan tiga harga:"
+    verdict_html: "Pembicara dibayar dari laba, jadi harga menentukan penghasilan mereka. Dengan villa dan 12 peserta di Rp 6 juta, laba bersihnya sekitar <strong>Rp 39 juta</strong> dan harga impasnya hanya sekitar Rp 2,8 juta, jadi masih ada ruang untuk harga early bird dan harga tim. Tanggalnya Desember supaya perusahaan bisa membayar dari anggaran L&D tahun ini. Saya usulkan tiga harga:"
     prices:
       - label: "Normal"
         key: price_normal
