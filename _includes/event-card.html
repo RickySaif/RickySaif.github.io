@@ -27,7 +27,7 @@
   <div class="rs-event-body">
     <p class="rs-event-when"><time datetime="{{ iso }}T{{ e.start }}:00+07:00">{{ tt.days[wd] }}, {{ e.date | date: "%-d" }} {{ tt.months[mo] }} {{ e.date | date: "%Y" }} &middot; <span class="rs-event-time">{{ t_start }}&ndash;{{ t_end }} WIB</span></time></p>
     <h3>{{ e.title[lang] }}</h3>
-    <p class="rs-event-where">{{ e.venue[lang] }}, {{ e.city }}</p>
+    <p class="rs-event-where">{{ e.venue[lang] }}{% if e.city and e.city != "" %}, {{ e.city }}{% endif %}</p>
     {%- if e.summary %}
     <p class="rs-event-summary">{{ e.summary[lang] }}</p>
     {%- endif %}

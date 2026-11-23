@@ -23,10 +23,10 @@ d_track:
 id:
   hero:
     title_html: 'Belajar <span class="cc-grad">Claude Code</span> Gratis & Bareng-bareng.'
-    lead: "Grup WhatsApp gratis berisi tutorial langkah demi langkah dan meetup offline (kopdar) setiap minggu."
+    lead: "Grup WhatsApp gratis berisi tutorial langkah demi langkah dan meetup online setiap minggu."
     cta_wa: "Gabung grup WhatsApp"
-    cta_meetup: "Daftar kopdar"
-    next_label: "Kopdar berikutnya"
+    cta_meetup: "Daftar meetup online"
+    next_label: "Meetup online berikutnya"
   # Hero terminal: plays each scene in turn. The last step is the "done" line.
   # result.type picks the illustration (app, video or slides). The chip (tag)
   # comes 2.5s after the result, or 2s before it when chip_first is true.
@@ -104,8 +104,8 @@ id:
         title: "Tanya di tempat yang tepat"
         text: "Mentok di satu langkah? Tanya di grup langkah itu. Siapa pun boleh jawab."
       - icon: pin
-        title: "Kopdar di Jakarta"
-        text: "Ketemu langsung, tanya apa saja, dan lihat live demo."
+        title: "Meetup online mingguan"
+        text: "Ketemu lewat online, tanya apa saja, dan lihat live demo."
     course:
       title: "Satu langkah, satu grup, dibimbing pelan-pelan"
       intro: "Tutorialnya dibagi ke beberapa grup yang berurutan. Tiap grup punya petunjuk di bio grupnya: langkah yang perlu Anda ikuti. Pertanyaan soal satu langkah tetap di grup langkah itu, jadi tidak tenggelam di obrolan lain."
@@ -134,7 +134,7 @@ id:
           text: "Dokumen dan kerjaan kantor."
       start_label: "Mulai dari grup"
       general_html: "Ada juga grup umum: <strong>Ngobrol</strong> untuk diskusi bebas, <strong>Member Showcase</strong> untuk karya anggota, dan <strong>Kopdar</strong> untuk info &amp; dokumentasi pertemuan. Boleh jualan, tapi lewat fitur <strong>Member Tag</strong>: makin aktif &amp; kontributif, makin lancar jualan di komunitas ini."
-    meetup_title: "Kopdar berikutnya"
+    meetup_title: "Meetup online berikutnya"
     meetup_more: "Lihat semua acara"
     invite_alt: "Undangan grup WhatsApp Claude Code Indonesia"
     invite_caption: "Klik gambar untuk gabung ke grup WhatsApp"
@@ -369,18 +369,18 @@ id:
     question: "Jadi, apa yang akan Anda buat dalam 38 menit?"
   final:
     title: "Jangan belajar sendirian."
-    lead: "Gabung grup WhatsApp Claude Code Indonesia untuk tutorial langkah demi langkah gratis dan teman untuk bertanya. Atau datang langsung ke kopdar di Jakarta."
+    lead: "Gabung grup WhatsApp Claude Code Indonesia untuk tutorial langkah demi langkah gratis dan teman untuk bertanya. Atau ikut meetup online mingguan."
     cta_wa: "Gabung grup WhatsApp"
-    cta_meetup: "Daftar kopdar"
-    small: "Gratis. Tempat kopdar terbatas."
+    cta_meetup: "Daftar meetup online"
+    small: "Gratis. Tempat meetup terbatas."
 
 en:
   hero:
     title_html: 'Learn <span class="cc-grad">Claude Code</span> Free & Together.'
-    lead: "A free WhatsApp group with step-by-step tutorials and weekly offline meetups (kopdar)."
+    lead: "A free WhatsApp group with step-by-step tutorials and weekly online meetups."
     cta_wa: "Join the WhatsApp group"
-    cta_meetup: "Register for the meetup"
-    next_label: "Next meetup"
+    cta_meetup: "Register for the online meetup"
+    next_label: "Next online meetup"
   terminal:
     note: "Illustration"
     nav_label: "Choose an example"
@@ -455,8 +455,8 @@ en:
         title: "Ask in the right place"
         text: "Stuck on a step? Ask in that step's group. Anyone can answer."
       - icon: pin
-        title: "Meetups in Jakarta"
-        text: "Meet in person, ask anything, and watch a live demo."
+        title: "Weekly online meetups"
+        text: "Meet online, ask anything, and watch a live demo."
     course:
       title: "One step, one group, guided at your own pace"
       intro: "The tutorial is split across groups, in order. Each group has its instructions in the group bio: the step to follow. Questions about a step stay in that step's group, so they don't get lost in other chat. The lessons are written in Indonesian."
@@ -485,7 +485,7 @@ en:
           text: "Documents and office work."
       start_label: "Start with"
       general_html: "There are general groups too: <strong>Ngobrol</strong> for open chat, <strong>Member Showcase</strong> for members' work, and <strong>Kopdar</strong> for meetup info &amp; documentation. Selling is welcome, but through the <strong>Member Tag</strong> feature: the more active and helpful you are, the better you'll sell in this community."
-    meetup_title: "Next meetup"
+    meetup_title: "Next online meetup"
     meetup_more: "See all events"
     invite_alt: "Claude Code Indonesia WhatsApp group invite"
     invite_caption: "Click the image to join the WhatsApp group"
@@ -716,7 +716,7 @@ en:
     question: "So, what would you create in 38 minutes?"
   final:
     title: "Don't learn it alone."
-    lead: "Join the Claude Code Indonesia WhatsApp group for a free step-by-step tutorial and people to ask. Or come to a meetup in Jakarta."
+    lead: "Join the Claude Code Indonesia WhatsApp group for a free step-by-step tutorial and people to ask. Or join the weekly online meetup."
     cta_wa: "Join the WhatsApp group"
-    cta_meetup: "Register for the meetup"
+    cta_meetup: "Register for the online meetup"
     small: "Free. Meetup seats are limited."
