@@ -1861,6 +1861,11 @@ $rs-cost-red-soft: color-mix(in srgb, var(--rs-critical) 10%, var(--rs-surface))
   }
 }
 
+.rs-demo-dialog--wide {
+  width: min(92vw, calc(88vh * 16 / 9));
+  aspect-ratio: 16 / 9;
+}
+
 .rs-demo-close {
   position: absolute;
   top: -14px;

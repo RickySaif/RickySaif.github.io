@@ -7,7 +7,7 @@
 {% if include.tool.video %}
 {% assign dv = site.data.translations[site.active_lang] | default: site.data.translations[site.default_lang] %}
 <a class="rs-demo-btn{% if include.class %} {{ include.class }}{% endif %}" href="{{ include.tool.video.src | relative_url }}" target="_blank" rel="noopener"
-   data-rs-demo data-src="{{ include.tool.video.src | relative_url }}" data-poster="{{ include.tool.video.poster | relative_url }}" data-title="{{ include.tool.name | escape }}">
+   data-rs-demo data-src="{{ include.tool.video.src | relative_url }}" data-poster="{{ include.tool.video.poster | relative_url }}" data-title="{{ include.tool.name | escape }}"{% if include.tool.video.landscape %} data-landscape{% endif %}>
   <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>{{ dv.watch_demo }}
 </a>
 {% unless rs_demo_dialog_done %}
@@ -27,6 +27,7 @@
     if (!a) return;
     e.preventDefault();
     vid.setAttribute('aria-label', a.dataset.title);
+    dlg.classList.toggle('rs-demo-dialog--wide', a.hasAttribute('data-landscape'));
     vid.poster = a.dataset.poster;
     if (vid.getAttribute('src') !== a.dataset.src) vid.src = a.dataset.src;
     dlg.showModal();

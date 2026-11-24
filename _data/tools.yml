@@ -61,6 +61,10 @@
     en: "Finding competent and loyal employees is tough these days. You've asked your network, but nobody has a recommendation. In the end, you're stuck in daily operations with no time to expand."
     id: "Cari pegawai yang kompeten & loyal sekarang susah. Udah tanya kenalan, ga ada yang bisa kasih rekomendasi. Ujung-ujungnya harus terjun ke operasional harian dan jadi ga sempat ekspansi."
   repo: "https://github.com/RickySaif/scouterr"
+  video:
+    src: "/assets/video/scouterr-demo.mp4"
+    poster: "/assets/video/scouterr-demo-poster.jpg"
+    landscape: true
   summary:
     en: "Scouterr gives you a list of people who meet your specifications and have plenty of positive recommendations from their LinkedIn peers. Thousands of profiles scanned. Your company deserves the best people."
     id: "Scouterr akan memberikan daftar orang-orang yang memenuhi spesifikasi dan juga  mendapatkan banyak rekomendasi positif dari rekan Linkedin mereka. Ribuan profile bisa ditelusuri. Perusahaan kamu layak dapat orang terbaik."
