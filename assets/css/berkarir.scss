@@ -1,0 +1,136 @@
+---
+---
+/* ==========================================================================
+   /berkarir/ (proposal). Loaded by _includes/berkarir.html on top of
+   landing.css and bootcamp.css, using their tokens. Phone rule first.
+   ========================================================================== */
+
+.cc mark.bk-ph {
+  background: #FFE9A8;
+  color: #5A3D00;
+  padding: 0 .3em;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.cc .bk-hook { font-family: var(--rs-font-display); font-style: italic; }
+.cc .bk-hook-who { margin: 8px 0 0 !important; font-size: 14px !important; opacity: .75; }
+
+/* Chain card (hero): evidence → prediction → open */
+.cc .bk-chain-card {
+  background: var(--cc-night-2);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,.35);
+}
+.cc .bk-chain { list-style: none; margin: 0; padding: 18px; display: grid; gap: 10px; }
+.cc .bk-chain-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.04);
+  border-left: 4px solid var(--cc-warm);
+}
+.cc .bk-chain-step + .bk-chain-step::before {
+  content: "↓";
+  position: absolute; top: -15px; left: 18px;
+  font-size: 12px; color: var(--cc-on-night); opacity: .5;
+}
+.cc .bk-chain-step--early { border-left-color: var(--cc-blue); }
+.cc .bk-chain-step--open { border-left: 4px dashed rgba(255,255,255,.35); background: transparent; }
+.cc .bk-chain-name { font-weight: 700; color: var(--cc-on-night); }
+.cc .bk-chain-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--cc-warm);
+}
+.cc .bk-chain-step--early .bk-chain-tag { color: var(--cc-blue); }
+.cc .bk-chain-step--open .bk-chain-tag { color: rgba(255,255,255,.6); }
+.cc .bk-chain-step--open .bk-chain-name { font-size: 22px; letter-spacing: .1em; }
+.cc .bk-chain-text { grid-column: 1 / -1; font-size: 14px; color: rgba(238,242,248,.75); }
+.cc .bk-chain-foot { margin: 0 !important; padding: 0 18px 16px; font-size: 13px !important; color: rgba(238,242,248,.6); }
+.cc .bk-chain-foot a { color: inherit; text-decoration: underline; }
+
+/* Kebun Makna */
+.cc .bk-km-grid { display: grid; gap: 28px; align-items: start; }
+.cc .bk-km-q { font-family: var(--rs-font-display); font-size: 22px !important; font-weight: 600; color: var(--rs-ink) !important; }
+.cc .bk-subtitle { margin-top: clamp(56px, 7vw, 88px); }
+.cc .bk-sub { max-width: 44em; margin-left: auto; margin-right: auto; }
+.cc .bk-table th[scope="row"] { font-weight: 700; color: var(--rs-ink); white-space: normal; }
+.cc .bk-table td, .cc .bk-table th { vertical-align: top; }
+.cc .bk-table .bk-add { color: var(--cc-warm-text); font-weight: 600; }
+.cc .bk-caption { caption-side: top; text-align: left; padding: 0 0 10px; font-weight: 700; color: var(--rs-ink); }
+.cc .bk-foot { max-width: 46em; margin-left: auto !important; margin-right: auto !important; text-align: center; color: var(--rs-text-tertiary); }
+.cc .bk-not { max-width: 46em; margin: 28px auto 0 !important; }
+
+/* Severance vs fee bars, to scale */
+.cc .bk-bars { margin-top: 16px; }
+.cc .bk-bar-label { display: flex; justify-content: space-between; gap: 8px; margin: 10px 0 4px !important; font-size: 14px !important; }
+.cc .bk-bar { display: block; height: 12px; border-radius: 6px; background: var(--rs-surface-sunken); overflow: hidden; }
+.cc .bk-bar i { display: block; height: 100%; width: var(--w); border-radius: 6px; transition: width .4s ease; }
+.cc .bk-bar--sev i { background: var(--rs-critical); }
+.cc .bk-bar--fee i { background: var(--cc-warm); }
+
+/* Program */
+.cc .bk-tracks { margin-top: 8px; }
+.cc .bk-format { margin-top: 40px; }
+
+/* Capstone mockup */
+.cc .bk-journey { margin-bottom: 56px; }
+.cc .bk-term-wrap { display: grid; gap: 20px; }
+.cc .bk-term-scene + .bk-term-scene { margin-top: 18px; padding-top: 14px; border-top: 1px dashed rgba(255,255,255,.12); }
+.cc .bk-term-week { margin: 0 0 6px !important; font-size: 11px !important; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cc-warm); }
+.cc .bk-notes {
+  background: var(--cc-cream);
+  color: #3A2A1E;
+  border-radius: 14px;
+  padding: 18px;
+  transform: rotate(-1deg);
+  box-shadow: 0 18px 40px rgba(0,0,0,.3);
+}
+.cc .bk-notes-title { display: flex; align-items: center; gap: 8px; margin: 0 0 10px !important; font-weight: 700; color: #3A2A1E !important; }
+.cc .bk-note { margin: 0 0 8px !important; font-size: 14px !important; color: #3A2A1E !important; }
+.cc .bk-examples { margin-top: 24px; }
+.cc .bk-ex { margin: 8px 0 0; font-size: 14px; }
+.cc .bk-ex dt { margin-top: 8px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--cc-warm-text); }
+.cc .bk-ex dd { margin: 2px 0 0; }
+
+/* Proof */
+.cc .bk-proofs { display: grid; gap: 20px; }
+.cc .bk-proof { background: var(--rs-surface); border-radius: 16px; padding: 22px; border: 1px solid var(--rs-hairline); }
+.cc .bk-proof h3 { margin: 4px 0 8px; font-size: 20px; }
+.cc .bk-proof--missing { border: 2px dashed var(--cc-warm); background: transparent; }
+
+/* Offers */
+.cc .bk-offer-list { margin: 10px 0; padding-left: 1.1em; font-size: 15px; }
+.cc .bk-price { margin: 12px 0 0 !important; font-weight: 700; }
+
+/* FAQ */
+.cc .bk-faq-wrap { max-width: 820px; }
+.cc .bk-faq details { border-bottom: 1px solid var(--rs-hairline); padding: 16px 0; }
+.cc .bk-faq summary { cursor: pointer; font-weight: 700; color: var(--rs-ink); font-size: 17px; list-style-position: outside; }
+.cc .bk-faq summary:focus-visible { outline: 2px solid var(--rs-focus); outline-offset: 4px; }
+.cc .bk-faq-a { margin-top: 10px; color: var(--rs-text); }
+.cc .bk-faq-a ol { padding-left: 1.2em; }
+
+/* Sources */
+.cc .bk-sources { padding-left: 1.3em; font-size: 14px; color: var(--rs-text-secondary); }
+.cc .bk-sources li { margin: 6px 0; }
+.cc .bk-sources a { color: var(--rs-accent); }
+
+@media (min-width: 860px) {
+  .cc .bk-km-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
+  .cc .bk-term-wrap { grid-template-columns: 1.6fr 1fr; align-items: center; }
+  .cc .bk-proofs { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Example cards on the dark capstone band */
+.cc .cc-dark .bk-examples .cc-feature { background: var(--cc-night-2); border-color: rgba(255,255,255,.08); }
+.cc .cc-dark .bk-examples .cc-feature h3 { color: var(--cc-on-night); }
+.cc .cc-dark .bk-ex dd { color: rgba(238,242,248,.8); }
+.cc .cc-dark .bk-ex dt { color: var(--cc-warm); }
+
+.cc .cc-path--new .bk-offer-list { color: inherit; opacity: .9; }

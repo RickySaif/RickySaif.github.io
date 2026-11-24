@@ -1,0 +1,527 @@
+{% comment %}
+  /berkarir/ in the active language: proposal page "Berkarir di Era Problem
+  Solving" for business owners who employ programmers. Words: _data/berkarir.yml.
+  Base styles: landing.scss; reused table/calculator: bootcamp.scss; page
+  styles: assets/css/berkarir.scss. Motion: landing.js ([data-reveal]).
+  Placeholders render as <mark class="bk-ph">[ISI: ...]</mark>; see
+  docs in _data/berkarir.yml (header) for the full list.
+{% endcomment %}
+{%- assign b = site.data.berkarir[site.active_lang] -%}
+{%- assign wa = "https://wa.me/6289678601060" -%}
+{%- assign mail = "mailto:rizky.syaiful@gmail.com" -%}
+<link rel="stylesheet" href="{{ "/assets/css/bootcamp.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/berkarir.css" | relative_url }}">
+
+<!-- ============================== Hero ============================== -->
+<section class="cc-hero cc-dark">
+  <div class="cc-hero-bg" aria-hidden="true">
+    <span class="cc-glow cc-glow--warm"></span>
+    <span class="cc-glow cc-glow--blue"></span>
+  </div>
+  <div class="cc-container cc-hero-grid">
+    <div class="cc-hero-copy">
+      <p class="cc-badge" data-reveal><span class="cc-live-dot"></span>{{ b.hero.badge }}</p>
+      <h1 data-reveal style="--d:1">{{ b.hero.title_html }}</h1>
+      <p class="cc-lead bk-hook" data-reveal style="--d:2">{{ b.hero.hook }}</p>
+      <p class="bk-hook-who" data-reveal style="--d:2">{{ b.hero.hook_who }}</p>
+      <div class="cc-actions" data-reveal style="--d:3">
+        <a class="cc-btn cc-btn--warm" href="{{ wa }}" target="_blank" rel="noopener">{% include cc-icon.html name="chat" size=20 %}{{ b.hero.cta_wa }}</a>
+        <a class="cc-btn cc-btn--ghost" href="#dua-jalan">{{ b.hero.cta_paths }}{% include cc-icon.html name="arrow" size=18 %}</a>
+      </div>
+    </div>
+
+    {%- comment -%} The chain: digital work AI has taken over, step by step.
+      Each step says whether it is evidence or prediction; the last is open. {%- endcomment %}
+    <div class="bk-chain-card" data-reveal style="--d:2">
+      <div class="cc-term-bar">
+        <span class="cc-dots"><i></i><i></i><i></i></span>
+        <span class="cc-term-title">{{ b.chain.title }}</span>
+        <span class="cc-term-note">{{ b.chain.note }}</span>
+      </div>
+      <ol class="bk-chain">
+        {%- for s in b.chain.steps %}
+        <li class="bk-chain-step bk-chain-step--{{ s.kind }}">
+          <span class="bk-chain-name">{{ s.name }}</span>
+          <span class="bk-chain-tag">{{ s.tag }}</span>
+          <span class="bk-chain-text">{{ s.text }}</span>
+        </li>
+        {%- endfor %}
+      </ol>
+      <p class="bk-chain-foot">{{ b.chain.foot_html }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Problem ============================= -->
+{%- assign pr = b.problem %}
+<section class="cc-section cc-section--surface cc-problem" aria-labelledby="bk-problem-title">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ pr.eyebrow }}</p>
+      <h2 id="bk-problem-title">{{ pr.title_html }}</h2>
+    </header>
+
+    <div class="cc-troubles">
+      {%- for persona in pr.personas %}
+      <article class="cc-trouble" data-reveal style="--d:{{ forloop.index }}">
+        <div class="cc-trouble-head">
+          <span class="cc-feature-icon">{% include cc-icon.html name=persona.icon size=26 %}</span>
+          <h3>{{ persona.role }}</h3>
+        </div>
+        <ul class="cc-trouble-pains">
+          {%- for pain in persona.pains %}<li>{{ pain }}</li>{% endfor %}
+        </ul>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <div class="cc-converge" aria-hidden="true" data-reveal>
+      <svg viewBox="0 0 100 48" preserveAspectRatio="none" focusable="false">
+        <path d="M16.7 0 C16.7 28 50 20 50 48"/>
+        <path d="M50 0 L50 48"/>
+        <path d="M83.3 0 C83.3 28 50 20 50 48"/>
+      </svg>
+    </div>
+
+    <div class="cc-dark cc-point" data-reveal>
+      <p class="cc-point-lead">{{ pr.point_lead }}</p>
+      <p class="cc-point-main">{{ pr.point }}</p>
+    </div>
+
+    <div class="cc-answer" data-reveal>
+      <p>{{ pr.evidence_intro }}</p>
+      <ul class="cc-answer-list">
+        {%- for item in pr.evidence %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+      <p class="bc-small">{{ pr.evidence_note_html }}</p>
+    </div>
+
+    <a class="cc-bridge" href="#kebun-makna" data-reveal>
+      <span class="cc-bridge-q">{{ pr.bridge }}</span>
+      <span class="cc-bridge-line" aria-hidden="true"><i></i></span>
+    </a>
+  </div>
+</section>
+
+<!-- ========================= Kebun Makna ============================ -->
+{%- assign km = b.km %}
+<section class="cc-section cc-section--warm" id="kebun-makna">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ km.eyebrow }}</p>
+      <h2>{{ km.title }}</h2>
+      <p class="cc-sub">{{ km.intro_html }}</p>
+    </header>
+
+    <div class="bk-km-grid">
+      {%- comment -%} Same before/after card as the reference page, same scale:
+        2 h against roughly 4,000 person-hours, so the AI bar is a sliver. {%- endcomment %}
+      {%- assign cmp = km.compare %}
+      <figure class="cc-compare" data-reveal data-cc-keep>
+        <p class="cc-compare-title">{{ cmp.title }}</p>
+        <div class="cc-compare-row cc-compare-row--ai">
+          <p class="cc-compare-head"><strong>{{ cmp.ai_label }}</strong><span>{{ cmp.ai_value }}</span></p>
+          <span class="cc-compare-bar" aria-hidden="true"><i style="--w: .05%"></i></span>
+          <p class="cc-compare-note"><span class="cc-compare-people" aria-hidden="true">{% include cc-icon.html name="users" size=15 %}</span>{{ cmp.ai_note }}</p>
+        </div>
+        <div class="cc-compare-row cc-compare-row--before">
+          <p class="cc-compare-head"><strong>{{ cmp.before_label }}</strong><span>{{ cmp.before_value }}</span></p>
+          <span class="cc-compare-bar" aria-hidden="true"><i style="--w: 100%"></i></span>
+          <p class="cc-compare-note"><span class="cc-compare-people" aria-hidden="true">{% for k in (1..5) %}{% include cc-icon.html name="users" size=15 %}{% endfor %}</span>{{ cmp.before_note }}</p>
+        </div>
+        <figcaption>{{ cmp.caption }}</figcaption>
+      </figure>
+
+      <div class="bk-km-answer" data-reveal style="--d:1">
+        <p class="bk-km-q">{{ km.question }}</p>
+        {%- for p in km.answer %}<p>{{ p }}</p>{% endfor %}
+        <a class="cc-link" href="https://km.generasimerdeka.com" target="_blank" rel="noopener">{{ km.link }} {% include cc-icon.html name="arrow" size=16 %}</a>
+      </div>
+    </div>
+
+    <h3 class="cc-h3 cc-center bk-subtitle" data-reveal>{{ km.table_title }}</h3>
+    <div class="bc-table-wrap" data-reveal>
+      <table class="bc-table bk-table">
+        <thead><tr><th></th>{% for h in km.table_head %}<th>{{ h }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {%- for r in km.table_rows %}
+          <tr><th scope="row">{{ r.aspect }}</th><td>{{ r.nurul }}</td><td>{{ r.dev }}</td><td class="bk-add">{{ r.adds }}</td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="cc-footnote bk-foot" data-reveal>{{ km.footnote_html }}</p>
+  </div>
+</section>
+
+<!-- ============================ Two paths =========================== -->
+{%- assign tp = b.paths %}
+<section class="cc-section cc-section--surface" id="dua-jalan">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ tp.eyebrow }}</p>
+      <h2>{{ tp.title }}</h2>
+      <p class="cc-sub">{{ tp.intro }}</p>
+    </header>
+    <div class="cc-paths">
+      {%- for p in tp.list %}
+      <article class="cc-path{% if p.new %} cc-path--new{% endif %}" data-reveal style="--d:{{ forloop.index }}">
+        <span class="cc-path-icon">{% include cc-icon.html name=p.icon size=22 %}</span>
+        <p class="cc-path-label">{{ p.label }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="bc-source" data-reveal>{{ tp.note }}</p>
+  </div>
+</section>
+
+<!-- ========================= Cost of path 1 ========================= -->
+{%- assign co = b.cost %}
+<section class="cc-section" id="biaya">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ co.eyebrow }}</p>
+      <h2>{{ co.title }}</h2>
+      <p class="cc-sub">{{ co.intro }}</p>
+    </header>
+
+    <div class="bc-costs-grid">
+      <div class="bc-costs-main">
+        <div class="bc-table-wrap" data-reveal>
+          <table class="bc-table">
+            <caption class="bk-caption">{{ co.table_caption }}</caption>
+            <thead><tr><th>{{ co.head_tenure }}</th><th>{{ co.head_pes }}</th><th>{{ co.head_upmk }}</th></tr></thead>
+            <tbody>
+              {%- for r in co.rows %}<tr><td>{{ r[0] }}</td><td class="bc-num">{{ r[1] }}</td><td class="bc-num">{{ r[2] }}</td></tr>{% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <div class="bc-tax" data-reveal>
+          <p class="bc-out-title">{% include cc-icon.html name="shield" size=20 %}{{ co.rules_title }}</p>
+          <ul>{%- for t in co.rules %}<li>{{ t }}</li>{% endfor %}</ul>
+        </div>
+      </div>
+
+      <form class="bc-calc" data-bk-calc data-reveal onsubmit="return false">
+        <p class="bc-out-title">{% include cc-icon.html name="chart" size=20 %}{{ co.calc_title }}</p>
+        <label class="bc-field">
+          <span>{{ co.calc_n }} <output data-out="n">5</output></span>
+          <input type="range" name="n" min="1" max="30" step="1" value="5">
+        </label>
+        <label class="bc-field">
+          <span>{{ co.calc_wage }}</span>
+          <span class="bc-input-rp"><i>Rp</i><input type="number" name="wage" min="0" step="500000" value="12000000" inputmode="numeric"></span>
+        </label>
+        <label class="bc-field">
+          <span>{{ co.calc_tenure }} <output data-out="y">4</output> {{ co.calc_years }}</span>
+          <input type="range" name="y" min="0" max="25" step="1" value="4">
+        </label>
+        <fieldset class="bc-field bc-seg">
+          <legend>{{ co.calc_reason }}</legend>
+          <label><input type="radio" name="m" value="0.5" checked><span>{{ co.calc_loss }}</span></label>
+          <label><input type="radio" name="m" value="1"><span>{{ co.calc_prevent }}</span></label>
+        </fieldset>
+        <label class="bc-field">
+          <span>{{ co.calc_fee }}</span>
+          <span class="bc-input-rp"><i>Rp</i><input type="number" name="fee" min="0" step="1000000" placeholder="{{ co.calc_fee_ph }}" inputmode="numeric"></span>
+        </label>
+        <dl class="bc-calc-out">
+          <div><dt>{{ co.out_pes }}</dt><dd data-out="pes">–</dd></div>
+          <div><dt>{{ co.out_upmk }}</dt><dd data-out="upmk">–</dd></div>
+          <div class="bc-profit"><dt>{{ co.out_total }}</dt><dd data-out="total">–</dd></div>
+        </dl>
+        {%- comment -%} Bars to scale: the longer one is 100%. {%- endcomment %}
+        <div class="bk-bars" aria-live="polite">
+          <p class="bk-bar-label">{{ co.bar_sev }} <b data-out="total2">–</b></p>
+          <span class="bk-bar bk-bar--sev"><i data-bar="sev" style="--w:100%"></i></span>
+          <p class="bk-bar-label">{{ co.bar_fee }} <b data-out="fee">{{ co.bar_fee_empty }}</b></p>
+          <span class="bk-bar bk-bar--fee"><i data-bar="fee" style="--w:0%"></i></span>
+        </div>
+        <p class="bc-small">{{ co.calc_note }}</p>
+      </form>
+    </div>
+
+    <h3 class="cc-h3 cc-center bk-subtitle" data-reveal>{{ co.options_title }}</h3>
+    <p class="cc-sub cc-center bk-sub" data-reveal>{{ co.options_intro }}</p>
+    <div class="bc-table-wrap" data-reveal>
+      <table class="bc-table bk-table">
+        <thead><tr><th></th>{% for h in co.options_head %}<th>{{ h }}</th>{% endfor %}</tr></thead>
+        <tbody>
+          {%- for r in co.options_rows %}
+          <tr><th scope="row">{{ r.aspect }}</th><td>{{ r.a }}</td><td>{{ r.b }}</td><td>{{ r.c }}</td></tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="cc-note bk-not" data-reveal>{% include cc-icon.html name="shield" size=18 %}{{ co.not_solve }}</p>
+    <p class="cc-footnote bk-foot" data-reveal>{{ co.footnote_html }}</p>
+  </div>
+</section>
+
+<!-- ============================ Program ============================= -->
+{%- assign pg = b.program %}
+<section class="cc-section cc-section--surface" id="program">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ pg.eyebrow }}</p>
+      <h2>{{ pg.title }}</h2>
+      <p class="cc-sub">{{ pg.intro }}</p>
+    </header>
+
+    <div class="cc-tracks bk-tracks">
+      {%- for t in pg.tracks %}
+      <article class="cc-track cc-track--{% if t.code == 'A' %}m{% else %}d{% endif %}" data-reveal style="--d:{{ forloop.index0 }}">
+        <div class="cc-track-info">
+          <span class="cc-track-code" aria-hidden="true">{{ t.code }}</span>
+          <h4>{{ t.name }}</h4>
+          <p>{{ t.text }}</p>
+        </div>
+        <ol class="cc-track-steps">
+          {%- for s in t.steps %}<li><span>{{ s.code }}</span>{{ s.text }}</li>{% endfor %}
+        </ol>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="bc-source" data-reveal>{{ pg.tm_note }}</p>
+
+    <div class="cc-what">
+      <div class="cc-what-copy" data-reveal>
+        <h3 class="cc-h3">{{ pg.week_title }}</h3>
+        <p>{{ pg.week_text }}</p>
+        <p class="cc-note">{% include cc-icon.html name="clock" size=18 %}{{ pg.week_note }}</p>
+      </div>
+      <ol class="cc-loop" data-reveal style="--d:1">
+        {%- for s in pg.week %}
+        <li style="--i:{{ forloop.index0 }}"><span class="cc-loop-num">{{ forloop.index }}</span>{{ s }}</li>
+        {%- endfor %}
+      </ol>
+    </div>
+
+    <dl class="cc-stats bk-format" data-reveal>
+      {%- for s in pg.format %}<div><dt>{{ s.label }}</dt><dd>{{ s.value_html }}</dd></div>{% endfor %}
+    </dl>
+  </div>
+</section>
+
+<!-- ============================ Capstone ============================ -->
+{%- assign cp = b.capstone %}
+<section class="cc-section cc-dark cc-story2" id="capstone">
+  <div class="cc-hero-bg" aria-hidden="true"><span class="cc-glow cc-glow--blue cc-glow--low"></span></div>
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ cp.eyebrow }}</p>
+      <h2>{{ cp.title }}</h2>
+      <p class="cc-sub">{{ cp.intro }}</p>
+    </header>
+
+    <ol class="cc-timeline bk-journey" data-reveal>
+      <span class="cc-timeline-track" aria-hidden="true"><span class="cc-timeline-bar"></span></span>
+      {%- for s in cp.steps %}
+      <li style="--i:{{ forloop.index0 }}">
+        <span class="cc-timeline-dot"></span>
+        <p class="cc-timeline-time">{{ s.time }}</p>
+        <h4>{{ s.title }}</h4>
+        <p>{{ s.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+
+    {%- comment -%} Illustrated mockup: one capstone, from interview notes to a
+      shipped feature, as a Claude Code session. Static; labelled "Ilustrasi". {%- endcomment %}
+    {%- assign tm = cp.term %}
+    <div class="bk-term-wrap" data-reveal>
+      <div class="cc-term bk-term">
+        <div class="cc-term-bar">
+          <span class="cc-dots"><i></i><i></i><i></i></span>
+          <span class="cc-term-title">{{ tm.title }}</span>
+          <span class="cc-term-note">{{ tm.note }}</span>
+        </div>
+        <div class="cc-term-body">
+          {%- for sc in tm.scenes %}
+          <div class="bk-term-scene">
+            <p class="bk-term-week">{{ sc.week }}</p>
+            <p class="cc-term-prompt"><span class="cc-term-caret">&gt;</span> <span>{{ sc.prompt }}</span></p>
+            <ul class="cc-term-steps">
+              {%- for st in sc.steps %}
+              <li class="cc-term-step{% if forloop.last %} cc-term-step--done{% endif %}">{% if forloop.last %}{% include cc-icon.html name="spark" size=16 %}{% else %}{% include cc-icon.html name="check" size=16 %}{% endif %}<span>{{ st }}</span></li>
+              {%- endfor %}
+            </ul>
+          </div>
+          {%- endfor %}
+        </div>
+      </div>
+      <div class="bk-notes" aria-label="{{ tm.notes_title }}">
+        <p class="bk-notes-title">{% include cc-icon.html name="mic" size=16 %}{{ tm.notes_title }}</p>
+        {%- for q in tm.notes %}<p class="bk-note"><b>{{ q.who }}</b> {{ q.text }}</p>{% endfor %}
+      </div>
+    </div>
+
+    <h3 class="cc-h3 cc-center bk-subtitle" data-reveal>{{ cp.examples_title }}</h3>
+    <p class="cc-sub cc-center bk-sub" data-reveal>{{ cp.examples_intro }}</p>
+    <div class="cc-features bk-examples">
+      {%- for e in cp.examples %}
+      <article class="cc-feature" data-reveal style="--d:{{ forloop.index }}">
+        <span class="cc-feature-icon">{% include cc-icon.html name=e.icon size=26 %}</span>
+        <h3>{{ e.biz }}</h3>
+        <dl class="bk-ex">
+          <dt>{{ cp.ex_problem }}</dt><dd>{{ e.problem }}</dd>
+          <dt>{{ cp.ex_users }}</dt><dd>{{ e.users }}</dd>
+          <dt>{{ cp.ex_build }}</dt><dd>{{ e.build }}</dd>
+          <dt>{{ cp.ex_measure }}</dt><dd>{{ e.measure }}</dd>
+        </dl>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ========================= Owner gets ============================= -->
+{%- assign og = b.owner %}
+<section class="cc-section cc-section--surface" id="hasil">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ og.eyebrow }}</p>
+      <h2>{{ og.title }}</h2>
+    </header>
+    <div class="cc-what">
+      <div class="cc-what-copy" data-reveal>
+        <h3 class="cc-h3">{{ og.deliver_title }}</h3>
+        <ul class="cc-answer-list">{%- for d in og.deliverables %}<li>{{ d }}</li>{% endfor %}</ul>
+      </div>
+      <div class="bc-table-wrap" data-reveal style="--d:1">
+        <table class="bc-table bk-table">
+          <caption class="bk-caption">{{ og.score_title }}</caption>
+          <thead><tr>{% for h in og.score_head %}<th>{{ h }}</th>{% endfor %}</tr></thead>
+          <tbody>
+            {%- for r in og.score %}<tr><th scope="row">{{ r.metric }}</th><td>{{ r.how }}</td><td>{{ r.target }}</td></tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="cc-note bk-not" data-reveal>{% include cc-icon.html name="users" size=18 %}{{ og.transparency }}</p>
+  </div>
+</section>
+
+<!-- ============================== Proof ============================= -->
+{%- assign pf = b.proof %}
+<section class="cc-section cc-section--warm" id="bukti">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ pf.eyebrow }}</p>
+      <h2>{{ pf.title }}</h2>
+    </header>
+    <div class="bk-proofs">
+      {%- for p in pf.list %}
+      <article class="bk-proof{% if p.missing %} bk-proof--missing{% endif %}" data-reveal style="--d:{{ forloop.index0 | modulo: 3 }}">
+        <p class="cc-eyebrow">{{ p.label }}</p>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.text_html }}</p>
+        {%- if p.url %}<a class="cc-link" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.link }} {% include cc-icon.html name="arrow" size=16 %}</a>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================ Options ============================= -->
+{%- assign en = b.engage %}
+<section class="cc-section" id="pilihan">
+  <div class="cc-container">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">{{ en.eyebrow }}</p>
+      <h2>{{ en.title }}</h2>
+      <p class="cc-sub">{{ en.intro }}</p>
+    </header>
+    <div class="cc-paths bk-offers">
+      {%- for o in en.list %}
+      <article class="cc-path{% if o.recommended %} cc-path--new{% endif %}" data-reveal style="--d:{{ forloop.index }}">
+        <p class="cc-path-label">{{ o.label }}</p>
+        <h3>{{ o.title }}</h3>
+        <p>{{ o.text }}</p>
+        <ul class="bk-offer-list">{%- for i in o.items %}<li>{{ i }}</li>{% endfor %}</ul>
+        <p class="bk-price">{{ o.price_html }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- =============================== FAQ ============================== -->
+{%- assign fq = b.faq %}
+<section class="cc-section cc-section--surface" id="faq">
+  <div class="cc-container bk-faq-wrap">
+    <header class="cc-head" data-reveal>
+      <p class="cc-eyebrow">FAQ</p>
+      <h2>{{ fq.title }}</h2>
+    </header>
+    <div class="bk-faq">
+      {%- for q in fq.list %}
+      <details data-reveal>
+        <summary>{{ q.q }}</summary>
+        <div class="bk-faq-a">{{ q.a_html }}</div>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================== Final ============================= -->
+<section class="cc-final cc-dark">
+  <div class="cc-hero-bg" aria-hidden="true">
+    <span class="cc-glow cc-glow--warm cc-glow--center"></span>
+  </div>
+  <div class="cc-container cc-final-inner">
+    <h2 data-reveal>{{ b.final.title }}</h2>
+    <p class="cc-lead" data-reveal style="--d:1">{{ b.final.lead }}</p>
+    <div class="cc-actions cc-actions--center" data-reveal style="--d:2">
+      <a class="cc-btn cc-btn--warm cc-btn--lg" href="{{ wa }}?text={{ b.final.wa_text | url_encode }}" target="_blank" rel="noopener">{% include cc-icon.html name="chat" size=20 %}{{ b.final.cta_wa }}</a>
+      <a class="cc-btn cc-btn--ghost cc-btn--lg" href="{{ mail }}?subject={{ b.final.mail_subject | url_encode }}">{{ b.final.cta_mail }}{% include cc-icon.html name="arrow" size=18 %}</a>
+    </div>
+    <p class="cc-small" data-reveal style="--d:3">{{ b.final.small }}</p>
+  </div>
+</section>
+
+<!-- ============================= Sources ============================ -->
+<section class="cc-section cc-section--surface bk-sources-sec" id="sumber">
+  <div class="cc-container">
+    <h2 class="cc-h3">{{ b.sources.title }}</h2>
+    <p class="bc-small">{{ b.sources.intro }}</p>
+    <ol class="bk-sources">
+      {%- for s in b.sources.list %}
+      <li id="s{{ forloop.index }}"><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.name }}</a>{% if s.note %} — {{ s.note }}{% endif %}</li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<script>
+/* Severance estimate (PP 35/2021, Pasal 40 and 43). Illustration only. */
+(function () {
+  var f = document.querySelector("[data-bk-calc]");
+  if (!f) return;
+  var loc = document.documentElement.lang === "id" ? "id-ID" : "en-US";
+  function rp(x) { return "Rp " + Math.round(x).toLocaleString(loc); }
+  function pes(y) { return y < 1 ? 1 : Math.min(Math.floor(y) + 1, 9); }
+  function upmk(y) {
+    if (y < 3) return 0; if (y >= 24) return 10;
+    return Math.min(Math.floor((y - 3) / 3) + 2, 8);
+  }
+  function out(k, v) { var el = f.querySelector('[data-out="' + k + '"]'); if (el) el.textContent = v; }
+  function run() {
+    var n = +f.n.value, w = +f.wage.value || 0, y = +f.y.value;
+    var m = +f.querySelector('input[name="m"]:checked').value, fee = +f.fee.value || 0;
+    var p = n * w * pes(y) * m, u = n * w * upmk(y), t = p + u;
+    out("n", n); out("y", y);
+    out("pes", rp(p) + " (" + (pes(y) * m) + "×)"); out("upmk", rp(u) + " (" + upmk(y) + "×)");
+    out("total", rp(t)); out("total2", rp(t));
+    out("fee", fee ? rp(fee) : f.getAttribute("data-empty") || "–");
+    var max = Math.max(t, fee) || 1;
+    f.querySelector('[data-bar="sev"]').style.setProperty("--w", (t / max * 100) + "%");
+    f.querySelector('[data-bar="fee"]').style.setProperty("--w", (fee / max * 100) + "%");
+  }
+  f.setAttribute("data-empty", f.querySelector('[data-out="fee"]').textContent);
+  f.addEventListener("input", run); run();
+})();
+</script>

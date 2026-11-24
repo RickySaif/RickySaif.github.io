@@ -1,0 +1,889 @@
+# Words for /berkarir/ (template: _includes/berkarir.html).
+# One block per language; both blocks have the same keys. Values ending in
+# _html may contain markup. Placeholders are written as
+# <mark class="bk-ph">[ISI: ...]</mark>; search for "[ISI" (id) or "[FILL" (en) to find them all.
+# Draft proposal: the page is noindex until the placeholders are filled.
+
+id:
+  hero:
+    badge: "Proposal · Draf untuk pemilik bisnis"
+    title_html: 'Berkarir di Era <span class="cc-grad">Problem Solving</span>'
+    hook: "“Jika pekerjaan di laptop diambil alih AI, pegawai saya mengerjakan apa?”"
+    hook_who: "Pertanyaan yang makin sering kami dengar dari pemilik bisnis yang menggaji programmer."
+    cta_wa: "Ngobrol dulu lewat WhatsApp"
+    cta_paths: "Lihat dua jalannya"
+
+  chain:
+    title: "pekerjaan digital · yang mulai diambil alih AI"
+    note: "Ringkasan"
+    steps:
+      - name: "Konsultasi & riset"
+        kind: evidence
+        tag: "Sudah terjadi"
+        text: "Riset, ringkasan, analisa data, dan draf laporan kini dikerjakan AI dalam hitungan menit."
+      - name: "Coding"
+        kind: evidence
+        tag: "Sedang terjadi"
+        text: "Lowongan programmer junior turun; satu orang dengan AI menyelesaikan yang dulu butuh tim."
+      - name: "Video editing"
+        kind: early
+        tag: "Mulai terjadi"
+        text: "Memotong, memberi teks, dan me-render video sudah bisa diminta dalam satu kalimat."
+      - name: "???"
+        kind: open
+        tag: "Belum tahu"
+        text: "Kami tidak tahu apa berikutnya. Itu justru intinya."
+    foot_html: 'Dua langkah pertama punya bukti; langkah ketiga baru tanda-tanda awal. Lihat <a href="#sumber">sumber</a>.'
+
+  problem:
+    eyebrow: "Terasa familiar?"
+    title_html: "Semua orang di kantor<br>sedang khawatir hal yang sama"
+    personas:
+      - role: "Pemilik bisnis"
+        icon: briefcase
+        pains: ["Gaji tim IT jalan terus, hasilnya terasa makin bisa dikejar AI", "PHK mahal, dan rasanya tidak adil untuk orang yang sudah lama setia", "Tidak tahu harus melatih tim ke arah mana"]
+      - role: "Programmer"
+        icon: terminal
+        pains: ["Takut posisinya hilang", "Junior yang pakai AI lebih cepat", "Jarang ketemu pengguna, jadi tidak tahu masalah aslinya", "Grogi kalau harus presentasi atau wawancara user"]
+      - role: "Manajer & tim lain"
+        icon: users
+        pains: ["Permintaan ke tim IT antre berminggu-minggu", "Yang dibangun sering tidak sesuai kebutuhan", "Kalau ada yang keluar, pengetahuan sistem ikut hilang"]
+    point_lead: "Faktanya: AI terus mengambil alih pekerjaan digital."
+    point: "Kalau tidak ada yang berubah, gaji yang Anda bayar akan makin kurang efektif dari tahun ke tahun."
+    evidence_intro: "Yang sudah ada buktinya, dan yang masih perkiraan:"
+    evidence:
+      - "Bukti: di Amerika Serikat, pekerja usia 22–25 tahun di profesi yang paling terpapar AI (termasuk developer) 19% di bawah tren rekan mereka yang kurang terpapar. Penyebabnya: rekrutmen baru yang berkurang, bukan PHK (Stanford, revisi Agustus 2026)."
+      - "Bukti: lowongan developer di AS naik lagi sejak 2025, tapi kenaikannya didominasi posisi senior, dan masih jauh di bawah tahun 2020 (Indeed Hiring Lab, Juli 2026)."
+      - "Bukti yang berlawanan: dalam satu uji terkontrol, developer berpengalaman justru 19% lebih lambat saat memakai AI di kode yang sudah mereka kenal (METR, 2025)."
+      - "Prediksi, bukan bukti: AI akan terus naik ke pekerjaan berikutnya. Seberapa cepat, tidak ada yang tahu pasti."
+    evidence_note_html: 'Data khusus Indonesia masih tipis. Kami belum menemukan angka resmi soal dampak AI pada lowongan programmer di Indonesia. Detail di <a href="#sumber">sumber</a>.'
+    bridge: "Apakah ada solusi lain selain efisiensi?"
+
+  km:
+    eyebrow: "Bukti 1 · Ancamannya nyata"
+    title: "Kalau non-coder bisa membuat ini, apa nilai seorang coder?"
+    intro_html: 'Nurul Bahirah, konsultan pendidikan yang tidak bisa coding, membuat versi pertama <strong>Kebun Makna</strong> dalam <strong>2 jam</strong> dengan Claude Code: game gratis untuk anak belajar arti kata demi kata surat-surat pendek Juz 30.'
+    compare:
+      title: "Kalau dibuat dengan cara lama"
+      ai_label: "Dengan Claude Code"
+      ai_value: "2 jam · 1 orang"
+      ai_note: "Nurul sendiri, tanpa bisa coding"
+      before_label: "Sebelum ada AI"
+      before_value: "4–6 bulan · 5 orang digaji"
+      before_note: "Game designer, ilustrator pixel art, dua programmer (satu khusus pengenalan suara), dan penguji"
+      caption: "Angka “sebelum ada AI” adalah perkiraan kami untuk game seukuran versi pertama Kebun Makna, bukan hasil pengukuran."
+    question: "Jawaban jujurnya: nilainya bergeser, bukan hilang."
+    answer:
+      - "Nurul tidak memulai dari teknologi. Ia memulai dari hal yang paling ia pahami: cara anak belajar. Keunggulannya adalah pemahaman yang dalam tentang pengguna dan masalahnya. Itu yang biasanya tidak dimiliki programmer."
+      - "Tapi Kebun Makna adalah versi pertama untuk satu kebutuhan, bukan sistem produksi yang melayani ribuan transaksi. Begitu sebuah aplikasi menyimpan data pelanggan, menerima pembayaran, atau harus tetap jalan tiga tahun lagi, ada hal yang sering terlewat: keamanan data, keandalan, dan kode yang bisa dirawat. Contohnya nyata: tahun 2025, 170 dari 1.645 aplikasi buatan AI yang dipindai membuka data penggunanya karena satu pengaturan database terlewat, dan dalam uji Veracode, kode buatan AI mengandung celah keamanan umum di 45% tugas."
+      - "Jadi nilai programmer bergeser: dari menulis kode, ke memahami masalah dan pengguna, lalu menilai kualitas, keamanan, dan daya tahan solusinya. Celah pertama itulah yang diisi program ini."
+    link: "Coba Kebun Makna"
+    table_title: "Siapa membawa apa"
+    table_head: ["Yang Nurul punya", "Yang biasanya dimiliki programmer", "Yang ditambahkan program ini"]
+    table_rows:
+      - aspect: "Pengguna & masalah"
+        nurul: "Paham betul cara anak belajar"
+        dev: "Jarang bertemu pengguna; menerima tiket"
+        adds: "Wawancara pengguna sungguhan tiap minggu"
+      - aspect: "Membangun"
+        nurul: "Claude Code, tanpa latar coding"
+        dev: "Bisa coding, sebagian belum terbiasa AI"
+        adds: "Claude Code + Supabase + GitHub sebagai alat kerja harian"
+      - aspect: "Kualitas & keamanan"
+        nurul: "Belum jadi fokus di versi pertama"
+        dev: "Tahu cara menguji, mengamankan, dan merawat kode"
+        adds: "Dipertahankan, dan dipakai untuk menilai hasil AI"
+      - aspect: "Komunikasi"
+        nurul: "Terbiasa menjelaskan ke orang tua dan anak"
+        dev: "Sering grogi di depan pengguna atau atasan"
+        adds: "Latihan bicara gaya Toastmasters tiap minggu"
+    footnote_html: 'Catatan jujur: Kebun Makna membuktikan <em>ancamannya</em>, belum membuktikan <em>solusinya</em>. Bukti bahwa programmer bisa bergeser peran: <mark class="bk-ph">[ISI: contoh programmer yang bergeser peran / hasil pilot]</mark>.'
+
+  paths:
+    eyebrow: "Dua jalan"
+    title: "Ya, ada jalan selain efisiensi"
+    intro: "Keduanya masuk akal. Yang satu mengurangi biaya, yang lain mengubah apa yang dibeli dari biaya itu."
+    list:
+      - label: "Jalan 1"
+        icon: briefcase
+        title: "Efisiensi: kurangi beban gaji"
+        text: "Wajar dipertimbangkan, dan kadang memang perlu. Tapi ada biaya pesangon yang nyata, risiko sengketa, dan pengetahuan sistem yang ikut keluar."
+      - label: "Jalan 2"
+        icon: spark
+        new: true
+        title: "Pindahkan orangnya ke problem solving"
+        text: "Geser tim dari pekerjaan yang diambil AI, ke menemukan dan menyelesaikan masalah nyata pengguna perusahaan: pekerjaan yang menghasilkan pendapatan."
+    note: "Dua jalan ini tidak saling meniadakan. Banyak perusahaan akan memakai keduanya."
+
+  cost:
+    eyebrow: "Biaya jalan 1"
+    title: "Berapa sebenarnya biaya melepas 5 programmer?"
+    intro: "PHK di Indonesia diatur PP 35/2021. Hitungannya pesangon + uang penghargaan masa kerja (UPMK) + uang penggantian hak (UPH), dari upah pokok ditambah tunjangan tetap. Geser angkanya sesuai kondisi Anda."
+    table_caption: "Kelipatan upah per orang (PP 35/2021, Pasal 40)"
+    head_tenure: "Masa kerja"
+    head_pes: "Pesangon"
+    head_upmk: "UPMK"
+    rows:
+      - ["< 1 tahun", "1 bulan", "–"]
+      - ["1–2 tahun", "2 bulan", "–"]
+      - ["2–3 tahun", "3 bulan", "–"]
+      - ["3–6 tahun", "4–6 bulan", "2 bulan"]
+      - ["6–9 tahun", "7–9 bulan", "3 bulan"]
+      - ["9–12 tahun", "9 bulan", "4 bulan"]
+      - ["12–24 tahun", "9 bulan", "5–8 bulan"]
+      - ["≥ 24 tahun", "9 bulan", "10 bulan"]
+    rules_title: "Yang perlu diperhatikan"
+    rules:
+      - "Efisiensi karena perusahaan rugi: 0,5× pesangon. Efisiensi untuk mencegah rugi: 1× pesangon. UPMK tetap 1× (Pasal 43)."
+      - "Kerugian harus dibuktikan, misalnya lewat audit internal atau eksternal. Tanpa bukti, sengketa di Pengadilan Hubungan Industrial lebih mungkin terjadi."
+      - "Mengganti karyawan dengan orang yang lebih murah untuk posisi yang sama sulit disebut efisiensi, karena efisiensi dikaitkan dengan rugi atau mencegah rugi. Risiko sengketanya tinggi. Ini analisa kami, bukan putusan pengadilan."
+      - "DPR mengesahkan UU Pelindungan Ketenagakerjaan pada 6 Oktober 2026, menindaklanjuti putusan MK 168/PUU-XXI/2023. Aturan pelaksananya belum kami pastikan. Kelipatan di atas bisa sudah berubah: cek ke konsultan hukum sebelum memakai angka ini."
+    calc_title: "Hitung perkiraan Anda"
+    calc_n: "Jumlah programmer:"
+    calc_wage: "Upah pokok + tunjangan tetap per bulan (contoh, ganti dengan angka Anda)"
+    calc_tenure: "Rata-rata masa kerja:"
+    calc_years: "tahun"
+    calc_reason: "Alasan efisiensi"
+    calc_loss: "Karena rugi (0,5×)"
+    calc_prevent: "Mencegah rugi (1×)"
+    calc_fee: "Biaya program untuk orang yang sama (opsional)"
+    calc_fee_ph: "isi jika sudah ada penawaran"
+    out_pes: "Pesangon"
+    out_upmk: "UPMK"
+    out_total: "Perkiraan total (belum termasuk UPH)"
+    bar_sev: "Pesangon + UPMK"
+    bar_fee: "Biaya program"
+    bar_fee_empty: "[ISI: harga program]"
+    calc_note: "Perkiraan kasar, bukan nasihat hukum. Belum termasuk UPH (sisa cuti, ongkos pulang), biaya rekrutmen pengganti, dan biaya sengketa. Verifikasi ke konsultan HR atau hukum."
+    options_title: "Jalan ketiga yang realistis: tahan rekrutmen + biarkan turnover alami"
+    options_intro: "Banyak pemilik akan memilih ini: tidak merekrut pengganti, menunggu yang keluar sendiri, lalu mengisi kebutuhan dengan junior yang fasih AI. Ini pilihan sah. Mari bandingkan dengan jujur."
+    options_head: ["Efisiensi (PHK)", "Tahan rekrutmen + turnover", "Program ini"]
+    options_rows:
+      - aspect: "Biaya langsung"
+        a: "Pesangon + UPMK + UPH, dibayar di depan"
+        b: "Hampir nol; gaji turun pelan-pelan"
+        c: '<mark class="bk-ph">[ISI: harga]</mark> per kohort'
+      - aspect: "Kecepatan efek"
+        a: "Cepat (bulan ini)"
+        b: "Lambat dan tidak bisa diatur siapa yang keluar"
+        c: "3 bulan sampai capstone pertama jalan"
+      - aspect: "Risiko"
+        a: "Sengketa, nama baik sebagai pemberi kerja"
+        b: "Yang keluar justru yang paling bagus"
+        c: "Sebagian peserta tidak berhasil bergeser"
+      - aspect: "Moral tim yang tersisa"
+        a: "Turun; semua menunggu giliran"
+        b: "Beban kerja naik untuk yang bertahan"
+        c: "Ada arah karier yang jelas"
+      - aspect: "Pengetahuan sistem"
+        a: "Ikut keluar"
+        b: "Ikut keluar, pelan-pelan"
+        c: "Tetap di dalam, ditambah pemahaman pengguna"
+    not_solve: "Yang tidak diselesaikan program ini: jumlah orang. Program ini memperbaiki efektivitas, bukan headcount. Kalau masalah Anda memang terlalu banyak orang untuk bisnis yang ada, program ini bukan jawabannya."
+    footnote_html: 'Sumber: <a href="#sumber">PP 35/2021</a>. Tabel di atas disederhanakan; pesangon naik satu bulan untuk tiap tahun masa kerja sampai 9 bulan. Semua angka dalam kalkulator adalah contoh yang bisa Anda ganti.'
+
+  program:
+    eyebrow: "Programnya"
+    title: "Dua jalur, satu tujuan: masalah pengguna yang beres"
+    intro: "Program pengembangan full-remote yang dirancang dan dipandu Ricky Saif. Setiap peserta atau tim kecil (squad) membawa satu masalah nyata yang terkait bisnis utama perusahaan, lalu menyelesaikannya sampai jalan."
+    tracks:
+      - code: "A"
+        name: "Komunikasi"
+        text: "Latihan bicara gaya Toastmasters: berani dan lancar menghadapi pengguna. Mendengar, bertanya, menjelaskan, dengan tujuan menyelesaikan masalah mereka."
+        steps:
+          - code: "A1"
+            text: "Bicara 2 menit tanpa persiapan (table topics)"
+          - code: "A2"
+            text: "Wawancara pengguna: bertanya tanpa menggiring"
+          - code: "A3"
+            text: "Menjelaskan solusi ke orang non-teknis"
+          - code: "A4"
+            text: "Evaluasi teman: satu pujian, satu saran"
+          - code: "A5"
+            text: "Presentasi capstone di depan pemilik"
+      - code: "B"
+        name: "Build"
+        text: "Praktik langsung Claude Code + Supabase + GitHub Pages untuk membangun solusinya. Mengikuti urutan jalur D di komunitas Claude Code Indonesia."
+        steps:
+          - code: "D-04"
+            text: "First App"
+          - code: "D-05"
+            text: "CLAUDE.md"
+          - code: "D-06"
+            text: "Git & GitHub"
+          - code: "D-07"
+            text: "Supabase"
+          - code: "D-08"
+            text: "Google Login"
+          - code: "D-11"
+            text: "Publish"
+    tm_note: "“Gaya Toastmasters” hanya menggambarkan formatnya. Program ini tidak berafiliasi dengan Toastmasters International."
+    week_title: "Ritme mingguan"
+    week_text: "Semua online. Dirancang supaya tetap bisa jalan di samping pekerjaan sehari-hari."
+    week:
+      - "Senin · Sesi Komunikasi 60 menit (Zoom/Meet)"
+      - "Selasa–Kamis · Bicara dengan minimal 2 pengguna"
+      - "Rabu · Sesi Build 90 menit, live dengan Claude Code"
+      - "Jumat · Demo 5 menit per squad + evaluasi"
+    week_note: 'Perkiraan waktu peserta: <mark class="bk-ph">[ISI: 4–6 jam/minggu]</mark> termasuk sesi.'
+    format:
+      - label: "Durasi"
+        value_html: '<mark class="bk-ph">[ISI: 12 minggu]</mark>'
+      - label: "Ukuran kohort"
+        value_html: '<mark class="bk-ph">[ISI: 6–12 orang, squad 2–3]</mark>'
+      - label: "Bahasa"
+        value_html: '<mark class="bk-ph">[ISI: Indonesia]</mark>'
+
+  capstone:
+    eyebrow: "Capstone"
+    title: "Capstone adalah buktinya"
+    intro: "Bukan ujian tertulis. Setiap squad menemukan masalah nyata, bicara dengan penggunanya, membangun, dan merilis solusi yang dipakai."
+    steps:
+      - time: "Minggu 1–2"
+        title: "Temukan masalahnya"
+        text: "Pilih satu masalah yang dekat dengan bisnis utama: yang membuang waktu, uang, atau pelanggan."
+      - time: "Minggu 2–4"
+        title: "Bicara dengan pengguna"
+        text: "Minimal 5 wawancara. Tujuannya memahami, bukan menjual ide."
+      - time: "Minggu 4–9"
+        title: "Bangun"
+        text: "Versi pertama secepatnya, lalu diperbaiki bersama penggunanya."
+      - time: "Minggu 9–11"
+        title: "Rilis"
+        text: "Dipakai orang sungguhan, dan diukur."
+      - time: "Minggu 12"
+        title: "Presentasi"
+        text: "Di depan pemilik: masalahnya, buktinya, hasilnya, dan langkah berikutnya."
+    term:
+      title: "claude · capstone-retur-pesanan"
+      note: "Ilustrasi"
+      notes_title: "Catatan wawancara (minggu 3)"
+      notes:
+        - who: "CS:"
+          text: "“Tiap retur saya cek 3 tempat: WA, spreadsheet, dan sistem gudang.”"
+        - who: "Gudang:"
+          text: "“Saya baru tahu ada retur kalau barangnya sudah datang.”"
+        - who: "Pelanggan:"
+          text: "“Saya tanya status retur 4 kali, jawabannya beda-beda.”"
+      scenes:
+        - week: "Minggu 5"
+          prompt: "Baca catatan-wawancara.md. Buat halaman status retur: CS input sekali, gudang dan pelanggan bisa lihat statusnya."
+          steps:
+            - "Membaca 7 catatan wawancara, merangkum 3 kebutuhan"
+            - "Membuat tabel retur di Supabase, dengan aturan akses per peran"
+            - "Membuat halaman input CS dan halaman cek status"
+            - "Selesai. Siap dicoba oleh 2 CS besok pagi."
+        - week: "Minggu 8"
+          prompt: "Tambahkan notifikasi ke gudang saat retur disetujui, lalu publish."
+          steps:
+            - "Menambah notifikasi, mengetes dengan data contoh"
+            - "Mengecek: tidak ada data pelanggan yang terbuka untuk publik"
+            - "Selesai. Online, dipakai tim CS mulai Senin."
+    examples_title: "Contoh capstone untuk tiga jenis bisnis"
+    examples_intro: "Contoh rekaan untuk menggambarkan bentuknya, bukan klien sungguhan."
+    ex_problem: "Masalah"
+    ex_users: "Bicara dengan"
+    ex_build: "Yang dibangun"
+    ex_measure: "Diukur dari"
+    examples:
+      - icon: store
+        biz: "Distributor / grosir"
+        problem: "Sales keliling tidak tahu stok terbaru, pesanan sering batal."
+        users: "Sales lapangan, admin gudang, 3 toko pelanggan"
+        build: "Halaman cek stok di HP + form pesanan yang langsung masuk ke gudang"
+        measure: "Pesanan batal karena stok, sebelum vs sesudah"
+      - icon: heart
+        biz: "Klinik"
+        problem: "Pasien menunggu lama karena antrean dicatat manual."
+        users: "Resepsionis, dokter, 10 pasien"
+        build: "Antrean online sederhana dengan perkiraan jam dipanggil"
+        measure: "Rata-rata waktu tunggu, keluhan pasien"
+      - icon: phone
+        biz: "Perusahaan software (B2B)"
+        problem: "Klien baru butuh 3 minggu sampai benar-benar memakai produk."
+        users: "Tim onboarding, 5 klien baru"
+        build: "Panduan setup interaktif + checklist yang terpantau"
+        measure: "Hari sampai klien aktif, tiket bantuan"
+
+  owner:
+    eyebrow: "Yang Anda terima"
+    title: "Apa yang pemilik dapat di akhir program"
+    deliver_title: "Hasil kerja"
+    deliverables:
+      - "Satu solusi yang sudah jalan per squad, dipakai pengguna sungguhan"
+      - "Catatan wawancara pengguna dan masalah yang sudah divalidasi"
+      - "Presentasi capstone, dengan angka sebelum dan sesudah"
+      - "Laporan per peserta: kekuatan, perkembangan, dan saran peran berikutnya"
+      - "Aturan kerja aman dengan AI dan data perusahaan"
+    score_title: "Scorecard keberhasilan"
+    score_head: ["Ukuran", "Cara mengukur", "Target"]
+    score:
+      - metric: "Percakapan dengan pengguna"
+        how: "Catatan wawancara"
+        target: '<mark class="bk-ph">[ISI: ≥ 5 per squad]</mark>'
+      - metric: "Masalah tervalidasi"
+        how: "Dikonfirmasi ≥ 3 pengguna"
+        target: '<mark class="bk-ph">[ISI: 1 per squad]</mark>'
+      - metric: "Solusi dirilis"
+        how: "Bisa diakses dan dipakai"
+        target: '<mark class="bk-ph">[ISI: 1 per squad]</mark>'
+      - metric: "Adopsi"
+        how: "Pengguna aktif mingguan"
+        target: '<mark class="bk-ph">[ISI]</mark>'
+      - metric: "Jam kerja yang dihemat"
+        how: "Perkiraan pengguna, sebelum vs sesudah"
+        target: '<mark class="bk-ph">[ISI]</mark>'
+      - metric: "Pendapatan yang terpengaruh"
+        how: "Disepakati di awal dengan pemilik"
+        target: '<mark class="bk-ph">[ISI]</mark>'
+    transparency: "Terbuka sejak awal: program ini jalur pengembangan, dan pemilik akan melihat hasil capstone saat memutuskan peran. Peserta diberi tahu di sesi pertama, dengan kriteria tertulis yang bisa dicapai dengan usaha sungguh-sungguh."
+
+  proof:
+    eyebrow: "Bukti"
+    title: "Siapa yang memandu, dan apa yang sudah dibuktikan"
+    list:
+      - label: "Bukti 2 · Pemandu"
+        title: "Ricky Saif, Partner CEO di Era AI"
+        text_html: "Lulusan Ilmu Komputer UI (2013), 13 tahun mendampingi organisasi. Pernah menjadi trainer manajemen dan software untuk BAPPENAS, Telkom Indigo, dan IDEMIA. Memimpin budaya dan engagement di Alterra (engagement Gallup +17%). Memfasilitasi transformasi agile skala besar (LeSS) di Dkatalis / Bank Jago: 4 tim, 35 developer dan PM. Menulis dua buku Agile/Scrum."
+      - label: "Bukti 3 · Komunikasi"
+        title: "“Why Culture Comes First”"
+        text_html: "Pidato 8 menit yang memenangkan AgileNE. Track A dipandu oleh orang yang berlatih bicara di depan umum."
+        url: "https://www.youtube.com/watch?v=_ycD1M2eW5g"
+        link: "Tonton di YouTube"
+      - label: "Bukti 4 · Build"
+        title: "Situs Scrum AI Addendum: 38 menit waktu Claude"
+        text_html: "Ricky membangun situsnya sendiri dengan Claude Code, ditambah tiga alat gratis: Customer Servicerr, Marketerr, dan Scouterr. Ia juga menjalankan komunitas Claude Code Indonesia."
+        url: "https://rizkysyaiful.github.io/scrum-ai-addendum/"
+        link: "Lihat hasilnya"
+      - label: "Bukti 5 · Belum ada"
+        missing: true
+        title: "Programmer yang berhasil bergeser peran"
+        text_html: 'Ini bukti yang paling penting, dan belum kami punya. <mark class="bk-ph">[ISI: contoh programmer yang bergeser peran / hasil pilot]</mark>. Pilot berbayar di bawah dirancang untuk mengisinya.'
+
+  engage:
+    eyebrow: "Pilihan kerja sama"
+    title: "Mulai dari yang kecil"
+    intro: "Rekomendasi kami: mulai dari sesi pengantar, lanjut ke pilot. Kohort penuh setelah pilot terbukti."
+    list:
+      - label: "Langkah 1"
+        title: "Sesi “Berkarir di Era Problem Solving”"
+        text: "Sesi pengantar 90 menit untuk pemilik dan tim, online."
+        items: ["Peta perubahan pekerjaan digital", "Demo Claude Code dari nol", "Tanya jawab terbuka"]
+        price_html: '<mark class="bk-ph">[ISI: gratis / harga sesi]</mark>'
+      - label: "Langkah 2 · Disarankan"
+        recommended: true
+        title: "Pilot berbayar"
+        text: "Satu kohort kecil, satu masalah nyata per squad."
+        items: ["Kedua jalur, versi ringkas", "Capstone sampai rilis", "Laporan hasil untuk pemilik"]
+        price_html: '<mark class="bk-ph">[ISI: harga pilot, durasi, jumlah peserta]</mark>'
+      - label: "Langkah 3"
+        title: "Kohort penuh"
+        text: "Setelah pilot, untuk lebih banyak tim."
+        items: ["Program lengkap", "Scorecard dipantau tiap bulan", "Pendampingan setelah program"]
+        price_html: '<mark class="bk-ph">[ISI: harga per peserta / per kohort]</mark>'
+
+  faq:
+    title: "Pertanyaan yang biasanya muncul"
+    list:
+      - q: "Programmer saya tidak suka bicara dengan orang. Apakah ini akan berhasil?"
+        a_html: "Mungkin tidak untuk semua orang, dan itu wajar. Track A dimulai dari latihan kecil (bicara 2 menit, wawancara satu orang) di lingkungan yang aman. Kebanyakan grogi itu soal jam terbang, bukan bakat. Kalau setelah program seseorang tetap lebih cocok di belakang layar, itu juga informasi yang berguna: perannya bisa menjadi penjaga kualitas dan keamanan hasil AI."
+      - q: "Kenapa tidak langsung rekrut junior yang fasih AI?"
+        a_html: "Bisa, dan untuk sebagian kebutuhan itu pilihan yang tepat. Bedanya: junior baru belum tahu bisnis, pelanggan, dan sistem Anda. Tim lama sudah tahu. Program ini menambahkan cara kerja AI dan keberanian bertemu pengguna ke orang yang sudah punya konteks. Bandingkan biaya dan risikonya di tabel di atas."
+      - q: "Bagaimana kalau mereka keluar setelah dilatih?"
+        a_html: "Risiko ini nyata. Dua hal membantu: solusi capstone tetap milik perusahaan dan tersimpan di repositori perusahaan, dan orang yang punya arah karier jelas cenderung lebih betah. Kalau perlu, perjanjian ikatan dinas bisa dibahas dengan HR Anda, dengan syarat yang wajar."
+      - q: "Apakah hasil capstone dipakai untuk menilai peserta?"
+        a_html: "Ya, dan itu disampaikan terbuka sejak hari pertama. Program ini jalur pengembangan; pemilik akan melihat hasil capstone saat memutuskan peran. Kriteria ditulis di awal, berfokus pada proses (wawancara, validasi, rilis), bukan hanya hasil akhir, dan dirancang supaya bisa dicapai dengan usaha sungguh-sungguh. Capstone menjadi salah satu masukan, bukan satu-satunya dasar keputusan."
+      - q: "Bagaimana dengan data pelanggan dan kerahasiaan perusahaan?"
+        a_html: "Aturan dasar sejak minggu pertama: <ol><li>Pakai data contoh atau data yang disamarkan selama membangun.</li><li>Data pribadi pelanggan baru masuk setelah ada persetujuan tertulis pemilik dan dasar pemrosesan sesuai UU PDP.</li><li>Pakai akun Claude dan Supabase milik perusahaan, bukan akun pribadi.</li><li>Aktifkan Row Level Security di setiap tabel Supabase; kunci rahasia tidak pernah masuk ke kode publik.</li><li>Repositori GitHub milik organisasi perusahaan, dan privat kalau berisi logika bisnis.</li><li>Kode dan hasil capstone milik perusahaan, ditulis di perjanjian kerja sama.</li></ol>Ini bukan nasihat hukum; sesuaikan dengan kebijakan perusahaan."
+      - q: "GitHub Pages dan Supabase cukup untuk produksi?"
+        a_html: "Untuk alat internal, halaman informasi, form, dan aplikasi kecil sampai menengah: biasanya cukup. Untuk sistem pembayaran, data sangat sensitif, beban sangat tinggi, atau toko online komersial di GitHub Pages: tidak, dan capstone seperti itu kami arahkan ke prototipe, lalu dipindah ke infrastruktur perusahaan. GitHub Pages tidak ditujukan untuk bisnis online komersial."
+      - q: "Apakah ini program Toastmasters?"
+        a_html: "Bukan. “Gaya Toastmasters” hanya menggambarkan formatnya: pidato yang disiapkan, bicara spontan, dan evaluasi antarteman. Program ini tidak berafiliasi dengan Toastmasters International."
+      - q: "Apakah program ini mengurangi jumlah karyawan?"
+        a_html: "Tidak. Program ini memperbaiki efektivitas, bukan jumlah orang. Kalau masalah utamanya kelebihan orang, bicarakan itu dengan jujur dulu; kami bisa bantu memikirkannya, tapi program ini bukan alat PHK terselubung."
+      - q: "Bagaimana dengan karyawan non-programmer (marketing, admin)?"
+        a_html: "Polanya sama: temukan masalah, bicara dengan pengguna, bangun dengan AI. Tapi Track B saat ini dirancang untuk developer. Untuk tim lain, kami sarankan mulai dari pilot programmer dulu, lalu memperluas."
+
+  final:
+    title: "Mau mulai dari mana?"
+    lead: "Ceritakan bisnis Anda dan tim yang Anda pikirkan. Kita bicarakan apakah program ini cocok, termasuk kalau jawabannya tidak."
+    cta_wa: "Chat WhatsApp"
+    wa_text: "Halo Ricky, saya tertarik dengan program Berkarir di Era Problem Solving."
+    cta_mail: "Kirim email"
+    mail_subject: "Berkarir di Era Problem Solving"
+    small: "Halaman ini adalah draf proposal. Angka bertanda [ISI] belum final."
+
+  sources:
+    title: "Sumber dan catatan"
+    intro: "Yang kami sebut “bukti” punya sumber di bawah. Yang kami sebut “perkiraan” atau “prediksi” adalah penilaian kami."
+    list:
+      - name: "Brynjolfsson, Chandar & Chen (2025), Canaries in the Coal Mine? Stanford Digital Economy Lab"
+        url: "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
+        note: "data payroll AS, deskriptif (bukan bukti sebab-akibat); belum tentu berlaku di Indonesia"
+      - name: "Indeed Hiring Lab (Juli 2026), AI and job postings"
+        url: "https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/"
+        note: "data AS"
+      - name: "CVE-2025-48757: aplikasi Lovable + Supabase tanpa Row Level Security"
+        url: "https://www.bleek.dev/cve-2025-48757"
+        note: "170 dari 1.645 aplikasi terbuka; cek juga catatan resmi NVD"
+      - name: "Veracode (2025), GenAI Code Security Report"
+        url: "https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/"
+        note: "tingkat potongan kode, bukan aplikasi utuh"
+      - name: "Kompas (6 Okt 2026), DPR sahkan UU Pelindungan Ketenagakerjaan"
+        url: "https://nasional.kompas.com/read/2026/10/06/17550051/dpr-sahkan-uu-pelindungan-ketenagakerjaan-ini-putusan-mk-yang-jadi-dasar"
+      - name: "METR (2025), Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
+        url: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+        note: "uji terkontrol, 16 developer; sampel kecil"
+      - name: "PP 35/2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK"
+        url: "https://peraturan.bpk.go.id/Details/161904/pp-no-35-tahun-2021"
+      - name: "Putusan MK 168/PUU-XXI/2023"
+        url: "https://www.mkri.id/"
+        note: "memerintahkan undang-undang ketenagakerjaan baru"
+      - name: "GitHub Pages: batas penggunaan"
+        url: "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits"
+      - name: "Kebun Makna"
+        url: "https://km.generasimerdeka.com"
+      - name: "Claude Code Indonesia: kisah Kebun Makna dan perkiraan “sebelum ada AI”"
+        url: "https://rickysaif.github.io/claude-code-indonesia/"
+
+en:
+  hero:
+    badge: "Proposal · Draft for business owners"
+    title_html: 'Careers in the Age of <span class="cc-grad">Problem Solving</span>'
+    hook: "“If AI takes over the work done on a laptop, what will my employees do?”"
+    hook_who: "A question we hear more and more from business owners who pay programmers."
+    cta_wa: "Talk it over on WhatsApp"
+    cta_paths: "See the two paths"
+
+  chain:
+    title: "digital work · that AI is starting to take over"
+    note: "Summary"
+    steps:
+      - name: "Consulting & research"
+        kind: evidence
+        tag: "Already happened"
+        text: "Research, summaries, data analysis, and report drafts are now done by AI in minutes."
+      - name: "Coding"
+        kind: evidence
+        tag: "Happening now"
+        text: "Junior programmer openings are down; one person with AI finishes what used to take a team."
+      - name: "Video editing"
+        kind: early
+        tag: "Starting"
+        text: "Cutting, captioning, and rendering a video can already be done with one sentence."
+      - name: "???"
+        kind: open
+        tag: "Unknown"
+        text: "We don't know what comes next. That is exactly the point."
+    foot_html: 'The first two steps have evidence; the third is only an early sign. See the <a href="#sumber">sources</a>.'
+
+  problem:
+    eyebrow: "Sound familiar?"
+    title_html: "Everyone in the office<br>is worried about the same thing"
+    personas:
+      - role: "Business owner"
+        icon: briefcase
+        pains: ["The IT team's salaries keep running, while their output feels increasingly within AI's reach", "Layoffs are expensive, and feel unfair to people who have been loyal for years", "No idea which direction to train the team in"]
+      - role: "Programmer"
+        icon: terminal
+        pains: ["Afraid of losing their position", "Juniors using AI are faster", "Rarely meet users, so they don't know the real problem", "Nervous about presenting or interviewing users"]
+      - role: "Managers & other teams"
+        icon: users
+        pains: ["Requests to the IT team queue up for weeks", "What gets built often doesn't match what's needed", "When someone leaves, their knowledge of the system leaves too"]
+    point_lead: "The fact: AI keeps taking over digital work."
+    point: "If nothing changes, the salaries you pay will become less effective year after year."
+    evidence_intro: "What has evidence behind it, and what is still a guess:"
+    evidence:
+      - "Evidence: in the United States, workers aged 22–25 in the professions most exposed to AI (including developers) are 19% below the trend of their less-exposed peers. The cause: fewer new hires, not layoffs (Stanford, revised August 2026)."
+      - "Evidence: developer job postings in the US have risen again since 2025, but the increase is dominated by senior positions, and is still well below 2020 (Indeed Hiring Lab, July 2026)."
+      - "Evidence to the contrary: in one controlled trial, experienced developers were actually 19% slower when using AI on code they already knew (METR, 2025)."
+      - "Prediction, not evidence: AI will keep moving up to the next kind of work. How fast, nobody knows for sure."
+    evidence_note_html: 'Indonesia-specific data is still thin. We haven''t found any official figures on the effect of AI on programmer job openings in Indonesia. Details in the <a href="#sumber">sources</a>.'
+    bridge: "Is there another answer besides efficiency?"
+
+  km:
+    eyebrow: "Evidence 1 · The threat is real"
+    title: "If a non-coder can build this, what is a coder worth?"
+    intro_html: 'Nurul Bahirah, an education consultant who can''t code, built the first version of <strong>Kebun Makna</strong> in <strong>2 hours</strong> with Claude Code: a free game that helps children learn the meaning of the short surahs of Juz 30, word by word.'
+    compare:
+      title: "If it were built the old way"
+      ai_label: "With Claude Code"
+      ai_value: "2 hours · 1 person"
+      ai_note: "Nurul alone, with no coding background"
+      before_label: "Before AI"
+      before_value: "4–6 months · 5 paid people"
+      before_note: "A game designer, a pixel-art illustrator, two programmers (one just for voice recognition), and a tester"
+      caption: "The “before AI” figure is our own estimate for a game the size of the first version of Kebun Makna, not a measurement."
+    question: "The honest answer: the value shifts, it doesn't disappear."
+    answer:
+      - "Nurul didn't start from the technology. She started from what she understands best: how children learn. Her edge is a deep understanding of the user and the problem. That is what programmers usually don't have."
+      - "But Kebun Makna is a first version for a single need, not a production system serving thousands of transactions. Once an app stores customer data, takes payments, or has to keep running three years from now, some things often get missed: data security, reliability, and code that can be maintained. The examples are real: in 2025, 170 of 1,645 AI-built apps that were scanned exposed their users' data because one database setting was missed, and in a Veracode test, AI-generated code contained common security flaws in 45% of tasks."
+      - "So a programmer's value shifts: from writing code, to understanding the problem and the user, then judging the quality, security, and durability of the solution. That first gap is what this program fills."
+    link: "Try Kebun Makna"
+    table_title: "Who brings what"
+    table_head: ["What Nurul has", "What programmers usually have", "What this program adds"]
+    table_rows:
+      - aspect: "Users & problem"
+        nurul: "Knows exactly how children learn"
+        dev: "Rarely meet users; receive tickets"
+        adds: "Real user interviews every week"
+      - aspect: "Building"
+        nurul: "Claude Code, no coding background"
+        dev: "Can code, some not yet used to AI"
+        adds: "Claude Code + Supabase + GitHub as everyday tools"
+      - aspect: "Quality & security"
+        nurul: "Not a focus in the first version"
+        dev: "Know how to test, secure, and maintain code"
+        adds: "Kept, and used to judge what AI produces"
+      - aspect: "Communication"
+        nurul: "Used to explaining things to parents and children"
+        dev: "Often nervous in front of users or bosses"
+        adds: "Toastmasters-style speaking practice every week"
+    footnote_html: 'An honest note: Kebun Makna proves the <em>threat</em>, not yet the <em>solution</em>. Evidence that programmers can shift roles: <mark class="bk-ph">[FILL: example of a programmer who shifted roles / pilot result]</mark>.'
+
+  paths:
+    eyebrow: "Two paths"
+    title: "Yes, there is a path besides efficiency"
+    intro: "Both make sense. One cuts the cost; the other changes what that cost buys."
+    list:
+      - label: "Path 1"
+        icon: briefcase
+        title: "Efficiency: reduce the payroll"
+        text: "Reasonable to consider, and sometimes necessary. But there is real severance pay (pesangon), the risk of disputes, and system knowledge that walks out the door."
+      - label: "Path 2"
+        icon: spark
+        new: true
+        title: "Move people into problem solving"
+        text: "Shift the team away from the work AI is taking, toward finding and solving real problems for the company's users: work that brings in revenue."
+    note: "These two paths don't exclude each other. Many companies will use both."
+
+  cost:
+    eyebrow: "Cost of path 1"
+    title: "What does it actually cost to let 5 programmers go?"
+    intro: "Layoffs in Indonesia are governed by Government Regulation 35/2021 (PP 35/2021). The calculation is severance pay (pesangon) + long-service pay (UPMK) + entitlement compensation (UPH), based on basic wage plus fixed allowances. Adjust the numbers to your situation."
+    table_caption: "Multiples of monthly wage per person (PP 35/2021, Article 40)"
+    head_tenure: "Length of service"
+    head_pes: "Severance (pesangon)"
+    head_upmk: "UPMK"
+    rows:
+      - ["< 1 year", "1 month", "–"]
+      - ["1–2 years", "2 months", "–"]
+      - ["2–3 years", "3 months", "–"]
+      - ["3–6 years", "4–6 months", "2 months"]
+      - ["6–9 years", "7–9 months", "3 months"]
+      - ["9–12 years", "9 months", "4 months"]
+      - ["12–24 years", "9 months", "5–8 months"]
+      - ["≥ 24 years", "9 months", "10 months"]
+    rules_title: "Things to keep in mind"
+    rules:
+      - "Efficiency because the company is losing money: 0.5× severance. Efficiency to prevent losses: 1× severance. UPMK stays at 1× (Article 43)."
+      - "The loss has to be proven, for example through an internal or external audit. Without proof, a dispute at the Industrial Relations Court (PHI) is more likely."
+      - "Replacing an employee with a cheaper person for the same position is hard to call efficiency, because efficiency is tied to losses or preventing losses. The risk of a dispute is high. This is our own analysis, not a court ruling."
+      - "The House of Representatives passed the Employment Protection Law on 6 October 2026, following Constitutional Court decision 168/PUU-XXI/2023. We haven't confirmed the implementing rules. The multiples above may already have changed: check with a legal consultant before using these numbers."
+    calc_title: "Estimate your own"
+    calc_n: "Number of programmers:"
+    calc_wage: "Basic wage + fixed allowances per month (example, replace with your own figure)"
+    calc_tenure: "Average length of service:"
+    calc_years: "years"
+    calc_reason: "Reason for efficiency"
+    calc_loss: "Because of losses (0.5×)"
+    calc_prevent: "Preventing losses (1×)"
+    calc_fee: "Program fee for the same people (optional)"
+    calc_fee_ph: "fill in once you have a quote"
+    out_pes: "Severance (pesangon)"
+    out_upmk: "UPMK"
+    out_total: "Estimated total (UPH not included)"
+    bar_sev: "Pesangon + UPMK"
+    bar_fee: "Program fee"
+    bar_fee_empty: "[FILL: program price]"
+    calc_note: "A rough estimate, not legal advice. It does not include UPH (unused leave, travel costs home), the cost of recruiting replacements, or the cost of disputes. Verify with an HR or legal consultant."
+    options_title: "A realistic third path: hold hiring + let turnover happen naturally"
+    options_intro: "Many owners will choose this: don't hire replacements, wait for people to leave on their own, then fill the need with AI-fluent juniors. It's a legitimate choice. Let's compare it honestly."
+    options_head: ["Efficiency (layoffs)", "Hold hiring + turnover", "This program"]
+    options_rows:
+      - aspect: "Direct cost"
+        a: "Pesangon + UPMK + UPH, paid up front"
+        b: "Almost zero; payroll shrinks slowly"
+        c: '<mark class="bk-ph">[FILL: price]</mark> per cohort'
+      - aspect: "Speed of effect"
+        a: "Fast (this month)"
+        b: "Slow, and you can't control who leaves"
+        c: "3 months until the first capstone is running"
+      - aspect: "Risk"
+        a: "Disputes, your reputation as an employer"
+        b: "The ones who leave are the best ones"
+        c: "Some participants don't manage to shift"
+      - aspect: "Morale of the remaining team"
+        a: "Drops; everyone waits for their turn"
+        b: "Workload rises for those who stay"
+        c: "A clear career direction"
+      - aspect: "System knowledge"
+        a: "Walks out the door"
+        b: "Walks out, slowly"
+        c: "Stays inside, plus an understanding of users"
+    not_solve: "What this program does not solve: the number of people. It improves effectiveness, not headcount. If your problem really is too many people for the business you have, this program is not the answer."
+    footnote_html: 'Source: <a href="#sumber">PP 35/2021</a>. The table above is simplified; severance rises by one month for each year of service, up to 9 months. All the numbers in the calculator are examples you can change.'
+
+  program:
+    eyebrow: "The program"
+    title: "Two tracks, one goal: user problems that actually get solved"
+    intro: "A fully remote development program designed and led by Ricky Saif. Each participant or small team (squad) brings one real problem tied to the company's core business, then solves it all the way to something working."
+    tracks:
+      - code: "A"
+        name: "Communication"
+        text: "Toastmasters-style speaking practice: being confident and fluent in front of users. Listening, asking, explaining, with the goal of solving their problem."
+        steps:
+          - code: "A1"
+            text: "Speak for 2 minutes without preparation (table topics)"
+          - code: "A2"
+            text: "User interviews: asking without leading"
+          - code: "A3"
+            text: "Explaining the solution to a non-technical person"
+          - code: "A4"
+            text: "Peer evaluation: one compliment, one suggestion"
+          - code: "A5"
+            text: "Capstone presentation in front of the owner"
+      - code: "B"
+        name: "Build"
+        text: "Hands-on practice with Claude Code + Supabase + GitHub Pages to build the solution. Follows the order of the D path in the Claude Code Indonesia community."
+        steps:
+          - code: "D-04"
+            text: "First App"
+          - code: "D-05"
+            text: "CLAUDE.md"
+          - code: "D-06"
+            text: "Git & GitHub"
+          - code: "D-07"
+            text: "Supabase"
+          - code: "D-08"
+            text: "Google Login"
+          - code: "D-11"
+            text: "Publish"
+    tm_note: "“Toastmasters-style” only describes the format. This program is not affiliated with Toastmasters International."
+    week_title: "Weekly rhythm"
+    week_text: "All online. Designed to fit alongside everyday work."
+    week:
+      - "Monday · 60-minute Communication session (Zoom/Meet)"
+      - "Tuesday–Thursday · Talk to at least 2 users"
+      - "Wednesday · 90-minute Build session, live with Claude Code"
+      - "Friday · 5-minute demo per squad + evaluation"
+    week_note: 'Estimated time for participants: <mark class="bk-ph">[FILL: 4–6 hours/week]</mark> including sessions.'
+    format:
+      - label: "Duration"
+        value_html: '<mark class="bk-ph">[FILL: 12 weeks]</mark>'
+      - label: "Cohort size"
+        value_html: '<mark class="bk-ph">[FILL: 6–12 people, squads of 2–3]</mark>'
+      - label: "Language"
+        value_html: '<mark class="bk-ph">[FILL: Indonesian]</mark>'
+
+  capstone:
+    eyebrow: "Capstone"
+    title: "The capstone is the proof"
+    intro: "Not a written exam. Each squad finds a real problem, talks to its users, builds, and ships a solution that people actually use."
+    steps:
+      - time: "Weeks 1–2"
+        title: "Find the problem"
+        text: "Pick one problem close to the core business: one that wastes time, money, or customers."
+      - time: "Weeks 2–4"
+        title: "Talk to users"
+        text: "At least 5 interviews. The goal is to understand, not to sell an idea."
+      - time: "Weeks 4–9"
+        title: "Build"
+        text: "A first version as fast as possible, then improve it together with its users."
+      - time: "Weeks 9–11"
+        title: "Ship"
+        text: "Used by real people, and measured."
+      - time: "Week 12"
+        title: "Present"
+        text: "In front of the owner: the problem, the evidence, the results, and the next step."
+    term:
+      title: "claude · capstone-order-returns"
+      note: "Illustration"
+      notes_title: "Interview notes (week 3)"
+      notes:
+        - who: "CS:"
+          text: "“For every return I check 3 places: WhatsApp, a spreadsheet, and the warehouse system.”"
+        - who: "Warehouse:"
+          text: "“I only find out there's a return when the goods have already arrived.”"
+        - who: "Customer:"
+          text: "“I asked about my return status 4 times and got a different answer each time.”"
+      scenes:
+        - week: "Week 5"
+          prompt: "Read interview-notes.md. Build a return status page: CS enters it once, warehouse and customers can see the status."
+          steps:
+            - "Reading 7 interview notes, summarizing 3 needs"
+            - "Creating a returns table in Supabase, with access rules per role"
+            - "Building the CS input page and the status check page"
+            - "Done. Ready for 2 CS agents to try tomorrow morning."
+        - week: "Week 8"
+          prompt: "Add a notification to the warehouse when a return is approved, then publish."
+          steps:
+            - "Adding the notification, testing it with sample data"
+            - "Checking: no customer data is open to the public"
+            - "Done. Live, used by the CS team starting Monday."
+    examples_title: "Capstone examples for three kinds of business"
+    examples_intro: "Made-up examples to show the shape, not real clients."
+    ex_problem: "Problem"
+    ex_users: "Talk to"
+    ex_build: "What gets built"
+    ex_measure: "Measured by"
+    examples:
+      - icon: store
+        biz: "Distributor / wholesaler"
+        problem: "Traveling sales reps don't know the latest stock, and orders often get cancelled."
+        users: "Field sales, warehouse admin, 3 customer shops"
+        build: "A stock-check page on mobile + an order form that goes straight to the warehouse"
+        measure: "Orders cancelled because of stock, before vs after"
+      - icon: heart
+        biz: "Clinic"
+        problem: "Patients wait a long time because the queue is recorded by hand."
+        users: "Receptionist, doctor, 10 patients"
+        build: "A simple online queue with an estimated time of being called"
+        measure: "Average waiting time, patient complaints"
+      - icon: phone
+        biz: "Software company (B2B)"
+        problem: "New clients take 3 weeks to actually start using the product."
+        users: "Onboarding team, 5 new clients"
+        build: "An interactive setup guide + a checklist that can be tracked"
+        measure: "Days until the client is active, support tickets"
+
+  owner:
+    eyebrow: "What you receive"
+    title: "What the owner gets at the end of the program"
+    deliver_title: "Deliverables"
+    deliverables:
+      - "One working solution per squad, used by real users"
+      - "User interview notes and validated problems"
+      - "Capstone presentation, with before and after numbers"
+      - "A report per participant: strengths, growth, and a suggested next role"
+      - "Rules for working safely with AI and company data"
+    score_title: "Success scorecard"
+    score_head: ["Measure", "How it's measured", "Target"]
+    score:
+      - metric: "Conversations with users"
+        how: "Interview notes"
+        target: '<mark class="bk-ph">[FILL: ≥ 5 per squad]</mark>'
+      - metric: "Validated problem"
+        how: "Confirmed by ≥ 3 users"
+        target: '<mark class="bk-ph">[FILL: 1 per squad]</mark>'
+      - metric: "Solution shipped"
+        how: "Accessible and in use"
+        target: '<mark class="bk-ph">[FILL: 1 per squad]</mark>'
+      - metric: "Adoption"
+        how: "Weekly active users"
+        target: '<mark class="bk-ph">[FILL]</mark>'
+      - metric: "Work hours saved"
+        how: "User estimate, before vs after"
+        target: '<mark class="bk-ph">[FILL]</mark>'
+      - metric: "Revenue affected"
+        how: "Agreed up front with the owner"
+        target: '<mark class="bk-ph">[FILL]</mark>'
+    transparency: "Open from the start: this program is a development path, and the owner will see the capstone results when deciding on roles. Participants are told in the first session, with written criteria that can be met through honest effort."
+
+  proof:
+    eyebrow: "Evidence"
+    title: "Who leads it, and what has been proven"
+    list:
+      - label: "Evidence 2 · The guide"
+        title: "Ricky Saif, Partner CEO in the AI Era"
+        text_html: "Computer Science graduate of Universitas Indonesia (2013), 13 years of working alongside organizations. Has been a management and software trainer for BAPPENAS, Telkom Indigo, and IDEMIA. Led culture and engagement at Alterra (Gallup engagement +17%). Facilitated a large-scale agile transformation (LeSS) at Dkatalis / Bank Jago: 4 teams, 35 developers and PMs. Wrote two books on Agile/Scrum."
+      - label: "Evidence 3 · Communication"
+        title: "“Why Culture Comes First”"
+        text_html: "The 8-minute speech that won AgileNE. Track A is led by someone who practices public speaking."
+        url: "https://www.youtube.com/watch?v=_ycD1M2eW5g"
+        link: "Watch on YouTube"
+      - label: "Evidence 4 · Build"
+        title: "The Scrum AI Addendum site: 38 minutes of Claude time"
+        text_html: "Ricky built the site himself with Claude Code, plus three free tools: Customer Servicerr, Marketerr, and Scouterr. He also runs the Claude Code Indonesia community."
+        url: "https://rizkysyaiful.github.io/scrum-ai-addendum/"
+        link: "See the result"
+      - label: "Evidence 5 · Not yet"
+        missing: true
+        title: "A programmer who successfully shifted roles"
+        text_html: 'This is the most important evidence, and we don''t have it yet. <mark class="bk-ph">[FILL: example of a programmer who shifted roles / pilot result]</mark>. The paid pilot below is designed to fill it.'
+
+  engage:
+    eyebrow: "Ways to work together"
+    title: "Start small"
+    intro: "Our recommendation: start with an intro session, then move to a pilot. A full cohort once the pilot has proven itself."
+    list:
+      - label: "Step 1"
+        title: "“Careers in the Age of Problem Solving” session"
+        text: "A 90-minute intro session for owners and teams, online."
+        items: ["A map of how digital work is changing", "A Claude Code demo from scratch", "Open Q&A"]
+        price_html: '<mark class="bk-ph">[FILL: free / session price]</mark>'
+      - label: "Step 2 · Recommended"
+        recommended: true
+        title: "Paid pilot"
+        text: "One small cohort, one real problem per squad."
+        items: ["Both tracks, condensed version", "Capstone through to shipping", "Results report for the owner"]
+        price_html: '<mark class="bk-ph">[FILL: pilot price, duration, number of participants]</mark>'
+      - label: "Step 3"
+        title: "Full cohort"
+        text: "After the pilot, for more teams."
+        items: ["The complete program", "Scorecard tracked monthly", "Support after the program"]
+        price_html: '<mark class="bk-ph">[FILL: price per participant / per cohort]</mark>'
+
+  faq:
+    title: "Questions that usually come up"
+    list:
+      - q: "My programmers don't like talking to people. Will this work?"
+        a_html: "Maybe not for everyone, and that's fine. Track A starts with small exercises (a 2-minute talk, interviewing one person) in a safe setting. Most nervousness is about practice, not talent. If after the program someone is still better suited to work behind the scenes, that is useful to know too: their role can be guarding the quality and security of what AI produces."
+      - q: "Why not just hire AI-fluent juniors?"
+        a_html: "You can, and for some needs it's the right choice. The difference: a new junior doesn't yet know your business, your customers, and your systems. Your existing team does. This program adds AI ways of working and the confidence to meet users to people who already have the context. Compare the costs and risks in the table above."
+      - q: "What if they leave after being trained?"
+        a_html: "This risk is real. Two things help: the capstone solution stays with the company and is kept in the company's repository, and people with a clear career direction tend to stay longer. If needed, a service-bond agreement can be discussed with your HR, on reasonable terms."
+      - q: "Are the capstone results used to assess participants?"
+        a_html: "Yes, and that is said openly from day one. This program is a development path; the owner will see the capstone results when deciding on roles. The criteria are written down at the start, focus on the process (interviews, validation, shipping) and not only the final result, and are designed to be achievable through honest effort. The capstone is one input, not the only basis for a decision."
+      - q: "What about customer data and company confidentiality?"
+        a_html: "Ground rules from the first week: <ol><li>Use sample or anonymized data while building.</li><li>Customers' personal data only comes in after the owner's written approval and a processing basis under the PDP Law.</li><li>Use the company's Claude and Supabase accounts, not personal ones.</li><li>Turn on Row Level Security on every Supabase table; secret keys never go into public code.</li><li>GitHub repositories belong to the company's organization, and are private if they contain business logic.</li><li>The code and capstone results belong to the company, written into the cooperation agreement.</li></ol>This is not legal advice; adapt it to your company's policy."
+      - q: "Are GitHub Pages and Supabase enough for production?"
+        a_html: "For internal tools, information pages, forms, and small to medium apps: usually yes. For payment systems, highly sensitive data, very high load, or a commercial online store on GitHub Pages: no, and we steer capstones like that toward a prototype, then move it to the company's infrastructure. GitHub Pages is not intended for commercial online businesses."
+      - q: "Is this a Toastmasters program?"
+        a_html: "No. “Toastmasters-style” only describes the format: prepared speeches, impromptu speaking, and peer evaluation. This program is not affiliated with Toastmasters International."
+      - q: "Does this program reduce the number of employees?"
+        a_html: "No. This program improves effectiveness, not headcount. If the main problem is having too many people, talk about that honestly first; we can help think it through, but this program is not a layoff tool in disguise."
+      - q: "What about non-programmer employees (marketing, admin)?"
+        a_html: "The pattern is the same: find a problem, talk to users, build with AI. But Track B is currently designed for developers. For other teams, we suggest starting with a programmer pilot first, then expanding."
+
+  final:
+    title: "Where would you like to start?"
+    lead: "Tell us about your business and the team you have in mind. We'll talk about whether this program fits, including if the answer is no."
+    cta_wa: "Chat on WhatsApp"
+    wa_text: "Hi Ricky, I'm interested in the Careers in the Age of Problem Solving program."
+    cta_mail: "Send an email"
+    mail_subject: "Careers in the Age of Problem Solving"
+    small: "This page is a draft proposal. Figures marked [FILL] are not final."
+
+  sources:
+    title: "Sources and notes"
+    intro: "What we call “evidence” has a source below. What we call an “estimate” or a “prediction” is our own judgment."
+    list:
+      - name: "Brynjolfsson, Chandar & Chen (2025), Canaries in the Coal Mine? Stanford Digital Economy Lab"
+        url: "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
+        note: "US payroll data, descriptive (not proof of cause and effect); may not apply in Indonesia"
+      - name: "Indeed Hiring Lab (Juli 2026), AI and job postings"
+        url: "https://hiringlab.indeed.com/2026/07/08/ai-and-job-postings-from-destruction-to-creation/"
+        note: "US data"
+      - name: "CVE-2025-48757: aplikasi Lovable + Supabase tanpa Row Level Security"
+        url: "https://www.bleek.dev/cve-2025-48757"
+        note: "170 of 1,645 apps exposed; also check the official NVD entry"
+      - name: "Veracode (2025), GenAI Code Security Report"
+        url: "https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/"
+        note: "measured at the level of code snippets, not whole apps"
+      - name: "Kompas (6 Okt 2026), DPR sahkan UU Pelindungan Ketenagakerjaan"
+        url: "https://nasional.kompas.com/read/2026/10/06/17550051/dpr-sahkan-uu-pelindungan-ketenagakerjaan-ini-putusan-mk-yang-jadi-dasar"
+      - name: "METR (2025), Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
+        url: "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+        note: "controlled trial, 16 developers; small sample"
+      - name: "PP 35/2021 tentang PKWT, Alih Daya, Waktu Kerja, dan PHK"
+        url: "https://peraturan.bpk.go.id/Details/161904/pp-no-35-tahun-2021"
+      - name: "Putusan MK 168/PUU-XXI/2023"
+        url: "https://www.mkri.id/"
+        note: "orders a new employment law"
+      - name: "GitHub Pages: batas penggunaan"
+        url: "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits"
+      - name: "Kebun Makna"
+        url: "https://km.generasimerdeka.com"
+      - name: "Claude Code Indonesia: kisah Kebun Makna dan perkiraan “sebelum ada AI”"
+        url: "https://rickysaif.github.io/claude-code-indonesia/"
