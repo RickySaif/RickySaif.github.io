@@ -3,7 +3,7 @@
   {% comment %} Each item is a page slug and a key in _data/translations.yml.
      Book Summary and Articles are hidden for now. To bring them back, add
      "book-summary,writing" to the list. {% endcomment %}
-  {% assign nav_items = "claude-code-indonesia,events" | split: "," %}
+  {% assign nav_items = "komunitas-ai,events" | split: "," %}
   {% comment %} Stay Tuned opens the WhatsApp channel in the page's language. {% endcomment %}
   {% if site.active_lang == "en" %}{% assign wa_channel = site.whatsapp_channel_url_en %}{% else %}{% assign wa_channel = site.whatsapp_channel_url_id %}{% endif %}
 

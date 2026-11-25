@@ -23,7 +23,7 @@ lang: id
     <p>Jadwal meetup baru diumumkan di grup WhatsApp Agentic Indonesia, bersama tutorial langkah demi langkah yang gratis.</p>
     <div class="rs-cta-row">
       <a class="rs-btn rs-btn--primary" href="{{ site.claude_code_wa_url }}" target="_blank" rel="noopener">Gabung grup WhatsApp</a>
-      <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/claude-code-indonesia/">Apa itu Agentic Indonesia?</a>
+      <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/komunitas-ai/">Apa itu Agentic Indonesia?</a>
     </div>
   </div>
 </section>

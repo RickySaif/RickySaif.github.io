@@ -23,7 +23,7 @@ lang: en
     <p>New meetups are announced in the Agentic Indonesia WhatsApp group, along with the free step-by-step tutorial.</p>
     <div class="rs-cta-row">
       <a class="rs-btn rs-btn--primary" href="{{ site.claude_code_wa_url }}" target="_blank" rel="noopener">Join the WhatsApp group</a>
-      <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/claude-code-indonesia/">What is Agentic Indonesia?</a>
+      <a class="rs-btn rs-btn--secondary rs-btn--on-ink" href="/komunitas-ai/">What is Agentic Indonesia?</a>
     </div>
   </div>
 </section>

@@ -31,15 +31,15 @@ disqus:
 
 # WhatsApp. ONE link for the whole site. The group invite is kept private:
 # visitors message Ricky (pre-filled text) and he sends the invite by hand.
-whatsapp_channel_url: "https://wa.me/6289678601060?text=Halo%20Mas%20Ricky%2C%20salam%20kenal.%20Saya%20minat%20gabung%20ke%20grup%20Claude%20Code%20Indonesia"
+whatsapp_channel_url: "https://wa.me/6289678601060?text=Halo%20Mas%20Ricky%2C%20salam%20kenal.%20Saya%20minat%20gabung%20ke%20grup%20Agentic%20Indonesia"
 
 # The two language channels, offered side by side on /stay-tuned/.
 whatsapp_channel_url_en: "https://whatsapp.com/channel/0029VbBuAJD2UPBOhpeowq26"
 whatsapp_channel_url_id: "https://whatsapp.com/channel/0029VbA90wsEAKWG14Kij70x"
 
-# Agentic Indonesia community (a WhatsApp group). Used only on /claude-code-indonesia/ and
+# Agentic Indonesia community (a WhatsApp group). Used only on /komunitas-ai/ and
 # /events/. Kept apart from whatsapp_channel_url on purpose: different audience.
-claude_code_wa_url: "https://wa.me/6289678601060?text=Halo%20Mas%20Ricky%2C%20salam%20kenal.%20Saya%20minat%20gabung%20ke%20grup%20Claude%20Code%20Indonesia"
+claude_code_wa_url: "https://wa.me/6289678601060?text=Halo%20Mas%20Ricky%2C%20salam%20kenal.%20Saya%20minat%20gabung%20ke%20grup%20Agentic%20Indonesia"
 
 # Free tools. Every repo lives under this GitHub org.
 github_url: "https://github.com/orgs/RickySaif/repositories"
