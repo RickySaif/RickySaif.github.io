@@ -318,6 +318,9 @@
   max-width: 32em;
   margin: 24px 0 0 !important;
   color: var(--cc-on-night-muted);
+
+  /* A paragraph break in the text is a small gap, not a blank line. */
+  .cc-lead-gap { display: block; height: .55em; }
 }
 
 .cc-hero-next {
@@ -2681,7 +2684,18 @@
 }
 
 @media (min-width: 1000px) {
-  .cc-hero-grid { grid-template-columns: 1.05fr 1fr; gap: 64px; }
+  .cc-hero-grid { grid-template-columns: 1.05fr 1fr; gap: 48px; }
+
+  /* The whole hero (label, headline, text, buttons and next meetup) should
+     fit the first screen without scrolling, so sizes follow the viewport
+     height as well as its width. */
+  .cc-hero { padding: clamp(24px, 4.5vh, 52px) 0 clamp(20px, 3vh, 44px); }
+  .cc .cc-hero h1 { font-size: clamp(34px, min(4.1vw, 6.4vh), 58px) !important; line-height: 1.06 !important; }
+  .cc-hero .cc-badge { margin-bottom: 14px !important; }
+  .cc .cc-hero .cc-lead { max-width: 36em; margin-top: 14px !important; font-size: clamp(15px, 2.2vh, 18px) !important; line-height: 1.5 !important; }
+  .cc-actions { margin-top: 20px; }
+  .cc-hero-next { margin-top: 16px; }
+  .cc-hero-visual { padding: 30px 0 100px; }
   .cc-story { grid-template-columns: 1.08fr 1fr; gap: 72px; }
   .cc-personas--many { grid-template-columns: repeat(3, 1fr); }
 }
