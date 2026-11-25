@@ -95,7 +95,7 @@ id:
           trends: ["Reels pendek", "Carousel"]
   community:
     title: "Satu komunitas, tiga hal yang Anda dapat"
-    intro: "Agentic Indonesia adalah komunitas WhatsApp untuk siapa saja yang ingin mulai memakai Claude Code. Gratis, dan tidak perlu bisa coding dulu."
+    intro: "Agentic Indonesia adalah komunitas WhatsApp untuk siapa saja yang ingin mulai belajar Agentic Coding. Gratis, dan tidak perlu bisa coding dulu."
     features:
       - icon: book
         title: "Tutorial langkah demi langkah"
@@ -125,10 +125,10 @@ id:
           text: "Bikin aplikasi. 14 grup berurutan, dari nol sampai aplikasinya online dan terpantau."
         - code: V
           name: "Video Production"
-          text: "Bikin video dengan Claude Code."
+          text: "Bikin video dengan Agentic Coding."
         - code: M
           name: "Marketing"
-          text: "Claude Code untuk kerja pemasaran."
+          text: "Agentic Coding untuk kerja pemasaran."
         - code: P
           name: "Paper Works"
           text: "Dokumen dan kerjaan kantor."
@@ -163,13 +163,13 @@ id:
       - "Mengambil-alih pekerjaan kamu dengan lebih baik, lebih cerdas, dan lebih kreatif, sehingga kamu punya waktu untuk mengerjakan hal lain"
     scene:
       tagline_lead: "Nabi Sulaiman punya Jin."
-      tagline_html: 'Saya punya <span class="cc-grad">Claude Code</span>.'
+      tagline_html: 'Saya punya <span class="cc-grad">Agentic Coding</span>.'
       alt: "Lukisan Nabi Sulaiman berdiri di tangga singgasana berhiaskan singa emas, menyambut Ratu Bilqis (Sheba)"
       credit: "Edward Poynter, The Visit of the Queen of Sheba to King Solomon (1890). Art Gallery of New South Wales. Domain publik, via"
       source_label: "Wikimedia Commons"
     bridge: "Apa buktinya?"
   why:
-    title: "Kenapa Claude Code akan mengubah cara kita bekerja"
+    title: "Kenapa Agentic Coding akan mengubah cara kita bekerja"
     intro: "Butuh bikin video, laporan, analisa, atau aplikasi? Selama ini pilihannya cuma dua."
     paths:
       - label: "Pilihan 1"
@@ -219,9 +219,9 @@ id:
       nous: {company: "Nous Research", from: "Hermes", text: "Hermes dibuat oleh Nous Research, lab AI independen."}
     tools_made_by: "Buatan"
     analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Agentic Coding seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
-    bridge: "Tempat terbaik belajar Claude Code?"
-    roles_title: "Siapa pun Anda, ada pekerjaan yang bisa Claude Code ambil alih"
-    roles_intro: "Kalau hasilnya digital, kemungkinan besar Claude Code bisa membantu membuatnya. Beberapa contoh:"
+    bridge: "Tempat terbaik belajar Agentic Coding?"
+    roles_title: "Siapa pun Anda, ada pekerjaan yang bisa diambil alih Agentic Coding"
+    roles_intro: "Kalau hasilnya digital, kemungkinan besar Agentic Coding bisa membantu membuatnya. Beberapa contoh:"
     roles:
       - icon: store
         title: "Pemilik toko"
@@ -258,7 +258,7 @@ id:
         text: "Membandingkan versi kontrak dan menandai klausul yang perlu dibaca ulang oleh manusia."
       - icon: terminal
         title: "Developer"
-        text: "Menulis, mengetes, dan memperbaiki kode, bahkan di proyek yang belum pernah Claude Code lihat."
+        text: "Menulis, mengetes, dan memperbaiki kode, bahkan di proyek yang belum pernah dilihat AI-nya."
     roles_outro_html: "Ingin Indonesia maju + dapat uang tambahan? <strong>Bantu mereka semua di atas pakai AI</strong> agar lebih efektif &amp; efisien."
   # Proof 2, appended to the "why" section: an animated case study. The stage
   # data is an illustration; the numbers in the copy come from the source.
@@ -335,7 +335,7 @@ id:
     # 5 people x 5 months x 160 h = 4,000 h, so the AI bar is a sliver.
     compare:
       title: "Kalau dibuat dengan cara lama"
-      ai_label: "Dengan Claude Code"
+      ai_label: "Dengan Agentic Coding"
       ai_value: "2 jam · 1 orang"
       ai_note: "Nurul sendiri, tanpa bisa coding"
       before_label: "Sebelum ada AI"
@@ -376,7 +376,7 @@ id:
         title: "Versi akhir"
         text: "Untuk setiap catatan bernomor dari saya, Claude Code memperbaiki lalu mengecek ulang."
     ts_title: "Waktu kerja, digambar sesuai skala"
-    ts_ai_label: "Dengan Claude Code"
+    ts_ai_label: "Dengan Agentic Coding"
     ts_ai_value: "38 menit"
     ts_before_label: "Tanpa AI: desainer, developer, dan animator"
     ts_before_value: "2–3 minggu (perkiraan saya)"
@@ -463,7 +463,7 @@ en:
           trends: ["Short Reels", "Carousels"]
   community:
     title: "One community, three things you get"
-    intro: "Agentic Indonesia is a WhatsApp community for anyone who wants to start using Claude Code. It's free, and you don't need to code first."
+    intro: "Agentic Indonesia is a WhatsApp community for anyone who wants to start learning Agentic Coding. It's free, and you don't need to code first."
     features:
       - icon: book
         title: "A step-by-step tutorial"
@@ -493,10 +493,10 @@ en:
           text: "Build apps. 14 groups in order, from zero to an app that is live and monitored."
         - code: V
           name: "Video Production"
-          text: "Make videos with Claude Code."
+          text: "Make videos with Agentic Coding."
         - code: M
           name: "Marketing"
-          text: "Claude Code for marketing work."
+          text: "Agentic Coding for marketing work."
         - code: P
           name: "Paper Works"
           text: "Documents and office work."
@@ -531,13 +531,13 @@ en:
       - "Take over your work and do it better, smarter and more creatively, so you have time for other things"
     scene:
       tagline_lead: "Prophet Solomon had Jinns."
-      tagline_html: 'I have <span class="cc-grad">Claude Code</span>.'
+      tagline_html: 'I have <span class="cc-grad">Agentic Coding</span>.'
       alt: "Painting of King Solomon standing on his throne steps lined with golden lions, welcoming the Queen of Sheba"
       credit: "Edward Poynter, The Visit of the Queen of Sheba to King Solomon (1890). Art Gallery of New South Wales. Public domain, via"
       source_label: "Wikimedia Commons"
     bridge: "Where's the proof?"
   why:
-    title: "Why Claude Code will change the way we work"
+    title: "Why Agentic Coding will change the way we work"
     intro: "Need a video, a report, an analysis or an app? Until now you had two choices."
     paths:
       - label: "Choice 1"
@@ -587,9 +587,9 @@ en:
       nous: {company: "Nous Research", from: "Hermes", text: "Hermes is made by Nous Research, an independent AI lab."}
     tools_made_by: "Made by"
     analogy_html: "AI chat is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. Agentic Coding is like a <strong>builder who comes to your house</strong> with tools."
-    bridge: "The best place to learn Claude Code?"
+    bridge: "The best place to learn Agentic Coding?"
     roles_title: "Whoever you are, there's work it can take off your hands"
-    roles_intro: "If the result is digital, Claude Code can most likely help you make it. A few examples:"
+    roles_intro: "If the result is digital, Agentic Coding can most likely help you make it. A few examples:"
     roles:
       - icon: store
         title: "Shop owners"
@@ -699,7 +699,7 @@ en:
     badge: "First version: 2 hours"
     compare:
       title: "If it were built the old way"
-      ai_label: "With Claude Code"
+      ai_label: "With Agentic Coding"
       ai_value: "2 hours · 1 person"
       ai_note: "Nurul herself, without knowing how to code"
       before_label: "Before AI"
@@ -740,7 +740,7 @@ en:
         title: "Final version"
         text: "For each of my numbered notes, it rebuilt and checked again."
     ts_title: "Work time, drawn to scale"
-    ts_ai_label: "With Claude Code"
+    ts_ai_label: "With Agentic Coding"
     ts_ai_value: "38 minutes"
     ts_before_label: "Without AI: a designer, a developer and an animator"
     ts_before_value: "2–3 weeks (my estimate)"
