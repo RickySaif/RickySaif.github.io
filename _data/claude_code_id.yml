@@ -22,7 +22,7 @@ d_track:
 
 id:
   hero:
-    title_html: 'Takut Dipecat / Memecat? <span class="cc-grad">Ini Solusinya.</span>'
+    title_html: 'In This Economy, Ga Mau Memecat/Dipecat? <span class="cc-grad">Ini Solusinya</span>'
     lead: "Pelajari superpower baru ini. Tingkatkan pemasukan bisnis. Buat sistem yang lebih cepat serta hemat. Berdayakan tim dan diri sendiri. In this economy, yang gitu-gitu aja bakal kalah bersaing, harus berani ikut komunitas untuk upgrade diri.<br><br>Claude Code Indonesia adalah grup WhatsApp gratis berisi tutorial langkah-demi-langkah dan meetup online setiap minggu.<br><br>Jangan sampai kompetitor-kompetitor kamu belajar duluan."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar meetup online"
@@ -368,7 +368,7 @@ id:
     result_link: "Lihat hasilnya: Scrum: AI Addendum"
     question: "Jadi, apa yang akan Anda buat dalam 38 menit?"
   final:
-    title: "Jangan belajar sendirian."
+    title: "Jangan belajar sendirian"
     lead: "Gabung grup WhatsApp Claude Code Indonesia untuk tutorial langkah demi langkah gratis dan teman untuk bertanya. Atau ikut meetup online mingguan."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar meetup online"
@@ -376,7 +376,7 @@ id:
 
 en:
   hero:
-    title_html: 'Afraid of Layoffs, or of Laying People Off? <span class="cc-grad">Here''s the Answer.</span>'
+    title_html: 'In This Economy, Don''t Want to Fire or Get Fired? <span class="cc-grad">Here''s the Answer</span>'
     lead: "Learn this new superpower. Grow your business revenue. Build systems that are faster and cheaper. Empower your team and yourself. In this economy, playing it safe means falling behind, so be bold enough to join a community and level up.<br><br>Claude Code Indonesia is a free WhatsApp group with step-by-step tutorials and weekly online meetups.<br><br>Don't let your competitors learn it first."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the online meetup"
@@ -469,7 +469,7 @@ en:
       groups_alt: "The list of groups in the Claude Code Indonesia WhatsApp community, from P-00 Setup to D-00 Start Here"
       lesson_label: "Group bio"
       lesson_alt: "The D-04 First App group bio: the steps to build a first app with Claude Code, in Indonesian"
-      tracks_title: "Four tracks. Pick the one you need."
+      tracks_title: "Four tracks, pick the one you need"
       tracks:
         - code: D
           name: "Development"
@@ -491,7 +491,7 @@ en:
     invite_caption: "Click the image to join the WhatsApp group"
   problem:
     eyebrow: "Sound familiar?"
-    title_html: "Different seats. Same pressure."
+    title_html: "Different seats, same pressure"
     personas:
       - role: "Business owner"
         icon: "briefcase"
@@ -715,7 +715,7 @@ en:
     result_link: "See the result: Scrum: AI Addendum"
     question: "So, what would you create in 38 minutes?"
   final:
-    title: "Don't learn it alone."
+    title: "Don't learn it alone"
     lead: "Join the Claude Code Indonesia WhatsApp group for a free step-by-step tutorial and people to ask. Or join the weekly online meetup."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the online meetup"
