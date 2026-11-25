@@ -15,6 +15,8 @@
  *   [data-cc-adstage]    proof 2: scan, flag, rewrite, Figma; loops 3 times
  *   [data-cc-terminal]   plays each scene: types the prompt, ticks the steps,
  *                        shows the result card; [data-scene-tab] switches scenes
+ *   [data-cc-pairs]      chat vs agentic tools: hover or tap one to light up the
+ *                        tool from the same company and show who makes them
  */
 (function () {
   "use strict";
@@ -209,6 +211,50 @@
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
+  });
+
+  // 5. Tool pairs (chat vs agentic). Hover (mouse) or focus previews a pair;
+  //    a click or tap pins it, and clicking it again lets go. Chips without a
+  //    partner clear the pin. Until this runs, the markup shows every panel.
+  each(document.querySelectorAll("[data-cc-pairs]"), function (root) {
+    var chips = root.querySelectorAll(".cc-tool");
+    var panels = root.querySelectorAll("[data-pair-panel]");
+    var pinned = null, preview = null;
+
+    function render() {
+      var on = preview || pinned;
+      root.classList.toggle("has-active", !!on);
+      each(chips, function (c) {
+        var p = c.getAttribute("data-pair");
+        c.classList.toggle("is-on", !!on && p === on);
+        if (p) c.setAttribute("aria-pressed", pinned === p ? "true" : "false");
+      });
+      each(panels, function (el) {
+        el.classList.toggle("is-on", el.getAttribute("data-pair-panel") === on);
+      });
+    }
+
+    each(chips, function (c) {
+      var p = c.getAttribute("data-pair");
+      c.addEventListener("pointerenter", function (e) {
+        if (e.pointerType === "mouse" && p) { preview = p; render(); }
+      });
+      c.addEventListener("pointerleave", function (e) {
+        if (e.pointerType === "mouse") { preview = null; render(); }
+      });
+      c.addEventListener("focus", function () {
+        if (p && c.matches(":focus-visible")) { preview = p; render(); }
+      });
+      c.addEventListener("blur", function () { preview = null; render(); });
+      c.addEventListener("click", function () {
+        pinned = p && pinned !== p ? p : null;
+        preview = null;
+        render();
+      });
+    });
+
+    root.classList.add("is-live");
+    render();
   });
 
 })();

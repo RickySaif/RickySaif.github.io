@@ -23,7 +23,7 @@ d_track:
 id:
   hero:
     title_html: 'In This Economy, Ga Mau Memecat/Dipecat? <span class="cc-grad">Ini Solusinya</span>'
-    lead: "Pelajari superpower baru ini. Tingkatkan pemasukan bisnis. Buat sistem yang lebih cepat serta hemat. Berdayakan tim dan diri sendiri. In this economy, yang gitu-gitu aja bakal kalah bersaing, harus berani ikut komunitas untuk upgrade diri.<br><br>Claude Code Indonesia adalah grup WhatsApp gratis berisi tutorial langkah-demi-langkah dan meetup online setiap minggu.<br><br>Jangan sampai kompetitor-kompetitor kamu belajar duluan."
+    lead: "Pelajari superpower baru ini. Tingkatkan pemasukan bisnis. Buat sistem yang lebih cepat serta hemat. Berdayakan tim dan diri sendiri. In this economy, yang gitu-gitu aja bakal kalah bersaing, harus berani ikut komunitas untuk upgrade diri.<br><br>Agentic Indonesia adalah grup WhatsApp gratis berisi tutorial langkah-demi-langkah dan meetup online setiap minggu.<br><br>Jangan sampai kompetitor-kompetitor kamu belajar duluan."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar meetup online"
     next_label: "Meetup online berikutnya"
@@ -95,7 +95,7 @@ id:
           trends: ["Reels pendek", "Carousel"]
   community:
     title: "Satu komunitas, tiga hal yang Anda dapat"
-    intro: "Claude Code Indonesia adalah komunitas WhatsApp untuk siapa saja yang ingin mulai memakai Claude Code. Gratis, dan tidak perlu bisa coding dulu."
+    intro: "Agentic Indonesia adalah komunitas WhatsApp untuk siapa saja yang ingin mulai memakai Claude Code. Gratis, dan tidak perlu bisa coding dulu."
     features:
       - icon: book
         title: "Tutorial langkah demi langkah"
@@ -115,7 +115,7 @@ id:
         - "Buka bio grup, lalu ikuti langkahnya"
         - "Mentok? Tanya di grup itu. Siapa pun boleh jawab."
       chip: "Tidak ada pertanyaan bodoh"
-      groups_alt: "Daftar grup di komunitas WhatsApp Claude Code Indonesia, dari P-00 Setup sampai D-00 Start Here"
+      groups_alt: "Daftar grup di komunitas WhatsApp Agentic Indonesia, dari P-00 Setup sampai D-00 Start Here"
       lesson_label: "Bio grup"
       lesson_alt: "Bio grup D-04 First App: langkah membuat aplikasi pertama dengan Claude Code"
       tracks_title: "Empat jalur, pilih sesuai kebutuhan"
@@ -136,7 +136,7 @@ id:
       general_html: "Ada juga grup umum: <strong>Ngobrol</strong> untuk diskusi bebas, <strong>Member Showcase</strong> untuk karya anggota, dan <strong>Kopdar</strong> untuk info &amp; dokumentasi pertemuan. Boleh jualan, tapi lewat fitur <strong>Member Tag</strong>: makin aktif &amp; kontributif, makin lancar jualan di komunitas ini."
     meetup_title: "Meetup online berikutnya"
     meetup_more: "Lihat semua acara"
-    invite_alt: "Undangan grup WhatsApp Claude Code Indonesia"
+    invite_alt: "Undangan grup WhatsApp Agentic Indonesia"
     invite_caption: "Klik gambar untuk gabung ke grup WhatsApp"
   problem:
     eyebrow: "Terasa familiar?"
@@ -194,13 +194,29 @@ id:
     chat_user: "Bagaimana cara membuat landing page?"
     chat_bot: "Ini contoh kodenya, silakan disalin:"
     chat_after: "Anda yang menyalin, mencoba, dan memperbaiki kalau error."
-    cc_label: "Claude Code"
+    cc_label: "AI Agentic"
     cc_user: "Buatkan landing page untuk toko kue saya."
     cc_steps:
       - "Membuat file"
       - "Menjalankan di browser"
       - "Memperbaiki error-nya sendiri"
     cc_after: "Anda tinggal menilai hasilnya."
+    tools_label: "Contohnya"
+    tools_hint: "Arahkan kursor atau ketuk salah satu untuk melihat siapa yang membuatnya."
+    tools_chat:
+      - {name: "ChatGPT", pair: "openai"}
+      - {name: "Claude Web", pair: "anthropic"}
+      - {name: "Gemini", pair: "google"}
+    tools_agent:
+      - {name: "Codex", pair: "openai"}
+      - {name: "Claude Desktop", pair: "anthropic"}
+      - {name: "Antigravity", pair: "google"}
+      - {name: "Hermes"}
+    tools_pairs:
+      openai: {company: "OpenAI", from: "ChatGPT", to: "Codex", text: "Satu perusahaan, dua cara pakai: ChatGPT untuk ngobrol, Codex untuk mengerjakan."}
+      anthropic: {company: "Anthropic", from: "Claude Web", to: "Claude Desktop", text: "Satu perusahaan, dua cara pakai: Claude Web untuk ngobrol, Claude Desktop untuk mengerjakan."}
+      google: {company: "Google", from: "Gemini", to: "Antigravity", text: "Satu perusahaan, dua cara pakai: Gemini untuk ngobrol, Antigravity untuk mengerjakan."}
+    tools_made_by: "Buatan"
     analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Claude Code seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
     bridge: "Tempat terbaik belajar Claude Code?"
     roles_title: "Siapa pun Anda, ada pekerjaan yang bisa Claude Code ambil alih"
@@ -369,7 +385,7 @@ id:
     question: "Jadi, apa yang akan Anda buat dalam 38 menit?"
   final:
     title: "Jangan belajar sendirian"
-    lead: "Gabung grup WhatsApp Claude Code Indonesia untuk tutorial langkah demi langkah gratis dan teman untuk bertanya. Atau ikut meetup online mingguan."
+    lead: "Gabung grup WhatsApp Agentic Indonesia untuk tutorial langkah demi langkah gratis dan teman untuk bertanya. Atau ikut meetup online mingguan."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar meetup online"
     small: "Gratis. Tempat meetup terbatas."
@@ -377,7 +393,7 @@ id:
 en:
   hero:
     title_html: 'In This Economy, Don''t Want to Fire or Get Fired? <span class="cc-grad">Here''s the Answer</span>'
-    lead: "Learn this new superpower. Grow your business revenue. Build systems that are faster and cheaper. Empower your team and yourself. In this economy, playing it safe means falling behind, so be bold enough to join a community and level up.<br><br>Claude Code Indonesia is a free WhatsApp group with step-by-step tutorials and weekly online meetups.<br><br>Don't let your competitors learn it first."
+    lead: "Learn this new superpower. Grow your business revenue. Build systems that are faster and cheaper. Empower your team and yourself. In this economy, playing it safe means falling behind, so be bold enough to join a community and level up.<br><br>Agentic Indonesia is a free WhatsApp group with step-by-step tutorials and weekly online meetups.<br><br>Don't let your competitors learn it first."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the online meetup"
     next_label: "Next online meetup"
@@ -446,7 +462,7 @@ en:
           trends: ["Short Reels", "Carousels"]
   community:
     title: "One community, three things you get"
-    intro: "Claude Code Indonesia is a WhatsApp community for anyone who wants to start using Claude Code. It's free, and you don't need to code first."
+    intro: "Agentic Indonesia is a WhatsApp community for anyone who wants to start using Claude Code. It's free, and you don't need to code first."
     features:
       - icon: book
         title: "A step-by-step tutorial"
@@ -466,7 +482,7 @@ en:
         - "Open the group bio and follow the steps"
         - "Stuck? Ask in that group. Anyone can answer."
       chip: "There are no stupid questions"
-      groups_alt: "The list of groups in the Claude Code Indonesia WhatsApp community, from P-00 Setup to D-00 Start Here"
+      groups_alt: "The list of groups in the Agentic Indonesia WhatsApp community, from P-00 Setup to D-00 Start Here"
       lesson_label: "Group bio"
       lesson_alt: "The D-04 First App group bio: the steps to build a first app with Claude Code, in Indonesian"
       tracks_title: "Four tracks, pick the one you need"
@@ -487,7 +503,7 @@ en:
       general_html: "There are general groups too: <strong>Ngobrol</strong> for open chat, <strong>Member Showcase</strong> for members' work, and <strong>Kopdar</strong> for meetup info &amp; documentation. Selling is welcome, but through the <strong>Member Tag</strong> feature: the more active and helpful you are, the better you'll sell in this community."
     meetup_title: "Next online meetup"
     meetup_more: "See all events"
-    invite_alt: "Claude Code Indonesia WhatsApp group invite"
+    invite_alt: "Agentic Indonesia WhatsApp group invite"
     invite_caption: "Click the image to join the WhatsApp group"
   problem:
     eyebrow: "Sound familiar?"
@@ -545,13 +561,29 @@ en:
     chat_user: "How do I make a landing page?"
     chat_bot: "Here is some example code you can copy:"
     chat_after: "You copy it, try it, and fix it when it breaks."
-    cc_label: "Claude Code"
+    cc_label: "Agentic AI"
     cc_user: "Build a landing page for my cake shop."
     cc_steps:
       - "Creates the files"
       - "Runs it in a browser"
       - "Fixes its own errors"
     cc_after: "You just judge the result."
+    tools_label: "Examples"
+    tools_hint: "Hover or tap one to see who makes it."
+    tools_chat:
+      - {name: "ChatGPT", pair: "openai"}
+      - {name: "Claude Web", pair: "anthropic"}
+      - {name: "Gemini", pair: "google"}
+    tools_agent:
+      - {name: "Codex", pair: "openai"}
+      - {name: "Claude Desktop", pair: "anthropic"}
+      - {name: "Antigravity", pair: "google"}
+      - {name: "Hermes"}
+    tools_pairs:
+      openai: {company: "OpenAI", from: "ChatGPT", to: "Codex", text: "One company, two ways to use it: ChatGPT to talk, Codex to get things done."}
+      anthropic: {company: "Anthropic", from: "Claude Web", to: "Claude Desktop", text: "One company, two ways to use it: Claude Web to talk, Claude Desktop to get things done."}
+      google: {company: "Google", from: "Gemini", to: "Antigravity", text: "One company, two ways to use it: Gemini to talk, Antigravity to get things done."}
+    tools_made_by: "Made by"
     analogy_html: "AI chat is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. Claude Code is like a <strong>builder who comes to your house</strong> with tools."
     bridge: "The best place to learn Claude Code?"
     roles_title: "Whoever you are, there's work it can take off your hands"
@@ -716,7 +748,7 @@ en:
     question: "So, what would you create in 38 minutes?"
   final:
     title: "Don't learn it alone"
-    lead: "Join the Claude Code Indonesia WhatsApp group for a free step-by-step tutorial and people to ask. Or join the weekly online meetup."
+    lead: "Join the Agentic Indonesia WhatsApp group for a free step-by-step tutorial and people to ask. Or join the weekly online meetup."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the online meetup"
     small: "Free. Meetup seats are limited."

@@ -1,4 +1,4 @@
-# Claude Code Indonesia meetups. Listed on /events/ (upcoming first, then past) and the
+# Agentic Indonesia meetups. Listed on /events/ (upcoming first, then past) and the
 # next upcoming one is announced on /claude-code-indonesia/.
 #
 # One entry per event. Order in this file does not matter: pages sort by date.
@@ -16,8 +16,8 @@
   start: "19:00"
   end: "21:00"
   title:
-    id: "Kopdar Claude Code Indonesia: AMA & live demo"
-    en: "Claude Code Indonesia meetup: AMA & live demo"
+    id: "Kopdar Agentic Indonesia: AMA & live demo"
+    en: "Agentic Indonesia meetup: AMA & live demo"
   venue:
     id: "J.Co Blora Sudirman, lt. 2 (dekat Stasiun KRL Sudirman)"
     en: "J.Co Blora Sudirman, 2nd floor (near Stasiun KRL Sudirman)"
@@ -31,8 +31,8 @@
   start: "20:00"
   end: "21:00"
   title:
-    id: "Online Meetup Komunitas Claude Code Indonesia (Minggu 48)"
-    en: "Claude Code Indonesia Online Meetup (Week 48)"
+    id: "Online Meetup Komunitas Agentic Indonesia (Minggu 48)"
+    en: "Agentic Indonesia Online Meetup (Week 48)"
   venue:
     id: "Online"
     en: "Online"

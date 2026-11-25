@@ -1,6 +1,6 @@
 # Shared UI strings, per language. Rendered by _includes/header.html,
 # footer.html, head.html and the case-study templates.
-# Header order is: Claude Code Indonesia, Events (set in header.html).
+# Header order is: Agentic Indonesia, Events (set in header.html).
 en:
   identity: "CEO's Partner in the AI Era"
   tagline: "Free AI tools. More sales, more revenue."
@@ -9,7 +9,7 @@ en:
   tools: "Tools"
   writing: "Articles"
   book-summary: "Book Summary"
-  claude-code-indonesia: "Claude Code Indonesia"
+  claude-code-indonesia: "Agentic Indonesia"
   events: "Events"
   about: "About"
   books: "Books I Authored"
@@ -56,7 +56,7 @@ id:
   tools: "Alat"
   writing: "Artikel"
   book-summary: "Ringkasan Buku"
-  claude-code-indonesia: "Claude Code Indonesia"
+  claude-code-indonesia: "Agentic Indonesia"
   events: "Acara"
   about: "Tentang"
   books: "Buku yang Saya Tulis"

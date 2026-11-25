@@ -37,7 +37,7 @@ whatsapp_channel_url: "https://wa.me/6289678601060?text=Halo%20Mas%20Ricky%2C%20
 whatsapp_channel_url_en: "https://whatsapp.com/channel/0029VbBuAJD2UPBOhpeowq26"
 whatsapp_channel_url_id: "https://whatsapp.com/channel/0029VbA90wsEAKWG14Kij70x"
 
-# Claude Code Indonesia community (a WhatsApp group). Used only on /claude-code-indonesia/ and
+# Agentic Indonesia community (a WhatsApp group). Used only on /claude-code-indonesia/ and
 # /events/. Kept apart from whatsapp_channel_url on purpose: different audience.
 claude_code_wa_url: "https://wa.me/6289678601060?text=Halo%20Mas%20Ricky%2C%20salam%20kenal.%20Saya%20minat%20gabung%20ke%20grup%20Claude%20Code%20Indonesia"
 
@@ -101,5 +101,5 @@ github: [metadata]
 # Direct WhatsApp chat with Ricky. Used by the footer "Contact me" link.
 whatsapp_direct_url: "https://wa.me/6289678601060"
 
-# WhatsApp for trying/testing Kebun Makna. Used by the Claude Code Indonesia story button.
+# WhatsApp for trying/testing Kebun Makna. Used by the Agentic Indonesia story button.
 kebun_makna_wa_url: "https://wa.me/62895601077462"

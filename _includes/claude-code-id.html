@@ -337,23 +337,59 @@
     </div>
 
     <h3 class="cc-h3 cc-center" data-reveal>{{ c.why.vs_title }}</h3>
+    {%- comment -%} Chat vs agentic, with example tools under each card. Tools from
+      the same company are paired (data-pair); hovering or tapping one lights up
+      its partner and shows the .cc-pair panel (landing.js, [data-cc-pairs]).
+      Without JavaScript the chips are inert and all three panels stay visible. {%- endcomment %}
+    <div class="cc-vs-wrap" data-cc-pairs>
     <div class="cc-vs">
-      <div class="cc-vs-card" data-reveal style="--d:1">
-        <p class="cc-vs-label">{{ c.why.chat_label }}</p>
-        <div class="cc-bubble cc-bubble--me">{{ c.why.chat_user }}</div>
-        <div class="cc-bubble cc-bubble--bot">{{ c.why.chat_bot }}<code>&lt;section class="hero"&gt;&hellip;</code></div>
-        <p class="cc-vs-after cc-vs-after--meh">{% include cc-icon.html name="repeat" size=18 %}{{ c.why.chat_after }}</p>
-      </div>
-      <div class="cc-vs-card cc-vs-card--cc" data-reveal style="--d:2">
-        <p class="cc-vs-label">{{ c.why.cc_label }}</p>
-        <div class="cc-bubble cc-bubble--me">{{ c.why.cc_user }}</div>
-        <ul class="cc-vs-steps">
-          {%- for s in c.why.cc_steps %}
-          <li>{% include cc-icon.html name="check" size=16 %}{{ s }}</li>
+      <div class="cc-vs-col">
+        <div class="cc-vs-card" data-reveal style="--d:1">
+          <p class="cc-vs-label">{{ c.why.chat_label }}</p>
+          <div class="cc-bubble cc-bubble--me">{{ c.why.chat_user }}</div>
+          <div class="cc-bubble cc-bubble--bot">{{ c.why.chat_bot }}<code>&lt;section class="hero"&gt;&hellip;</code></div>
+          <p class="cc-vs-after cc-vs-after--meh">{% include cc-icon.html name="repeat" size=18 %}{{ c.why.chat_after }}</p>
+        </div>
+        <div class="cc-tools" data-reveal style="--d:2">
+          <span class="cc-tools-label">{{ c.why.tools_label }}</span>
+          {%- for t in c.why.tools_chat %}
+          <button type="button" class="cc-tool"{% if t.pair %} data-pair="{{ t.pair }}" aria-pressed="false"{% endif %}>{{ t.name }}</button>
           {%- endfor %}
-        </ul>
-        <p class="cc-vs-after">{% include cc-icon.html name="spark" size=18 %}{{ c.why.cc_after }}</p>
+        </div>
       </div>
+      <div class="cc-vs-col">
+        <div class="cc-vs-card cc-vs-card--cc" data-reveal style="--d:2">
+          <p class="cc-vs-label">{{ c.why.cc_label }}</p>
+          <div class="cc-bubble cc-bubble--me">{{ c.why.cc_user }}</div>
+          <ul class="cc-vs-steps">
+            {%- for s in c.why.cc_steps %}
+            <li>{% include cc-icon.html name="check" size=16 %}{{ s }}</li>
+            {%- endfor %}
+          </ul>
+          <p class="cc-vs-after">{% include cc-icon.html name="spark" size=18 %}{{ c.why.cc_after }}</p>
+        </div>
+        <div class="cc-tools" data-reveal style="--d:3">
+          <span class="cc-tools-label">{{ c.why.tools_label }}</span>
+          {%- for t in c.why.tools_agent %}
+          <button type="button" class="cc-tool"{% if t.pair %} data-pair="{{ t.pair }}" aria-pressed="false"{% endif %}>{{ t.name }}</button>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="cc-pairbox" aria-live="polite">
+      <p class="cc-pair-hint">{{ c.why.tools_hint }}</p>
+      {%- for pr in c.why.tools_pairs %}
+      {%- assign key = pr[0] %}{% assign v = pr[1] %}
+      <div class="cc-pair" data-pair-panel="{{ key }}">
+        <div class="cc-pair-viz">
+          <span class="cc-pair-node">{{ v.from }}</span>
+          <span class="cc-pair-link"><span class="cc-pair-co">{{ c.why.tools_made_by }} {{ v.company }}</span></span>
+          <span class="cc-pair-node">{{ v.to }}</span>
+        </div>
+        <p class="cc-pair-text">{{ v.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
     </div>
     <blockquote class="cc-analogy" data-reveal><p>{{ c.why.analogy_html }}</p></blockquote>
 
