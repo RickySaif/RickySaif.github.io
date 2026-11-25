@@ -381,10 +381,12 @@
       {%- for pr in c.why.tools_pairs %}
       {%- assign key = pr[0] %}{% assign v = pr[1] %}
       <div class="cc-pair" data-pair-panel="{{ key }}">
-        <div class="cc-pair-viz">
+        <div class="cc-pair-viz{% unless v.to %} cc-pair-viz--solo{% endunless %}">
           <span class="cc-pair-node">{{ v.from }}</span>
           <span class="cc-pair-link"><span class="cc-pair-co">{{ c.why.tools_made_by }} {{ v.company }}</span></span>
+          {%- if v.to %}
           <span class="cc-pair-node">{{ v.to }}</span>
+          {%- endif %}
         </div>
         <p class="cc-pair-text">{{ v.text }}</p>
       </div>

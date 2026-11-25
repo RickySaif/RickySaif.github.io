@@ -179,16 +179,16 @@ id:
         title: "Bayar ahlinya, lalu menunggu"
         text: "Mahal, dan sering antre berminggu-minggu."
       - label: "Pilihan 3 · Baru"
-        title: "Jelaskan, lalu Claude Code yang mengerjakan"
-        text: "Anda fokus pada masalahnya. Claude Code yang mengerjakan."
-    what_title: "Apa itu Claude Code?"
-    what_text: "Claude Code adalah AI buatan Anthropic yang bekerja langsung di komputer Anda. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
+        title: "Jelaskan, lalu Agentic Coding yang mengerjakan"
+        text: "Anda fokus pada masalahnya. AI yang mengerjakan."
+    what_title: "Apa itu Agentic Coding?"
+    what_text: "Agentic Coding adalah cara bekerja dengan AI agen yang bekerja langsung di komputer Anda. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
     loop:
       - "Anda menjelaskan tujuannya"
-      - "Claude Code membuat file, menulis kode, mengolah data"
-      - "Claude Code menjalankan dan mengecek hasilnya"
+      - "AI membuat file, menulis kode, mengolah data"
+      - "AI menjalankan dan mengecek hasilnya"
       - "Anda menilai dan memberi masukan"
-    loop_note: "Sebelum melakukan hal penting, Claude Code minta izin dulu."
+    loop_note: "Sebelum melakukan hal penting, AI-nya minta izin dulu."
     vs_title: "Bedanya dengan Chat AI"
     chat_label: "Chat AI biasa (lebih butuh skill prompting)"
     chat_user: "Bagaimana cara membuat landing page?"
@@ -211,13 +211,14 @@ id:
       - {name: "Codex", pair: "openai"}
       - {name: "Claude Desktop", pair: "anthropic"}
       - {name: "Antigravity", pair: "google"}
-      - {name: "Hermes"}
+      - {name: "Hermes", pair: "nous"}
     tools_pairs:
       openai: {company: "OpenAI", from: "ChatGPT", to: "Codex", text: "Satu perusahaan, dua cara pakai: ChatGPT untuk ngobrol, Codex untuk mengerjakan."}
       anthropic: {company: "Anthropic", from: "Claude Web", to: "Claude Desktop", text: "Satu perusahaan, dua cara pakai: Claude Web untuk ngobrol, Claude Desktop untuk mengerjakan."}
       google: {company: "Google", from: "Gemini", to: "Antigravity", text: "Satu perusahaan, dua cara pakai: Gemini untuk ngobrol, Antigravity untuk mengerjakan."}
+      nous: {company: "Nous Research", from: "Hermes", text: "Hermes dibuat oleh Nous Research, lab AI independen."}
     tools_made_by: "Buatan"
-    analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Claude Code seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
+    analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Agentic Coding seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
     bridge: "Tempat terbaik belajar Claude Code?"
     roles_title: "Siapa pun Anda, ada pekerjaan yang bisa Claude Code ambil alih"
     roles_intro: "Kalau hasilnya digital, kemungkinan besar Claude Code bisa membantu membuatnya. Beberapa contoh:"
@@ -546,10 +547,10 @@ en:
         title: "Pay an expert, then wait"
         text: "Expensive, and often weeks in a queue."
       - label: "Choice 3 · New"
-        title: "Explain it, and Claude Code does the work"
+        title: "Explain it, and Agentic Coding does the work"
         text: "You focus on the problem. It does the work."
-    what_title: "What is Claude Code?"
-    what_text: "Claude Code is an AI from Anthropic that works directly on your computer. You explain what you want in everyday language. Bahasa Indonesia works too."
+    what_title: "What is Agentic Coding?"
+    what_text: "Agentic Coding is working with an AI agent that works directly on your computer. You explain what you want in everyday language. Bahasa Indonesia works too."
     loop:
       - "You explain the goal"
       - "It creates files, writes code, crunches data"
@@ -578,13 +579,14 @@ en:
       - {name: "Codex", pair: "openai"}
       - {name: "Claude Desktop", pair: "anthropic"}
       - {name: "Antigravity", pair: "google"}
-      - {name: "Hermes"}
+      - {name: "Hermes", pair: "nous"}
     tools_pairs:
       openai: {company: "OpenAI", from: "ChatGPT", to: "Codex", text: "One company, two ways to use it: ChatGPT to talk, Codex to get things done."}
       anthropic: {company: "Anthropic", from: "Claude Web", to: "Claude Desktop", text: "One company, two ways to use it: Claude Web to talk, Claude Desktop to get things done."}
       google: {company: "Google", from: "Gemini", to: "Antigravity", text: "One company, two ways to use it: Gemini to talk, Antigravity to get things done."}
+      nous: {company: "Nous Research", from: "Hermes", text: "Hermes is made by Nous Research, an independent AI lab."}
     tools_made_by: "Made by"
-    analogy_html: "AI chat is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. Claude Code is like a <strong>builder who comes to your house</strong> with tools."
+    analogy_html: "AI chat is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. Agentic Coding is like a <strong>builder who comes to your house</strong> with tools."
     bridge: "The best place to learn Claude Code?"
     roles_title: "Whoever you are, there's work it can take off your hands"
     roles_intro: "If the result is digital, Claude Code can most likely help you make it. A few examples:"

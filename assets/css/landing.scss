@@ -1691,6 +1691,7 @@
   &[data-pair="openai"] { --pc: #10A37F; }
   &[data-pair="anthropic"] { --pc: #D97757; }
   &[data-pair="google"] { --pc: #4285F4; }
+  &[data-pair="nous"] { --pc: #7C5CFF; }
   &:focus-visible { outline: 2px solid var(--rs-accent); outline-offset: 2px; }
 }
 .cc-tool.is-on {
@@ -1721,6 +1722,7 @@
 .cc-pair[data-pair-panel="openai"] { --pc: #10A37F; }
 .cc-pair[data-pair-panel="anthropic"] { --pc: #D97757; }
 .cc-pair[data-pair-panel="google"] { --pc: #4285F4; }
+.cc-pair[data-pair-panel="nous"] { --pc: #7C5CFF; }
 
 .cc-pair-viz {
   display: grid;
@@ -1730,6 +1732,8 @@
   width: 100%;
   max-width: 560px;
 }
+.cc-pair-viz--solo { grid-template-columns: auto auto; justify-content: center; }
+.cc-pair-viz--solo .cc-pair-link { min-width: 160px; }
 .cc-pair-node {
   padding: 10px 16px;
   border: 1.5px solid var(--pc);
