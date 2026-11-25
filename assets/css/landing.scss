@@ -2689,12 +2689,22 @@
   /* The whole hero (label, headline, text, buttons and next meetup) should
      fit the first screen without scrolling, so sizes follow the viewport
      height as well as its width. */
-  .cc-hero { padding: clamp(32px, 5.5vh, 64px) 0 clamp(24px, 3vh, 40px); }
+  /* The hero fills the first screen (below the 65px header) and centres its
+     content, so the spare space is shared evenly above and below instead of
+     piling up under the meetup box. */
+  .cc-hero {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    min-height: min(calc(100vh - 65px), 880px);
+    padding: clamp(28px, 4.5vh, 52px) 0;
+  }
+  .cc-hero > .cc-container { width: 100%; }
   .cc .cc-hero h1 { font-size: clamp(34px, min(4.1vw, 6.4vh), 58px) !important; line-height: 1.06 !important; }
   .cc-hero .cc-badge { margin-bottom: 22px !important; }
   .cc .cc-hero .cc-lead { max-width: 38em; margin-top: 18px !important; font-size: clamp(15px, 2.2vh, 18px) !important; line-height: 1.5 !important; }
   .cc-actions { margin-top: 24px; }
-  .cc-hero-next { margin-top: 18px; }
+  .cc-hero-next { margin-top: 16px; }
   .cc-hero-visual { padding: 30px 0 64px; }
   .cc-hero .cc-term-body { padding-bottom: 84px; }
   .cc-story { grid-template-columns: 1.08fr 1fr; gap: 72px; }
@@ -2703,7 +2713,7 @@
 
 /* Short laptop screens: a little less air so the hero still fits. */
 @media (min-width: 1000px) and (max-height: 760px) {
-  .cc-hero { padding: 26px 0 18px; }
+  .cc-hero { padding: 24px 0; }
   .cc-hero .cc-badge { margin-bottom: 14px !important; }
   .cc .cc-hero .cc-lead { margin-top: 12px !important; }
   .cc-hero .cc-actions { margin-top: 18px; }
