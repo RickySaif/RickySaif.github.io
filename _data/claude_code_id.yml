@@ -95,7 +95,7 @@ id:
           trends: ["Reels pendek", "Carousel"]
   community:
     title: "Satu komunitas, tiga hal yang Anda dapat"
-    intro: "Agentic Indonesia adalah komunitas WhatsApp untuk siapa saja yang ingin mulai belajar Agentic Coding. Gratis, dan tidak perlu bisa coding dulu."
+    intro: "Agentic Indonesia adalah komunitas WhatsApp untuk siapa saja yang ingin mulai belajar Agen AI. Gratis, dan tidak perlu bisa coding dulu."
     features:
       - icon: book
         title: "Tutorial langkah demi langkah"
@@ -125,10 +125,10 @@ id:
           text: "Bikin aplikasi. 14 grup berurutan, dari nol sampai aplikasinya online dan terpantau."
         - code: V
           name: "Video Production"
-          text: "Bikin video dengan Agentic Coding."
+          text: "Bikin video dengan Agen AI."
         - code: M
           name: "Marketing"
-          text: "Agentic Coding untuk kerja pemasaran."
+          text: "Agen AI untuk kerja pemasaran."
         - code: P
           name: "Paper Works"
           text: "Dokumen dan kerjaan kantor."
@@ -169,7 +169,7 @@ id:
       source_label: "Wikimedia Commons"
     bridge: "Apa buktinya?"
   why:
-    title: "Kenapa Agentic Coding akan mengubah cara kita bekerja"
+    title: "Kenapa Agen AI akan mengubah cara kita bekerja"
     intro: "Butuh bikin video, laporan, analisa, atau aplikasi? Selama ini pilihannya cuma dua."
     paths:
       - label: "Pilihan 1"
@@ -179,10 +179,10 @@ id:
         title: "Bayar ahlinya, lalu menunggu"
         text: "Mahal, dan sering antre berminggu-minggu."
       - label: "Pilihan 3 · Baru"
-        title: "Jelaskan, lalu Agentic Coding yang mengerjakan"
+        title: "Jelaskan, lalu Agen AI yang mengerjakan"
         text: "Anda fokus pada masalahnya. AI yang mengerjakan."
-    what_title: "Apa itu Agentic Coding?"
-    what_text: "Agentic Coding adalah agen AI yang bekerja langsung di komputer Anda secara mandiri. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
+    what_title: "Apa itu Agen AI?"
+    what_text: "Agen AI adalah AI yang bekerja langsung di komputer Anda secara mandiri. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
     loop:
       - "Anda menjelaskan tujuannya"
       - "AI membuat file, menulis kode, mengolah data"
@@ -218,10 +218,10 @@ id:
       google: {company: "Google", from: "Gemini", to: "Antigravity", text: "Satu perusahaan, dua cara pakai: Gemini untuk ngobrol, Antigravity untuk mengerjakan."}
       nous: {company: "Nous Research", from: "Hermes", text: "Hermes dibuat oleh Nous Research, lab AI independen."}
     tools_made_by: "Buatan"
-    analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Agentic Coding seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
-    bridge: "Tempat terbaik belajar Agentic Coding?"
-    roles_title: "Siapa pun Anda, ada pekerjaan yang bisa diambil alih Agentic Coding"
-    roles_intro: "Kalau hasilnya digital, kemungkinan besar Agentic Coding bisa membantu membuatnya. Beberapa contoh:"
+    analogy_html: "Chat AI itu seperti <strong>konsultan di telepon</strong>: sarannya bagus, tapi Anda sendiri yang turun tangan. Agen AI seperti <strong>tukang yang datang ke rumah</strong> membawa perkakas."
+    bridge: "Tempat terbaik belajar Agen AI?"
+    roles_title: "Siapa pun Anda, ada pekerjaan yang bisa diambil alih Agen AI"
+    roles_intro: "Kalau hasilnya digital, kemungkinan besar Agen AI bisa membantu membuatnya. Beberapa contoh:"
     roles:
       - icon: store
         title: "Pemilik toko"
@@ -312,7 +312,7 @@ id:
     name: "Nurul Bahirah"
     role: "Konsultan pendidikan, lulusan Inggris"
     photo_alt: "Foto Nurul Bahirah"
-    intro_html: "Nurul adalah konsultan pendidikan lulusan Inggris yang ingin mengajarkan makna Al-Qur'an ke anaknya. Dengan Agentic Coding (merek Claude Code), ia membuat <strong>Kebun Makna</strong>: game berkebun gratis untuk anak-anak belajar arti kata demi kata dan bacaan surat-surat pendek Juz 30. Versi pertamanya jadi dalam <strong>2 jam</strong>."
+    intro_html: "Nurul adalah konsultan pendidikan lulusan Inggris yang ingin mengajarkan makna Al-Qur'an ke anaknya. Dengan Agen AI (merek Claude Code), ia membuat <strong>Kebun Makna</strong>: game berkebun gratis untuk anak-anak belajar arti kata demi kata dan bacaan surat-surat pendek Juz 30. Versi pertamanya jadi dalam <strong>2 jam</strong>."
     features:
       - icon: book
         title: "10 surat, An-Nas sampai Al-Fil"
@@ -325,7 +325,7 @@ id:
         text: "Anak menolong warga desa dan mendapat Koin Makna setiap kali memahami arti ayat."
     stats:
       - label: "Dibuat oleh"
-        value_html: "Nurul Bahirah, dengan Agentic Coding (merek Claude Code)"
+        value_html: "Nurul Bahirah, dengan Agen AI (merek Claude Code)"
       - label: "Versi pertama"
         value_html: "2 jam"
       - label: "Model bisnis"
@@ -335,7 +335,7 @@ id:
     # 5 people x 5 months x 160 h = 4,000 h, so the AI bar is a sliver.
     compare:
       title: "Kalau dibuat dengan cara lama"
-      ai_label: "Dengan Agentic Coding (merek Claude Code)"
+      ai_label: "Dengan Agen AI (merek Claude Code)"
       ai_value: "2 jam · 1 orang"
       ai_note: "Nurul sendiri, tanpa bisa coding"
       before_label: "Sebelum ada AI"
@@ -376,7 +376,7 @@ id:
         title: "Versi akhir"
         text: "Untuk setiap catatan bernomor dari saya, Claude Code memperbaiki lalu mengecek ulang."
     ts_title: "Waktu kerja, digambar sesuai skala"
-    ts_ai_label: "Dengan Agentic Coding (merek Claude Code)"
+    ts_ai_label: "Dengan Agen AI (merek Claude Code)"
     ts_ai_value: "38 menit"
     ts_before_label: "Tanpa AI: desainer, developer, dan animator"
     ts_before_value: "2–3 minggu (perkiraan saya)"
@@ -463,7 +463,7 @@ en:
           trends: ["Short Reels", "Carousels"]
   community:
     title: "One community, three things you get"
-    intro: "Agentic Indonesia is a WhatsApp community for anyone who wants to start learning Agentic Coding. It's free, and you don't need to code first."
+    intro: "Agentic Indonesia is a WhatsApp community for anyone who wants to start learning AI Agents. It's free, and you don't need to code first."
     features:
       - icon: book
         title: "A step-by-step tutorial"
@@ -493,10 +493,10 @@ en:
           text: "Build apps. 14 groups in order, from zero to an app that is live and monitored."
         - code: V
           name: "Video Production"
-          text: "Make videos with Agentic Coding."
+          text: "Make videos with an AI Agent."
         - code: M
           name: "Marketing"
-          text: "Agentic Coding for marketing work."
+          text: "AI Agents for marketing work."
         - code: P
           name: "Paper Works"
           text: "Documents and office work."
@@ -537,7 +537,7 @@ en:
       source_label: "Wikimedia Commons"
     bridge: "Where's the proof?"
   why:
-    title: "Why Agentic Coding will change the way we work"
+    title: "Why AI Agents will change the way we work"
     intro: "Need a video, a report, an analysis or an app? Until now you had two choices."
     paths:
       - label: "Choice 1"
@@ -547,10 +547,10 @@ en:
         title: "Pay an expert, then wait"
         text: "Expensive, and often weeks in a queue."
       - label: "Choice 3 · New"
-        title: "Explain it, and Agentic Coding does the work"
+        title: "Explain it, and an AI Agent does the work"
         text: "You focus on the problem. It does the work."
-    what_title: "What is Agentic Coding?"
-    what_text: "Agentic Coding is working with an AI agent that works directly on your computer. You explain what you want in everyday language. Bahasa Indonesia works too."
+    what_title: "What is an AI Agent?"
+    what_text: "An AI Agent is an AI that works directly on your computer, on its own. You explain what you want in everyday language. Bahasa Indonesia works too."
     loop:
       - "You explain the goal"
       - "It creates files, writes code, crunches data"
@@ -586,10 +586,10 @@ en:
       google: {company: "Google", from: "Gemini", to: "Antigravity", text: "One company, two ways to use it: Gemini to talk, Antigravity to get things done."}
       nous: {company: "Nous Research", from: "Hermes", text: "Hermes is made by Nous Research, an independent AI lab."}
     tools_made_by: "Made by"
-    analogy_html: "AI chat is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. Agentic Coding is like a <strong>builder who comes to your house</strong> with tools."
-    bridge: "The best place to learn Agentic Coding?"
+    analogy_html: "AI chat is like a <strong>consultant on the phone</strong>: good advice, but you do the work yourself. An AI Agent is like a <strong>builder who comes to your house</strong> with tools."
+    bridge: "The best place to learn AI Agents?"
     roles_title: "Whoever you are, there's work it can take off your hands"
-    roles_intro: "If the result is digital, Agentic Coding can most likely help you make it. A few examples:"
+    roles_intro: "If the result is digital, an AI Agent can most likely help you make it. A few examples:"
     roles:
       - icon: store
         title: "Shop owners"
@@ -678,7 +678,7 @@ en:
     name: "Nurul Bahirah"
     role: "Education consultant, UK graduate"
     photo_alt: "Photo of Nurul Bahirah"
-    intro_html: "Nurul is an education consultant and a UK graduate who wants to teach her child the meaning of the Qur'an. With Agentic Coding (Claude Code brand), she built <strong>Kebun Makna</strong>: a free farming game where children learn the word-by-word meaning and recitation of the short surahs of Juz 30. The first version took her <strong>2 hours</strong>."
+    intro_html: "Nurul is an education consultant and a UK graduate who wants to teach her child the meaning of the Qur'an. With an AI Agent (Claude Code brand), she built <strong>Kebun Makna</strong>: a free farming game where children learn the word-by-word meaning and recitation of the short surahs of Juz 30. The first version took her <strong>2 hours</strong>."
     features:
       - icon: book
         title: "10 surahs, An-Nas to Al-Fil"
@@ -691,7 +691,7 @@ en:
         text: "Children help the villagers and earn Meaning Coins each time they understand an ayah."
     stats:
       - label: "Built by"
-        value_html: "Nurul Bahirah, with Agentic Coding (Claude Code brand)"
+        value_html: "Nurul Bahirah, with an AI Agent (Claude Code brand)"
       - label: "First version"
         value_html: "2 hours"
       - label: "Business model"
@@ -699,7 +699,7 @@ en:
     badge: "First version: 2 hours"
     compare:
       title: "If it were built the old way"
-      ai_label: "With Agentic Coding (Claude Code brand)"
+      ai_label: "With an AI Agent (Claude Code brand)"
       ai_value: "2 hours · 1 person"
       ai_note: "Nurul herself, without knowing how to code"
       before_label: "Before AI"
@@ -740,7 +740,7 @@ en:
         title: "Final version"
         text: "For each of my numbered notes, it rebuilt and checked again."
     ts_title: "Work time, drawn to scale"
-    ts_ai_label: "With Agentic Coding (Claude Code brand)"
+    ts_ai_label: "With an AI Agent (Claude Code brand)"
     ts_ai_value: "38 minutes"
     ts_before_label: "Without AI: a designer, a developer and an animator"
     ts_before_value: "2–3 weeks (my estimate)"
