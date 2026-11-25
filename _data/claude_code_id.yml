@@ -335,7 +335,7 @@ id:
     # 5 people x 5 months x 160 h = 4,000 h, so the AI bar is a sliver.
     compare:
       title: "Kalau dibuat dengan cara lama"
-      ai_label: "Dengan Agentic Coding"
+      ai_label: "Dengan Agentic Coding (merek Claude Code)"
       ai_value: "2 jam · 1 orang"
       ai_note: "Nurul sendiri, tanpa bisa coding"
       before_label: "Sebelum ada AI"
@@ -376,7 +376,7 @@ id:
         title: "Versi akhir"
         text: "Untuk setiap catatan bernomor dari saya, Claude Code memperbaiki lalu mengecek ulang."
     ts_title: "Waktu kerja, digambar sesuai skala"
-    ts_ai_label: "Dengan Agentic Coding"
+    ts_ai_label: "Dengan Agentic Coding (merek Claude Code)"
     ts_ai_value: "38 menit"
     ts_before_label: "Tanpa AI: desainer, developer, dan animator"
     ts_before_value: "2–3 minggu (perkiraan saya)"
@@ -699,7 +699,7 @@ en:
     badge: "First version: 2 hours"
     compare:
       title: "If it were built the old way"
-      ai_label: "With Agentic Coding"
+      ai_label: "With Agentic Coding (Claude Code brand)"
       ai_value: "2 hours · 1 person"
       ai_note: "Nurul herself, without knowing how to code"
       before_label: "Before AI"
@@ -740,7 +740,7 @@ en:
         title: "Final version"
         text: "For each of my numbered notes, it rebuilt and checked again."
     ts_title: "Work time, drawn to scale"
-    ts_ai_label: "With Agentic Coding"
+    ts_ai_label: "With Agentic Coding (Claude Code brand)"
     ts_ai_value: "38 minutes"
     ts_before_label: "Without AI: a designer, a developer and an animator"
     ts_before_value: "2–3 weeks (my estimate)"
