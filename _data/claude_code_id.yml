@@ -182,7 +182,7 @@ id:
         title: "Jelaskan, lalu Agentic Coding yang mengerjakan"
         text: "Anda fokus pada masalahnya. AI yang mengerjakan."
     what_title: "Apa itu Agentic Coding?"
-    what_text: "Agentic Coding adalah cara bekerja dengan agen AI yang bekerja langsung di komputer Anda secara mandiri. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
+    what_text: "Agentic Coding adalah agen AI yang bekerja langsung di komputer Anda secara mandiri. Anda cukup menjelaskan apa yang Anda mau dalam bahasa sehari-hari. Bahasa Indonesia juga bisa."
     loop:
       - "Anda menjelaskan tujuannya"
       - "AI membuat file, menulis kode, mengolah data"
