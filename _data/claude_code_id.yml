@@ -24,7 +24,7 @@ id:
   hero:
     label: "Komunitas AI (Agentic Indonesia)"
     title_html: 'In This Economy, Ga Mau Memecat/Dipecat? <span class="cc-grad">Ini Solusinya</span>'
-    lead: "Ada superpower baru bernama Agen AI. Dia bisa tingkatkan pemasukan. Proses juga jadi lebih cepat, hemat, dan efisien. Bisa dipakai oleh siapa saja. Kalau ga mau belajar superpower ini, yang bakal ketinggalan in this economy.<br><span class='cc-lead-gap'></span>Agentic Indonesia adalah grup WhatsApp gratis berisi tutorial langkah-demi-langkah dan meetup online setiap minggu.<br><span class='cc-lead-gap'></span>Jangan sampai kompetitor-kompetitor kamu belajar duluan."
+    lead: "Ada superpower baru bernama Agen AI. Dia bisa tingkatkan pemasukan. Proses juga jadi lebih cepat, hemat, dan efisien. Bisa dipakai oleh siapa saja. Artinya, kalau menunda-nunda belajar superpower ini... ya sudah pasti ketinggalan, apalagi in this economy.<br><span class='cc-lead-gap'></span>Agentic Indonesia adalah grup WhatsApp gratis berisi tutorial langkah-demi-langkah dan meetup online setiap minggu.<br><span class='cc-lead-gap'></span>Jangan sampai kompetitor-kompetitor kamu belajar duluan."
     cta_wa: "Gabung grup WhatsApp"
     cta_meetup: "Daftar meetup online"
     next_label: "Meetup online berikutnya"
@@ -195,7 +195,7 @@ id:
     chat_user: "Bagaimana cara membuat landing page?"
     chat_bot: "Ini contoh kodenya, silakan disalin:"
     chat_after: "Anda yang menyalin, mencoba, dan memperbaiki kalau error."
-    cc_label: "AI Agentic"
+    cc_label: "Agen AI"
     cc_user: "Buatkan landing page untuk toko kue saya."
     cc_steps:
       - "Membuat file"
@@ -396,7 +396,7 @@ en:
   hero:
     label: "AI Community (Agentic Indonesia)"
     title_html: 'In This Economy, Don''t Want to Fire or Get Fired? <span class="cc-grad">Here''s the Answer</span>'
-    lead: "There's a new superpower called AI Agents. It can grow your revenue. Work gets faster, cheaper and more efficient too. Anyone can use it. If you don't want to learn this superpower, you'll be the one left behind in this economy.<br><span class='cc-lead-gap'></span>Agentic Indonesia is a free WhatsApp group with step-by-step tutorials and weekly online meetups.<br><span class='cc-lead-gap'></span>Don't let your competitors learn it first."
+    lead: "There's a new superpower called AI Agents. It can grow your revenue. Work gets faster, cheaper and more efficient too. Anyone can use it. Which means, if you keep putting off learning it... you'll get left behind, especially in this economy.<br><span class='cc-lead-gap'></span>Agentic Indonesia is a free WhatsApp group with step-by-step tutorials and weekly online meetups.<br><span class='cc-lead-gap'></span>Don't let your competitors learn it first."
     cta_wa: "Join the WhatsApp group"
     cta_meetup: "Register for the online meetup"
     next_label: "Next online meetup"
@@ -564,7 +564,7 @@ en:
     chat_user: "How do I make a landing page?"
     chat_bot: "Here is some example code you can copy:"
     chat_after: "You copy it, try it, and fix it when it breaks."
-    cc_label: "Agentic AI"
+    cc_label: "AI Agent"
     cc_user: "Build a landing page for my cake shop."
     cc_steps:
       - "Creates the files"
